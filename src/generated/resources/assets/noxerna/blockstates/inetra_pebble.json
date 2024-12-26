@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "pebbles=1": {
+      "model": "noxerna:block/inetra_pebble"
+    },
+    "pebbles=2": {
+      "model": "noxerna:block/two_inetra_pebbles"
+    },
+    "pebbles=3": {
+      "model": "noxerna:block/three_inetra_pebbles"
+    },
+    "pebbles=4": {
+      "model": "noxerna:block/four_inetra_pebbles"
+    }
+  }
+}

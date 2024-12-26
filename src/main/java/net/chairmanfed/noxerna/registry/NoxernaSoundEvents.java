@@ -8,11 +8,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 
 public class NoxernaSoundEvents {
+    public static final SoundEvent HEAVY_METAL_BREAK = register("block.heavy_metal.break");
+    public static final SoundEvent HEAVY_METAL_PLACE = register("block.heavy_metal.place");
     public static final SoundEvent NOBLEWOOD_BREAK = register("block.noblewood.break");
     public static final SoundEvent NOBLEWOOD_FALL = register("block.noblewood.fall");
     public static final SoundEvent NOBLEWOOD_HIT = register("block.noblewood.hit");
     public static final SoundEvent NOBLEWOOD_PLACE = register("block.noblewood.place");
     public static final SoundEvent NOBLEWOOD_STEP = register("block.noblewood.step");
+    public static final SoundEvent NOXUM_PLACE = register("block.noxum.place");
+    public static final SoundEvent NOXUM_STEP = register("block.noxum.step");
 
     private static Holder<SoundEvent> register(ResourceLocation pName, ResourceLocation pLocation, float pRange) {
         return net.minecraft.core.Registry.registerForHolder(

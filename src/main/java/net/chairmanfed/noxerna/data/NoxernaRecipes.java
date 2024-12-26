@@ -9,7 +9,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -148,6 +151,68 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 0.7f, 100)
                 .group("ferrebris_ingot")
                 .save(output, name("blasting/ferrebris_ingot"));
+        // Smithing Templates
+        cloneSmithingTemplate(NoxernaItems.INETRA.get(), NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get())
+                .group("smithing_template")
+                .save(output, name("crafting/nihoxite_upgrade_smithing_template"));
+        // Smithing Template Alt recipes
+        cloneSmithingTemplate(Items.NETHERRACK, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/netherite_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COBBLESTONE, Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/sentry_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COBBLESTONE, Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/vex_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.MOSSY_COBBLESTONE, Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/wild_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COBBLESTONE, Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/coast_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.SANDSTONE, Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/dune_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.TERRACOTTA, Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/wayfinder_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.TERRACOTTA, Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/raiser_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.TERRACOTTA, Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/shaper_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.TERRACOTTA, Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/host_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COBBLED_DEEPSLATE, Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/ward_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COBBLED_DEEPSLATE, Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/silence_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.PRISMARINE, Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/tide_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.BLACKSTONE, Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/snout_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.NETHERRACK, Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/rib_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.END_STONE, Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/eye_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.PURPUR_BLOCK, Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/spire_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.BREEZE_ROD, Items.FLOW_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/flow_upgrade_smithing_template_from_any_diamond"));
+        cloneSmithingTemplate(Items.COPPER_BLOCK, Items.BOLT_ARMOR_TRIM_SMITHING_TEMPLATE)
+                .group("smithing_template")
+                .save(output, name("crafting/bolt_upgrade_smithing_template_from_any_diamond"));
 
         // Tool Recipes
         makeAxe(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_AXE.get())
@@ -229,28 +294,29 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeSword(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, NoxernaItems.ADAMUNA_SWORD.get())
                 .group("adamuna_tools")
                 .save(output, name("crafting/adamuna_sword"));
-
+        // Nihoxite
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_AXE.get(), NoxernaItems.NIHOXITE_AXE.get())
                 .save(output, name("smithing/nihoxite_axe"));
-        nihoxiteUpgrade(Items.DIAMOND_AXE, NoxernaItems.NIHOXITE_AXE.get())
-                .save(output, name("smithing/diamond_nihoxite_axe"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_HOE.get(), NoxernaItems.NIHOXITE_HOE.get())
                 .save(output, name("smithing/nihoxite_hoe"));
-        nihoxiteUpgrade(Items.DIAMOND_HOE, NoxernaItems.NIHOXITE_HOE.get())
-                .save(output, name("smithing/diamond_nihoxite_hoe"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_PICKAXE.get(), NoxernaItems.NIHOXITE_PICKAXE.get())
                 .save(output, name("smithing/nihoxite_pickaxe"));
-        nihoxiteUpgrade(Items.DIAMOND_PICKAXE, NoxernaItems.NIHOXITE_PICKAXE.get())
-                .save(output, name("smithing/diamond_nihoxite_pickaxe"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_SHOVEL.get(), NoxernaItems.NIHOXITE_SHOVEL.get())
                 .save(output, name("smithing/nihoxite_shovel"));
-        nihoxiteUpgrade(Items.DIAMOND_SHOVEL, NoxernaItems.NIHOXITE_SHOVEL.get())
-                .save(output, name("smithing/diamond_nihoxite_shovel"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_SWORD.get(), NoxernaItems.NIHOXITE_SWORD.get())
                 .save(output, name("smithing/nihoxite_sword"));
+        // Nihoxite Alt recipes
+        nihoxiteUpgrade(Items.DIAMOND_AXE, NoxernaItems.NIHOXITE_AXE.get())
+                .save(output, name("smithing/diamond_nihoxite_axe"));
+        nihoxiteUpgrade(Items.DIAMOND_HOE, NoxernaItems.NIHOXITE_HOE.get())
+                .save(output, name("smithing/diamond_nihoxite_hoe"));
+        nihoxiteUpgrade(Items.DIAMOND_PICKAXE, NoxernaItems.NIHOXITE_PICKAXE.get())
+                .save(output, name("smithing/diamond_nihoxite_pickaxe"));
+        nihoxiteUpgrade(Items.DIAMOND_SHOVEL, NoxernaItems.NIHOXITE_SHOVEL.get())
+                .save(output, name("smithing/diamond_nihoxite_shovel"));
         nihoxiteUpgrade(Items.DIAMOND_SWORD, NoxernaItems.NIHOXITE_SWORD.get())
                 .save(output, name("smithing/diamond_nihoxite_sword"));
-
+        // Netherite Alt recipes
         netheriteUpgrade(NoxernaItems.ADAMUNA_AXE.get(), Items.NETHERITE_AXE)
                 .save(output, name("smithing/adamuna_netherite_axe"));
         netheriteUpgrade(NoxernaItems.ADAMUNA_HOE.get(), Items.NETHERITE_HOE)

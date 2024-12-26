@@ -140,7 +140,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder EXPLORE_NOXERNA = Advancement.Builder.advancement()
                 .parent(BREACH_SURFACE)
                 .display(
-                        new ItemStack(Items.NETHERITE_BOOTS),
+                        new ItemStack(NoxernaItems.NIHOXITE_BOOTS.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".explore_noxerna.title"),
                         Component.translatable(
@@ -340,7 +340,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 )
                 .requirements(AdvancementRequirements.allOf(List.of(
                         "all_stone_variants", "noxum", "noxum_stairs", "noxum_slab", "noxum_wall",
-                        "noxum_pressure_plate", "noxum_button", "noxum_pebble")))
+                        "noxum_pressure_plate", "noxum_button", "noxum_pebble", "polished_noxum",
+                        "polished_noxum_stairs", "polished_noxum_slab", "polished_noxum_wall", "noxum_bricks",
+                        "noxum_brick_stairs", "noxum_brick_slab", "noxum_brick_wall")))
                 .addCriterion("all_stone_variants",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
                 .addCriterion("noxum", InventoryChangeTrigger.TriggerInstance.hasItems(
@@ -362,6 +364,26 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .addCriterion("noxum_pebble",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
                                 ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_PEBBLE.get().asItem())))
+                .addCriterion("polished_noxum", InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(NoxernaBlocks.POLISHED_NOXUM.get().asItem())))
+                .addCriterion("polished_noxum_stairs", InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())))
+                .addCriterion("polished_noxum_slab",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem())))
+                .addCriterion("polished_noxum_wall",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem())))
+                .addCriterion("noxum_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_BRICKS.get().asItem())))
+                .addCriterion("noxum_brick_stairs", InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem())))
+                .addCriterion("noxum_brick_slab",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem())))
+                .addCriterion("noxum_brick_wall",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())))
                 .save(saver, TheNoxerna.MODID + ":story/all_stone_variants");
         // Experience a quake while in the Noxerna
         AdvancementHolder NOXQUAKE = Advancement.Builder.advancement()
@@ -661,7 +683,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FERREBRIS_ARMOR = Advancement.Builder.advancement()
                 .parent(SMELT_FERREBRIS)
                 .display(
-                        new ItemStack(Items.IRON_CHESTPLATE),
+                        new ItemStack(NoxernaItems.FERREBRIS_CHESTPLATE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".ferrebris_armor.title"),
                         Component.translatable(
@@ -679,7 +701,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FULL_FERREBRIS_ARMOR = Advancement.Builder.advancement()
                 .parent(FERREBRIS_ARMOR)
                 .display(
-                        new ItemStack(Items.IRON_CHESTPLATE),
+                        new ItemStack(NoxernaItems.FERREBRIS_CHESTPLATE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".full_ferrebris_armor.title"),
                         Component.translatable(
@@ -691,7 +713,11 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("full_ferrebris_armor",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                        NoxernaItems.FERREBRIS_HELMET.get(),
+                                        NoxernaItems.FERREBRIS_CHESTPLATE.get(),
+                                        NoxernaItems.FERREBRIS_LEGGINGS.get(),
+                                        NoxernaItems.FERREBRIS_BOOTS.get()))
                 .save(saver, TheNoxerna.MODID + ":story/full_ferrebris_armor");
         // Make a ferrebris shield
         AdvancementHolder FERREBRIS_SHIELD = Advancement.Builder.advancement()
@@ -810,7 +836,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder ADAMUNA_ARMOR = Advancement.Builder.advancement()
                 .parent(MINE_ADAMUNA)
                 .display(
-                        new ItemStack(Items.DIAMOND_CHESTPLATE),
+                        new ItemStack(NoxernaItems.ADAMUNA_CHESTPLATE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".adamuna_armor.title"),
                         Component.translatable(
@@ -828,7 +854,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FULL_ADAMUNA_ARMOR = Advancement.Builder.advancement()
                 .parent(ADAMUNA_ARMOR)
                 .display(
-                        new ItemStack(Items.DIAMOND_CHESTPLATE),
+                        new ItemStack(NoxernaItems.ADAMUNA_CHESTPLATE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".full_adamuna_armor.title"),
                         Component.translatable(
@@ -840,7 +866,12 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("full_adamuna_armor",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.ADAMUNA_HELMET.get(),
+                                        NoxernaItems.ADAMUNA_CHESTPLATE.get(),
+                                        NoxernaItems.ADAMUNA_LEGGINGS.get(),
+                                        NoxernaItems.ADAMUNA_BOOTS.get())))
                 .save(saver, TheNoxerna.MODID + ":story/full_adamuna_armor");
         // Nihoxite storyline, continuing from "MINE_ADAMUNA"
         // Obtain Raw Inperlum
@@ -906,7 +937,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder NIHOXITE_ARMOR = Advancement.Builder.advancement()
                 .parent(REFINE_NIHOXITE)
                 .display(
-                        new ItemStack(Items.NETHERITE_CHESTPLATE),
+                        new ItemStack(NoxernaItems.NIHOXITE_CHESTPLATE.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".nihoxite_armor.title"),
                         Component.translatable(
@@ -918,7 +949,12 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("nihoxite_armor",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.NIHOXITE_HELMET.get(),
+                                        NoxernaItems.NIHOXITE_CHESTPLATE.get(),
+                                        NoxernaItems.NIHOXITE_LEGGINGS.get(),
+                                        NoxernaItems.NIHOXITE_BOOTS.get())))
                 .save(saver, TheNoxerna.MODID + ":story/nihoxite_armor");
         // Noxerna Boss storyline (Megatomaton)
         // Find a section of ruined railway
@@ -1011,6 +1047,42 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .addCriterion("defeated_megatomaton",
                         CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
                 .save(saver, TheNoxerna.MODID + ":story/defeat_megatomaton");
+        // Lumai Crystal Energy Weapons
+        AdvancementHolder ENERGY_WEAPONS = Advancement.Builder.advancement()
+                .parent(DEFEAT_MEGATOMATON)
+                .display(
+                        new ItemStack(Items.LIGHTNING_ROD),
+                        Component.translatable(
+                                "advancement." + TheNoxerna.MODID + ".energy_weapons.title"),
+                        Component.translatable(
+                                "advancement." + TheNoxerna.MODID + ".energy_weapons.description"),
+                        null,
+                        AdvancementType.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .addCriterion("energy_weapons",
+                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .save(saver, TheNoxerna.MODID + ":story/energy_weapons");
+        // Brick a Charge Node
+        AdvancementHolder SHUTDOWN_CHARGE_NODE = Advancement.Builder.advancement()
+                .parent(ENERGY_WEAPONS)
+                .display(
+                        new ItemStack(Items.LIGHTNING_ROD),
+                        Component.translatable(
+                                "advancement." + TheNoxerna.MODID + ".shutdown_charge_node.title"),
+                        Component.translatable(
+                                "advancement." + TheNoxerna.MODID + ".shutdown_charge_node.description"),
+                        null,
+                        AdvancementType.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .addCriterion("shutdown_charge_node",
+                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .save(saver, TheNoxerna.MODID + ":story/shutdown_charge_node");
         // Noxerna Boss storyline (Sulfernus)
         // Find a geothermal outpost
         AdvancementHolder GEOTHERMAL_OUTPOST = Advancement.Builder.advancement()

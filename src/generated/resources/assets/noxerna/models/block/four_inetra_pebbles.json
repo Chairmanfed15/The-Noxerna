@@ -1,0 +1,6 @@
+{
+  "parent": "noxerna:block/four_pebbles",
+  "textures": {
+    "all": "noxerna:block/inetra"
+  }
+}

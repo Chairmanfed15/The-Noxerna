@@ -14,6 +14,46 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "noxum_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_brick_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_brick_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_brick_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_brick_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "noxum_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:noxum_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "noxum_button": {
       "conditions": {
         "items": [
@@ -73,6 +113,46 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "polished_noxum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:polished_noxum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "polished_noxum_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:polished_noxum_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "polished_noxum_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:polished_noxum_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "polished_noxum_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:polished_noxum_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -112,6 +192,30 @@
     ],
     [
       "noxum_pebble"
+    ],
+    [
+      "polished_noxum"
+    ],
+    [
+      "polished_noxum_stairs"
+    ],
+    [
+      "polished_noxum_slab"
+    ],
+    [
+      "polished_noxum_wall"
+    ],
+    [
+      "noxum_bricks"
+    ],
+    [
+      "noxum_brick_stairs"
+    ],
+    [
+      "noxum_brick_slab"
+    ],
+    [
+      "noxum_brick_wall"
     ]
   ],
   "sends_telemetry_event": true

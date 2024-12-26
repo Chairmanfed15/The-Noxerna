@@ -1,6 +1,8 @@
 {
   "values": [
     "noxerna:xenon_planks",
-    "noxerna:krypton_planks"
+    "noxerna:krypton_planks",
+    "noxerna:argon_planks",
+    "noxerna:neon_planks"
   ]
 }

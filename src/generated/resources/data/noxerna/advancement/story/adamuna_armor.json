@@ -11,7 +11,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:diamond_chestplate"
+      "id": "noxerna:adamuna_chestplate"
     },
     "title": {
       "translate": "advancement.noxerna.adamuna_armor.title"

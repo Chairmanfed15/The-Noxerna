@@ -1,0 +1,6 @@
+{
+  "parent": "noxerna:block/three_pebbles",
+  "textures": {
+    "all": "noxerna:block/soltra"
+  }
+}

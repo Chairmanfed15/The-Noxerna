@@ -2,7 +2,19 @@
   "parent": "noxerna:story/refine_nihoxite",
   "criteria": {
     "nihoxite_armor": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "noxerna:nihoxite_helmet",
+              "noxerna:nihoxite_chestplate",
+              "noxerna:nihoxite_leggings",
+              "noxerna:nihoxite_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +24,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_chestplate"
+      "id": "noxerna:nihoxite_chestplate"
     },
     "title": {
       "translate": "advancement.noxerna.nihoxite_armor.title"

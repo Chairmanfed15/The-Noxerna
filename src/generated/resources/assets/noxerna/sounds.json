@@ -1,0 +1,57 @@
+{
+  "block.heavy_metal.break": {
+    "sounds": [
+      "noxerna:block/heavy_metal/break1",
+      "noxerna:block/heavy_metal/break2",
+      "noxerna:block/heavy_metal/break3",
+      "noxerna:block/heavy_metal/break4"
+    ]
+  },
+  "block.heavy_metal.place": {
+    "sounds": [
+      "noxerna:block/heavy_metal/place1",
+      "noxerna:block/heavy_metal/place2",
+      "noxerna:block/heavy_metal/place3",
+      "noxerna:block/heavy_metal/place4"
+    ]
+  },
+  "block.noblewood.break": {
+    "sounds": [
+      "noxerna:block/noblewood/break"
+    ]
+  },
+  "block.noblewood.fall": {
+    "sounds": [
+      "noxerna:block/noblewood/fall"
+    ]
+  },
+  "block.noblewood.hit": {
+    "sounds": [
+      "noxerna:block/noblewood/hit"
+    ]
+  },
+  "block.noblewood.place": {
+    "sounds": [
+      "noxerna:block/noblewood/place"
+    ]
+  },
+  "block.noblewood.step": {
+    "sounds": [
+      "noxerna:block/noblewood/step"
+    ]
+  },
+  "block.noxum.place": {
+    "sounds": [
+      "noxerna:block/noxum/place1",
+      "noxerna:block/noxum/place2",
+      "noxerna:block/noxum/place3"
+    ]
+  },
+  "block.noxum.step": {
+    "sounds": [
+      "noxerna:block/noxum/step1",
+      "noxerna:block/noxum/step2",
+      "noxerna:block/noxum/step3"
+    ]
+  }
+}

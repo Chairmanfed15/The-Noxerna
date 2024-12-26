@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/energy_weapons",
+  "criteria": {
+    "shutdown_charge_node": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.shutdown_charge_node.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:lightning_rod"
+    },
+    "title": {
+      "translate": "advancement.noxerna.shutdown_charge_node.title"
+    }
+  },
+  "requirements": [
+    [
+      "shutdown_charge_node"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

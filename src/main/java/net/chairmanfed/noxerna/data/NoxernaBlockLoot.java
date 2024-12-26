@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.data.providers;
+package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.block.PebbleBlock;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
@@ -10,21 +10,22 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-public class NoxernaBlockLootProvider extends BlockLootSubProvider {
-    public NoxernaBlockLootProvider(HolderLookup.Provider lookupProvider) {
+public class NoxernaBlockLoot extends BlockLootSubProvider {
+    public NoxernaBlockLoot(HolderLookup.Provider lookupProvider) {
         super(Set.of(), FeatureFlags.DEFAULT_FLAGS, lookupProvider);
     }
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return NoxernaBlocks.BLOCKS.getEntries().stream().map(e -> (Block) e.value()).toList();
+        return NoxernaBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::value).collect(Collectors.toList());
     }
     protected void dropSlab(Block slabBlock) {
         this.add(slabBlock, this::createSlabItemTable);
@@ -50,6 +51,10 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
 
     protected void dropPebbles(Block pebbleBlock) {
         this.add(pebbleBlock, this::createPebbleDrops);
+    }
+
+    protected void noDrop(Block block) {
+        this.add(block, noDrop());
     }
 
     @Override
@@ -82,10 +87,40 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get());
         dropSelf(NoxernaBlocks.KRYPTON_BUTTON.get());
 
+        dropSelf(NoxernaBlocks.ARGON_PLANKS.get());
+
+        dropSelf(NoxernaBlocks.NEON_PLANKS.get());
+
+        dropSelf(NoxernaBlocks.SOLTRA.get());
+        dropSelf(NoxernaBlocks.POLISHED_SOLTRA.get());
+        dropSelf(NoxernaBlocks.SOLTRA_BRICKS.get());
+        dropPebbles(NoxernaBlocks.SOLTRA_PEBBLE.get());
+
         dropSelf(NoxernaBlocks.NOXUM.get());
         dropSelf(NoxernaBlocks.NOXUM_STAIRS.get());
-        dropSelf(NoxernaBlocks.NOXUM_BRICKS.get());
+        dropSlab(NoxernaBlocks.NOXUM_SLAB.get());
+        dropSelf(NoxernaBlocks.NOXUM_WALL.get());
+        dropSelf(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.NOXUM_BUTTON.get());
         dropSelf(NoxernaBlocks.POLISHED_NOXUM.get());
+        dropSelf(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
+        dropSlab(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
+        dropSelf(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICKS.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
+        dropSlab(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
+        dropSelf(NoxernaBlocks.NOXUM_BRICK_WALL.get());
+        dropPebbles(NoxernaBlocks.NOXUM_PEBBLE.get());
+
+        dropSelf(NoxernaBlocks.AESTUM.get());
+        dropSelf(NoxernaBlocks.POLISHED_AESTUM.get());
+        dropSelf(NoxernaBlocks.AESTUM_BRICKS.get());
+        dropPebbles(NoxernaBlocks.AESTUM_PEBBLE.get());
+
+        dropSelf(NoxernaBlocks.INETRA.get());
+        dropSelf(NoxernaBlocks.POLISHED_INETRA.get());
+        dropSelf(NoxernaBlocks.INETRA_BRICKS.get());
+        dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING.get());
@@ -117,21 +152,5 @@ public class NoxernaBlockLootProvider extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING.get());
-        noDrop(NoxernaBlocks.VOIDROCK.get());
-        dropSelf(NoxernaBlocks.NOXUM_BRICK_STAIRS.get());
-        dropSelf(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get());
-        dropSlab(NoxernaBlocks.NOXUM_SLAB.get());
-        dropSlab(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
-        dropSlab(NoxernaBlocks.POLISHED_NOXUM_SLAB.get());
-        dropSelf(NoxernaBlocks.NOXUM_WALL.get());
-        dropSelf(NoxernaBlocks.NOXUM_BRICK_WALL.get());
-        dropSelf(NoxernaBlocks.POLISHED_NOXUM_WALL.get());
-        dropSelf(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
-        dropSelf(NoxernaBlocks.NOXUM_BUTTON.get());
-        dropPebbles(NoxernaBlocks.NOXUM_PEBBLE.get());
-    }
-
-    private LootTable.Builder noDrop(Block block) {
-        return LootTable.lootTable();
     }
 }

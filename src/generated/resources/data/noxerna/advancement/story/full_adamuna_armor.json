@@ -2,7 +2,19 @@
   "parent": "noxerna:story/adamuna_armor",
   "criteria": {
     "full_adamuna_armor": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "noxerna:adamuna_helmet",
+              "noxerna:adamuna_chestplate",
+              "noxerna:adamuna_leggings",
+              "noxerna:adamuna_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +24,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:diamond_chestplate"
+      "id": "noxerna:adamuna_chestplate"
     },
     "title": {
       "translate": "advancement.noxerna.full_adamuna_armor.title"

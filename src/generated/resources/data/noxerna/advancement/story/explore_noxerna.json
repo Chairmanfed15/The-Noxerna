@@ -12,7 +12,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_boots"
+      "id": "noxerna:nihoxite_boots"
     },
     "title": {
       "translate": "advancement.noxerna.explore_noxerna.title"

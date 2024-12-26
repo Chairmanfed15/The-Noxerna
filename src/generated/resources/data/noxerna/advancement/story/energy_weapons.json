@@ -1,0 +1,28 @@
+{
+  "parent": "noxerna:story/defeat_megatomaton",
+  "criteria": {
+    "energy_weapons": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.noxerna.energy_weapons.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:lightning_rod"
+    },
+    "title": {
+      "translate": "advancement.noxerna.energy_weapons.title"
+    }
+  },
+  "requirements": [
+    [
+      "energy_weapons"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

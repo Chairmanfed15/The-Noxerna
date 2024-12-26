@@ -1,6 +1,6 @@
-package net.chairmanfed.noxerna.registry;
+package net.chairmanfed.noxerna.item;
 
-import net.minecraft.world.item.Items;
+import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;

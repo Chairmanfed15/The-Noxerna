@@ -38,7 +38,7 @@ public class NoxernaDimension {
                 true,
                 0.4D,
                 false,
-                false,
+                true,
                 0,
                 192,
                 192,

@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.providers.NoxernaAdvancementProvider;
+import net.chairmanfed.noxerna.data.providers.NoxernaLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -33,6 +34,7 @@ public class DataGenerators {
         generator.addProvider(client, new NoxernaBlockStateProvider(output, existingFileHelper));
         generator.addProvider(client, new NoxernaItemModels(output, existingFileHelper));
         generator.addProvider(client, new NoxernaLanguageProvider(output, existingFileHelper));
+        generator.addProvider(client, new NoxernaSoundDefinitions(output, existingFileHelper));
 
         // Data
         NoxernaRegistries datapack = new NoxernaRegistries(output, lookupProvider);
@@ -45,7 +47,7 @@ public class DataGenerators {
         generator.addProvider(server, entityTags);
         generator.addProvider(server, new NoxernaDataMaps(output, lookupProvider));
         generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
-        generator.addProvider(server, new NoxernaLootTables(output, lookupProvider));
+        generator.addProvider(server, new NoxernaLootTableProvider(output, lookupProvider));
         generator.addProvider(server, new NoxernaAdvancementProvider(output, lookupProvider, existingFileHelper));
     }
 }

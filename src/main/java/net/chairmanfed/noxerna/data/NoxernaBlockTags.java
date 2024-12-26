@@ -8,6 +8,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.checkerframework.checker.units.qual.N;
@@ -25,11 +26,11 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         // Minecraft Tags
         // World Generation
         tag(BlockTags.FEATURES_CANNOT_REPLACE)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.GEODE_INVALID_BLOCKS)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         // Mining Logic
             // Valid Tools
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -51,11 +52,13 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         // Logic
             // Entity Interaction
         tag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.DRAGON_IMMUNE)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.WITHER_IMMUNE)
-                .add(NoxernaBlocks.VOIDROCK.get());
+                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
+        tag(BlockTags.PORTALS)
+                .add(NoxernaBlocks.NOXERNA_PORTAL.get());
             // MultiBlock Formation
         tag(BlockTags.BEACON_BASE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS);
@@ -102,7 +105,7 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.XENON_BUTTON.get());
         // Common Tags
         // Material Storage Blocks
-        tag(NoxernaTags.BlockTags.STORAGE_BLOCKS)
+        tag(Tags.Blocks.STORAGE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS);
         tag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get());
@@ -116,7 +119,11 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .addTag(BlockTags.INFINIBURN_OVERWORLD)
                 .add(NoxernaBlocks.VOIDROCK.get());
         tag(NoxernaTags.BlockTags.QUAKE_IMMUNE)
-                .addTag(NoxernaTags.BlockTags.PEBBLES);
+                .addTag(NoxernaTags.BlockTags.PEBBLES).addTag(NoxernaTags.BlockTags.BOSS_IMMUNE);
+        tag(NoxernaTags.BlockTags.SOLAR_INCINERATION_IMMUNE)
+                .add(NoxernaBlocks.SOLTRA.get()).add(NoxernaBlocks.POLISHED_SOLTRA.get())
+                .add(NoxernaBlocks.SOLTRA_BRICKS.get()).addTag(NoxernaTags.BlockTags.PEBBLES)
+                .addTag(NoxernaTags.BlockTags.BOSS_IMMUNE);
         // Mining Logic
             // Incorrect Tool Tiers
         tag(NoxernaTags.BlockTags.INCORRECT_FOR_NOBLEWOOD_TOOL)
@@ -133,7 +140,8 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
         // Block Variations
         tag(NoxernaTags.BlockTags.PEBBLES)
-                .add(NoxernaBlocks.NOXUM_PEBBLE.get());
+                .add(NoxernaBlocks.SOLTRA_PEBBLE.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get())
+                .add(NoxernaBlocks.AESTUM_PEBBLE.get()).add(NoxernaBlocks.INETRA_PEBBLE.get());
         // Wooden Blocks
         tag(NoxernaTags.BlockTags.XENON_LOGS)
                 .add(NoxernaBlocks.XENON_LOG.get()).add(NoxernaBlocks.XENON_WOOD.get())

@@ -1,5 +1,6 @@
 {
   "values": [
-    "noxerna:voidrock"
+    "noxerna:voidrock",
+    "noxerna:noxerna_portal_frame"
   ]
 }

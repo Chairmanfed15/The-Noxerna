@@ -1,5 +1,8 @@
 {
   "values": [
-    "noxerna:noxum"
+    "noxerna:soltra",
+    "noxerna:noxum",
+    "noxerna:aestum",
+    "noxerna:inetra"
   ]
 }

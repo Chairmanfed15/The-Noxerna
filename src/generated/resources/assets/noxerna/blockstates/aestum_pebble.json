@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "pebbles=1": {
+      "model": "noxerna:block/aestum_pebble"
+    },
+    "pebbles=2": {
+      "model": "noxerna:block/two_aestum_pebbles"
+    },
+    "pebbles=3": {
+      "model": "noxerna:block/three_aestum_pebbles"
+    },
+    "pebbles=4": {
+      "model": "noxerna:block/four_aestum_pebbles"
+    }
+  }
+}

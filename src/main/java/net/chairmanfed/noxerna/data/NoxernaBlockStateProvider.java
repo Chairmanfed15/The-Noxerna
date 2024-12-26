@@ -2,12 +2,15 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlockStateProperties;
+import net.chairmanfed.noxerna.block.PebbleBlock;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -49,13 +52,46 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         pressurePlateWithItem(NoxernaBlocks.KRYPTON_PRESSURE_PLATE, NoxernaBlocks.KRYPTON_PLANKS);
         buttonWithItem(NoxernaBlocks.KRYPTON_BUTTON, NoxernaBlocks.KRYPTON_PLANKS);
 
+        // Argon Wood set
+        blockWithItem(NoxernaBlocks.ARGON_PLANKS);
+
+        // Neon Wood set
+        blockWithItem(NoxernaBlocks.NEON_PLANKS);
+
+        // Soltra Stone set
+        blockWithItem(NoxernaBlocks.SOLTRA);
+        blockWithItem(NoxernaBlocks.POLISHED_SOLTRA);
+        blockWithItem(NoxernaBlocks.SOLTRA_BRICKS);
+        pebbleBlock(NoxernaBlocks.SOLTRA_PEBBLE, NoxernaBlocks.SOLTRA);
+
         // Noxum Stone set
         blockWithItem(NoxernaBlocks.NOXUM);
         stairBlockWithItem(NoxernaBlocks.NOXUM_STAIRS, NoxernaBlocks.NOXUM);
+        slabBlockWithItem(NoxernaBlocks.NOXUM_SLAB, NoxernaBlocks.NOXUM);
+        wallBlockWithItem(NoxernaBlocks.NOXUM_WALL, NoxernaBlocks.NOXUM);
+        pressurePlateWithItem(NoxernaBlocks.NOXUM_PRESSURE_PLATE, NoxernaBlocks.NOXUM);
+        buttonWithItem(NoxernaBlocks.NOXUM_BUTTON, NoxernaBlocks.NOXUM);
+        pebbleBlock(NoxernaBlocks.NOXUM_PEBBLE, NoxernaBlocks.NOXUM);
         blockWithItem(NoxernaBlocks.POLISHED_NOXUM);
         stairBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_STAIRS, NoxernaBlocks.POLISHED_NOXUM);
+        slabBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_SLAB, NoxernaBlocks.POLISHED_NOXUM);
+        wallBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_WALL, NoxernaBlocks.POLISHED_NOXUM);
         blockWithItem(NoxernaBlocks.NOXUM_BRICKS);
         stairBlockWithItem(NoxernaBlocks.NOXUM_BRICK_STAIRS, NoxernaBlocks.NOXUM_BRICKS);
+        slabBlockWithItem(NoxernaBlocks.NOXUM_BRICK_SLAB, NoxernaBlocks.NOXUM_BRICKS);
+        wallBlockWithItem(NoxernaBlocks.NOXUM_BRICK_WALL, NoxernaBlocks.NOXUM_BRICKS);
+
+        // Aestum Stone set
+        blockWithItem(NoxernaBlocks.AESTUM);
+        blockWithItem(NoxernaBlocks.POLISHED_AESTUM);
+        blockWithItem(NoxernaBlocks.AESTUM_BRICKS);
+        pebbleBlock(NoxernaBlocks.AESTUM_PEBBLE, NoxernaBlocks.AESTUM);
+
+        // Inetra Stone set
+        blockWithItem(NoxernaBlocks.INETRA);
+        blockWithItem(NoxernaBlocks.POLISHED_INETRA);
+        blockWithItem(NoxernaBlocks.INETRA_BRICKS);
+        pebbleBlock(NoxernaBlocks.INETRA_PEBBLE, NoxernaBlocks.INETRA);
 
         // Ferrebris Metal set
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
@@ -108,15 +144,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);
-        slabBlockWithItem(NoxernaBlocks.NOXUM_SLAB, NoxernaBlocks.NOXUM);
-        slabBlockWithItem(NoxernaBlocks.NOXUM_BRICK_SLAB, NoxernaBlocks.NOXUM_BRICKS);
-        slabBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_SLAB, NoxernaBlocks.POLISHED_NOXUM);
-        wallBlockWithItem(NoxernaBlocks.NOXUM_WALL, NoxernaBlocks.NOXUM);
-        wallBlockWithItem(NoxernaBlocks.NOXUM_BRICK_WALL, NoxernaBlocks.NOXUM_BRICKS);
-        wallBlockWithItem(NoxernaBlocks.POLISHED_NOXUM_WALL, NoxernaBlocks.POLISHED_NOXUM);
-        pressurePlateWithItem(NoxernaBlocks.NOXUM_PRESSURE_PLATE, NoxernaBlocks.NOXUM);
-        buttonWithItem(NoxernaBlocks.NOXUM_BUTTON, NoxernaBlocks.NOXUM);
-        pebbleBlock(NoxernaBlocks.NOXUM_PEBBLE, NoxernaBlocks.NOXUM);
+        blockWithItem(NoxernaBlocks.NOXERNA_PORTAL_FRAME);
     }
 
     private void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
@@ -184,89 +212,40 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         this.buttonBlock((ButtonBlock) block.get(), this.blockTexture(baseBlock.get()));
         this.itemModels().buttonInventory(block.getId().toString(), this.blockTexture(baseBlock.get()));
     }
-
-    public void pebbleBlock(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
-        // This shit ugly as sin, like actual fucking yandev code kind of ugly,
-        // but it works and that's all I care about rn.
-        // I mean, this doesn't even matter to the performance of the mod (I think), because all it's for is
-        // generating pebble models
-        MultiPartBlockStateBuilder multipartBuilder = getMultipartBuilder(block.get());
-        multipartBuilder.part()
-                .modelFile(this.models()
-                .withExistingParent(block.getId().getPath(), this.modLoc("block/pebble"))
-                .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 1)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, false)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(block.getId().getPath(), this.modLoc("block/pebble"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 1)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, true)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "two_" + block.getId().getPath() + "s",
-                                this.modLoc("block/two_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 2)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, false)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "two_" + block.getId().getPath() + "s",
-                                this.modLoc("block/two_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 2)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, true)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "three_" + block.getId().getPath() + "s",
-                                this.modLoc("block/three_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 3)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, false)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "three_" + block.getId().getPath() + "s",
-                                this.modLoc("block/three_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 3)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, true)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "four_" + block.getId().getPath() + "s",
-                                this.modLoc("block/four_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 4)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, false)
-                .end();
-        multipartBuilder.part()
-                .modelFile(this.models()
-                        .withExistingParent(
-                                "four_" + block.getId().getPath() + "s",
-                                this.modLoc("block/four_pebbles"))
-                        .texture("all", this.blockTexture(baseBlock.get())))
-                .addModel()
-                .condition(NoxernaBlockStateProperties.PEBBLE, 4)
-                .condition(NoxernaBlockStateProperties.WATERLOGGED, true)
-                .end();
+    public void pebbleBlock(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock){
+        this.getVariantBuilder(block.get()).forAllStatesExcept((blockState) -> {
+            int pebbles = blockState.getValue(PebbleBlock.PEBBLES);
+            switch (pebbles) {
+                case 4 -> {
+                    return ConfiguredModel.builder().modelFile(this.models()
+                            .withExistingParent(
+                                    "four_" + baseBlock.getId().getPath() + "_pebbles",
+                                    this.modLoc("block/four_pebbles"))
+                            .texture("all", this.blockTexture(baseBlock.get()))).build();
+                }
+                case 3 -> {
+                    return ConfiguredModel.builder().modelFile(this.models()
+                            .withExistingParent(
+                                    "three_" + baseBlock.getId().getPath() + "_pebbles",
+                                    this.modLoc("block/three_pebbles"))
+                            .texture("all", this.blockTexture(baseBlock.get()))).build();
+                }
+                case 2 -> {
+                    return ConfiguredModel.builder().modelFile(this.models()
+                            .withExistingParent(
+                                    "two_" + baseBlock.getId().getPath() + "_pebbles",
+                                    this.modLoc("block/two_pebbles"))
+                            .texture("all", this.blockTexture(baseBlock.get()))).build();
+                }
+                default -> {
+                    return ConfiguredModel.builder().modelFile(this.models()
+                            .withExistingParent(
+                                    baseBlock.getId().getPath() + "_pebble",
+                                    this.modLoc("block/pebble"))
+                            .texture("all", this.blockTexture(baseBlock.get()))).build();
+                }
+            }
+        }, PebbleBlock.WATERLOGGED);
         this.itemModels().basicItem(ResourceLocation.parse(block.getId().toString()));
     }
 

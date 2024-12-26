@@ -14,6 +14,7 @@ public class NoxernaBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TheNoxerna.MODID);
 
     // Registers Blocks and assigns properties
+
     // Xenon Noblewood Set
     public static final DeferredBlock<Block> XENON_LOG = BLOCKS.register(
             "xenon_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
@@ -32,7 +33,7 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> XENON_PLANKS = BLOCKS.register(
             "xenon_planks", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(3.5f).explosionResistance(3.0f)
-                    .sound(SoundType.CHERRY_WOOD).ignitedByLava().lightLevel(state -> 12)));
+                    .sound(NoxernaSoundTypes.NOBLEWOOD).ignitedByLava().lightLevel(state -> 12)));
     public static final DeferredBlock<Block> XENON_STAIRS = BLOCKS.register(
             "xenon_stairs", () -> new StairBlock(XENON_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get())));
@@ -74,7 +75,7 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> KRYPTON_PLANKS = BLOCKS.register(
             "krypton_planks", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(3.5f).explosionResistance(3.0f)
-                    .sound(SoundType.CHERRY_WOOD).ignitedByLava().lightLevel(state -> 12)));
+                    .sound(NoxernaSoundTypes.NOBLEWOOD).ignitedByLava().lightLevel(state -> 12)));
     public static final DeferredBlock<Block> KRYPTON_STAIRS = BLOCKS.register(
             "krypton_stairs", () -> new StairBlock(KRYPTON_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(KRYPTON_PLANKS.get())));
@@ -98,11 +99,40 @@ public class NoxernaBlocks {
             "krypton_button", () -> new ButtonBlock(NoxernaBlockSetTypes.KRYPTON_BLOCK_SET, 30,
                     BlockBehaviour.Properties.ofFullCopy(KRYPTON_PLANKS.get())));
 
+    // Argon Wood set
+    public static final DeferredBlock<Block> ARGON_PLANKS = BLOCKS.register(
+            "argon_planks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(3.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOBLEWOOD).ignitedByLava().lightLevel(state -> 12)));
+
+    // Neon Wood set
+    public static final DeferredBlock<Block> NEON_PLANKS = BLOCKS.register(
+            "neon_planks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(3.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOBLEWOOD).ignitedByLava().lightLevel(state -> 12)));
+
+    // Soltra Stone set
+    public static final DeferredBlock<Block> SOLTRA = BLOCKS.register(
+            "soltra", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> POLISHED_SOLTRA = BLOCKS.register(
+            "polished_soltra", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLTRA_BRICKS = BLOCKS.register(
+            "soltra_bricks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLTRA_PEBBLE = BLOCKS.register("soltra_pebble", () ->
+            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(SOLTRA.get())
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
+
     // Noxum Stone set
     public static final DeferredBlock<Block> NOXUM = BLOCKS.register(
             "noxum", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(4.5f).explosionResistance(6.0f)
-                    .sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> NOXUM_STAIRS = BLOCKS.register(
             "noxum_stairs", () -> new StairBlock(NOXUM.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(NOXUM.get())));
@@ -123,7 +153,7 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> POLISHED_NOXUM = BLOCKS.register(
             "polished_noxum", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(4.5f).explosionResistance(6.0f)
-                    .sound(SoundType.POLISHED_DEEPSLATE).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> POLISHED_NOXUM_STAIRS = BLOCKS.register(
             "polished_noxum_stairs", () -> new StairBlock(POLISHED_NOXUM.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(POLISHED_NOXUM.get())));
@@ -137,9 +167,50 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NOXUM_BRICKS = BLOCKS.register(
             "noxum_bricks", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(4.5f).explosionResistance(6.0f)
-                    .sound(SoundType.DEEPSLATE_BRICKS).requiresCorrectToolForDrops()));
-    public static final DeferredBlock<Block> NOXUM_BRICK_STAIRS = BLOCKS.register("noxum_brick_stairs", () -> new StairBlock(NOXUM.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(NOXUM.get())));
-    public static final DeferredBlock<Block> NOXUM_BRICK_SLAB = BLOCKS.register("noxum_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM.get())));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> NOXUM_BRICK_STAIRS = BLOCKS.register(
+            "noxum_brick_stairs", () -> new StairBlock(NOXUM_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(NOXUM_BRICKS.get())));
+    public static final DeferredBlock<Block> NOXUM_BRICK_SLAB = BLOCKS.register(
+            "noxum_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM_BRICKS.get())));
+    public static final DeferredBlock<Block> NOXUM_PEBBLE = BLOCKS.register("noxum_pebble", () ->
+            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM.get())
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    // Aestum Stone set
+    public static final DeferredBlock<Block> AESTUM = BLOCKS.register(
+            "aestum", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(7.5f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> POLISHED_AESTUM = BLOCKS.register(
+            "polished_aestum", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(7.5f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_BRICKS = BLOCKS.register(
+            "aestum_bricks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(7.5f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_PEBBLE = BLOCKS.register("aestum_pebble", () ->
+            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(AESTUM.get())
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    // Inetra Stone set
+    public static final DeferredBlock<Block> INETRA = BLOCKS.register(
+            "inetra", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> POLISHED_INETRA = BLOCKS.register(
+            "polished_inetra", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_BRICKS = BLOCKS.register(
+            "inetra_bricks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(9.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_PEBBLE = BLOCKS.register("inetra_pebble", () ->
+            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(INETRA.get())
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     // Resource Storage & Decorative Blocks
     // Ferrebris
@@ -186,7 +257,7 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NIHOXITE_BLOCK = BLOCKS.register(
             "nihoxite_block", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.5f).explosionResistance(7.5f)
-                    .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.HEAVY_METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> NIHOXITE_PLATING = BLOCKS.register(
             "nihoxite_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(NIHOXITE_BLOCK.get())));
     // Vitragor
@@ -267,11 +338,14 @@ public class NoxernaBlocks {
             "oxidized_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
-    // Voidrock
-    public static final DeferredBlock<Block> VOIDROCK = BLOCKS.register(
-        "voidrock", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)));
 
-    public static final DeferredBlock<Block> NOXUM_PEBBLE = BLOCKS.register("noxum_pebble", () ->
-            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM.get())
-                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
+    // Special Dimension Blocks
+    public static final DeferredBlock<Block> VOIDROCK = BLOCKS.register(
+            "voidrock", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)));
+    public static final DeferredBlock<Block> NOXERNA_PORTAL_FRAME = BLOCKS.register(
+            "noxerna_portal_frame",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REINFORCED_DEEPSLATE).noLootTable()));
+    public static final DeferredBlock<Block> NOXERNA_PORTAL = BLOCKS.register(
+            "noxerna_portal",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable()));
 }

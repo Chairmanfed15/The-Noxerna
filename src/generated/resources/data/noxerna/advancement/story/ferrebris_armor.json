@@ -11,7 +11,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:iron_chestplate"
+      "id": "noxerna:ferrebris_chestplate"
     },
     "title": {
       "translate": "advancement.noxerna.ferrebris_armor.title"

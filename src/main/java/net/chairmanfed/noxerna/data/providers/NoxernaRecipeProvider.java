@@ -145,6 +145,16 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
     }
+    public ShapedRecipeBuilder cloneSmithingTemplate(Item cloneMaterial, Item smithingTemplate) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, smithingTemplate, 2)
+                .pattern("$@$")
+                .pattern("$#$")
+                .pattern("$$$")
+                .define('@', smithingTemplate)
+                .define('#', cloneMaterial)
+                .define('$', NoxernaTags.ItemTags.ANY_DIAMOND_GEM)
+                .unlockedBy("has_" + smithingTemplate, has(smithingTemplate));
+    }
 
     // Tool Recipes
     public ShapedRecipeBuilder makeAxe(TagKey<Item> input, Item result) {

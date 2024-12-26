@@ -8,10 +8,15 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NoxernaLanguageProvider extends LanguageProvider {
     public NoxernaLanguageProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, TheNoxerna.MODID, "en_us");
     }
+
+    public static final Map<String, String> SUBTITLE_GENERATOR = new HashMap<>();
 
     protected void addAdvancement(String id, String title, String description) {
         this.add("advancement." + TheNoxerna.MODID + "." + id + ".title", title);
@@ -70,6 +75,10 @@ public class NoxernaLanguageProvider extends LanguageProvider {
         addBlock(NoxernaBlocks.KRYPTON_TRAPDOOR, "Krypton Trapdoor");
         addBlock(NoxernaBlocks.KRYPTON_PRESSURE_PLATE, "Krypton Pressure Plate");
         addBlock(NoxernaBlocks.KRYPTON_BUTTON, "Krypton Button");
+        // Argon Wood set
+        addBlock(NoxernaBlocks.ARGON_PLANKS, "Argon Planks");
+        // Neon Wood set
+        addBlock(NoxernaBlocks.NEON_PLANKS, "Neon Planks");
         // Noxum Stone set
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
@@ -320,6 +329,10 @@ public class NoxernaLanguageProvider extends LanguageProvider {
                 "Awaken Megatomaton, the Titanic Machine");
         addAdvancement("defeat_megatomaton", "Decommissioned",
                 "Shut down Project Kingslayer for good");
+        addAdvancement("energy_weapons", "The Future is Now!",
+                "Have an Energy Weapon be refined from Megatomaton's remains");
+        addAdvancement("shutdown_charge_node", "Blackout",
+                "Drain a charge node of its reserves. Now wait for it to recharge");
         // Noxerna Boss Storyline (Sulfernus)
         addAdvancement("geothermal_outpost", "Resting Flame",
                 "Stumble upon an old outpost overtaken by a geothermal hotspot");

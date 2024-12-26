@@ -2,7 +2,23 @@
   "parent": "noxerna:story/ferrebris_armor",
   "criteria": {
     "full_ferrebris_armor": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:ferrebris_helmet"
+          },
+          {
+            "items": "noxerna:ferrebris_chestplate"
+          },
+          {
+            "items": "noxerna:ferrebris_leggings"
+          },
+          {
+            "items": "noxerna:ferrebris_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -12,7 +28,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:iron_chestplate"
+      "id": "noxerna:ferrebris_chestplate"
     },
     "title": {
       "translate": "advancement.noxerna.full_ferrebris_armor.title"
