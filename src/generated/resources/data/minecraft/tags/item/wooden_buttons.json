@@ -1,5 +1,6 @@
 {
   "values": [
-    "noxerna:xenon_button"
+    "noxerna:xenon_button",
+    "noxerna:krypton_button"
   ]
 }

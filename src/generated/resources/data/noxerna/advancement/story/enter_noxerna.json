@@ -14,7 +14,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:flint_and_steel"
+      "id": "noxerna:pyrocharge"
     },
     "title": {
       "translate": "advancement.noxerna.enter_noxerna.title"

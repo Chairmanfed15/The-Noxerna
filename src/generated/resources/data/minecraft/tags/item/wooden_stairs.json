@@ -1,5 +1,7 @@
 {
   "values": [
-    "noxerna:xenon_stairs"
+    "noxerna:xenon_stairs",
+    "noxerna:krypton_stairs",
+    "noxerna:argon_stairs"
   ]
 }

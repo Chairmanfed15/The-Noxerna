@@ -1,17 +1,14 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.generators.tags;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.checkerframework.checker.units.qual.N;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -88,33 +85,59 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.KRYPTON_PLANKS.get());
             // Wooden Block Variations
         tag(BlockTags.WOODEN_STAIRS)
-                .add(NoxernaBlocks.XENON_STAIRS.get());
+                .add(NoxernaBlocks.XENON_STAIRS.get()).add(NoxernaBlocks.KRYPTON_STAIRS.get())
+                .add(NoxernaBlocks.ARGON_STAIRS.get());
         tag(BlockTags.WOODEN_SLABS)
-                .add(NoxernaBlocks.XENON_SLAB.get());
+                .add(NoxernaBlocks.XENON_SLAB.get()).add(NoxernaBlocks.KRYPTON_SLAB.get());
         tag(BlockTags.WOODEN_FENCES)
-                .add(NoxernaBlocks.XENON_FENCE.get());
+                .add(NoxernaBlocks.XENON_FENCE.get()).add(NoxernaBlocks.KRYPTON_FENCE.get());
         tag(BlockTags.FENCE_GATES)
-                .add(NoxernaBlocks.XENON_FENCE_GATE.get());
+                .add(NoxernaBlocks.XENON_FENCE_GATE.get()).add(NoxernaBlocks.KRYPTON_FENCE_GATE.get());
         tag(BlockTags.WOODEN_DOORS)
-                .add(NoxernaBlocks.XENON_DOOR.get());
+                .add(NoxernaBlocks.XENON_DOOR.get()).add(NoxernaBlocks.KRYPTON_DOOR.get());
         tag(BlockTags.WOODEN_TRAPDOORS)
-                .add(NoxernaBlocks.XENON_TRAPDOOR.get());
+                .add(NoxernaBlocks.XENON_TRAPDOOR.get()).add(NoxernaBlocks.KRYPTON_TRAPDOOR.get());
         tag(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get());
+                .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get()).add(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get());
         tag(BlockTags.WOODEN_BUTTONS)
-                .add(NoxernaBlocks.XENON_BUTTON.get());
+                .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get());
         // Common Tags
         // Material Storage Blocks
         tag(Tags.Blocks.STORAGE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS);
         tag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get());
+        tag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.UMBURAM_BLOCK.get());
+        tag(NoxernaTags.BlockTags.TENERYL_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.TENERYL_BLOCK.get());
+        tag(NoxernaTags.BlockTags.ADAMUNA_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.ADAMUNA_BLOCK.get());
+        tag(NoxernaTags.BlockTags.INPERLUM_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.INPERLUM_BLOCK.get());
+        tag(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.NIHOXITE_BLOCK.get());
+        tag(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.VITRAGOR_BLOCK.get());
+        tag(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS)
+                .add(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
+        // Dye able Blocks
+        tag(Tags.Blocks.CONCRETES)
+                .add(NoxernaBlocks.ARGON_CONCRETE.get());
+        // Dyed Blocks
+        tag(Tags.Blocks.DYED).addTag(NoxernaTags.BlockTags.DYED_ARGON);
+        tag(NoxernaTags.BlockTags.DYED_ARGON)
+                .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+
         // Noxerna Tags
         // Logic
             // Entity Interaction
         tag(NoxernaTags.BlockTags.BOSS_IMMUNE)
                 .addTag(BlockTags.WITHER_IMMUNE);
             // World Changes
+        tag(NoxernaTags.BlockTags.BASE_STONE_NOXERNA)
+                .add(NoxernaBlocks.SOLTRA.get()).add(NoxernaBlocks.NOXUM.get()).add(NoxernaBlocks.AESTUM.get())
+                .add(NoxernaBlocks.INETRA.get());
         tag(NoxernaTags.BlockTags.INFINIBURN_NOXERNA)
                 .addTag(BlockTags.INFINIBURN_OVERWORLD)
                 .add(NoxernaBlocks.VOIDROCK.get());

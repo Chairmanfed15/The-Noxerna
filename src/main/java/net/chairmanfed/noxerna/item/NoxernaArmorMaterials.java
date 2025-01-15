@@ -62,7 +62,9 @@ public class NoxernaArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 0);
             }), 9, SoundEvents.ARMOR_EQUIP_IRON,
                     () -> Ingredient.of(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS),
-                    List.of(new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"))),
+                    List.of(
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"), "", false),
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"), "_overlay", false)),
                     2.0F, 0.05F));
     public static final Holder<ArmorMaterial> UMBURAM = ARMOUR_MATERIAL.register(
             "umburam", () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
@@ -73,7 +75,9 @@ public class NoxernaArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 5);
             }), 25, SoundEvents.ARMOR_EQUIP_GOLD,
                     () -> Ingredient.of(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS),
-                    List.of(new ArmorMaterial.Layer(TheNoxerna.prefix("umburam"))),
+                    List.of(
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("umburam"), "", false),
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("umburam"), "_overlay", false)),
                     0.0F, 0.0F));
     public static final Holder<ArmorMaterial> ADAMUNA = ARMOUR_MATERIAL.register(
             "adamuna", () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
@@ -84,7 +88,9 @@ public class NoxernaArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 8);
             }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND,
                     () -> Ingredient.of(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS),
-                    List.of(new ArmorMaterial.Layer(TheNoxerna.prefix("adamuna"))),
+                    List.of(
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("adamuna"), "", false),
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("adamuna"), "_overlay", false)),
                     3.0F, 0.1F));
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> NIHOXITE = ARMOUR_MATERIAL.register(
             "nihoxite", () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
@@ -95,6 +101,8 @@ public class NoxernaArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 8);
             }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE,
                     () -> Ingredient.of(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS),
-                    List.of(new ArmorMaterial.Layer(TheNoxerna.prefix("nihoxite"))),
+                    List.of(
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("nihoxite"), "", false),
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("nihoxite"), "_overlay", false)),
                     4.0F, 0.15F));
 }

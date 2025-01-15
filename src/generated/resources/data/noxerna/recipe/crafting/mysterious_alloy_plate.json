@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "mysterious_alloy_plate",
+  "key": {
+    "#": {
+      "item": "noxerna:mysterious_scrap"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:mysterious_alloy_plate"
+  }
+}

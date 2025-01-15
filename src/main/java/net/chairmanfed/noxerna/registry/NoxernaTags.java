@@ -67,6 +67,17 @@ public class NoxernaTags {
             // Rods
         public static final TagKey<Item> NOBLEWOOD_RODS = commonTag("rods/noblewood");
         public static final TagKey<Item> WOODEN_RODS = commonTag("rods/wooden");
+            // Dyes
+        public static final TagKey<Item> XENON_DYES = commonTag("dyes/xenon");
+        public static final TagKey<Item> KRYPTON_DYES = commonTag("dyes/krypton");
+        public static final TagKey<Item> ARGON_DYES = commonTag("dyes/argon");
+        public static final TagKey<Item> NEON_DYES = commonTag("dyes/neon");
+            // Dyed Blocks
+        public static final TagKey<Item> DYED_XENON = commonTag("dyed/xenon");
+        public static final TagKey<Item> DYED_KRYPTON = commonTag("dyed/krypton");
+        public static final TagKey<Item> DYED_ARGON = commonTag("dyed/argon");
+        public static final TagKey<Item> DYED_NEON = commonTag("dyed/neon");
+
         public static TagKey<Item> localTag(String tagName) {
             return net.minecraft.tags.ItemTags.create(TheNoxerna.prefix(tagName));
         }
@@ -100,7 +111,21 @@ public class NoxernaTags {
         public static final TagKey<Block> KRYPTON_LOGS = localTag("krypton_logs");
 
         public static final TagKey<Block> FERREBRIS_STORAGE_BLOCKS = commonTag("storage_blocks/ferrebris");
+        public static final TagKey<Block> UMBURAM_STORAGE_BLOCKS = commonTag("storage_blocks/umburam");
+        public static final TagKey<Block> TENERYL_STORAGE_BLOCKS = commonTag("storage_blocks/teneryl");
+        public static final TagKey<Block> ADAMUNA_STORAGE_BLOCKS = commonTag("storage_blocks/adamuna");
+        public static final TagKey<Block> INPERLUM_STORAGE_BLOCKS = commonTag("storage_blocks/inperlum");
+        public static final TagKey<Block> NIHOXITE_STORAGE_BLOCKS = commonTag("storage_blocks/nihoxite");
+        public static final TagKey<Block> VITRAGOR_STORAGE_BLOCKS = commonTag("storage_blocks/vitragor");
+        public static final TagKey<Block> OBSCUPRUM_STORAGE_BLOCKS = commonTag("storage_blocks/obscuprum");
+        public static final TagKey<Block> DYED_XENON = commonTag("dyed/xenon");
+        public static final TagKey<Block> DYED_KRYPTON = commonTag("dyed/krypton");
+        public static final TagKey<Block> DYED_ARGON = commonTag("dyed/argon");
+        public static final TagKey<Block> DYED_NEON = commonTag("dyed/neon");
         public static final TagKey<Block> NOXUM_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/noxum");
+        public static final TagKey<Block> AESTUM_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/aestum");
+        public static final TagKey<Block> INETRA_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/inetra");
+
         public static TagKey<Block> localTag(String tagName) {
             return net.minecraft.tags.BlockTags.create(TheNoxerna.prefix(tagName));
         }
@@ -123,6 +148,7 @@ public class NoxernaTags {
     }
     public static class EntityTags {
         public static final TagKey<EntityType<?>> AUTOMATONS = localTag("automatons");
+        public static final TagKey<EntityType<?>> VOID_ENTITIES = localTag("void_entities");
         public static final TagKey<EntityType<?>> SENSITIVE_TO_DISMANTLE = localTag("sensitive_to_dismantle");
         public static final TagKey<EntityType<?>> SENSITIVE_TO_SHADOWBANE = localTag("sensitive_to_shadowbane");
         public static final TagKey<EntityType<?>> QUAKE_IMMUNE = localTag("quake_immune");

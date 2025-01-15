@@ -1,5 +1,6 @@
 {
   "values": [
-    "noxerna:xenon_pressure_plate"
+    "noxerna:xenon_pressure_plate",
+    "noxerna:krypton_pressure_plate"
   ]
 }

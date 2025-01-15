@@ -130,32 +130,58 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("crafting/noblewood_crafting_table"));
 
         // Ingredient Recipes
+        // Crafting
         makeSticks(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_STICK.get())
                 .group("sticks")
                 .save(output, name("crafting/noblewood_stick"));
+        // Packing 2x2
+        packing2x2(NoxernaItems.MYSTERIOUS_SCRAP.get(), NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get())
+                .group("mysterious_alloy_plate")
+                .save(output, name("crafting/mysterious_alloy_plate"));
+        // Packing 3x3
         packing3x3(NoxernaItems.FERREBRIS_NUGGET.get(), NoxernaItems.FERREBRIS_INGOT.get(),
                 NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_ingot_from_nugget"));
+        // Unpacking 3x3
         unpacking3x3(NoxernaItems.FERREBRIS_BLOCK.get(), NoxernaItems.FERREBRIS_INGOT.get())
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_ingot_from_block"));
         unpacking3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_NUGGET.get())
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_nugget"));
+        // Smelting
         smelting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 200)
                 .group("ferrebris_ingot")
                 .save(output, name("smelting/ferrebris_ingot"));
+        smelting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
+                0.7f, 200)
+                .group("obscuprum_ingot")
+                .save(output, name("smelting/obscuprum_ingot"));
+        smelting(NoxernaTags.ItemTags.RAW_UMBURAM_MATERIALS, NoxernaItems.UMBURAM_INGOT.get(),
+                0.7f, 200)
+                .group("umburam_ingot")
+                .save(output, name("smelting/umburam_ingot"));
+        // Blasting
         blasting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 100)
                 .group("ferrebris_ingot")
                 .save(output, name("blasting/ferrebris_ingot"));
+        blasting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
+                0.7f, 100)
+                .group("obscuprum_ingot")
+                .save(output, name("blasting/obscuprum_ingot"));
+        blasting(NoxernaTags.ItemTags.RAW_UMBURAM_MATERIALS, NoxernaItems.UMBURAM_INGOT.get(),
+                0.7f, 100)
+                .group("umburam_ingot")
+                .save(output, name("blasting/umburam_ingot"));
+
         // Smithing Templates
         cloneSmithingTemplate(NoxernaItems.INETRA.get(), NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get())
                 .group("smithing_template")
                 .save(output, name("crafting/nihoxite_upgrade_smithing_template"));
-        // Smithing Template Alt recipes
+            // Alt recipes
         cloneSmithingTemplate(Items.NETHERRACK, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)
                 .group("smithing_template")
                 .save(output, name("crafting/netherite_upgrade_smithing_template_from_any_diamond"));

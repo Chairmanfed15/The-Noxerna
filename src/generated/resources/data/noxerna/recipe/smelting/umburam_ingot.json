@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "umburam_ingot",
+  "ingredient": {
+    "tag": "c:raw_materials/umburam"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:umburam_ingot"
+  }
+}

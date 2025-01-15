@@ -13,7 +13,7 @@
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "minecraft:bucket"
+      "id": "noxerna:complete_all_challenges"
     },
     "title": {
       "translate": "advancement.noxerna.complete_all_challenges.title"

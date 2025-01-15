@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.generators.tags;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
@@ -80,6 +80,9 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.FERREBRIS_BOOTS.get()).add(NoxernaItems.UMBURAM_BOOTS.get())
                 .add(NoxernaItems.ADAMUNA_BOOTS.get()).add(NoxernaItems.NIHOXITE_BOOTS.get())
                 .add(NoxernaItems.HEART_BOOTS.get());
+        // Materials
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(NoxernaItems.XENON_DYE.get()).add(NoxernaItems.ARGON_DYE.get());
         // Common tags
         // Copy from Block Tags
         this.copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
@@ -136,10 +139,18 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.INPERLUM_INGOT.get());
         tag(NoxernaTags.ItemTags.NIHOXITE_INGOTS)
                 .add(NoxernaItems.NIHOXITE_INGOT.get());
+            // Rods
         tag(NoxernaTags.ItemTags.WOODEN_RODS)
                 .addTag(NoxernaTags.ItemTags.NOBLEWOOD_RODS);
         tag(NoxernaTags.ItemTags.NOBLEWOOD_RODS)
                 .add(NoxernaItems.NOBLEWOOD_STICK.get());
+            // Dyes
+        tag(Tags.Items.DYES)
+                .addTag(NoxernaTags.ItemTags.XENON_DYES).addTag(NoxernaTags.ItemTags.ARGON_DYES);
+        tag(NoxernaTags.ItemTags.XENON_DYES)
+                .add(NoxernaItems.XENON_DYE.get());
+        tag(NoxernaTags.ItemTags.ARGON_DYES)
+                .add(NoxernaItems.ARGON_DYE.get());
         // Noxerna Tags
         // Copy from Block Tags
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);

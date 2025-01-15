@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/mysterious_alloy_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "hasnoxerna:mysterious_scrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:mysterious_scrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasnoxerna:mysterious_scrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/mysterious_alloy_plate"
+    ]
+  }
+}

@@ -1,12 +1,12 @@
 package net.chairmanfed.noxerna.registry;
 
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;

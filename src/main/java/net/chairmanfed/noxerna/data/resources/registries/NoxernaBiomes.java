@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.registry;
+package net.chairmanfed.noxerna.data.resources.registries;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.minecraft.core.HolderGetter;

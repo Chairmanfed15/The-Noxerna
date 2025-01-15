@@ -104,6 +104,9 @@ public class NoxernaBlocks {
             "argon_planks", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(3.5f).explosionResistance(3.0f)
                     .sound(NoxernaSoundTypes.NOBLEWOOD).ignitedByLava().lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> ARGON_STAIRS = BLOCKS.register(
+            "argon_stairs", () -> new StairBlock(ARGON_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get())));
 
     // Neon Wood set
     public static final DeferredBlock<Block> NEON_PLANKS = BLOCKS.register(
@@ -218,6 +221,9 @@ public class NoxernaBlocks {
             "ferrebris_block", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.5f).explosionResistance(7.5f)
                     .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> FERREBRIS_BARS = BLOCKS.register(
+            "ferrebris_bars", () -> new IronBarsBlock(
+                    BlockBehaviour.Properties.ofFullCopy(FERREBRIS_BLOCK.get()).noOcclusion()));
     public static final DeferredBlock<Block> FERREBRIS_PLATING = BLOCKS.register(
             "ferrebris_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(FERREBRIS_BLOCK.get())));
     public static final DeferredBlock<Block> FERREBRIS_PLATING_STAIRS = BLOCKS.register(
@@ -338,7 +344,15 @@ public class NoxernaBlocks {
             "oxidized_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
-
+    // Coloured Blocks
+    public static final DeferredBlock<Block> ARGON_CONCRETE = BLOCKS.register(
+            "argon_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> ARGON_CONCRETE_POWDER = BLOCKS.register(
+            "argon_concrete_powder",
+            () -> new ConcretePowderBlock(NoxernaBlocks.ARGON_CONCRETE.get(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE_POWDER)
+                    .lightLevel(state -> 12)));
     // Special Dimension Blocks
     public static final DeferredBlock<Block> VOIDROCK = BLOCKS.register(
             "voidrock", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)));

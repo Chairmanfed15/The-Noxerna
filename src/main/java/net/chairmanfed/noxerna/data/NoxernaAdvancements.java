@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import com.google.common.collect.ImmutableList;
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.chairmanfed.noxerna.registry.*;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
@@ -9,12 +10,9 @@ import net.minecraft.advancements.AdvancementRequirements;
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.advancements.critereon.*;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.advancements.packs.VanillaAdventureAdvancements;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -52,7 +50,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         // Advancement Root
         AdvancementHolder ROOT = Advancement.Builder.advancement()
                 .display(
-                        NoxernaBlocks.NOXUM.get(),
+                        new ItemStack(NoxernaItems.ROOT.get()),
                         Component.translatable("advancement." + TheNoxerna.MODID + ".root.title"),
                         Component.translatable("advancement." + TheNoxerna.MODID + ".root.description"),
                         ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, "textures/block/noxum_bricks.png"),
@@ -69,7 +67,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FIND_ABANDONED_PORTAL = Advancement.Builder.advancement()
                 .parent(ROOT)
                 .display(
-                        new ItemStack(Items.RAIL),
+                        new ItemStack(NoxernaItems.NOXERNA_PORTAL_FRAME.get()),
                         Component.translatable("advancement." + TheNoxerna.MODID + ".find_abandoned_portal.title"),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".find_abandoned_portal.description"),
@@ -86,7 +84,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder ENTER_NOXERNA = Advancement.Builder.advancement()
                 .parent(FIND_ABANDONED_PORTAL)
                 .display(
-                        new ItemStack(Items.FLINT_AND_STEEL),
+                        new ItemStack(NoxernaItems.PYROCHARGE.get()),
                         Component.translatable("advancement." + TheNoxerna.MODID + ".enter_noxerna.title"),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".enter_noxerna.description"),
@@ -575,7 +573,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder MINE_NATIVE_MINERALS = Advancement.Builder.advancement()
                 .parent(SMELT_FERREBRIS)
                 .display(
-                        new ItemStack(Items.BUNDLE),
+                        new ItemStack(NoxernaItems.MINE_NATIVE_MINERALS.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".mine_native_minerals.title"),
                         Component.translatable(
@@ -1288,7 +1286,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder KILL_ALL_NOXERNA_MOBS = Advancement.Builder.advancement()
                 .parent(DEFEAT_VOID_TYRANT)
                 .display(
-                        new ItemStack(Items.NETHERITE_SWORD),
+                        new ItemStack(NoxernaItems.NIHOXITE_SWORD.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".kill_all_noxerna_mobs.title"),
                         Component.translatable(
@@ -1305,7 +1303,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder COMPLETE_ALL_CHALLENGES = Advancement.Builder.advancement()
                 .parent(KILL_ALL_NOXERNA_MOBS)
                 .display(
-                        new ItemStack(Items.BUCKET),
+                        new ItemStack(NoxernaItems.COMPLETE_ALL_CHALLENGES.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".complete_all_challenges.title"),
                         Component.translatable(

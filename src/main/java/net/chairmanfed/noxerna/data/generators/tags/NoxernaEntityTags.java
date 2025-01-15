@@ -1,4 +1,4 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.generators.tags;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaTags;

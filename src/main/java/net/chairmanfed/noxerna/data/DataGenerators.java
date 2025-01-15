@@ -1,6 +1,10 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.data.generators.NoxernaRegistrySets;
+import net.chairmanfed.noxerna.data.generators.tags.NoxernaBlockTags;
+import net.chairmanfed.noxerna.data.generators.tags.NoxernaEntityTags;
+import net.chairmanfed.noxerna.data.generators.tags.NoxernaItemTags;
 import net.chairmanfed.noxerna.data.providers.NoxernaAdvancementProvider;
 import net.chairmanfed.noxerna.data.providers.NoxernaLootTableProvider;
 import net.minecraft.core.HolderLookup;
@@ -33,11 +37,11 @@ public class DataGenerators {
         // Assets
         generator.addProvider(client, new NoxernaBlockStateProvider(output, existingFileHelper));
         generator.addProvider(client, new NoxernaItemModels(output, existingFileHelper));
-        generator.addProvider(client, new NoxernaLanguageProvider(output, existingFileHelper));
+        generator.addProvider(client, new NoxernaLanguageData(output, existingFileHelper));
         generator.addProvider(client, new NoxernaSoundDefinitions(output, existingFileHelper));
 
         // Data
-        NoxernaRegistries datapack = new NoxernaRegistries(output, lookupProvider);
+        NoxernaRegistrySets datapack = new NoxernaRegistrySets(output, lookupProvider);
         generator.addProvider(server, datapack);
         BlockTagsProvider blockTags = new NoxernaBlockTags(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, blockTags);

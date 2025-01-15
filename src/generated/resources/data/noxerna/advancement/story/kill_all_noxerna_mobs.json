@@ -12,7 +12,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:netherite_sword"
+      "id": "noxerna:nihoxite_sword"
     },
     "title": {
       "translate": "advancement.noxerna.kill_all_noxerna_mobs.title"

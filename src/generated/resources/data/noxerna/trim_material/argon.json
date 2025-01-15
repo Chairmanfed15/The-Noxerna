@@ -1,0 +1,9 @@
+{
+  "asset_name": "argon",
+  "description": {
+    "color": "#B50A6C",
+    "translate": "trim_material.noxerna.argon"
+  },
+  "ingredient": "noxerna:argon_dye",
+  "item_model_index": 0.4
+}

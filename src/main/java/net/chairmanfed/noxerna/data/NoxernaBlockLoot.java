@@ -88,6 +88,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_BUTTON.get());
 
         dropSelf(NoxernaBlocks.ARGON_PLANKS.get());
+        dropSelf(NoxernaBlocks.ARGON_STAIRS.get());
 
         dropSelf(NoxernaBlocks.NEON_PLANKS.get());
 
@@ -123,6 +124,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
+        dropSelf(NoxernaBlocks.FERREBRIS_BARS.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
@@ -152,5 +154,8 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING.get());
+
+        dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+        dropSelf(NoxernaBlocks.ARGON_CONCRETE.get());
     }
 }

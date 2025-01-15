@@ -11,7 +11,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:rail"
+      "id": "noxerna:noxerna_portal_frame"
     },
     "title": {
       "translate": "advancement.noxerna.find_abandoned_portal.title"

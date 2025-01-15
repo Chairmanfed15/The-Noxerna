@@ -1,17 +1,13 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.block.NoxernaBlockStateProperties;
 import net.chairmanfed.noxerna.block.PebbleBlock;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -54,6 +50,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
         // Argon Wood set
         blockWithItem(NoxernaBlocks.ARGON_PLANKS);
+        stairBlockWithItem(NoxernaBlocks.ARGON_STAIRS, NoxernaBlocks.ARGON_PLANKS);
 
         // Neon Wood set
         blockWithItem(NoxernaBlocks.NEON_PLANKS);
@@ -95,6 +92,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
         // Ferrebris Metal set
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
+        paneBlockWithItem(NoxernaBlocks.FERREBRIS_BARS, "cutout");
         blockWithItem(NoxernaBlocks.FERREBRIS_PLATING);
         stairBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_STAIRS, NoxernaBlocks.FERREBRIS_PLATING);
         slabBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_SLAB, NoxernaBlocks.FERREBRIS_PLATING);
@@ -142,13 +140,20 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING);
         blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING);
 
+        // Coloured Blocks
+        blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);
+        blockWithItem(NoxernaBlocks.ARGON_CONCRETE);
+
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);
         blockWithItem(NoxernaBlocks.NOXERNA_PORTAL_FRAME);
+        basicBlock(NoxernaBlocks.NOXERNA_PORTAL);
     }
-
     private void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+    public void basicBlock(DeferredBlock<Block> block) {
+        this.simpleBlock(block.get(), cubeAll(block.get()));
     }
     public void simpleBlockItem(DeferredBlock<Block> block) {
         this.itemModels().withExistingParent(block.getId().toString(),
@@ -182,6 +187,12 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
     public void wallBlockWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         this.wallBlock((WallBlock) block.get(), this.blockTexture(baseBlock.get()));
         this.itemModels().wallInventory(block.getId().toString(), this.blockTexture(baseBlock.get()));
+    }
+    public void paneBlockWithItem(DeferredBlock<Block> block, String renderType) {
+        this.paneBlockWithRenderType((IronBarsBlock) block.get(),
+                this.blockTexture(block.get()),
+                this.blockTexture(block.get()), renderType);
+        this.itemModels().basicItem(block.get().asItem());
     }
     public void doorBlockWithItem(DeferredBlock<Block> block) {
         this.doorBlock((DoorBlock) block.get(),

@@ -2,13 +2,11 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaSoundEvents;
-import net.chairmanfed.noxerna.registry.NoxernaSoundTypes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.SoundDefinition;
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
-import net.neoforged.neoforge.registries.DeferredHolder;
 
 import javax.annotation.Nullable;
 
@@ -63,6 +61,6 @@ public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
         String subtitleKey = "subtitles.noxerna." + splitName[0] + "." + splitName[1];
         if (splitName.length > 2) subtitleKey += "." +splitName[2];
         definition.subtitle(subtitleKey);
-        NoxernaLanguageProvider.SUBTITLE_GENERATOR.put(subtitleKey, subtitle);
+        NoxernaLanguageData.SUBTITLE_GENERATOR.put(subtitleKey, subtitle);
     }
 }

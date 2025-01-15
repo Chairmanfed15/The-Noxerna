@@ -1,15 +1,15 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.registry.NoxernaItems;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-
-import java.util.function.Supplier;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class NoxernaItemModels extends ItemModelProvider {
     public NoxernaItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -17,87 +17,134 @@ public class NoxernaItemModels extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
-        basicItem(NoxernaItems.RAW_FERREBRIS.get());
-        basicItem(NoxernaItems.RAW_OBSCUPRUM.get());
-        basicItem(NoxernaItems.RAW_UMBURAM.get());
-        basicItem(NoxernaItems.RAW_INPERLUM.get());
-        basicItem(NoxernaItems.TENERYL.get());
-        basicItem(NoxernaItems.ADAMUNA.get());
-        basicItem(NoxernaItems.VITRAGOR.get());
-        toolItem((Supplier<Item>) NoxernaItems.VITRALISK.get());
-        basicItem(NoxernaItems.FERREBRIS_NUGGET.get());
-        basicItem(NoxernaItems.OBSCUPRUM_NUGGET.get());
-        basicItem(NoxernaItems.UMBURAM_NUGGET.get());
-        basicItem(NoxernaItems.INPERLUM_NUGGET.get());
-        basicItem(NoxernaItems.NIHOXITE_NUGGET.get());
-        basicItem(NoxernaItems.FERREBRIS_INGOT.get());
-        basicItem(NoxernaItems.OBSCUPRUM_INGOT.get());
-        basicItem(NoxernaItems.UMBURAM_INGOT.get());
-        basicItem(NoxernaItems.INPERLUM_INGOT.get());
-        basicItem(NoxernaItems.NIHOXITE_INGOT.get());
-        toolItem((Supplier<Item>) NoxernaItems.NOBLEWOOD_STICK.get());
-        basicItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get());
+        // Intermediates
+        flatItem(NoxernaItems.RAW_FERREBRIS);
+        flatItem(NoxernaItems.RAW_OBSCUPRUM);
+        flatItem(NoxernaItems.RAW_UMBURAM);
+        flatItem(NoxernaItems.RAW_INPERLUM);
+        flatItem(NoxernaItems.TENERYL);
+        flatItem(NoxernaItems.ADAMUNA);
+        flatItem(NoxernaItems.VITRAGOR);
+        flatItem(NoxernaItems.FERREBRIS_NUGGET);
+        flatItem(NoxernaItems.OBSCUPRUM_NUGGET);
+        flatItem(NoxernaItems.UMBURAM_NUGGET);
+        flatItem(NoxernaItems.INPERLUM_NUGGET);
+        flatItem(NoxernaItems.NIHOXITE_NUGGET);
+        flatItem(NoxernaItems.FERREBRIS_INGOT);
+        flatItem(NoxernaItems.OBSCUPRUM_INGOT);
+        flatItem(NoxernaItems.UMBURAM_INGOT);
+        flatItem(NoxernaItems.INPERLUM_INGOT);
+        flatItem(NoxernaItems.NIHOXITE_INGOT);
+        flatItem(NoxernaItems.MYSTERIOUS_SCRAP);
+        flatItem(NoxernaItems.MYSTERIOUS_ALLOY_PLATE);
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_STICK);
+        wipItem(NoxernaItems.GLOWGRAIN);
+        wipItem(NoxernaItems.ROCKHIDE);
+        flatItem(NoxernaItems.SULAZE_CORE);
+        flatItem(NoxernaItems.XENON_DYE);
+        wipItem(NoxernaItems.KRYPTON_DYE);
+        flatItem(NoxernaItems.ARGON_DYE);
+        wipItem(NoxernaItems.NEON_DYE);
+        wipItem(NoxernaItems.VITRAGOR_DUST);
+        wipItem(NoxernaItems.SULAZE_POWDER);
+        flatItem(NoxernaItems.NOBLEWOOD_BOWL);
+        flatItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
+        // Food
 
-        toolItem(NoxernaItems.NOBLEWOOD_AXE);
-        toolItem(NoxernaItems.NOBLEWOOD_HOE);
-        toolItem(NoxernaItems.NOBLEWOOD_PICKAXE);
-        toolItem(NoxernaItems.NOBLEWOOD_SHOVEL);
-        toolItem(NoxernaItems.NOBLEWOOD_SWORD);
-
-        toolItem(NoxernaItems.NOXSTONE_AXE);
-        toolItem(NoxernaItems.NOXSTONE_HOE);
-        toolItem(NoxernaItems.NOXSTONE_PICKAXE);
-        toolItem(NoxernaItems.NOXSTONE_SHOVEL);
-        toolItem(NoxernaItems.NOXSTONE_SWORD);
-
-        toolItem(NoxernaItems.FERREBRIS_AXE);
-        toolItem(NoxernaItems.FERREBRIS_HOE);
-        toolItem(NoxernaItems.FERREBRIS_PICKAXE);
-        toolItem(NoxernaItems.FERREBRIS_SHOVEL);
-        toolItem(NoxernaItems.FERREBRIS_SWORD);
-        basicItem(NoxernaItems.FERREBRIS_HELMET.getId());
-        basicItem(NoxernaItems.FERREBRIS_CHESTPLATE.getId());
-        basicItem(NoxernaItems.FERREBRIS_LEGGINGS.getId());
-        basicItem(NoxernaItems.FERREBRIS_BOOTS.getId());
-
-        toolItem(NoxernaItems.UMBURAM_AXE);
-        toolItem(NoxernaItems.UMBURAM_HOE);
-        toolItem(NoxernaItems.UMBURAM_PICKAXE);
-        toolItem(NoxernaItems.UMBURAM_SHOVEL);
-        toolItem(NoxernaItems.UMBURAM_SWORD);
-        basicItem(NoxernaItems.UMBURAM_HELMET.getId());
-        basicItem(NoxernaItems.UMBURAM_CHESTPLATE.getId());
-        basicItem(NoxernaItems.UMBURAM_LEGGINGS.getId());
-        basicItem(NoxernaItems.UMBURAM_BOOTS.getId());
-
-        toolItem(NoxernaItems.ADAMUNA_AXE);
-        toolItem(NoxernaItems.ADAMUNA_HOE);
-        toolItem(NoxernaItems.ADAMUNA_PICKAXE);
-        toolItem(NoxernaItems.ADAMUNA_SHOVEL);
-        toolItem(NoxernaItems.ADAMUNA_SWORD);
-        basicItem(NoxernaItems.ADAMUNA_HELMET.getId());
-        basicItem(NoxernaItems.ADAMUNA_CHESTPLATE.getId());
-        basicItem(NoxernaItems.ADAMUNA_LEGGINGS.getId());
-        basicItem(NoxernaItems.ADAMUNA_BOOTS.getId());
-
-        toolItem(NoxernaItems.NIHOXITE_AXE);
-        toolItem(NoxernaItems.NIHOXITE_HOE);
-        toolItem(NoxernaItems.NIHOXITE_PICKAXE);
-        toolItem(NoxernaItems.NIHOXITE_SHOVEL);
-        toolItem(NoxernaItems.NIHOXITE_SWORD);
-        basicItem(NoxernaItems.NIHOXITE_HELMET.getId());
-        basicItem(NoxernaItems.NIHOXITE_CHESTPLATE.getId());
-        basicItem(NoxernaItems.NIHOXITE_LEGGINGS.getId());
-        basicItem(NoxernaItems.NIHOXITE_BOOTS.getId());
-
-        basicItem(NoxernaItems.HEART_HELMET.getId());
-        basicItem(NoxernaItems.HEART_CHESTPLATE.getId());
-        basicItem(NoxernaItems.HEART_LEGGINGS.getId());
-        basicItem(NoxernaItems.HEART_BOOTS.getId());
+        // Tiered Tools
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_AXE);
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_HOE);
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_PICKAXE);
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_SHOVEL);
+        handheldFlatItem(NoxernaItems.NOBLEWOOD_SWORD);
+        handheldFlatItem(NoxernaItems.NOXSTONE_AXE);
+        handheldFlatItem(NoxernaItems.NOXSTONE_HOE);
+        handheldFlatItem(NoxernaItems.NOXSTONE_PICKAXE);
+        handheldFlatItem(NoxernaItems.NOXSTONE_SHOVEL);
+        handheldFlatItem(NoxernaItems.NOXSTONE_SWORD);
+        handheldFlatItem(NoxernaItems.FERREBRIS_AXE);
+        handheldFlatItem(NoxernaItems.FERREBRIS_HOE);
+        handheldFlatItem(NoxernaItems.FERREBRIS_PICKAXE);
+        handheldFlatItem(NoxernaItems.FERREBRIS_SHOVEL);
+        handheldFlatItem(NoxernaItems.FERREBRIS_SWORD);
+        handheldFlatItem(NoxernaItems.UMBURAM_AXE);
+        handheldFlatItem(NoxernaItems.UMBURAM_HOE);
+        handheldFlatItem(NoxernaItems.UMBURAM_PICKAXE);
+        handheldFlatItem(NoxernaItems.UMBURAM_SHOVEL);
+        handheldFlatItem(NoxernaItems.UMBURAM_SWORD);
+        handheldFlatItem(NoxernaItems.ADAMUNA_AXE);
+        handheldFlatItem(NoxernaItems.ADAMUNA_HOE);
+        handheldFlatItem(NoxernaItems.ADAMUNA_PICKAXE);
+        handheldFlatItem(NoxernaItems.ADAMUNA_SHOVEL);
+        handheldFlatItem(NoxernaItems.ADAMUNA_SWORD);
+        handheldFlatItem(NoxernaItems.NIHOXITE_AXE);
+        handheldFlatItem(NoxernaItems.NIHOXITE_HOE);
+        handheldFlatItem(NoxernaItems.NIHOXITE_PICKAXE);
+        handheldFlatItem(NoxernaItems.NIHOXITE_SHOVEL);
+        handheldFlatItem(NoxernaItems.NIHOXITE_SWORD);
+        // Misc Tools
+        handheldFlatItem(NoxernaItems.VITRALISK);
+        flatItem(NoxernaItems.PYROCHARGE);
+        // Armor
+        wipItem(NoxernaItems.ROCKHIDE_HELMET);
+        wipItem(NoxernaItems.ROCKHIDE_CHESTPLATE);
+        wipItem(NoxernaItems.ROCKHIDE_LEGGINGS);
+        wipItem(NoxernaItems.ROCKHIDE_BOOTS);
+        wipItem(NoxernaItems.EXOSKELETON_HELMET);
+        wipItem(NoxernaItems.EXOSKELETON_CHESTPLATE);
+        wipItem(NoxernaItems.EXOSKELETON_LEGGINGS);
+        wipItem(NoxernaItems.EXOSKELETON_BOOTS);
+        flatItem(NoxernaItems.FERREBRIS_HELMET);
+        flatItem(NoxernaItems.FERREBRIS_CHESTPLATE);
+        flatItem(NoxernaItems.FERREBRIS_LEGGINGS);
+        flatItem(NoxernaItems.FERREBRIS_BOOTS);
+        flatItem(NoxernaItems.UMBURAM_HELMET);
+        flatItem(NoxernaItems.UMBURAM_CHESTPLATE);
+        flatItem(NoxernaItems.UMBURAM_LEGGINGS);
+        flatItem(NoxernaItems.UMBURAM_BOOTS);
+        flatItem(NoxernaItems.ADAMUNA_HELMET);
+        flatItem(NoxernaItems.ADAMUNA_CHESTPLATE);
+        flatItem(NoxernaItems.ADAMUNA_LEGGINGS);
+        flatItem(NoxernaItems.ADAMUNA_BOOTS);
+        flatItem(NoxernaItems.NIHOXITE_HELMET);
+        flatItem(NoxernaItems.NIHOXITE_CHESTPLATE);
+        flatItem(NoxernaItems.NIHOXITE_LEGGINGS);
+        flatItem(NoxernaItems.NIHOXITE_BOOTS);
+        flatItem(NoxernaItems.HEART_HELMET);
+        flatItem(NoxernaItems.HEART_CHESTPLATE);
+        flatItem(NoxernaItems.HEART_LEGGINGS);
+        flatItem(NoxernaItems.HEART_BOOTS);
+        // Advancement Dummy Items
+        advancementItem(NoxernaItems.ROOT);
+        advancementItem(NoxernaItems.MINE_NATIVE_MINERALS);
+        advancementItem(NoxernaItems.COMPLETE_ALL_CHALLENGES);
     }
-
-    public void toolItem(Supplier<Item> item) {
-        this.withExistingParent(BuiltInRegistries.ITEM.getKey(item.get()).getPath(), mcLoc("item/handheld"))
-                .texture("layer0", modLoc("item/" + BuiltInRegistries.ITEM.getKey(item.get()).getPath()));
+    public void flatItem(DeferredItem<Item> item) {
+        this.getBuilder(item.getId().toString())
+                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                .texture("layer0",
+                        ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(),
+                                "item/" + item.getId().getPath()));
+    }
+    public void handheldFlatItem(DeferredItem<Item> item) {
+        this.getBuilder(item.getId().toString())
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0",
+                        ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(),
+                                "item/" + item.getId().getPath()));
+    }
+    public void wipItem(DeferredItem<Item> item) {
+        this.getBuilder(item.getId().toString())
+                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                .texture("layer0",
+                        ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(),
+                                "item/wip_placeholder"));
+    }
+    public void advancementItem(DeferredItem<Item> item) {
+        this.getBuilder(item.getId().toString())
+                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                .texture("layer0",
+                        ResourceLocation.fromNamespaceAndPath(item.getId().getNamespace(),
+                                "item/advancements/" + item.getId().getPath()));
     }
 }

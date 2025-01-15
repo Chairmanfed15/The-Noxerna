@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "noxerna:block/argon_planks",
+    "side": "noxerna:block/argon_planks",
+    "top": "noxerna:block/argon_planks"
+  }
+}

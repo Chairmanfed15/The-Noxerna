@@ -51,6 +51,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaBlocks.KRYPTON_BUTTON);
                         // Argon
                         output.accept(NoxernaBlocks.ARGON_PLANKS);
+                        output.accept(NoxernaBlocks.ARGON_STAIRS);
                         // Neon
                         output.accept(NoxernaBlocks.NEON_PLANKS);
                         // Stone Sets
@@ -94,6 +95,7 @@ public class NoxernaCreativeModeTabs {
                         // Material Storage & Decoration Blocks
                         // Ferrebris
                         output.accept(NoxernaBlocks.FERREBRIS_BLOCK);
+                        output.accept(NoxernaBlocks.FERREBRIS_BARS);
                         output.accept(NoxernaBlocks.FERREBRIS_PLATING);
                         output.accept(NoxernaBlocks.FERREBRIS_PLATING_STAIRS);
                         output.accept(NoxernaBlocks.FERREBRIS_PLATING_SLAB);
@@ -139,28 +141,35 @@ public class NoxernaCreativeModeTabs {
                             // Exposed
                             // Weathered
                             // Oxidized
-                    }).build()
-    );
+                    }).build());
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
+            NOXERNA_COLORED_BLOCKS = CREATIVE_TABS.register(
+                    "noxerna_colored_blocks", () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".colored_blocks"))
+                    .icon(()-> new ItemStack(NoxernaBlocks.ARGON_CONCRETE.get()))
+                    .displayItems((params, output) -> {
+                        output.accept(NoxernaBlocks.ARGON_CONCRETE);
+                        output.accept(NoxernaBlocks.ARGON_CONCRETE_POWDER);
+                    }).withTabsBefore(NOXERNA_BUILDING_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_NATURAL_BLOCKS = CREATIVE_TABS.register(
-            "noxerna_natural_blocks", () -> CreativeModeTab.builder()
+                    "noxerna_natural_blocks", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".natural_blocks"))
                     .icon(()-> new ItemStack(NoxernaBlocks.NOXUM.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaBlocks.SOLTRA);
-                        output.accept(NoxernaBlocks.SOLTRA_PEBBLE);
                         output.accept(NoxernaBlocks.NOXUM);
-                        output.accept(NoxernaBlocks.NOXUM_PEBBLE);
                         output.accept(NoxernaBlocks.AESTUM);
-                        output.accept(NoxernaBlocks.AESTUM_PEBBLE);
                         output.accept(NoxernaBlocks.INETRA);
+                        output.accept(NoxernaBlocks.SOLTRA_PEBBLE);
+                        output.accept(NoxernaBlocks.NOXUM_PEBBLE);
+                        output.accept(NoxernaBlocks.AESTUM_PEBBLE);
                         output.accept(NoxernaBlocks.INETRA_PEBBLE);
                         output.accept(NoxernaBlocks.XENON_LOG);
                         output.accept(NoxernaBlocks.KRYPTON_LOG);
                         output.accept(NoxernaBlocks.VOIDROCK);
                     })
-                    .withTabsBefore(NOXERNA_BUILDING_BLOCKS.getKey()).build()
-    );
+                    .withTabsBefore(NOXERNA_COLORED_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_TOOLS_AND_UTILITIES = CREATIVE_TABS.register(
             "noxerna_tools_and_utilities", () -> CreativeModeTab.builder()
@@ -194,8 +203,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.PYROCHARGE.get());
                         output.accept(NoxernaItems.VITRALISK.get());
                     })
-                    .withTabsBefore(NOXERNA_NATURAL_BLOCKS.getKey()).build()
-    );
+                    .withTabsBefore(NOXERNA_NATURAL_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_COMBAT = CREATIVE_TABS.register(
             "noxerna_combat", () -> CreativeModeTab.builder()
@@ -244,8 +252,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.HEART_BOOTS.get());
                         output.accept(NoxernaItems.VITRALISK.get());
                     })
-                    .withTabsBefore(NOXERNA_TOOLS_AND_UTILITIES.getKey()).build()
-    );
+                    .withTabsBefore(NOXERNA_TOOLS_AND_UTILITIES.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_INGREDIENTS = CREATIVE_TABS.register(
             "noxerna_ingredients", () -> CreativeModeTab.builder()
@@ -269,16 +276,20 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.UMBURAM_INGOT.get());
                         output.accept(NoxernaItems.INPERLUM_INGOT.get());
                         output.accept(NoxernaItems.NIHOXITE_INGOT.get());
+                        output.accept(NoxernaItems.MYSTERIOUS_SCRAP.get());
+                        output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get());
                         output.accept(NoxernaItems.NOBLEWOOD_STICK.get());
                         output.accept(NoxernaItems.GLOWGRAIN.get());
                         output.accept(NoxernaItems.ROCKHIDE.get());
-                        output.accept(NoxernaItems.SULAZE_CORE.get());
-                        output.accept(NoxernaItems.MYSTERIOUS_SCRAP.get());
-                        output.accept(NoxernaItems.NOBLEWOOD_BOWL.get());
-                        output.accept(NoxernaItems.VITRAGOR_DUST.get());
-                        output.accept(NoxernaItems.SULAZE_POWDER.get());
-                        output.accept(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get());
+                        output.accept(NoxernaItems.SULAZE_CORE);
+                        output.accept(NoxernaItems.XENON_DYE);
+                        output.accept(NoxernaItems.KRYPTON_DYE);
+                        output.accept(NoxernaItems.ARGON_DYE);
+                        output.accept(NoxernaItems.NEON_DYE);
+                        output.accept(NoxernaItems.NOBLEWOOD_BOWL);
+                        output.accept(NoxernaItems.VITRAGOR_DUST);
+                        output.accept(NoxernaItems.SULAZE_POWDER);
+                        output.accept(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
                     })
-                    .withTabsBefore(NOXERNA_COMBAT.getKey()).build()
-    );
+                    .withTabsBefore(NOXERNA_COMBAT.getKey()).build());
 }

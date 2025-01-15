@@ -52,7 +52,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:bundle"
+      "id": "noxerna:mine_native_minerals"
     },
     "title": {
       "translate": "advancement.noxerna.mine_native_minerals.title"

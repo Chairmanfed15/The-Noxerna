@@ -121,6 +121,13 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has" + input, has(input));
     }
+    public ShapedRecipeBuilder packing2x2(Item input, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has" + input, has(input));
+    }
     public ShapedRecipeBuilder packing3x3(Item input, ItemLike result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
                 .pattern("###")
