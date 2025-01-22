@@ -2,7 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -22,7 +22,6 @@ public class NoxernaLanguageData extends LanguageProvider {
         this.add("advancement." + TheNoxerna.MODID + "." + id + ".title", title);
         this.add("advancement." + TheNoxerna.MODID + "." + id + ".description", description);
     }
-
     protected void addUpgradeTemplate(String upgradeType, String name, String ingredients, String appliedTo) {
         this.add("upgrade." + TheNoxerna.MODID + "." + upgradeType, name);
         this.add("item." + TheNoxerna.MODID + ".smithing_template."
@@ -33,6 +32,10 @@ public class NoxernaLanguageData extends LanguageProvider {
                 + upgradeType + ".additions_slot_description", "Add " + ingredients);
         this.add("item." + TheNoxerna.MODID + ".smithing_template."
                 + upgradeType + ".base_slot_description", "Add " + appliedTo);
+    }
+    protected void addTrimMaterial(String material, String name) {
+        this.add("trim_material." + TheNoxerna.MODID + "." + material,
+                name + " Material");
     }
 
     @Override
@@ -46,7 +49,13 @@ public class NoxernaLanguageData extends LanguageProvider {
         add("itemGroup." + TheNoxerna.MODID + ".ingredients", "Noxerna Ingredients");
         // Game Rules
         add("gamerule.maxQuakeMagnitude", "Maximum Quake Magnitude");
-
+        // Trim Materials
+        addTrimMaterial("argon", "Argon");
+        addTrimMaterial("krypton", "Krypton");
+        addTrimMaterial("neon", "Neon");
+        addTrimMaterial("obscuprum", "Obscuprum");
+        addTrimMaterial("oxidised_obscuprum", "Obscuprum (Oxidized)");
+        addTrimMaterial("xenon", "Xenon");
         // Building Blocks
         // Xenon Wood set
         addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
@@ -146,22 +155,22 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.OBSCUPRUM_BLOCK, "Block of Obscuprum");
         addBlock(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK, "Exposed Obscuprum");
         addBlock(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK, "Weathered Obscuprum");
-        addBlock(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BLOCK, "Oxidized Obscuprum");
+        addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK, "Oxidized Obscuprum");
             // Cut
         addBlock(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK, "Cut Obscuprum");
         addBlock(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK, "Exposed Cut Obscuprum");
         addBlock(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK, "Weathered Cut Obscuprum");
-        addBlock(NoxernaBlocks.OXIDIZED_CUT_OBSCUPRUM_BLOCK, "Oxidized Cut Obscuprum");
+        addBlock(NoxernaBlocks.OXIDISED_CUT_OBSCUPRUM_BLOCK, "Oxidized Cut Obscuprum");
             // Bricks
         addBlock(NoxernaBlocks.OBSCUPRUM_BRICKS, "Obscuprum Bricks");
         addBlock(NoxernaBlocks.EXPOSED_OBSCUPRUM_BRICKS, "Exposed Obscuprum Bricks");
         addBlock(NoxernaBlocks.WEATHERED_OBSCUPRUM_BRICKS, "Weathered Obscuprum Bricks");
-        addBlock(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BRICKS, "Oxidized Obscuprum Bricks");
+        addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_BRICKS, "Oxidized Obscuprum Bricks");
             // Plating
         addBlock(NoxernaBlocks.OBSCUPRUM_PLATING, "Obscuprum Plating");
         addBlock(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING, "Exposed Obscuprum Plating");
         addBlock(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING, "Weathered Obscuprum Plating");
-        addBlock(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING, "Oxidized Obscuprum Plating");
+        addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING, "Oxidized Obscuprum Plating");
         // Colored Blocks
             // Concrete
         addBlock(NoxernaBlocks.ARGON_CONCRETE, "Argon Concrete");
@@ -169,7 +178,10 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.ARGON_CONCRETE_POWDER, "Argon Concrete Powder");
         // Natural Blocks
         // Stones
+        addBlock(NoxernaBlocks.SOLTRA_PEBBLE, "Soltra Pebble");
         addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
+        addBlock(NoxernaBlocks.AESTUM_PEBBLE, "Aestum Pebble");
+        addBlock(NoxernaBlocks.INETRA_PEBBLE, "Inetra Pebble");
         addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
         // Mystery Blocks
         addBlock(NoxernaBlocks.NOXERNA_PORTAL, "Noxerna Portal");
@@ -199,15 +211,19 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.MYSTERIOUS_SCRAP, "Mysterious Scrap");
         addItem(NoxernaItems.MYSTERIOUS_ALLOY_PLATE, "Mysterious Alloy Plate");
         // Misc
+        addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
+        addItem(NoxernaItems.GLOWGRAIN, "Glowgrain");
+        addItem(NoxernaItems.ROCKHIDE, "Rockhide");
         addItem(NoxernaItems.SULAZE_CORE, "Sulaze Core");
         addItem(NoxernaItems.XENON_DYE, "Xenon Dye");
+        addItem(NoxernaItems.KRYPTON_DYE, "Krypton Dye");
         addItem(NoxernaItems.ARGON_DYE, "Argon Dye");
-        addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
+        addItem(NoxernaItems.NEON_DYE, "Neon Dye");
         addItem(NoxernaItems.NOBLEWOOD_BOWL, "Noblewood Bowl");
+        addItem(NoxernaItems.VITRAGOR_DUST, "Vitragor Dust");
+        addItem(NoxernaItems.SULAZE_POWDER, "Sulaze Powder");
         // Banner Patterns
-
         // Pottery Sherds
-
         // Smithing Templates
         addItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
         addUpgradeTemplate("nihoxite_upgrade", "Nihoxite Upgrade",
@@ -246,6 +262,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.NIHOXITE_SWORD, "Nihoxite Sword");
         // Misc
         addItem(NoxernaItems.PYROCHARGE, "Pyrocharge");
+        addItem(NoxernaItems.PICKADZE, "Pickadze");
         addItem(NoxernaItems.VITRALISK, "Vitralisk");
         // Armor
         addItem(NoxernaItems.ROCKHIDE_HELMET, "Rockhide Cap");
@@ -285,6 +302,8 @@ public class NoxernaLanguageData extends LanguageProvider {
         // Common Tags
             // Material Storage Blocks
         add(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS, "Ferrebris Storage Blocks");
+            // Dyed Blocks
+        add(NoxernaTags.BlockTags.DYED_ARGON, "Argon Dyed Blocks");
         // Noxerna Tags
         add(NoxernaTags.BlockTags.BOSS_IMMUNE, "Bosses Cannot Destroy");
         add(NoxernaTags.BlockTags.INFINIBURN_NOXERNA, "Burns Forever in Noxerna");
@@ -292,7 +311,6 @@ public class NoxernaLanguageData extends LanguageProvider {
         add(NoxernaTags.BlockTags.QUAKE_IMMUNE, "Immune to Quakes");
         add(NoxernaTags.BlockTags.XENON_LOGS, "Xenon Logs");
         add(NoxernaTags.BlockTags.KRYPTON_LOGS, "Xenon Logs");
-
         // Item Tags
         // Common Tags
             // Raw Materials
@@ -302,6 +320,10 @@ public class NoxernaLanguageData extends LanguageProvider {
         add(NoxernaTags.ItemTags.RAW_INPERLUM_MATERIALS, "Inperlum Raw Materials");
             // Ingots
         add(NoxernaTags.ItemTags.FERREBRIS_INGOTS, "Ferrebris Ingots");
+        add(NoxernaTags.ItemTags.OBSCUPRUM_INGOTS, "Obscuprum Ingots");
+        add(NoxernaTags.ItemTags.UMBURAM_INGOTS, "Umburam Ingots");
+        add(NoxernaTags.ItemTags.INPERLUM_INGOTS, "Inperlum Ingots");
+        add(NoxernaTags.ItemTags.NIHOXITE_INGOTS, "Nihoxite Ingots");
         // Noxerna Tags
             // Block set groups
         add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, "Noblewood Planks");
@@ -312,6 +334,8 @@ public class NoxernaLanguageData extends LanguageProvider {
             // Advancement Logic
         add(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT, "Completes Hard Shadowy Rock");
         add(NoxernaTags.ItemTags.COMPLETES_NOXERNA_TOOLS_ADVANCEMENT, "Completes A Better Tool for the Job");
+            // Tools
+        add(NoxernaTags.ItemTags.PICKADZES, "Pickadzes");
             // Tool Materials
         add(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, "Noxstone Tool Materials");
         add(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, "Ferrebris Tool Materials");

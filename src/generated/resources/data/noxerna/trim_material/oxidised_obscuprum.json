@@ -1,0 +1,9 @@
+{
+  "asset_name": "oxidised_obscuprum",
+  "description": {
+    "color": "#674364",
+    "translate": "trim_material.noxerna.oxidised_obscuprum"
+  },
+  "ingredient": "noxerna:raw_obscuprum",
+  "item_model_index": 0.4
+}

@@ -2,7 +2,7 @@ package net.chairmanfed.noxerna.data.generators.tags;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -36,6 +36,9 @@ public class NoxernaItemTags extends ItemTagsProvider {
         this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
         this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
         this.copy(BlockTags.STONE_BUTTONS, ItemTags.STONE_BUTTONS);
+        // Enchanting
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .addTag(NoxernaTags.ItemTags.PICKADZES);
         // Tools
         tag(ItemTags.AXES)
                 .add(NoxernaItems.NOBLEWOOD_AXE.get()).add(NoxernaItems.NOXSTONE_AXE.get())
@@ -82,11 +85,23 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.HEART_BOOTS.get());
         // Materials
         tag(ItemTags.TRIM_MATERIALS)
-                .add(NoxernaItems.XENON_DYE.get()).add(NoxernaItems.ARGON_DYE.get());
+                .add(NoxernaItems.ARGON_DYE.get()).add(NoxernaItems.KRYPTON_DYE.get())
+                .add(NoxernaItems.NEON_DYE.get()).add(NoxernaItems.OBSCUPRUM_INGOT.get())
+                .add(NoxernaItems.RAW_OBSCUPRUM.get()).add(NoxernaItems.XENON_DYE.get());
         // Common tags
         // Copy from Block Tags
         this.copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
         this.copy(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS, NoxernaTags.ItemTags.FERREBRIS_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS, NoxernaTags.ItemTags.UMBURAM_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.TENERYL_STORAGE_BLOCKS, NoxernaTags.ItemTags.TENERYL_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.ADAMUNA_STORAGE_BLOCKS, NoxernaTags.ItemTags.ADAMUNA_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.INPERLUM_STORAGE_BLOCKS, NoxernaTags.ItemTags.INPERLUM_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS, NoxernaTags.ItemTags.NIHOXITE_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS, NoxernaTags.ItemTags.VITRAGOR_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS, NoxernaTags.ItemTags.OBSCUPRUM_STORAGE_BLOCKS);
+        // Tools
+        tag(Tags.Items.TOOLS)
+                .addTag(NoxernaTags.ItemTags.PICKADZES);
         // Ingredient Groupings
             // Raw Materials
         tag(Tags.Items.RAW_MATERIALS)
@@ -146,11 +161,16 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.NOBLEWOOD_STICK.get());
             // Dyes
         tag(Tags.Items.DYES)
-                .addTag(NoxernaTags.ItemTags.XENON_DYES).addTag(NoxernaTags.ItemTags.ARGON_DYES);
+                .addTag(NoxernaTags.ItemTags.XENON_DYES).addTag(NoxernaTags.ItemTags.KRYPTON_DYES)
+                .addTag(NoxernaTags.ItemTags.ARGON_DYES).addTag(NoxernaTags.ItemTags.NEON_DYES);
         tag(NoxernaTags.ItemTags.XENON_DYES)
                 .add(NoxernaItems.XENON_DYE.get());
+        tag(NoxernaTags.ItemTags.KRYPTON_DYES)
+                .add(NoxernaItems.KRYPTON_DYE.get());
         tag(NoxernaTags.ItemTags.ARGON_DYES)
                 .add(NoxernaItems.ARGON_DYE.get());
+        tag(NoxernaTags.ItemTags.NEON_DYES)
+                .add(NoxernaItems.NEON_DYE.get());
         // Noxerna Tags
         // Copy from Block Tags
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
@@ -163,6 +183,9 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.NOBLEWOOD_PICKAXE.get()).add(NoxernaItems.NOXSTONE_PICKAXE.get())
                 .add(NoxernaItems.FERREBRIS_PICKAXE.get()).add(NoxernaItems.UMBURAM_PICKAXE.get())
                 .add(NoxernaItems.ADAMUNA_PICKAXE.get()).add(NoxernaItems.NIHOXITE_PICKAXE.get());
+        // Tools
+        tag(NoxernaTags.ItemTags.PICKADZES)
+                .add(NoxernaItems.PICKADZE.get());
         // Alt Material Grouping
         tag(NoxernaTags.ItemTags.ANY_IRON_INGOT)
                 .addTag(NoxernaTags.ItemTags.IRON_INGOTS).addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS);

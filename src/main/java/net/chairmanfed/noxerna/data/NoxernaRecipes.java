@@ -3,16 +3,13 @@ package net.chairmanfed.noxerna.data;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.providers.NoxernaRecipeProvider;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 

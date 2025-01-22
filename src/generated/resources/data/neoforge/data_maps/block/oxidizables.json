@@ -13,10 +13,10 @@
       "next_oxidation_stage": "noxerna:exposed_obscuprum_block"
     },
     "noxerna:weathered_cut_obscuprum_block": {
-      "next_oxidation_stage": "noxerna:oxidized_cut_obscuprum_block"
+      "next_oxidation_stage": "noxerna:oxidised_cut_obscuprum_block"
     },
     "noxerna:weathered_obscuprum_block": {
-      "next_oxidation_stage": "noxerna:oxidized_obscuprum_block"
+      "next_oxidation_stage": "noxerna:oxidised_obscuprum_block"
     }
   }
 }

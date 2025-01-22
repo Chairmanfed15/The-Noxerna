@@ -1,0 +1,9 @@
+{
+  "asset_name": "obscuprum",
+  "description": {
+    "color": "#436467",
+    "translate": "trim_material.noxerna.obscuprum"
+  },
+  "ingredient": "noxerna:obscuprum_ingot",
+  "item_model_index": 0.9
+}

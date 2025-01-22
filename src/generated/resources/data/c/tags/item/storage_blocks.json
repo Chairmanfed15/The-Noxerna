@@ -1,5 +1,12 @@
 {
   "values": [
-    "#c:storage_blocks/ferrebris"
+    "#c:storage_blocks/ferrebris",
+    "#c:storage_blocks/umburam",
+    "#c:storage_blocks/teneryl",
+    "#c:storage_blocks/adamuna",
+    "#c:storage_blocks/inperlum",
+    "#c:storage_blocks/nihoxite",
+    "#c:storage_blocks/vitragor",
+    "#c:storage_blocks/obscuprum"
   ]
 }

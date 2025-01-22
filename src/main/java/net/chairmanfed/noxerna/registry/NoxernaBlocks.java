@@ -3,7 +3,6 @@ package net.chairmanfed.noxerna.registry;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlockSetTypes;
 import net.chairmanfed.noxerna.block.PebbleBlock;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
@@ -286,8 +285,8 @@ public class NoxernaBlocks {
             "weathered_obscuprum_block",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BLOCK.get())));
-    public static final DeferredBlock<Block> OXIDIZED_OBSCUPRUM_BLOCK = BLOCKS.register(
-            "oxidized_obscuprum_block",
+    public static final DeferredBlock<Block> OXIDISED_OBSCUPRUM_BLOCK = BLOCKS.register(
+            "oxidised_obscuprum_block",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BLOCK.get())));
     // Cut
@@ -304,8 +303,8 @@ public class NoxernaBlocks {
             "weathered_cut_obscuprum_block",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
                     BlockBehaviour.Properties.ofFullCopy(CUT_OBSCUPRUM_BLOCK.get())));
-    public static final DeferredBlock<Block> OXIDIZED_CUT_OBSCUPRUM_BLOCK = BLOCKS.register(
-            "oxidized_cut_obscuprum_block",
+    public static final DeferredBlock<Block> OXIDISED_CUT_OBSCUPRUM_BLOCK = BLOCKS.register(
+            "oxidised_cut_obscuprum_block",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(CUT_OBSCUPRUM_BLOCK.get())));
     // Bricks
@@ -322,8 +321,8 @@ public class NoxernaBlocks {
             "weathered_obscuprum_bricks",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BRICKS.get())));
-    public static final DeferredBlock<Block> OXIDIZED_OBSCUPRUM_BRICKS = BLOCKS.register(
-            "oxidized_obscuprum_bricks",
+    public static final DeferredBlock<Block> OXIDISED_OBSCUPRUM_BRICKS = BLOCKS.register(
+            "oxidised_obscuprum_bricks",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BRICKS.get())));
     // Plating
@@ -340,8 +339,8 @@ public class NoxernaBlocks {
             "weathered_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
-    public static final DeferredBlock<Block> OXIDIZED_OBSCUPRUM_PLATING = BLOCKS.register(
-            "oxidized_obscuprum_plating",
+    public static final DeferredBlock<Block> OXIDISED_OBSCUPRUM_PLATING = BLOCKS.register(
+            "oxidised_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
     // Coloured Blocks

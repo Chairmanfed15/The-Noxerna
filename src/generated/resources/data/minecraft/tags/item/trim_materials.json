@@ -1,6 +1,10 @@
 {
   "values": [
-    "noxerna:xenon_dye",
-    "noxerna:argon_dye"
+    "noxerna:argon_dye",
+    "noxerna:krypton_dye",
+    "noxerna:neon_dye",
+    "noxerna:obscuprum_ingot",
+    "noxerna:raw_obscuprum",
+    "noxerna:xenon_dye"
   ]
 }

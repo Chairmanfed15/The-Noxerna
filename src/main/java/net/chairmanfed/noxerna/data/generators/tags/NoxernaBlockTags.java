@@ -29,7 +29,7 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(BlockTags.LAVA_POOL_STONE_CANNOT_REPLACE)
                 .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         // Mining Logic
-            // Valid Tools
+            // Valid Tool Assignment
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(NoxernaBlocks.NOXUM.get()).add(NoxernaBlocks.NOXUM_STAIRS.get())
                 .add(NoxernaBlocks.NOXUM_SLAB.get()).add(NoxernaBlocks.NOXUM_WALL.get())
@@ -41,11 +41,10 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get()).add(NoxernaBlocks.FERREBRIS_PLATING.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get()).add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
-            // Incorrect Tool tiers
-        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
-                .add(NoxernaBlocks.FERREBRIS_BLOCK.get());
-        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
-                .add(NoxernaBlocks.FERREBRIS_BLOCK.get());
+            // Required Tool Tier
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS);
         // Logic
             // Entity Interaction
         tag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS)
@@ -58,10 +57,10 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXERNA_PORTAL.get());
             // MultiBlock Formation
         tag(BlockTags.BEACON_BASE_BLOCKS)
-                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS);
+                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS);
             // Block Replacement
         tag(BlockTags.SCULK_REPLACEABLE)
-                .add(NoxernaBlocks.NOXUM.get());
+                .addTag(NoxernaTags.BlockTags.BASE_STONE_NOXERNA);
         // Block Variations
         tag(BlockTags.STAIRS)
                 .add(NoxernaBlocks.NOXUM_STAIRS.get()).add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get())
@@ -101,10 +100,16 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get()).add(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get());
         tag(BlockTags.WOODEN_BUTTONS)
                 .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get());
+        // Dye able Blocks
+        tag(BlockTags.CONCRETE_POWDER)
+                .add(NoxernaBlocks.ARGON_CONCRETE.get());
         // Common Tags
         // Material Storage Blocks
         tag(Tags.Blocks.STORAGE_BLOCKS)
-                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS);
+                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.TENERYL_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.ADAMUNA_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.INPERLUM_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS);
         tag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get());
         tag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS)
@@ -148,6 +153,9 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.SOLTRA_BRICKS.get()).addTag(NoxernaTags.BlockTags.PEBBLES)
                 .addTag(NoxernaTags.BlockTags.BOSS_IMMUNE);
         // Mining Logic
+            // Valid Tool Assignment
+        tag(NoxernaTags.BlockTags.MINEABLE_WITH_PICKADZE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE).addTag(BlockTags.MINEABLE_WITH_SHOVEL);
             // Incorrect Tool Tiers
         tag(NoxernaTags.BlockTags.INCORRECT_FOR_NOBLEWOOD_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_WOODEN_TOOL);

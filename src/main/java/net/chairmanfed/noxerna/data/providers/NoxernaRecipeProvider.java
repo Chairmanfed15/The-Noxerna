@@ -1,7 +1,7 @@
 package net.chairmanfed.noxerna.data.providers;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

@@ -141,19 +141,19 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK.get());
-        dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BLOCK.get());
+        dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK.get());
-        dropSelf(NoxernaBlocks.OXIDIZED_CUT_OBSCUPRUM_BLOCK.get());
+        dropSelf(NoxernaBlocks.OXIDISED_CUT_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.OBSCUPRUM_BRICKS.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_BRICKS.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_BRICKS.get());
-        dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BRICKS.get());
+        dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_BRICKS.get());
         dropSelf(NoxernaBlocks.OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
-        dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING.get());
+        dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING.get());
 
         dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE.get());

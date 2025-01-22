@@ -1,15 +1,13 @@
 package net.chairmanfed.noxerna;
 
 import com.mojang.logging.LogUtils;
-import net.chairmanfed.noxerna.data.DataGenerators;
-import net.chairmanfed.noxerna.item.NoxernaArmorMaterials;
+import net.chairmanfed.noxerna.item.equipment.armour.NoxernaArmourMaterials;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
-import net.chairmanfed.noxerna.registry.NoxernaCreativeModeTabs;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaCreativeModeTabs;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
@@ -22,7 +20,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
@@ -46,7 +43,7 @@ public class TheNoxerna
         modEventBus.addListener(this::commonSetup);
         NoxernaBlocks.BLOCKS.register(modEventBus);
         NoxernaItems.ITEMS.register(modEventBus);
-        NoxernaArmorMaterials.ARMOUR_MATERIAL.register(modEventBus);
+        NoxernaArmourMaterials.ARMOUR_MATERIAL.register(modEventBus);
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         // modEventBus.addListener(NoxernaCreativeModeTabs::buildContents);
         // modEventBus.addListener(DataGenerators::gatherData);

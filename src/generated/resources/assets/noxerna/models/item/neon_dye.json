@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "noxerna:item/wip_placeholder"
+    "layer0": "noxerna:item/neon_dye"
   }
 }

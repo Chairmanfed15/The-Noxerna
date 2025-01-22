@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "noxerna:block/oxidized_cut_obscuprum_block"
-  }
-}

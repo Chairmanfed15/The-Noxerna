@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.data;
 import com.google.common.collect.ImmutableList;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.*;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;

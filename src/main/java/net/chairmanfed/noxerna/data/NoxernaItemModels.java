@@ -1,11 +1,10 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaItems;
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -44,7 +43,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.XENON_DYE);
         wipItem(NoxernaItems.KRYPTON_DYE);
         flatItem(NoxernaItems.ARGON_DYE);
-        wipItem(NoxernaItems.NEON_DYE);
+        flatItem(NoxernaItems.NEON_DYE);
         wipItem(NoxernaItems.VITRAGOR_DUST);
         wipItem(NoxernaItems.SULAZE_POWDER);
         flatItem(NoxernaItems.NOBLEWOOD_BOWL);
@@ -83,8 +82,9 @@ public class NoxernaItemModels extends ItemModelProvider {
         handheldFlatItem(NoxernaItems.NIHOXITE_SHOVEL);
         handheldFlatItem(NoxernaItems.NIHOXITE_SWORD);
         // Misc Tools
-        handheldFlatItem(NoxernaItems.VITRALISK);
         flatItem(NoxernaItems.PYROCHARGE);
+        handheldFlatItem(NoxernaItems.PICKADZE);
+        handheldFlatItem(NoxernaItems.VITRALISK);
         // Armor
         wipItem(NoxernaItems.ROCKHIDE_HELMET);
         wipItem(NoxernaItems.ROCKHIDE_CHESTPLATE);

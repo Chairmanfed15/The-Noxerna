@@ -43,6 +43,10 @@
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
         "argon": "noxerna:trims/color_palettes/argon",
+        "krypton": "noxerna:trims/color_palettes/krypton",
+        "neon": "noxerna:trims/color_palettes/neon",
+        "obscuprum": "noxerna:trims/color_palettes/obscuprum",
+        "oxidised_obscuprum": "noxerna:trims/color_palettes/oxidised_obscuprum",
         "xenon": "noxerna:trims/color_palettes/xenon"
       }
     }

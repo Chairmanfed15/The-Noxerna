@@ -123,22 +123,22 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
-        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK);
             // Cut
         blockWithItem(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK);
-        blockWithItem(NoxernaBlocks.OXIDIZED_CUT_OBSCUPRUM_BLOCK);
+        blockWithItem(NoxernaBlocks.OXIDISED_CUT_OBSCUPRUM_BLOCK);
             // Bricks
         blockWithItem(NoxernaBlocks.OBSCUPRUM_BRICKS);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BRICKS);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BRICKS);
-        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_BRICKS);
+        blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_BRICKS);
             // Plating
         blockWithItem(NoxernaBlocks.OBSCUPRUM_PLATING);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING);
-        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING);
+        blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
 
         // Coloured Blocks
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);

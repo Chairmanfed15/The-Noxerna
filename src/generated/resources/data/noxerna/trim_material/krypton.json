@@ -1,0 +1,9 @@
+{
+  "asset_name": "krypton",
+  "description": {
+    "color": "#9EFF01",
+    "translate": "trim_material.noxerna.krypton"
+  },
+  "ingredient": "noxerna:krypton_dye",
+  "item_model_index": 0.7
+}

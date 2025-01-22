@@ -12,10 +12,13 @@ import net.minecraft.world.level.material.Fluid;
 public class NoxernaTags {
     public static class ItemTags {
         // Local Tags
+        // Advancement Logic
         public static final TagKey<Item> COMPLETES_MINE_HARD_STONE_ADVANCEMENT = localTag(
                 "completes_mine_hard_stone_advancement");
         public static final TagKey<Item> COMPLETES_NOXERNA_TOOLS_ADVANCEMENT = localTag(
                 "completes_noxerna_tools_advancement");
+        // Tool Groupings
+        public static final TagKey<Item> PICKADZES = localTag("pickadzes");
         public static final TagKey<Item> NOBLEWOOD_PLANKS = localTag("noblewood_planks");
         public static final TagKey<Item> ANY_IRON_INGOT = localTag("any_iron_ingot");
         public static final TagKey<Item> ANY_DIAMOND_GEM = localTag("any_diamond_gem");
@@ -88,6 +91,7 @@ public class NoxernaTags {
     public static class BlockTags {
         public static final TagKey<Block> BASE_STONE_NOXERNA = localTag("base_stone_noxerna");
 
+        public static final TagKey<Block> MINEABLE_WITH_PICKADZE = localTag("mineable/pickadze");
         public static final TagKey<Block> INCORRECT_FOR_NOBLEWOOD_TOOL = localTag(
                 "incorrect_for_noblewood_tool");
         public static final TagKey<Block> INCORRECT_FOR_NOXSTONE_TOOL = localTag(

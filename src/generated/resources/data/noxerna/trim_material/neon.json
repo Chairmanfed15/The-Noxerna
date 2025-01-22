@@ -1,0 +1,9 @@
+{
+  "asset_name": "neon",
+  "description": {
+    "color": "#FF60FE",
+    "translate": "trim_material.noxerna.neon"
+  },
+  "ingredient": "noxerna:neon_dye",
+  "item_model_index": 1.0
+}
