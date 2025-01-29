@@ -173,9 +173,15 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING, "Oxidized Obscuprum Plating");
         // Colored Blocks
             // Concrete
+        addBlock(NoxernaBlocks.XENON_CONCRETE, "Xenon Concrete");
+        addBlock(NoxernaBlocks.KRYPTON_CONCRETE, "Krypton Concrete");
         addBlock(NoxernaBlocks.ARGON_CONCRETE, "Argon Concrete");
+        addBlock(NoxernaBlocks.NEON_CONCRETE, "Neon Concrete");
             // Concrete Powder
+        addBlock(NoxernaBlocks.XENON_CONCRETE_POWDER, "Xenon Concrete Powder");
+        addBlock(NoxernaBlocks.KRYPTON_CONCRETE_POWDER, "Krypton Concrete Powder");
         addBlock(NoxernaBlocks.ARGON_CONCRETE_POWDER, "Argon Concrete Powder");
+        addBlock(NoxernaBlocks.NEON_CONCRETE_POWDER, "Neon Concrete Powder");
         // Natural Blocks
         // Stones
         addBlock(NoxernaBlocks.SOLTRA_PEBBLE, "Soltra Pebble");
@@ -194,6 +200,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.RAW_UMBURAM, "Raw Umburam");
         addItem(NoxernaItems.RAW_INPERLUM, "Raw Inperlum");
         // Gems
+        addItem(NoxernaItems.LUMAI_CRYSTAL, "Lumai Crystal");
         addItem(NoxernaItems.TENERYL, "Teneryl");
         addItem(NoxernaItems.ADAMUNA, "Adamuna");
         addItem(NoxernaItems.VITRAGOR, "Vitragor");
@@ -211,6 +218,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.MYSTERIOUS_SCRAP, "Mysterious Scrap");
         addItem(NoxernaItems.MYSTERIOUS_ALLOY_PLATE, "Mysterious Alloy Plate");
         // Misc
+        addItem(NoxernaItems.LUMAI_FUEL_CELL, "Lumai Fuel Cell");
         addItem(NoxernaItems.NOBLEWOOD_STICK, "Noblewood Stick");
         addItem(NoxernaItems.GLOWGRAIN, "Glowgrain");
         addItem(NoxernaItems.ROCKHIDE, "Rockhide");
@@ -295,7 +303,9 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.HEART_BOOTS, "Heart Boots");
         // Advancement Dummy Items
         addItem(NoxernaItems.ROOT, "Noxerna");
+        addItem(NoxernaItems.AWAKEN_MEGATOMATON, "Kaiju Buster");
         addItem(NoxernaItems.MINE_NATIVE_MINERALS, "Shadow Mineralogy");
+        addItem(NoxernaItems.DEFEAT_MEGATOMATON, "Decommissioned");
         addItem(NoxernaItems.COMPLETE_ALL_CHALLENGES, "Master Cave Dweller");
 
         // Block Tags

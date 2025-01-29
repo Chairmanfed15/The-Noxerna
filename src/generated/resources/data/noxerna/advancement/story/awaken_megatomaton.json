@@ -12,7 +12,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:trial_spawner"
+      "id": "noxerna:awaken_megatomaton"
     },
     "title": {
       "translate": "advancement.noxerna.awaken_megatomaton.title"

@@ -5,12 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "noxerna:nihoxite_helmet",
-              "noxerna:nihoxite_chestplate",
-              "noxerna:nihoxite_leggings",
-              "noxerna:nihoxite_boots"
-            ]
+            "items": "noxerna:nihoxite_helmet"
+          },
+          {
+            "items": "noxerna:nihoxite_chestplate"
+          },
+          {
+            "items": "noxerna:nihoxite_leggings"
+          },
+          {
+            "items": "noxerna:nihoxite_boots"
           }
         ]
       },

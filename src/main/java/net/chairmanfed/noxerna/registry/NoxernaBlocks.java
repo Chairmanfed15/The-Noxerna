@@ -344,14 +344,38 @@ public class NoxernaBlocks {
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
     // Coloured Blocks
+    public static final DeferredBlock<Block> XENON_CONCRETE = BLOCKS.register(
+            "xenon_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> KRYPTON_CONCRETE = BLOCKS.register(
+            "krypton_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)
+                    .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> ARGON_CONCRETE = BLOCKS.register(
             "argon_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)
                     .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> NEON_CONCRETE = BLOCKS.register(
+            "neon_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> XENON_CONCRETE_POWDER = BLOCKS.register(
+            "xenon_concrete_powder",
+            () -> new ConcretePowderBlock(NoxernaBlocks.XENON_CONCRETE.get(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> KRYPTON_CONCRETE_POWDER = BLOCKS.register(
+            "krypton_concrete_powder",
+            () -> new ConcretePowderBlock(NoxernaBlocks.KRYPTON_CONCRETE.get(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE_POWDER)
+                            .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> ARGON_CONCRETE_POWDER = BLOCKS.register(
             "argon_concrete_powder",
             () -> new ConcretePowderBlock(NoxernaBlocks.ARGON_CONCRETE.get(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE_POWDER)
-                    .lightLevel(state -> 12)));
+                            .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> NEON_CONCRETE_POWDER = BLOCKS.register(
+            "neon_concrete_powder",
+            () -> new ConcretePowderBlock(NoxernaBlocks.NEON_CONCRETE.get(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE_POWDER)
+                            .lightLevel(state -> 12)));
     // Special Dimension Blocks
     public static final DeferredBlock<Block> VOIDROCK = BLOCKS.register(
             "voidrock", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK)));

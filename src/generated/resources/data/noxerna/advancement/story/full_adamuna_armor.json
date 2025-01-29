@@ -5,12 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "noxerna:adamuna_helmet",
-              "noxerna:adamuna_chestplate",
-              "noxerna:adamuna_leggings",
-              "noxerna:adamuna_boots"
-            ]
+            "items": "noxerna:adamuna_helmet"
+          },
+          {
+            "items": "noxerna:adamuna_chestplate"
+          },
+          {
+            "items": "noxerna:adamuna_leggings"
+          },
+          {
+            "items": "noxerna:adamuna_boots"
           }
         ]
       },

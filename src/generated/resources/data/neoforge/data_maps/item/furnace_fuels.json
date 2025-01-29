@@ -2,6 +2,9 @@
   "values": {
     "#noxerna:noblewood_planks": {
       "burn_time": 300
+    },
+    "noxerna:lumai_fuel_cell": {
+      "burn_time": 3200
     }
   }
 }

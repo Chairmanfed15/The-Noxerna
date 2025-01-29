@@ -63,8 +63,7 @@ public class NoxernaArmourMaterials {
             }), 9, SoundEvents.ARMOR_EQUIP_IRON,
                     () -> Ingredient.of(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS),
                     List.of(
-                            new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"), "", false),
-                            new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"), "_overlay", false)),
+                            new ArmorMaterial.Layer(TheNoxerna.prefix("ferrebris"), "", false)),
                     2.0F, 0.05F));
     public static final Holder<ArmorMaterial> UMBURAM = ARMOUR_MATERIAL.register(
             "umburam", () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {

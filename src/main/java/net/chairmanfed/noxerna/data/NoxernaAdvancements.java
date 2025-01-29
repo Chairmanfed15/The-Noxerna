@@ -847,7 +847,12 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("adamuna_armor",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.ADAMUNA_HELMET.get(),
+                                        NoxernaItems.ADAMUNA_CHESTPLATE.get(),
+                                        NoxernaItems.ADAMUNA_LEGGINGS.get(),
+                                        NoxernaItems.ADAMUNA_BOOTS.get())))
                 .save(saver, TheNoxerna.MODID + ":story/adamuna_armor");
         // Have a full set of Adamuna armour
         AdvancementHolder FULL_ADAMUNA_ARMOR = Advancement.Builder.advancement()
@@ -866,11 +871,10 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 )
                 .addCriterion("full_adamuna_armor",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(
                                         NoxernaItems.ADAMUNA_HELMET.get(),
                                         NoxernaItems.ADAMUNA_CHESTPLATE.get(),
                                         NoxernaItems.ADAMUNA_LEGGINGS.get(),
-                                        NoxernaItems.ADAMUNA_BOOTS.get())))
+                                        NoxernaItems.ADAMUNA_BOOTS.get()))
                 .save(saver, TheNoxerna.MODID + ":story/full_adamuna_armor");
         // Nihoxite storyline, continuing from "MINE_ADAMUNA"
         // Obtain Raw Inperlum
@@ -949,11 +953,10 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 )
                 .addCriterion("nihoxite_armor",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(
                                         NoxernaItems.NIHOXITE_HELMET.get(),
                                         NoxernaItems.NIHOXITE_CHESTPLATE.get(),
                                         NoxernaItems.NIHOXITE_LEGGINGS.get(),
-                                        NoxernaItems.NIHOXITE_BOOTS.get())))
+                                        NoxernaItems.NIHOXITE_BOOTS.get()))
                 .save(saver, TheNoxerna.MODID + ":story/nihoxite_armor");
         // Noxerna Boss storyline (Megatomaton)
         // Find a section of ruined railway
@@ -1014,7 +1017,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder AWAKEN_MEGATOMATON = Advancement.Builder.advancement()
                 .parent(FIND_MEGATOMATON_ARENA)
                 .display(
-                        new ItemStack(Items.TRIAL_SPAWNER),
+                        new ItemStack(NoxernaItems.AWAKEN_MEGATOMATON.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".awaken_megatomaton.title"),
                         Component.translatable(
@@ -1032,7 +1035,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder DEFEAT_MEGATOMATON = Advancement.Builder.advancement()
                 .parent(AWAKEN_MEGATOMATON)
                 .display(
-                        new ItemStack(Items.VAULT),
+                        new ItemStack(NoxernaItems.DEFEAT_MEGATOMATON.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".defeat_megatomaton.title"),
                         Component.translatable(

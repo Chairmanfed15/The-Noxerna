@@ -13,7 +13,7 @@
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "minecraft:vault"
+      "id": "noxerna:defeat_megatomaton"
     },
     "title": {
       "translate": "advancement.noxerna.defeat_megatomaton.title"

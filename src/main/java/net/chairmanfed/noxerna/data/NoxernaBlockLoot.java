@@ -155,7 +155,13 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING.get());
 
-        dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+        dropSelf(NoxernaBlocks.XENON_CONCRETE.get());
+        dropSelf(NoxernaBlocks.KRYPTON_CONCRETE.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE.get());
+        dropSelf(NoxernaBlocks.NEON_CONCRETE.get());
+        dropSelf(NoxernaBlocks.XENON_CONCRETE_POWDER.get());
+        dropSelf(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
+        dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+        dropSelf(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
     }
 }

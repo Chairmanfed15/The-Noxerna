@@ -40,7 +40,9 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXUM_BRICK_WALL.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get())
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get()).add(NoxernaBlocks.FERREBRIS_PLATING.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get()).add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get())
-                .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
+                .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get()).add(NoxernaBlocks.XENON_CONCRETE.get())
+                .add(NoxernaBlocks.KRYPTON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE.get())
+                .add(NoxernaBlocks.NEON_CONCRETE.get());
             // Required Tool Tier
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS)
@@ -102,7 +104,7 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get());
         // Dye able Blocks
         tag(BlockTags.CONCRETE_POWDER)
-                .add(NoxernaBlocks.ARGON_CONCRETE.get());
+                .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         // Common Tags
         // Material Storage Blocks
         tag(Tags.Blocks.STORAGE_BLOCKS)
@@ -128,11 +130,20 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
         // Dye able Blocks
         tag(Tags.Blocks.CONCRETES)
-                .add(NoxernaBlocks.ARGON_CONCRETE.get());
+                .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE.get())
+                .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE.get());
         // Dyed Blocks
-        tag(Tags.Blocks.DYED).addTag(NoxernaTags.BlockTags.DYED_ARGON);
+        tag(Tags.Blocks.DYED)
+                .addTag(NoxernaTags.BlockTags.DYED_XENON).addTag(NoxernaTags.BlockTags.DYED_KRYPTON)
+                .addTag(NoxernaTags.BlockTags.DYED_ARGON).addTag(NoxernaTags.BlockTags.DYED_NEON);
+        tag(NoxernaTags.BlockTags.DYED_XENON)
+                .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.XENON_CONCRETE_POWDER.get());
+        tag(NoxernaTags.BlockTags.DYED_KRYPTON)
+                .add(NoxernaBlocks.KRYPTON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
         tag(NoxernaTags.BlockTags.DYED_ARGON)
                 .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+        tag(NoxernaTags.BlockTags.DYED_NEON)
+                .add(NoxernaBlocks.NEON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
 
         // Noxerna Tags
         // Logic

@@ -18,6 +18,10 @@
     "noxerna:ferrebris_plating",
     "noxerna:ferrebris_plating_stairs",
     "noxerna:ferrebris_plating_slab",
-    "noxerna:ferrebris_plating_wall"
+    "noxerna:ferrebris_plating_wall",
+    "noxerna:xenon_concrete",
+    "noxerna:krypton_concrete",
+    "noxerna:argon_concrete",
+    "noxerna:neon_concrete"
   ]
 }

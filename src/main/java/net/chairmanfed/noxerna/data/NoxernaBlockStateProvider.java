@@ -141,8 +141,14 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
 
         // Coloured Blocks
-        blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);
+        blockWithItem(NoxernaBlocks.XENON_CONCRETE);
+        blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE);
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE);
+        blockWithItem(NoxernaBlocks.NEON_CONCRETE);
+        blockWithItem(NoxernaBlocks.XENON_CONCRETE_POWDER);
+        blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE_POWDER);
+        blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);
+        blockWithItem(NoxernaBlocks.NEON_CONCRETE_POWDER);
 
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);

@@ -2,7 +2,19 @@
   "parent": "noxerna:story/mine_adamuna",
   "criteria": {
     "adamuna_armor": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "noxerna:adamuna_helmet",
+              "noxerna:adamuna_chestplate",
+              "noxerna:adamuna_leggings",
+              "noxerna:adamuna_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {

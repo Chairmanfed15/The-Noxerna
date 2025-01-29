@@ -27,6 +27,10 @@ public class NoxernaItems {
 
     @SuppressWarnings("Unused")
     // Intermediates
+    public static final DeferredItem<Item> LUMAI_CRYSTAL = registerSimpleItem(
+            "lumai_crystal", new Item.Properties());
+    public static final DeferredItem<Item> LUMAI_FUEL_CELL = registerSimpleItem(
+            "lumai_fuel_cell", new Item.Properties());
     public static final DeferredItem<Item> RAW_FERREBRIS = registerSimpleItem(
             "raw_ferrebris", new Item.Properties());
     public static final DeferredItem<Item> RAW_OBSCUPRUM = registerSimpleItem(
@@ -88,7 +92,10 @@ public class NoxernaItems {
     public static final DeferredItem<Item> SULAZE_POWDER = registerSimpleItem(
             "sulaze_powder", new Item.Properties());
     public static final DeferredItem<Item> NIHOXITE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
-            "nihoxite_upgrade_smithing_template", () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate());
+            "nihoxite_upgrade_smithing_template", () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate()
+    );
+    public static final DeferredItem<Item> EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE = registerSimpleItem(
+            "exotic_armor_trim_smithing_template", new Item.Properties());
 
     // Tools, sorted by tier
     // Noblewood
@@ -226,6 +233,8 @@ public class NoxernaItems {
                             NoxernaToolMaterials.OBSCUPRUM, 1, -3.2f))));
     public static final DeferredItem<Item> VITRALISK = registerSimpleItem(
             "vitralisk", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> FERREBRIS_SHIELD = registerSimpleItem(
+            "ferrebris_shield", new Item.Properties().stacksTo(1));
 
     // Armour, sorted by tier
     // Rockhide
@@ -414,8 +423,12 @@ public class NoxernaItems {
     // Advancement Dummy Items
     public static final DeferredItem<Item> ROOT = registerItemWithRarity(
             "root", Rarity.EPIC, new Item.Properties());
+    public static final DeferredItem<Item> AWAKEN_MEGATOMATON = registerItemWithRarity(
+            "awaken_megatomaton", Rarity.EPIC, new Item.Properties());
     public static final DeferredItem<Item> MINE_NATIVE_MINERALS = registerItemWithRarity(
             "mine_native_minerals", Rarity.EPIC, new Item.Properties());
+    public static final DeferredItem<Item> DEFEAT_MEGATOMATON = registerItemWithRarity(
+            "defeat_megatomaton", Rarity.EPIC, new Item.Properties());
     public static final DeferredItem<Item> COMPLETE_ALL_CHALLENGES = registerItemWithRarity(
             "complete_all_challenges", Rarity.EPIC, new Item.Properties());
     // Block Items
@@ -607,10 +620,23 @@ public class NoxernaItems {
     public static final DeferredItem<Item> OXIDISED_OBSCUPRUM_PLATING = registerBlockItem(
             "oxidised_obscuprum_plating", NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
     // Coloured Blocks
+    public static final DeferredItem<Item> XENON_CONCRETE = registerBlockItem(
+            "xenon_concrete", NoxernaBlocks.XENON_CONCRETE);
+    public static final DeferredItem<Item> KRYPTON_CONCRETE = registerBlockItem(
+            "krypton_concrete", NoxernaBlocks.KRYPTON_CONCRETE);
     public static final DeferredItem<Item> ARGON_CONCRETE = registerBlockItem(
             "argon_concrete", NoxernaBlocks.ARGON_CONCRETE);
+    public static final DeferredItem<Item> NEON_CONCRETE = registerBlockItem(
+            "neon_concrete", NoxernaBlocks.NEON_CONCRETE);
+
+    public static final DeferredItem<Item> XENON_CONCRETE_POWDER = registerBlockItem(
+            "xenon_concrete_powder", NoxernaBlocks.XENON_CONCRETE_POWDER);
+    public static final DeferredItem<Item> KRYPTON_CONCRETE_POWDER = registerBlockItem(
+            "krypton_concrete_powder", NoxernaBlocks.KRYPTON_CONCRETE_POWDER);
     public static final DeferredItem<Item> ARGON_CONCRETE_POWDER = registerBlockItem(
             "argon_concrete_powder", NoxernaBlocks.ARGON_CONCRETE_POWDER);
+    public static final DeferredItem<Item> NEON_CONCRETE_POWDER = registerBlockItem(
+            "neon_concrete_powder", NoxernaBlocks.NEON_CONCRETE_POWDER);
     // Special Dimension Block Items
     public static final DeferredItem<Item> VOIDROCK = registerBlockItem(
             "voidrock", NoxernaBlocks.VOIDROCK);

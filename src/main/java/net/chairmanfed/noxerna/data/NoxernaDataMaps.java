@@ -1,5 +1,6 @@
 package net.chairmanfed.noxerna.data;
 
+import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -32,6 +33,7 @@ public class NoxernaDataMaps extends DataMapProvider {
                 .add(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK,
                         new Oxidizable(NoxernaBlocks.OXIDISED_CUT_OBSCUPRUM_BLOCK.get()), false);
         builder(NeoForgeDataMaps.FURNACE_FUELS)
-                .add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, new FurnaceFuel(300), false);
+                .add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, new FurnaceFuel(300), false)
+                .add(NoxernaItems.LUMAI_FUEL_CELL, new FurnaceFuel(3200), false);
     }
 }

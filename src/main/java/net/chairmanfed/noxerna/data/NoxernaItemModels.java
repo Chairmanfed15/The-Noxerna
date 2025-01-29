@@ -17,6 +17,8 @@ public class NoxernaItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // Intermediates
+        flatItem(NoxernaItems.LUMAI_CRYSTAL);
+        flatItem(NoxernaItems.LUMAI_FUEL_CELL);
         flatItem(NoxernaItems.RAW_FERREBRIS);
         flatItem(NoxernaItems.RAW_OBSCUPRUM);
         flatItem(NoxernaItems.RAW_UMBURAM);
@@ -41,13 +43,14 @@ public class NoxernaItemModels extends ItemModelProvider {
         wipItem(NoxernaItems.ROCKHIDE);
         flatItem(NoxernaItems.SULAZE_CORE);
         flatItem(NoxernaItems.XENON_DYE);
-        wipItem(NoxernaItems.KRYPTON_DYE);
+        flatItem(NoxernaItems.KRYPTON_DYE);
         flatItem(NoxernaItems.ARGON_DYE);
         flatItem(NoxernaItems.NEON_DYE);
         wipItem(NoxernaItems.VITRAGOR_DUST);
         wipItem(NoxernaItems.SULAZE_POWDER);
         flatItem(NoxernaItems.NOBLEWOOD_BOWL);
         flatItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
+        flatItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
         // Food
 
         // Tiered Tools
@@ -85,6 +88,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.PYROCHARGE);
         handheldFlatItem(NoxernaItems.PICKADZE);
         handheldFlatItem(NoxernaItems.VITRALISK);
+        wipItem(NoxernaItems.FERREBRIS_SHIELD);
         // Armor
         wipItem(NoxernaItems.ROCKHIDE_HELMET);
         wipItem(NoxernaItems.ROCKHIDE_CHESTPLATE);
@@ -116,7 +120,9 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.HEART_BOOTS);
         // Advancement Dummy Items
         advancementItem(NoxernaItems.ROOT);
+        advancementItem(NoxernaItems.AWAKEN_MEGATOMATON);
         advancementItem(NoxernaItems.MINE_NATIVE_MINERALS);
+        advancementItem(NoxernaItems.DEFEAT_MEGATOMATON);
         advancementItem(NoxernaItems.COMPLETE_ALL_CHALLENGES);
     }
     public void flatItem(DeferredItem<Item> item) {
