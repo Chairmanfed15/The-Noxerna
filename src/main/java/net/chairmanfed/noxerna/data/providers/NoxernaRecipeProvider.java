@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -243,6 +244,13 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                         Ingredient.of(Items.NETHERITE_INGOT),
                         RecipeCategory.TOOLS, result)
                 .unlocks("has_netherite", has(Items.NETHERITE_INGOT));
+    }
+    public SmithingTrimRecipeBuilder trimRecipe(Item trimTemplate) {
+        return SmithingTrimRecipeBuilder.smithingTrim(
+                Ingredient.of(trimTemplate),
+                Ingredient.of(ItemTags.TRIMMABLE_ARMOR),
+                Ingredient.of(ItemTags.TRIM_MATERIALS),
+                RecipeCategory.TOOLS).unlocks(("has_" + trimTemplate), has(trimTemplate));
     }
 
     public SimpleCookingRecipeBuilder smelting(

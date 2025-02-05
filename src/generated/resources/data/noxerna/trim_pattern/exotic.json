@@ -1,0 +1,8 @@
+{
+  "asset_id": "noxerna:exotic",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.noxerna.exotic"
+  },
+  "template_item": "noxerna:exotic_armor_trim_smithing_template"
+}

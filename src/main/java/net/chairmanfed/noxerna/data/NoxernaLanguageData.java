@@ -236,6 +236,8 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE, "Smithing Template");
         addUpgradeTemplate("nihoxite_upgrade", "Nihoxite Upgrade",
                 "Nihoxite Ingot", "Adamuna Equipment");
+        addItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
+        add("trim_pattern.noxerna.exotic", "Exotic Armor Trim");
         // Tools
         // Tiered
         addItem(NoxernaItems.NOBLEWOOD_AXE, "Noblewood Axe");
@@ -349,6 +351,10 @@ public class NoxernaLanguageData extends LanguageProvider {
             // Tool Materials
         add(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS, "Noxstone Tool Materials");
         add(NoxernaTags.ItemTags.FERREBRIS_TOOL_MATERIALS, "Ferrebris Tool Materials");
+        add(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, "Umburam Tool Materials");
+            // Material Groups
+        add(NoxernaTags.ItemTags.ANY_IRON_INGOT, "Any Iron-like Ingot");
+        add(NoxernaTags.ItemTags.ANY_DIAMOND_GEM, "Any Diamond-like Gem");
 
         // Root + Enter Noxerna Storyline
         addAdvancement("root", "Noxerna", "Bring a Torch or 64");

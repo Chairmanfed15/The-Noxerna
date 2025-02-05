@@ -694,7 +694,12 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("ferrebris_armor",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.FERREBRIS_HELMET.get(),
+                                        NoxernaItems.FERREBRIS_CHESTPLATE.get(),
+                                        NoxernaItems.FERREBRIS_LEGGINGS.get(),
+                                        NoxernaItems.FERREBRIS_BOOTS.get())))
                 .save(saver, TheNoxerna.MODID + ":story/ferrebris_armor");
         // Have a full set of Ferrebris armour
         AdvancementHolder FULL_FERREBRIS_ARMOR = Advancement.Builder.advancement()
@@ -722,7 +727,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder FERREBRIS_SHIELD = Advancement.Builder.advancement()
                 .parent(SMELT_FERREBRIS)
                 .display(
-                        new ItemStack(Items.SHIELD),
+                        new ItemStack(NoxernaItems.FERREBRIS_SHIELD.get()),
                         Component.translatable(
                                 "advancement." + TheNoxerna.MODID + ".ferrebris_shield.title"),
                         Component.translatable(
@@ -734,7 +739,9 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         false
                 )
                 .addCriterion("ferrebris_shield",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(
+                                        NoxernaItems.FERREBRIS_SHIELD)))
                 .save(saver, TheNoxerna.MODID + ":story/ferrebris_shield");
         // Make a Ferrebris pickaxe
         AdvancementHolder FERREBRIS_TOOLS = Advancement.Builder.advancement()

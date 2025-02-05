@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.data.generators;
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimMaterials;
+import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimPatterns;
 import net.chairmanfed.noxerna.registry.NoxernaDimension;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -22,5 +23,6 @@ public class NoxernaRegistrySets extends DatapackBuiltinEntriesProvider {
             .add(Registries.LEVEL_STEM, NoxernaDimension::bootstrapStem)
             .add(Registries.DIMENSION_TYPE, NoxernaDimension::bootstrapType)
             .add(Registries.NOISE_SETTINGS, NoxernaDimension::bootstrapNoise)
+            .add(Registries.TRIM_PATTERN, NoxernaTrimPatterns::bootstrap)
             .add(Registries.TRIM_MATERIAL, NoxernaTrimMaterials::bootstrap);
 }

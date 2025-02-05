@@ -2,7 +2,14 @@
   "parent": "noxerna:story/smelt_ferrebris",
   "criteria": {
     "ferrebris_shield": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:ferrebris_shield"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -11,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:shield"
+      "id": "noxerna:ferrebris_shield"
     },
     "title": {
       "translate": "advancement.noxerna.ferrebris_shield.title"

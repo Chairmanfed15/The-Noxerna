@@ -246,6 +246,7 @@
   "item.noxerna.exoskeleton_chestplate": "Exoskeleton Harness",
   "item.noxerna.exoskeleton_helmet": "Exoskeleton Shell",
   "item.noxerna.exoskeleton_leggings": "Exoskeleton Bracers",
+  "item.noxerna.exotic_armor_trim_smithing_template": "Smithing Template",
   "item.noxerna.ferrebris_axe": "Ferrebris Axe",
   "item.noxerna.ferrebris_boots": "Ferrebris Boots",
   "item.noxerna.ferrebris_chestplate": "Ferrebris Chestplate",
@@ -354,6 +355,8 @@
   "tag.item.c.raw_materials.inperlum": "Inperlum Raw Materials",
   "tag.item.c.raw_materials.obscuprum": "Obscuprum Raw Materials",
   "tag.item.c.raw_materials.umburam": "Umburam Raw Materials",
+  "tag.item.noxerna.any_diamond_gem": "Any Diamond-like Gem",
+  "tag.item.noxerna.any_iron_ingot": "Any Iron-like Ingot",
   "tag.item.noxerna.completes_mine_hard_stone_advancement": "Completes Hard Shadowy Rock",
   "tag.item.noxerna.completes_noxerna_tools_advancement": "Completes A Better Tool for the Job",
   "tag.item.noxerna.ferrebris_tool_materials": "Ferrebris Tool Materials",
@@ -363,6 +366,7 @@
   "tag.item.noxerna.pebbles": "Pebbles",
   "tag.item.noxerna.pickadzes": "Pickadzes",
   "tag.item.noxerna.stone_types.noxum": "Any Noxum Stone",
+  "tag.item.noxerna.umburam_tool_materials": "Umburam Tool Materials",
   "tag.item.noxerna.xenon_logs": "Xenon Logs",
   "trim_material.noxerna.argon": "Argon Material",
   "trim_material.noxerna.krypton": "Krypton Material",
@@ -370,5 +374,6 @@
   "trim_material.noxerna.obscuprum": "Obscuprum Material",
   "trim_material.noxerna.oxidised_obscuprum": "Obscuprum (Oxidized) Material",
   "trim_material.noxerna.xenon": "Xenon Material",
+  "trim_pattern.noxerna.exotic": "Exotic Armor Trim",
   "upgrade.noxerna.nihoxite_upgrade": "Nihoxite Upgrade"
 }

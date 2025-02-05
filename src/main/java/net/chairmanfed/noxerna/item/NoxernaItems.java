@@ -2,12 +2,15 @@ package net.chairmanfed.noxerna.item;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.item.equipment.armour.NoxernaArmourMaterials;
+import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimPatterns;
+import net.chairmanfed.noxerna.item.equipment.tools.TieredShieldItem;
 import net.chairmanfed.noxerna.item.miscellaneous.NoxernaSmithingTemplateItem;
 import net.chairmanfed.noxerna.item.equipment.tools.NoxernaToolMaterials;
 import net.chairmanfed.noxerna.item.equipment.tools.PickadzeItem;
 import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -22,6 +25,9 @@ public class NoxernaItems {
         return ITEMS.register(name, () -> new Item(new Item.Properties().rarity(rarity)));
     }
     public static DeferredItem<Item> registerBlockItem(String name, Supplier<Block> block) {
+        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+    public static DeferredItem<Item> registerBlockItemWithProperties(String name, DeferredBlock<Block> block, Item.Properties properties) {
         return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
@@ -94,8 +100,9 @@ public class NoxernaItems {
     public static final DeferredItem<Item> NIHOXITE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
             "nihoxite_upgrade_smithing_template", () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate()
     );
-    public static final DeferredItem<Item> EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE = registerSimpleItem(
-            "exotic_armor_trim_smithing_template", new Item.Properties());
+    public static final DeferredItem<Item> EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register(
+            "exotic_armor_trim_smithing_template",
+            ()-> NoxernaSmithingTemplateItem.createArmorTrimTemplate(NoxernaTrimPatterns.EXOTIC));
 
     // Tools, sorted by tier
     // Noblewood
@@ -233,8 +240,9 @@ public class NoxernaItems {
                             NoxernaToolMaterials.OBSCUPRUM, 1, -3.2f))));
     public static final DeferredItem<Item> VITRALISK = registerSimpleItem(
             "vitralisk", new Item.Properties().stacksTo(16));
-    public static final DeferredItem<Item> FERREBRIS_SHIELD = registerSimpleItem(
-            "ferrebris_shield", new Item.Properties().stacksTo(1));
+    public static final DeferredItem<Item> FERREBRIS_SHIELD = ITEMS.register(
+            "ferrebris_shield", ()-> new TieredShieldItem(NoxernaToolMaterials.FERREBRIS,
+                    new Item.Properties()));
 
     // Armour, sorted by tier
     // Rockhide
@@ -640,6 +648,6 @@ public class NoxernaItems {
     // Special Dimension Block Items
     public static final DeferredItem<Item> VOIDROCK = registerBlockItem(
             "voidrock", NoxernaBlocks.VOIDROCK);
-    public static final DeferredItem<Item> NOXERNA_PORTAL_FRAME = registerBlockItem(
-            "noxerna_portal_frame", NoxernaBlocks.NOXERNA_PORTAL_FRAME);
+    public static final DeferredItem<Item> NOXERNA_PORTAL_FRAME = registerBlockItemWithProperties(
+            "noxerna_portal_frame", NoxernaBlocks.NOXERNA_PORTAL_FRAME, new Item.Properties().rarity(Rarity.UNCOMMON));
 }

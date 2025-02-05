@@ -45,7 +45,6 @@ public class TheNoxerna
         NoxernaItems.ITEMS.register(modEventBus);
         NoxernaArmourMaterials.ARMOUR_MATERIAL.register(modEventBus);
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
-        // modEventBus.addListener(NoxernaCreativeModeTabs::buildContents);
         // modEventBus.addListener(DataGenerators::gatherData);
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

@@ -2,7 +2,19 @@
   "parent": "noxerna:story/smelt_ferrebris",
   "criteria": {
     "ferrebris_armor": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "noxerna:ferrebris_helmet",
+              "noxerna:ferrebris_chestplate",
+              "noxerna:ferrebris_leggings",
+              "noxerna:ferrebris_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {

@@ -84,6 +84,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.ADAMUNA_BOOTS.get()).add(NoxernaItems.NIHOXITE_BOOTS.get())
                 .add(NoxernaItems.HEART_BOOTS.get());
         // Materials
+        tag(ItemTags.TRIM_TEMPLATES)
+                .add(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
         tag(ItemTags.TRIM_MATERIALS)
                 .add(NoxernaItems.ARGON_DYE.get()).add(NoxernaItems.KRYPTON_DYE.get())
                 .add(NoxernaItems.NEON_DYE.get()).add(NoxernaItems.OBSCUPRUM_INGOT.get())
@@ -119,7 +121,10 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.RAW_INPERLUM.get());
             // Gems
         tag(Tags.Items.GEMS)
-                .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS).addTag(NoxernaTags.ItemTags.VITRAGOR_GEMS);
+                .addTag(NoxernaTags.ItemTags.TENERYL_GEMS).addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS)
+                .addTag(NoxernaTags.ItemTags.VITRAGOR_GEMS);
+        tag(NoxernaTags.ItemTags.TENERYL_GEMS)
+                .add(NoxernaItems.TENERYL.get());
         tag(NoxernaTags.ItemTags.ADAMUNA_GEMS)
                 .add(NoxernaItems.ADAMUNA.get());
         tag(NoxernaTags.ItemTags.VITRAGOR_GEMS)

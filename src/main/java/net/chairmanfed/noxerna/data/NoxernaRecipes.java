@@ -178,6 +178,12 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         cloneSmithingTemplate(NoxernaItems.INETRA.get(), NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get())
                 .group("smithing_template")
                 .save(output, name("crafting/nihoxite_upgrade_smithing_template"));
+        cloneSmithingTemplate(NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get(), NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .group("smithing_template")
+                .save(output, name("crafting/exotic_armor_trim_smithing_template"));
+        // Armour Trims
+        trimRecipe(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .save(output, name("smithing/exotic_armor_trim_smithing"));
             // Alt recipes
         cloneSmithingTemplate(Items.NETHERRACK, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)
                 .group("smithing_template")
