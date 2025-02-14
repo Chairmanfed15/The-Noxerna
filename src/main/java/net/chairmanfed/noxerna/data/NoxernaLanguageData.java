@@ -44,6 +44,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         add("itemGroup." + TheNoxerna.MODID + ".building_blocks", "Noxerna Building Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".colored_blocks", "Noxerna Colored Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".natural_blocks", "Noxerna Natural Blocks");
+        add("itemGroup." + TheNoxerna.MODID + ".functional_blocks", "Noxerna Functional Blocks");
         add("itemGroup." + TheNoxerna.MODID + ".tools_and_utilities", "Noxerna Tools & Utilities");
         add("itemGroup." + TheNoxerna.MODID + ".combat", "Noxerna Combat");
         add("itemGroup." + TheNoxerna.MODID + ".ingredients", "Noxerna Ingredients");
@@ -86,16 +87,50 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.KRYPTON_PRESSURE_PLATE, "Krypton Pressure Plate");
         addBlock(NoxernaBlocks.KRYPTON_BUTTON, "Krypton Button");
         // Argon Wood set
+        addBlock(NoxernaBlocks.ARGON_LOG, "Argon Log");
+        addBlock(NoxernaBlocks.ARGON_WOOD, "Argon Wood");
+        addBlock(NoxernaBlocks.STRIPPED_ARGON_LOG, "Stripped Argon Log");
+        addBlock(NoxernaBlocks.STRIPPED_ARGON_WOOD, "Stripped Argon Wood");
         addBlock(NoxernaBlocks.ARGON_PLANKS, "Argon Planks");
         addBlock(NoxernaBlocks.ARGON_STAIRS, "Argon Stairs");
+        addBlock(NoxernaBlocks.ARGON_SLAB, "Argon Slab");
+        addBlock(NoxernaBlocks.ARGON_FENCE, "Argon Fence");
+        addBlock(NoxernaBlocks.ARGON_FENCE_GATE, "Argon Fence Gate");
+        addBlock(NoxernaBlocks.ARGON_DOOR, "Argon Door");
+        addBlock(NoxernaBlocks.ARGON_TRAPDOOR, "Argon Trapdoor");
+        addBlock(NoxernaBlocks.ARGON_PRESSURE_PLATE, "Argon Pressure Plate");
+        addBlock(NoxernaBlocks.ARGON_BUTTON, "Argon Button");
         // Neon Wood set
+        addBlock(NoxernaBlocks.NEON_LOG, "Neon Log");
+        addBlock(NoxernaBlocks.NEON_WOOD, "Neon Wood");
+        addBlock(NoxernaBlocks.STRIPPED_NEON_LOG, "Stripped Neon Log");
+        addBlock(NoxernaBlocks.STRIPPED_NEON_WOOD, "Stripped Neon Wood");
         addBlock(NoxernaBlocks.NEON_PLANKS, "Neon Planks");
+        addBlock(NoxernaBlocks.NEON_STAIRS, "Neon Stairs");
+        addBlock(NoxernaBlocks.NEON_SLAB, "Neon Slab");
+        addBlock(NoxernaBlocks.NEON_FENCE, "Neon Fence");
+        addBlock(NoxernaBlocks.NEON_FENCE_GATE, "Neon Fence Gate");
+        addBlock(NoxernaBlocks.NEON_DOOR, "Neon Door");
+        addBlock(NoxernaBlocks.NEON_TRAPDOOR, "Neon Trapdoor");
+        addBlock(NoxernaBlocks.NEON_PRESSURE_PLATE, "Neon Pressure Plate");
+        addBlock(NoxernaBlocks.NEON_BUTTON, "Neon Button");
         // Soltra Stone set
         addBlock(NoxernaBlocks.SOLTRA, "Soltra");
+        addBlock(NoxernaBlocks.SOLTRA_STAIRS, "Soltra Stairs");
+        addBlock(NoxernaBlocks.SOLTRA_SLAB, "Soltra Slab");
+        addBlock(NoxernaBlocks.SOLTRA_WALL, "Soltra Wall");
+        addBlock(NoxernaBlocks.SOLTRA_PRESSURE_PLATE, "Soltra Pressure Plate");
+        addBlock(NoxernaBlocks.SOLTRA_BUTTON, "Soltra Button");
             // Polished
         addBlock(NoxernaBlocks.POLISHED_SOLTRA, "Polished Soltra");
+        addBlock(NoxernaBlocks.POLISHED_SOLTRA_STAIRS, "Polished Soltra Stairs");
+        addBlock(NoxernaBlocks.POLISHED_SOLTRA_SLAB, "Polished Soltra Slab");
+        addBlock(NoxernaBlocks.POLISHED_SOLTRA_WALL, "Polished Soltra Wall");
             // Bricks
         addBlock(NoxernaBlocks.SOLTRA_BRICKS, "Soltra Bricks");
+        addBlock(NoxernaBlocks.SOLTRA_BRICK_STAIRS, "Soltra Brick Stairs");
+        addBlock(NoxernaBlocks.SOLTRA_BRICK_SLAB, "Soltra Brick Slab");
+        addBlock(NoxernaBlocks.SOLTRA_BRICK_WALL, "Soltra Brick Wall");
         // Noxum Stone set
         addBlock(NoxernaBlocks.NOXUM, "Noxum");
         addBlock(NoxernaBlocks.NOXUM_STAIRS, "Noxum Stairs");
@@ -115,16 +150,38 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.NOXUM_BRICK_WALL, "Noxum Brick Wall");
         // Aestum Stone set
         addBlock(NoxernaBlocks.AESTUM, "Aestum");
+        addBlock(NoxernaBlocks.AESTUM_STAIRS, "Aestum Stairs");
+        addBlock(NoxernaBlocks.AESTUM_SLAB, "Aestum Slab");
+        addBlock(NoxernaBlocks.AESTUM_WALL, "Aestum Wall");
+        addBlock(NoxernaBlocks.AESTUM_PRESSURE_PLATE, "Aestum Pressure Plate");
+        addBlock(NoxernaBlocks.AESTUM_BUTTON, "Aestum Button");
             // Polished
         addBlock(NoxernaBlocks.POLISHED_AESTUM, "Polished Aestum");
+        addBlock(NoxernaBlocks.POLISHED_AESTUM_STAIRS, "Polished Aestum Stairs");
+        addBlock(NoxernaBlocks.POLISHED_AESTUM_SLAB, "Polished Aestum Slab");
+        addBlock(NoxernaBlocks.POLISHED_AESTUM_WALL, "Polished Aestum Wall");
             // Bricks
         addBlock(NoxernaBlocks.AESTUM_BRICKS, "Aestum Bricks");
+        addBlock(NoxernaBlocks.AESTUM_BRICK_STAIRS, "Aestum Brick Stairs");
+        addBlock(NoxernaBlocks.AESTUM_BRICK_SLAB, "Aestum Brick Slab");
+        addBlock(NoxernaBlocks.AESTUM_BRICK_WALL, "Aestum Brick Wall");
         // Inetra Stone set
         addBlock(NoxernaBlocks.INETRA, "Inetra");
+        addBlock(NoxernaBlocks.INETRA_STAIRS, "Inetra Stairs");
+        addBlock(NoxernaBlocks.INETRA_SLAB, "Inetra Slab");
+        addBlock(NoxernaBlocks.INETRA_WALL, "Inetra Wall");
+        addBlock(NoxernaBlocks.INETRA_PRESSURE_PLATE, "Inetra Pressure Plate");
+        addBlock(NoxernaBlocks.INETRA_BUTTON, "Inetra Button");
             // Polished
         addBlock(NoxernaBlocks.POLISHED_INETRA, "Polished Inetra");
+        addBlock(NoxernaBlocks.POLISHED_INETRA_STAIRS, "Polished Inetra Stairs");
+        addBlock(NoxernaBlocks.POLISHED_INETRA_SLAB, "Polished Inetra Slab");
+        addBlock(NoxernaBlocks.POLISHED_INETRA_WALL, "Polished Inetra Wall");
             // Bricks
         addBlock(NoxernaBlocks.INETRA_BRICKS, "Inetra Bricks");
+        addBlock(NoxernaBlocks.INETRA_BRICK_STAIRS, "Inetra Brick Stairs");
+        addBlock(NoxernaBlocks.INETRA_BRICK_SLAB, "Inetra Brick Slab");
+        addBlock(NoxernaBlocks.INETRA_BRICK_WALL, "Inetra Brick Wall");
         // Ferrebris Metal set
         addBlock(NoxernaBlocks.FERREBRIS_BLOCK, "Block of Ferrebris");
         addBlock(NoxernaBlocks.FERREBRIS_BARS, "Ferrebris Bars");
@@ -339,10 +396,13 @@ public class NoxernaLanguageData extends LanguageProvider {
         // Noxerna Tags
             // Block set groups
         add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, "Noblewood Planks");
-        add(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, "Any Noxum Stone");
+        add(NoxernaTags.ItemTags.BLOCKSET_NOXUM, "Any Noxum Stone");
+        add(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, "Any Ferrebris Plating");
         add(NoxernaTags.ItemTags.PEBBLES, "Pebbles");
         add(NoxernaTags.ItemTags.XENON_LOGS, "Xenon Logs");
         add(NoxernaTags.ItemTags.KRYPTON_LOGS, "Krypton Logs");
+        add(NoxernaTags.ItemTags.ARGON_LOGS, "Argon Logs");
+        add(NoxernaTags.ItemTags.NEON_LOGS, "Neon Logs");
             // Advancement Logic
         add(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT, "Completes Hard Shadowy Rock");
         add(NoxernaTags.ItemTags.COMPLETES_NOXERNA_TOOLS_ADVANCEMENT, "Completes A Better Tool for the Job");

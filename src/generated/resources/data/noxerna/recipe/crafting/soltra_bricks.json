@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soltra_bricks",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_soltra"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "noxerna:soltra_bricks"
+  }
+}

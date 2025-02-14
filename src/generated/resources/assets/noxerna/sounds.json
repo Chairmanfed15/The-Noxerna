@@ -15,6 +15,18 @@
       "noxerna:block/heavy_metal/place4"
     ]
   },
+  "block.light_metal.break": {
+    "sounds": [
+      "noxerna:block/light_metal/break1",
+      "noxerna:block/light_metal/break2"
+    ]
+  },
+  "block.light_metal.place": {
+    "sounds": [
+      "noxerna:block/light_metal/place1",
+      "noxerna:block/light_metal/place2"
+    ]
+  },
   "block.noblewood.break": {
     "sounds": [
       "noxerna:block/noblewood/break"

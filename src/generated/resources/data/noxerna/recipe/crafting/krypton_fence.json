@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "key": {
+    "#": {
+      "item": "noxerna:krypton_planks"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "#$#"
+  ],
+  "result": {
+    "count": 3,
+    "id": "noxerna:krypton_fence"
+  }
+}

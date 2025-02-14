@@ -1,7 +1,6 @@
 package net.chairmanfed.noxerna.data.generators.tags;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -181,6 +180,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
         this.copy(NoxernaTags.BlockTags.XENON_LOGS, NoxernaTags.ItemTags.XENON_LOGS);
         this.copy(NoxernaTags.BlockTags.KRYPTON_LOGS, NoxernaTags.ItemTags.KRYPTON_LOGS);
+        this.copy(NoxernaTags.BlockTags.ARGON_LOGS, NoxernaTags.ItemTags.ARGON_LOGS);
+        this.copy(NoxernaTags.BlockTags.NEON_LOGS, NoxernaTags.ItemTags.NEON_LOGS);
         // Advancement Logic
         tag(NoxernaTags.ItemTags.COMPLETES_MINE_HARD_STONE_ADVANCEMENT)
                 .addTag(NoxernaTags.ItemTags.NOXSTONE_TOOL_MATERIALS);
@@ -211,14 +212,32 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         tag(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)
                 .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
-        // Interchangeable Block Types
-        tag(NoxernaTags.ItemTags.NOXUM_STONE_TYPE)
-                .add(NoxernaBlocks.NOXUM.get().asItem()).add(NoxernaBlocks.NOXUM_STAIRS.get().asItem())
-                .add(NoxernaBlocks.NOXUM_WALL.get().asItem()).add(NoxernaBlocks.POLISHED_NOXUM.get().asItem())
-                .add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
-                .add(NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem()).add(NoxernaBlocks.NOXUM_BRICKS.get().asItem())
-                .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem()).add(NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem());
-        tag(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING)
+        // Interchangeable Blocksets
+        tag(NoxernaTags.ItemTags.BLOCKSET_SOLTRA)
+                .add(NoxernaItems.SOLTRA.get()).add(NoxernaItems.SOLTRA_STAIRS.get())
+                .add(NoxernaItems.SOLTRA_WALL.get()).add(NoxernaItems.POLISHED_SOLTRA.get())
+                .add(NoxernaItems.POLISHED_SOLTRA_STAIRS.get()).add(NoxernaItems.POLISHED_SOLTRA_WALL.get())
+                .add(NoxernaItems.SOLTRA_BRICKS.get()).add(NoxernaItems.SOLTRA_BRICK_STAIRS.get())
+                .add(NoxernaItems.SOLTRA_BRICK_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_NOXUM)
+                .add(NoxernaItems.NOXUM.get()).add(NoxernaItems.NOXUM_STAIRS.get())
+                .add(NoxernaItems.NOXUM_WALL.get()).add(NoxernaItems.POLISHED_NOXUM.get())
+                .add(NoxernaItems.POLISHED_NOXUM_STAIRS.get()).add(NoxernaItems.POLISHED_NOXUM_WALL.get())
+                .add(NoxernaItems.NOXUM_BRICKS.get()).add(NoxernaItems.NOXUM_BRICK_STAIRS.get())
+                .add(NoxernaItems.NOXUM_BRICK_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_AESTUM)
+                .add(NoxernaItems.AESTUM.get()).add(NoxernaItems.AESTUM_STAIRS.get())
+                .add(NoxernaItems.AESTUM_WALL.get()).add(NoxernaItems.POLISHED_AESTUM.get())
+                .add(NoxernaItems.POLISHED_AESTUM_STAIRS.get()).add(NoxernaItems.POLISHED_AESTUM_WALL.get())
+                .add(NoxernaItems.AESTUM_BRICKS.get()).add(NoxernaItems.AESTUM_BRICK_STAIRS.get())
+                .add(NoxernaItems.AESTUM_BRICK_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_INETRA)
+                .add(NoxernaItems.INETRA.get()).add(NoxernaItems.INETRA_STAIRS.get())
+                .add(NoxernaItems.INETRA_WALL.get()).add(NoxernaItems.POLISHED_INETRA.get())
+                .add(NoxernaItems.POLISHED_INETRA_STAIRS.get()).add(NoxernaItems.POLISHED_INETRA_WALL.get())
+                .add(NoxernaItems.INETRA_BRICKS.get()).add(NoxernaItems.INETRA_BRICK_STAIRS.get())
+                .add(NoxernaItems.INETRA_BRICK_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING)
                 .add(NoxernaItems.FERREBRIS_PLATING.get()).add(NoxernaItems.FERREBRIS_PLATING_STAIRS.get())
                 .add(NoxernaItems.FERREBRIS_PLATING_WALL.get());
     }

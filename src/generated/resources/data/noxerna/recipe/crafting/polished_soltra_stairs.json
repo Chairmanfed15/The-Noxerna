@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_soltra",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_soltra"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "noxerna:polished_soltra_stairs"
+  }
+}

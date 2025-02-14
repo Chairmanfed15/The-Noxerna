@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:soltra_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:soltra_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/soltra_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:soltra_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/soltra_brick_slab"
+    ]
+  }
+}

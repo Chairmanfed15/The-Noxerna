@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "inetra",
+  "ingredients": [
+    {
+      "item": "noxerna:inetra"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:inetra_pebble"
+  }
+}

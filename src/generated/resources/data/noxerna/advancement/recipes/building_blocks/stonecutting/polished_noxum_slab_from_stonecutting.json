@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_TagKey[minecraft:item / noxerna:stone_types/noxum]": {
+    "has_TagKey[minecraft:item / noxerna:blockset/noxum]": {
       "conditions": {
         "items": [
           {
-            "items": "#noxerna:stone_types/noxum"
+            "items": "#noxerna:blockset/noxum"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_TagKey[minecraft:item / noxerna:stone_types/noxum]"
+      "has_TagKey[minecraft:item / noxerna:blockset/noxum]"
     ]
   ],
   "rewards": {

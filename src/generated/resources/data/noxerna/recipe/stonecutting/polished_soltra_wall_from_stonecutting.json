@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "noxerna:blockset/soltra"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:polished_soltra_wall"
+  }
+}

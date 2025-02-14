@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "inetra",
+  "key": {
+    "#": {
+      "item": "noxerna:inetra_pebble"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:inetra"
+  }
+}

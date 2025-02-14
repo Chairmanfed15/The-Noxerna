@@ -1,5 +1,8 @@
 {
   "values": [
-    "noxerna:noxum_pressure_plate"
+    "noxerna:soltra_pressure_plate",
+    "noxerna:noxum_pressure_plate",
+    "noxerna:aestum_pressure_plate",
+    "noxerna:inetra_pressure_plate"
   ]
 }

@@ -49,16 +49,50 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         buttonWithItem(NoxernaBlocks.KRYPTON_BUTTON, NoxernaBlocks.KRYPTON_PLANKS);
 
         // Argon Wood set
+        logBlockWithItem(NoxernaBlocks.ARGON_LOG);
+        woodBlockWithItem(NoxernaBlocks.ARGON_WOOD, NoxernaBlocks.ARGON_LOG);
+        logBlockWithItem(NoxernaBlocks.STRIPPED_ARGON_LOG);
+        woodBlockWithItem(NoxernaBlocks.STRIPPED_ARGON_WOOD, NoxernaBlocks.STRIPPED_ARGON_LOG);
         blockWithItem(NoxernaBlocks.ARGON_PLANKS);
         stairBlockWithItem(NoxernaBlocks.ARGON_STAIRS, NoxernaBlocks.ARGON_PLANKS);
+        slabBlockWithItem(NoxernaBlocks.ARGON_SLAB, NoxernaBlocks.ARGON_PLANKS);
+        fenceBlockWithItem(NoxernaBlocks.ARGON_FENCE, NoxernaBlocks.ARGON_PLANKS);
+        fenceGateWithItem(NoxernaBlocks.ARGON_FENCE_GATE, NoxernaBlocks.ARGON_PLANKS);
+        doorBlockWithItem(NoxernaBlocks.ARGON_DOOR, "cutout");
+        trapDoorWithItem(NoxernaBlocks.ARGON_TRAPDOOR, "cutout");
+        pressurePlateWithItem(NoxernaBlocks.ARGON_PRESSURE_PLATE, NoxernaBlocks.ARGON_PLANKS);
+        buttonWithItem(NoxernaBlocks.ARGON_BUTTON, NoxernaBlocks.ARGON_PLANKS);
 
         // Neon Wood set
+        logBlockWithItem(NoxernaBlocks.NEON_LOG);
+        woodBlockWithItem(NoxernaBlocks.NEON_WOOD, NoxernaBlocks.NEON_LOG);
+        logBlockWithItem(NoxernaBlocks.STRIPPED_NEON_LOG);
+        woodBlockWithItem(NoxernaBlocks.STRIPPED_NEON_WOOD, NoxernaBlocks.STRIPPED_NEON_LOG);
         blockWithItem(NoxernaBlocks.NEON_PLANKS);
+        stairBlockWithItem(NoxernaBlocks.NEON_STAIRS, NoxernaBlocks.NEON_PLANKS);
+        slabBlockWithItem(NoxernaBlocks.NEON_SLAB, NoxernaBlocks.NEON_PLANKS);
+        fenceBlockWithItem(NoxernaBlocks.NEON_FENCE, NoxernaBlocks.NEON_PLANKS);
+        fenceGateWithItem(NoxernaBlocks.NEON_FENCE_GATE, NoxernaBlocks.NEON_PLANKS);
+        doorBlockWithItem(NoxernaBlocks.NEON_DOOR, "cutout");
+        trapDoorWithItem(NoxernaBlocks.NEON_TRAPDOOR, "cutout");
+        pressurePlateWithItem(NoxernaBlocks.NEON_PRESSURE_PLATE, NoxernaBlocks.NEON_PLANKS);
+        buttonWithItem(NoxernaBlocks.NEON_BUTTON, NoxernaBlocks.NEON_PLANKS);
 
         // Soltra Stone set
         blockWithItem(NoxernaBlocks.SOLTRA);
+        stairBlockWithItem(NoxernaBlocks.SOLTRA_STAIRS, NoxernaBlocks.SOLTRA);
+        slabBlockWithItem(NoxernaBlocks.SOLTRA_SLAB, NoxernaBlocks.SOLTRA);
+        wallBlockWithItem(NoxernaBlocks.SOLTRA_WALL, NoxernaBlocks.SOLTRA);
+        pressurePlateWithItem(NoxernaBlocks.SOLTRA_PRESSURE_PLATE, NoxernaBlocks.SOLTRA);
+        buttonWithItem(NoxernaBlocks.SOLTRA_BUTTON, NoxernaBlocks.SOLTRA);
         blockWithItem(NoxernaBlocks.POLISHED_SOLTRA);
+        stairBlockWithItem(NoxernaBlocks.POLISHED_SOLTRA_STAIRS, NoxernaBlocks.POLISHED_SOLTRA);
+        slabBlockWithItem(NoxernaBlocks.POLISHED_SOLTRA_SLAB, NoxernaBlocks.POLISHED_SOLTRA);
+        wallBlockWithItem(NoxernaBlocks.POLISHED_SOLTRA_WALL, NoxernaBlocks.POLISHED_SOLTRA);
         blockWithItem(NoxernaBlocks.SOLTRA_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.SOLTRA_BRICK_STAIRS, NoxernaBlocks.SOLTRA_BRICKS);
+        slabBlockWithItem(NoxernaBlocks.SOLTRA_BRICK_SLAB, NoxernaBlocks.SOLTRA_BRICKS);
+        wallBlockWithItem(NoxernaBlocks.SOLTRA_BRICK_WALL, NoxernaBlocks.SOLTRA_BRICKS);
         pebbleBlock(NoxernaBlocks.SOLTRA_PEBBLE, NoxernaBlocks.SOLTRA);
 
         // Noxum Stone set
@@ -80,15 +114,37 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
         // Aestum Stone set
         blockWithItem(NoxernaBlocks.AESTUM);
-        blockWithItem(NoxernaBlocks.POLISHED_AESTUM);
-        blockWithItem(NoxernaBlocks.AESTUM_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.AESTUM_STAIRS, NoxernaBlocks.AESTUM);
+        slabBlockWithItem(NoxernaBlocks.AESTUM_SLAB, NoxernaBlocks.AESTUM);
+        wallBlockWithItem(NoxernaBlocks.AESTUM_WALL, NoxernaBlocks.AESTUM);
+        pressurePlateWithItem(NoxernaBlocks.AESTUM_PRESSURE_PLATE, NoxernaBlocks.AESTUM);
+        buttonWithItem(NoxernaBlocks.AESTUM_BUTTON, NoxernaBlocks.AESTUM);
         pebbleBlock(NoxernaBlocks.AESTUM_PEBBLE, NoxernaBlocks.AESTUM);
+        blockWithItem(NoxernaBlocks.POLISHED_AESTUM);
+        stairBlockWithItem(NoxernaBlocks.POLISHED_AESTUM_STAIRS, NoxernaBlocks.POLISHED_AESTUM);
+        slabBlockWithItem(NoxernaBlocks.POLISHED_AESTUM_SLAB, NoxernaBlocks.POLISHED_AESTUM);
+        wallBlockWithItem(NoxernaBlocks.POLISHED_AESTUM_WALL, NoxernaBlocks.POLISHED_AESTUM);
+        blockWithItem(NoxernaBlocks.AESTUM_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.AESTUM_BRICK_STAIRS, NoxernaBlocks.AESTUM_BRICKS);
+        slabBlockWithItem(NoxernaBlocks.AESTUM_BRICK_SLAB, NoxernaBlocks.AESTUM_BRICKS);
+        wallBlockWithItem(NoxernaBlocks.AESTUM_BRICK_WALL, NoxernaBlocks.AESTUM_BRICKS);
 
         // Inetra Stone set
         blockWithItem(NoxernaBlocks.INETRA);
-        blockWithItem(NoxernaBlocks.POLISHED_INETRA);
-        blockWithItem(NoxernaBlocks.INETRA_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.INETRA_STAIRS, NoxernaBlocks.INETRA);
+        slabBlockWithItem(NoxernaBlocks.INETRA_SLAB, NoxernaBlocks.INETRA);
+        wallBlockWithItem(NoxernaBlocks.INETRA_WALL, NoxernaBlocks.INETRA);
+        pressurePlateWithItem(NoxernaBlocks.INETRA_PRESSURE_PLATE, NoxernaBlocks.INETRA);
+        buttonWithItem(NoxernaBlocks.INETRA_BUTTON, NoxernaBlocks.INETRA);
         pebbleBlock(NoxernaBlocks.INETRA_PEBBLE, NoxernaBlocks.INETRA);
+        blockWithItem(NoxernaBlocks.POLISHED_INETRA);
+        stairBlockWithItem(NoxernaBlocks.POLISHED_INETRA_STAIRS, NoxernaBlocks.POLISHED_INETRA);
+        slabBlockWithItem(NoxernaBlocks.POLISHED_INETRA_SLAB, NoxernaBlocks.POLISHED_INETRA);
+        wallBlockWithItem(NoxernaBlocks.POLISHED_INETRA_WALL, NoxernaBlocks.POLISHED_INETRA);
+        blockWithItem(NoxernaBlocks.INETRA_BRICKS);
+        stairBlockWithItem(NoxernaBlocks.INETRA_BRICK_STAIRS, NoxernaBlocks.INETRA_BRICKS);
+        slabBlockWithItem(NoxernaBlocks.INETRA_BRICK_SLAB, NoxernaBlocks.INETRA_BRICKS);
+        wallBlockWithItem(NoxernaBlocks.INETRA_BRICK_WALL, NoxernaBlocks.INETRA_BRICKS);
 
         // Ferrebris Metal set
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);

@@ -19,6 +19,7 @@ public class NoxernaTags {
                 "completes_noxerna_tools_advancement");
         // Tool Groupings
         public static final TagKey<Item> PICKADZES = localTag("pickadzes");
+        // Tool Material Groups
         public static final TagKey<Item> NOBLEWOOD_PLANKS = localTag("noblewood_planks");
         public static final TagKey<Item> ANY_IRON_INGOT = localTag("any_iron_ingot");
         public static final TagKey<Item> ANY_DIAMOND_GEM = localTag("any_diamond_gem");
@@ -27,11 +28,17 @@ public class NoxernaTags {
         public static final TagKey<Item> UMBURAM_TOOL_MATERIALS = localTag("umburam_tool_materials");
         public static final TagKey<Item> ADAMUNA_TOOL_MATERIALS = localTag("adamuna_tool_materials");
         public static final TagKey<Item> NIHOXITE_TOOL_MATERIALS = localTag("nihoxite_tool_materials");
-        public static final TagKey<Item> NOXUM_STONE_TYPE = localTag("stone_types/noxum");
-        public static final TagKey<Item> FERREBRIS_METAL_PLATING = localTag("metal_plating/ferrebris");
+        // Block Groups
+        public static final TagKey<Item> BLOCKSET_SOLTRA = localTag("blockset/soltra");
+        public static final TagKey<Item> BLOCKSET_NOXUM = localTag("blockset/noxum");
+        public static final TagKey<Item> BLOCKSET_AESTUM = localTag("blockset/aestum");
+        public static final TagKey<Item> BLOCKSET_INETRA = localTag("blockset/inetra");
+        public static final TagKey<Item> BLOCKSET_FERREBRIS_PLATING = localTag("blockset/ferrebris_plating");
         public static final TagKey<Item> PEBBLES = localTag("pebbles");
         public static final TagKey<Item> XENON_LOGS = localTag("xenon_logs");
         public static final TagKey<Item> KRYPTON_LOGS = localTag("krypton_logs");
+        public static final TagKey<Item> ARGON_LOGS = localTag("argon_logs");
+        public static final TagKey<Item> NEON_LOGS = localTag("neon_logs");
 
         // Common Tags
         // Material Groupings
@@ -113,6 +120,8 @@ public class NoxernaTags {
         public static final TagKey<Block> BOSS_IMMUNE = localTag("boss_immune");
         public static final TagKey<Block> XENON_LOGS = localTag("xenon_logs");
         public static final TagKey<Block> KRYPTON_LOGS = localTag("krypton_logs");
+        public static final TagKey<Block> ARGON_LOGS = localTag("argon_logs");
+        public static final TagKey<Block> NEON_LOGS = localTag("neon_logs");
 
         public static final TagKey<Block> FERREBRIS_STORAGE_BLOCKS = commonTag("storage_blocks/ferrebris");
         public static final TagKey<Block> UMBURAM_STORAGE_BLOCKS = commonTag("storage_blocks/umburam");

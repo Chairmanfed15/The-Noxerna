@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "noxerna:block/aestum_bricks",
+    "side": "noxerna:block/aestum_bricks",
+    "top": "noxerna:block/aestum_bricks"
+  }
+}

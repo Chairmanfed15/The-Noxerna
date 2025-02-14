@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:polished_soltra": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:polished_soltra"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/polished_soltra_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:polished_soltra"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/polished_soltra_stairs"
+    ]
+  }
+}

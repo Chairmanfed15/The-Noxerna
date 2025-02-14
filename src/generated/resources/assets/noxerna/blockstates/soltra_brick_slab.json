@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/soltra_brick_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/soltra_bricks"
+    },
+    "type=top": {
+      "model": "noxerna:block/soltra_brick_slab_top"
+    }
+  }
+}

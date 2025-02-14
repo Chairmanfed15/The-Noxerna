@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "soltra",
+  "ingredients": [
+    {
+      "item": "noxerna:soltra"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:soltra_pebble"
+  }
+}

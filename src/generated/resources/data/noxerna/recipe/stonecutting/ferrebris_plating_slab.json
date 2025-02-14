@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "tag": "noxerna:metal_plating/ferrebris"
+    "tag": "noxerna:blockset/ferrebris_plating"
   },
   "result": {
     "count": 2,

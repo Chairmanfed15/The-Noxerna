@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/inetra_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/inetra"
+    },
+    "type=top": {
+      "model": "noxerna:block/inetra_slab_top"
+    }
+  }
+}

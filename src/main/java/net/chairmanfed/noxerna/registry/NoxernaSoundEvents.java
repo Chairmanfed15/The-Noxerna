@@ -10,6 +10,8 @@ import net.minecraft.sounds.SoundEvent;
 public class NoxernaSoundEvents {
     public static final SoundEvent HEAVY_METAL_BREAK = register("block.heavy_metal.break");
     public static final SoundEvent HEAVY_METAL_PLACE = register("block.heavy_metal.place");
+    public static final SoundEvent LIGHT_METAL_BREAK = register("block.light_metal.break");
+    public static final SoundEvent LIGHT_METAL_PLACE = register("block.light_metal.place");
     public static final SoundEvent NOBLEWOOD_BREAK = register("block.noblewood.break");
     public static final SoundEvent NOBLEWOOD_FALL = register("block.noblewood.fall");
     public static final SoundEvent NOBLEWOOD_HIT = register("block.noblewood.hit");

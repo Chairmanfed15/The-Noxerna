@@ -1,6 +1,8 @@
 {
   "values": [
     "noxerna:xenon_trapdoor",
-    "noxerna:krypton_trapdoor"
+    "noxerna:krypton_trapdoor",
+    "noxerna:argon_trapdoor",
+    "noxerna:neon_trapdoor"
   ]
 }

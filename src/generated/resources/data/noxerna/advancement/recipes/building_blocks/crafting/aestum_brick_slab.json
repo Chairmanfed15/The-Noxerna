@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:aestum_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:aestum_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/aestum_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:aestum_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/aestum_brick_slab"
+    ]
+  }
+}

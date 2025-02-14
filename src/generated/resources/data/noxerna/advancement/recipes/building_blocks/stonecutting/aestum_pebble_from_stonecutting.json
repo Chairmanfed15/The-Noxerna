@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / noxerna:blockset/aestum]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:blockset/aestum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:stonecutting/aestum_pebble_from_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / noxerna:blockset/aestum]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:stonecutting/aestum_pebble_from_stonecutting"
+    ]
+  }
+}

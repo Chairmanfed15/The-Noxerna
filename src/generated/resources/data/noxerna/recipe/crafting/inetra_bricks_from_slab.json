@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "inetra_bricks",
+  "key": {
+    "#": {
+      "item": "noxerna:inetra_brick_slab"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:inetra_bricks"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "inetra",
+  "key": {
+    "#": {
+      "item": "noxerna:inetra"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:inetra_wall"
+  }
+}

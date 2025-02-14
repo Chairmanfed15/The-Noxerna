@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "aestum",
+  "key": {
+    "#": {
+      "item": "noxerna:aestum"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:aestum_wall"
+  }
+}

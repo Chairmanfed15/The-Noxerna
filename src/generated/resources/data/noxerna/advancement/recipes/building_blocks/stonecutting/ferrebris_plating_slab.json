@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_TagKey[minecraft:item / noxerna:metal_plating/ferrebris]": {
+    "has_TagKey[minecraft:item / noxerna:blockset/ferrebris_plating]": {
       "conditions": {
         "items": [
           {
-            "items": "#noxerna:metal_plating/ferrebris"
+            "items": "#noxerna:blockset/ferrebris_plating"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_TagKey[minecraft:item / noxerna:metal_plating/ferrebris]"
+      "has_TagKey[minecraft:item / noxerna:blockset/ferrebris_plating]"
     ]
   ],
   "rewards": {

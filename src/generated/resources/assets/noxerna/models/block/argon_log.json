@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "noxerna:block/argon_log_top",
+    "side": "noxerna:block/argon_log"
+  }
+}

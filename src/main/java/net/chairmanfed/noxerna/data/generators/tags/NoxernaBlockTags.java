@@ -9,6 +9,7 @@ import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.checkerframework.checker.units.qual.N;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -31,22 +32,54 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         // Mining Logic
             // Valid Tool Assignment
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(NoxernaBlocks.SOLTRA.get()).add(NoxernaBlocks.SOLTRA_STAIRS.get())
+                .add(NoxernaBlocks.SOLTRA_SLAB.get()).add(NoxernaBlocks.SOLTRA_WALL.get())
+                .add(NoxernaBlocks.SOLTRA_PRESSURE_PLATE.get()).add(NoxernaBlocks.SOLTRA_BUTTON.get())
+                .add(NoxernaBlocks.POLISHED_SOLTRA.get()).add(NoxernaBlocks.POLISHED_SOLTRA_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_SOLTRA_SLAB.get()).add(NoxernaBlocks.POLISHED_SOLTRA_WALL.get())
+                .add(NoxernaBlocks.SOLTRA_BRICKS.get()).add(NoxernaBlocks.SOLTRA_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.SOLTRA_BRICK_SLAB.get()).add(NoxernaBlocks.SOLTRA_BRICK_WALL.get())
                 .add(NoxernaBlocks.NOXUM.get()).add(NoxernaBlocks.NOXUM_STAIRS.get())
                 .add(NoxernaBlocks.NOXUM_SLAB.get()).add(NoxernaBlocks.NOXUM_WALL.get())
-                .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get()).add(NoxernaBlocks.POLISHED_NOXUM.get())
-                .add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get()).add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get())
-                .add(NoxernaBlocks.POLISHED_NOXUM_WALL.get()).add(NoxernaBlocks.NOXUM_BRICKS.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get()).add(NoxernaBlocks.NOXUM_BRICK_SLAB.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_WALL.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get())
-                .add(NoxernaBlocks.FERREBRIS_BLOCK.get()).add(NoxernaBlocks.FERREBRIS_PLATING.get())
-                .add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get()).add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get())
-                .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get()).add(NoxernaBlocks.XENON_CONCRETE.get())
-                .add(NoxernaBlocks.KRYPTON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE.get())
-                .add(NoxernaBlocks.NEON_CONCRETE.get());
+                .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get()).add(NoxernaBlocks.NOXUM_BUTTON.get())
+                .add(NoxernaBlocks.POLISHED_NOXUM.get()).add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get()).add(NoxernaBlocks.POLISHED_NOXUM_WALL.get())
+                .add(NoxernaBlocks.NOXUM_BRICKS.get()).add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.NOXUM_BRICK_SLAB.get()).add(NoxernaBlocks.NOXUM_BRICK_WALL.get())
+                .add(NoxernaBlocks.AESTUM.get()).add(NoxernaBlocks.AESTUM_STAIRS.get())
+                .add(NoxernaBlocks.AESTUM_SLAB.get()).add(NoxernaBlocks.AESTUM_WALL.get())
+                .add(NoxernaBlocks.AESTUM_PRESSURE_PLATE.get()).add(NoxernaBlocks.AESTUM_BUTTON.get())
+                .add(NoxernaBlocks.POLISHED_AESTUM.get()).add(NoxernaBlocks.POLISHED_AESTUM_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_AESTUM_SLAB.get()).add(NoxernaBlocks.POLISHED_AESTUM_WALL.get())
+                .add(NoxernaBlocks.AESTUM_BRICKS.get()).add(NoxernaBlocks.AESTUM_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.AESTUM_BRICK_SLAB.get()).add(NoxernaBlocks.AESTUM_BRICK_WALL.get())
+                .add(NoxernaBlocks.INETRA.get()).add(NoxernaBlocks.INETRA_STAIRS.get())
+                .add(NoxernaBlocks.INETRA_SLAB.get()).add(NoxernaBlocks.INETRA_WALL.get())
+                .add(NoxernaBlocks.INETRA_PRESSURE_PLATE.get()).add(NoxernaBlocks.INETRA_BUTTON.get())
+                .add(NoxernaBlocks.POLISHED_INETRA.get()).add(NoxernaBlocks.POLISHED_INETRA_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_INETRA_SLAB.get()).add(NoxernaBlocks.POLISHED_INETRA_WALL.get())
+                .add(NoxernaBlocks.INETRA_BRICKS.get()).add(NoxernaBlocks.INETRA_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.INETRA_BRICK_SLAB.get()).add(NoxernaBlocks.INETRA_BRICK_WALL.get())
+                .addTag(NoxernaTags.BlockTags.PEBBLES).add(NoxernaBlocks.FERREBRIS_BLOCK.get())
+                .add(NoxernaBlocks.FERREBRIS_PLATING.get()).add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get())
+                .add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get()).add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get())
+                .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE.get())
+                .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE.get());
             // Required Tool Tier
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS);
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(NoxernaBlocks.INETRA.get()).add(NoxernaBlocks.INETRA_STAIRS.get())
+                .add(NoxernaBlocks.INETRA_SLAB.get()).add(NoxernaBlocks.INETRA_WALL.get())
+                .add(NoxernaBlocks.POLISHED_INETRA.get()).add(NoxernaBlocks.POLISHED_INETRA_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_INETRA_SLAB.get()).add(NoxernaBlocks.POLISHED_INETRA_WALL.get())
+                .add(NoxernaBlocks.INETRA_BRICKS.get()).add(NoxernaBlocks.INETRA_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.INETRA_BRICK_SLAB.get()).add(NoxernaBlocks.INETRA_BRICK_WALL.get())
+                .addTag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.TENERYL_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.ADAMUNA_STORAGE_BLOCKS);
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .addTag(NoxernaTags.BlockTags.INPERLUM_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS);
         // Logic
             // Entity Interaction
         tag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS)
@@ -65,43 +98,67 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .addTag(NoxernaTags.BlockTags.BASE_STONE_NOXERNA);
         // Block Variations
         tag(BlockTags.STAIRS)
-                .add(NoxernaBlocks.NOXUM_STAIRS.get()).add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get()).add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get());
+                .add(NoxernaBlocks.SOLTRA_STAIRS.get()).add(NoxernaBlocks.POLISHED_SOLTRA_STAIRS.get())
+                .add(NoxernaBlocks.SOLTRA_BRICK_STAIRS.get()).add(NoxernaBlocks.NOXUM_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_NOXUM_STAIRS.get()).add(NoxernaBlocks.NOXUM_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.AESTUM_STAIRS.get()).add(NoxernaBlocks.POLISHED_AESTUM_STAIRS.get())
+                .add(NoxernaBlocks.AESTUM_BRICK_STAIRS.get()).add(NoxernaBlocks.INETRA_STAIRS.get())
+                .add(NoxernaBlocks.POLISHED_INETRA_STAIRS.get()).add(NoxernaBlocks.INETRA_BRICK_STAIRS.get())
+                .add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get());
         tag(BlockTags.SLABS)
-                .add(NoxernaBlocks.NOXUM_SLAB.get()).add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_SLAB.get()).add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
+                .add(NoxernaBlocks.SOLTRA_SLAB.get()).add(NoxernaBlocks.POLISHED_SOLTRA_SLAB.get())
+                .add(NoxernaBlocks.SOLTRA_BRICK_SLAB.get()).add(NoxernaBlocks.NOXUM_SLAB.get())
+                .add(NoxernaBlocks.POLISHED_NOXUM_SLAB.get()).add(NoxernaBlocks.NOXUM_BRICK_SLAB.get())
+                .add(NoxernaBlocks.AESTUM_SLAB.get()).add(NoxernaBlocks.POLISHED_AESTUM_SLAB.get())
+                .add(NoxernaBlocks.AESTUM_BRICK_SLAB.get()).add(NoxernaBlocks.INETRA_SLAB.get())
+                .add(NoxernaBlocks.POLISHED_INETRA_SLAB.get()).add(NoxernaBlocks.INETRA_BRICK_SLAB.get())
+                .add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
         tag(BlockTags.WALLS)
-                .add(NoxernaBlocks.NOXUM_WALL.get()).add(NoxernaBlocks.POLISHED_NOXUM_WALL.get())
-                .add(NoxernaBlocks.NOXUM_BRICK_WALL.get()).add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
+                .add(NoxernaBlocks.SOLTRA_WALL.get()).add(NoxernaBlocks.POLISHED_SOLTRA_WALL.get())
+                .add(NoxernaBlocks.SOLTRA_BRICK_WALL.get()).add(NoxernaBlocks.NOXUM_WALL.get())
+                .add(NoxernaBlocks.POLISHED_NOXUM_WALL.get()).add(NoxernaBlocks.NOXUM_BRICK_WALL.get())
+                .add(NoxernaBlocks.AESTUM_WALL.get()).add(NoxernaBlocks.POLISHED_AESTUM_WALL.get())
+                .add(NoxernaBlocks.AESTUM_BRICK_WALL.get()).add(NoxernaBlocks.INETRA_WALL.get())
+                .add(NoxernaBlocks.POLISHED_INETRA_WALL.get()).add(NoxernaBlocks.INETRA_BRICK_WALL.get())
+                .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
         tag(BlockTags.STONE_PRESSURE_PLATES)
-                .add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get());
+                .add(NoxernaBlocks.SOLTRA_PRESSURE_PLATE.get()).add(NoxernaBlocks.NOXUM_PRESSURE_PLATE.get())
+                .add(NoxernaBlocks.AESTUM_PRESSURE_PLATE.get()).add(NoxernaBlocks.INETRA_PRESSURE_PLATE.get());
         tag(BlockTags.STONE_BUTTONS)
-                .add(NoxernaBlocks.NOXUM_BUTTON.get());
+                .add(NoxernaBlocks.SOLTRA_BUTTON.get()).add(NoxernaBlocks.NOXUM_BUTTON.get())
+                .add(NoxernaBlocks.AESTUM_BUTTON.get()).add(NoxernaBlocks.INETRA_BUTTON.get());
         // Wooden Blocks
         tag(BlockTags.LOGS)
-                .addTag(NoxernaTags.BlockTags.XENON_LOGS)
-                .addTag(NoxernaTags.BlockTags.KRYPTON_LOGS);
+                .addTag(NoxernaTags.BlockTags.XENON_LOGS).addTag(NoxernaTags.BlockTags.KRYPTON_LOGS)
+                .addTag(NoxernaTags.BlockTags.ARGON_LOGS).addTag(NoxernaTags.BlockTags.NEON_LOGS);
         tag(BlockTags.PLANKS)
-                .add(NoxernaBlocks.XENON_PLANKS.get())
-                .add(NoxernaBlocks.KRYPTON_PLANKS.get());
+                .add(NoxernaBlocks.XENON_PLANKS.get()).add(NoxernaBlocks.KRYPTON_PLANKS.get())
+                .add(NoxernaBlocks.ARGON_PLANKS.get()).add(NoxernaBlocks.NEON_PLANKS.get());
             // Wooden Block Variations
         tag(BlockTags.WOODEN_STAIRS)
                 .add(NoxernaBlocks.XENON_STAIRS.get()).add(NoxernaBlocks.KRYPTON_STAIRS.get())
-                .add(NoxernaBlocks.ARGON_STAIRS.get());
+                .add(NoxernaBlocks.ARGON_STAIRS.get()).add(NoxernaBlocks.NEON_STAIRS.get());
         tag(BlockTags.WOODEN_SLABS)
-                .add(NoxernaBlocks.XENON_SLAB.get()).add(NoxernaBlocks.KRYPTON_SLAB.get());
+                .add(NoxernaBlocks.XENON_SLAB.get()).add(NoxernaBlocks.KRYPTON_SLAB.get())
+                .add(NoxernaBlocks.ARGON_SLAB.get()).add(NoxernaBlocks.NEON_SLAB.get());
         tag(BlockTags.WOODEN_FENCES)
-                .add(NoxernaBlocks.XENON_FENCE.get()).add(NoxernaBlocks.KRYPTON_FENCE.get());
+                .add(NoxernaBlocks.XENON_FENCE.get()).add(NoxernaBlocks.KRYPTON_FENCE.get())
+                .add(NoxernaBlocks.ARGON_FENCE.get()).add(NoxernaBlocks.NEON_FENCE.get());
         tag(BlockTags.FENCE_GATES)
-                .add(NoxernaBlocks.XENON_FENCE_GATE.get()).add(NoxernaBlocks.KRYPTON_FENCE_GATE.get());
+                .add(NoxernaBlocks.XENON_FENCE_GATE.get()).add(NoxernaBlocks.KRYPTON_FENCE_GATE.get())
+                .add(NoxernaBlocks.ARGON_FENCE_GATE.get()).add(NoxernaBlocks.NEON_FENCE_GATE.get());
         tag(BlockTags.WOODEN_DOORS)
-                .add(NoxernaBlocks.XENON_DOOR.get()).add(NoxernaBlocks.KRYPTON_DOOR.get());
+                .add(NoxernaBlocks.XENON_DOOR.get()).add(NoxernaBlocks.KRYPTON_DOOR.get())
+                .add(NoxernaBlocks.ARGON_DOOR.get()).add(NoxernaBlocks.NEON_DOOR.get());
         tag(BlockTags.WOODEN_TRAPDOORS)
-                .add(NoxernaBlocks.XENON_TRAPDOOR.get()).add(NoxernaBlocks.KRYPTON_TRAPDOOR.get());
+                .add(NoxernaBlocks.XENON_TRAPDOOR.get()).add(NoxernaBlocks.KRYPTON_TRAPDOOR.get())
+                .add(NoxernaBlocks.ARGON_TRAPDOOR.get()).add(NoxernaBlocks.NEON_TRAPDOOR.get());
         tag(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get()).add(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get());
+                .add(NoxernaBlocks.XENON_PRESSURE_PLATE.get()).add(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get())
+                .add(NoxernaBlocks.ARGON_PRESSURE_PLATE.get()).add(NoxernaBlocks.NEON_PRESSURE_PLATE.get());
         tag(BlockTags.WOODEN_BUTTONS)
-                .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get());
+                .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get())
+                .add(NoxernaBlocks.ARGON_BUTTON.get()).add(NoxernaBlocks.NEON_BUTTON.get());
         // Dye able Blocks
         tag(BlockTags.CONCRETE_POWDER)
                 .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
@@ -144,7 +201,6 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         tag(NoxernaTags.BlockTags.DYED_NEON)
                 .add(NoxernaBlocks.NEON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
-
         // Noxerna Tags
         // Logic
             // Entity Interaction
@@ -191,5 +247,11 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(NoxernaTags.BlockTags.KRYPTON_LOGS)
                 .add(NoxernaBlocks.KRYPTON_LOG.get()).add(NoxernaBlocks.KRYPTON_WOOD.get())
                 .add(NoxernaBlocks.STRIPPED_KRYPTON_LOG.get()).add(NoxernaBlocks.STRIPPED_KRYPTON_WOOD.get());
+        tag(NoxernaTags.BlockTags.ARGON_LOGS)
+                .add(NoxernaBlocks.ARGON_LOG.get()).add(NoxernaBlocks.ARGON_WOOD.get())
+                .add(NoxernaBlocks.STRIPPED_ARGON_LOG.get()).add(NoxernaBlocks.STRIPPED_ARGON_WOOD.get());
+        tag(NoxernaTags.BlockTags.NEON_LOGS)
+                .add(NoxernaBlocks.NEON_LOG.get()).add(NoxernaBlocks.NEON_WOOD.get())
+                .add(NoxernaBlocks.STRIPPED_NEON_LOG.get()).add(NoxernaBlocks.STRIPPED_NEON_WOOD.get());
     }
 }

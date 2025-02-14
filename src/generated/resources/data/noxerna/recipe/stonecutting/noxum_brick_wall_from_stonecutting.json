@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "noxerna:blockset/noxum"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:noxum_brick_wall"
+  }
+}

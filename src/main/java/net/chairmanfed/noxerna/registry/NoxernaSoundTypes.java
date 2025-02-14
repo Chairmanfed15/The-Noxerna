@@ -11,6 +11,13 @@ public class NoxernaSoundTypes {
             NoxernaSoundEvents.HEAVY_METAL_PLACE,
             SoundEvents.HEAVY_CORE_HIT,
             SoundEvents.HEAVY_CORE_FALL);
+    public static final SoundType LIGHT_METAL = new SoundType(
+            1.0F, 1.0F,
+            NoxernaSoundEvents.LIGHT_METAL_BREAK,
+            SoundEvents.NETHERITE_BLOCK_STEP,
+            NoxernaSoundEvents.LIGHT_METAL_BREAK,
+            SoundEvents.NETHERITE_BLOCK_HIT,
+            SoundEvents.NETHERITE_BLOCK_FALL);
     public static final SoundType NOBLEWOOD = new SoundType(
             1.0F, 1.0F, NoxernaSoundEvents.NOBLEWOOD_BREAK, NoxernaSoundEvents.NOBLEWOOD_STEP,
             NoxernaSoundEvents.NOBLEWOOD_PLACE, NoxernaSoundEvents.NOBLEWOOD_HIT, NoxernaSoundEvents.NOBLEWOOD_FALL

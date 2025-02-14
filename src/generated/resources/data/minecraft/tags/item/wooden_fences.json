@@ -1,6 +1,8 @@
 {
   "values": [
     "noxerna:xenon_fence",
-    "noxerna:krypton_fence"
+    "noxerna:krypton_fence",
+    "noxerna:argon_fence",
+    "noxerna:neon_fence"
   ]
 }

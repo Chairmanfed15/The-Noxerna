@@ -1,8 +1,17 @@
 {
   "values": [
+    "noxerna:soltra_stairs",
+    "noxerna:polished_soltra_stairs",
+    "noxerna:soltra_brick_stairs",
     "noxerna:noxum_stairs",
     "noxerna:polished_noxum_stairs",
     "noxerna:noxum_brick_stairs",
+    "noxerna:aestum_stairs",
+    "noxerna:polished_aestum_stairs",
+    "noxerna:aestum_brick_stairs",
+    "noxerna:inetra_stairs",
+    "noxerna:polished_inetra_stairs",
+    "noxerna:inetra_brick_stairs",
     "noxerna:ferrebris_plating_stairs"
   ]
 }

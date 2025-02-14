@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "noxerna:block/inetra_bricks",
+    "side": "noxerna:block/inetra_bricks",
+    "top": "noxerna:block/inetra_bricks"
+  }
+}

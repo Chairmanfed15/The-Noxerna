@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_fence_gate",
+  "key": {
+    "#": {
+      "item": "noxerna:argon_planks"
+    },
+    "$": {
+      "tag": "c:rods/noblewood"
+    }
+  },
+  "pattern": [
+    "$#$",
+    "$#$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:argon_fence_gate"
+  }
+}

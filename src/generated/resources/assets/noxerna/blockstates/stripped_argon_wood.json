@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "noxerna:block/stripped_argon_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "noxerna:block/stripped_argon_wood"
+    },
+    "axis=z": {
+      "model": "noxerna:block/stripped_argon_wood_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "noxerna:blockset/inetra"
+  },
+  "result": {
+    "count": 9,
+    "id": "noxerna:inetra_pebble"
+  }
+}

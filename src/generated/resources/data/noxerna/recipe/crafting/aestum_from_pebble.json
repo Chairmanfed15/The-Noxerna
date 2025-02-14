@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "aestum",
+  "key": {
+    "#": {
+      "item": "noxerna:aestum_pebble"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:aestum"
+  }
+}

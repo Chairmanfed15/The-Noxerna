@@ -495,20 +495,88 @@ public class NoxernaItems {
     public static final DeferredItem<Item> KRYPTON_BUTTON = registerBlockItem(
             "krypton_button", NoxernaBlocks.KRYPTON_BUTTON);
     // Argon Wood set
+    public static final DeferredItem<Item> ARGON_LOG = registerBlockItem(
+            "argon_log", NoxernaBlocks.ARGON_LOG);
+    public static final DeferredItem<Item> ARGON_WOOD = registerBlockItem(
+            "argon_wood", NoxernaBlocks.ARGON_WOOD);
+    public static final DeferredItem<Item> STRIPPED_ARGON_LOG = registerBlockItem(
+            "stripped_argon_log", NoxernaBlocks.STRIPPED_ARGON_LOG);
+    public static final DeferredItem<Item> STRIPPED_ARGON_WOOD = registerBlockItem(
+            "stripped_argon_wood", NoxernaBlocks.STRIPPED_ARGON_WOOD);
     public static final DeferredItem<Item> ARGON_PLANKS = registerBlockItem(
             "argon_planks", NoxernaBlocks.ARGON_PLANKS);
     public static final DeferredItem<Item> ARGON_STAIRS = registerBlockItem(
             "argon_stairs", NoxernaBlocks.ARGON_STAIRS);
+    public static final DeferredItem<Item> ARGON_SLAB = registerBlockItem(
+            "argon_slab", NoxernaBlocks.ARGON_SLAB);
+    public static final DeferredItem<Item> ARGON_FENCE = registerBlockItem(
+            "argon_fence", NoxernaBlocks.ARGON_FENCE);
+    public static final DeferredItem<Item> ARGON_FENCE_GATE = registerBlockItem(
+            "argon_fence_gate", NoxernaBlocks.ARGON_FENCE_GATE);
+    public static final DeferredItem<Item> ARGON_DOOR = registerBlockItem(
+            "argon_door", NoxernaBlocks.ARGON_DOOR);
+    public static final DeferredItem<Item> ARGON_TRAPDOOR = registerBlockItem(
+            "argon_trapdoor", NoxernaBlocks.ARGON_TRAPDOOR);
+    public static final DeferredItem<Item> ARGON_PRESSURE_PLATE = registerBlockItem(
+            "argon_pressure_plate", NoxernaBlocks.ARGON_PRESSURE_PLATE);
+    public static final DeferredItem<Item> ARGON_BUTTON = registerBlockItem(
+            "argon_button", NoxernaBlocks.ARGON_BUTTON);
     // Neon Wood set
+    public static final DeferredItem<Item> NEON_LOG = registerBlockItem(
+            "neon_log", NoxernaBlocks.NEON_LOG);
+    public static final DeferredItem<Item> NEON_WOOD = registerBlockItem(
+            "neon_wood", NoxernaBlocks.NEON_WOOD);
+    public static final DeferredItem<Item> STRIPPED_NEON_LOG = registerBlockItem(
+            "stripped_neon_log", NoxernaBlocks.STRIPPED_NEON_LOG);
+    public static final DeferredItem<Item> STRIPPED_NEON_WOOD = registerBlockItem(
+            "stripped_neon_wood", NoxernaBlocks.STRIPPED_NEON_WOOD);
     public static final DeferredItem<Item> NEON_PLANKS = registerBlockItem(
             "neon_planks", NoxernaBlocks.NEON_PLANKS);
+    public static final DeferredItem<Item> NEON_STAIRS = registerBlockItem(
+            "neon_stairs", NoxernaBlocks.NEON_STAIRS);
+    public static final DeferredItem<Item> NEON_SLAB = registerBlockItem(
+            "neon_slab", NoxernaBlocks.NEON_SLAB);
+    public static final DeferredItem<Item> NEON_FENCE = registerBlockItem(
+            "neon_fence", NoxernaBlocks.NEON_FENCE);
+    public static final DeferredItem<Item> NEON_FENCE_GATE = registerBlockItem(
+            "neon_fence_gate", NoxernaBlocks.NEON_FENCE_GATE);
+    public static final DeferredItem<Item> NEON_DOOR = registerBlockItem(
+            "neon_door", NoxernaBlocks.NEON_DOOR);
+    public static final DeferredItem<Item> NEON_TRAPDOOR = registerBlockItem(
+            "neon_trapdoor", NoxernaBlocks.NEON_TRAPDOOR);
+    public static final DeferredItem<Item> NEON_PRESSURE_PLATE = registerBlockItem(
+            "neon_pressure_plate", NoxernaBlocks.NEON_PRESSURE_PLATE);
+    public static final DeferredItem<Item> NEON_BUTTON = registerBlockItem(
+            "neon_button", NoxernaBlocks.NEON_BUTTON);
     // Soltra Block set
     public static final DeferredItem<Item> SOLTRA = registerBlockItem(
             "soltra", NoxernaBlocks.SOLTRA);
+    public static final DeferredItem<Item> SOLTRA_STAIRS = registerBlockItem(
+            "soltra_stairs", NoxernaBlocks.SOLTRA_STAIRS);
+    public static final DeferredItem<Item> SOLTRA_SLAB = registerBlockItem(
+            "soltra_slab", NoxernaBlocks.SOLTRA_SLAB);
+    public static final DeferredItem<Item> SOLTRA_WALL = registerBlockItem(
+            "soltra_wall", NoxernaBlocks.SOLTRA_WALL);
+    public static final DeferredItem<Item> SOLTRA_PRESSURE_PLATE = registerBlockItem(
+            "soltra_pressure_plate", NoxernaBlocks.SOLTRA_PRESSURE_PLATE);
+    public static final DeferredItem<Item> SOLTRA_BUTTON = registerBlockItem(
+            "soltra_button", NoxernaBlocks.SOLTRA_BUTTON);
     public static final DeferredItem<Item> POLISHED_SOLTRA = registerBlockItem(
             "polished_soltra", NoxernaBlocks.POLISHED_SOLTRA);
+    public static final DeferredItem<Item> POLISHED_SOLTRA_STAIRS = registerBlockItem(
+            "polished_soltra_stairs", NoxernaBlocks.POLISHED_SOLTRA_STAIRS);
+    public static final DeferredItem<Item> POLISHED_SOLTRA_SLAB = registerBlockItem(
+            "polished_soltra_slab", NoxernaBlocks.POLISHED_SOLTRA_SLAB);
+    public static final DeferredItem<Item> POLISHED_SOLTRA_WALL = registerBlockItem(
+            "polished_soltra_wall", NoxernaBlocks.POLISHED_SOLTRA_WALL);
     public static final DeferredItem<Item> SOLTRA_BRICKS = registerBlockItem(
             "soltra_bricks", NoxernaBlocks.SOLTRA_BRICKS);
+    public static final DeferredItem<Item> SOLTRA_BRICK_STAIRS = registerBlockItem(
+            "soltra_brick_stairs", NoxernaBlocks.SOLTRA_BRICK_STAIRS);
+    public static final DeferredItem<Item> SOLTRA_BRICK_SLAB = registerBlockItem(
+            "soltra_brick_slab", NoxernaBlocks.SOLTRA_BRICK_SLAB);
+    public static final DeferredItem<Item> SOLTRA_BRICK_WALL = registerBlockItem(
+            "soltra_brick_wall", NoxernaBlocks.SOLTRA_BRICK_WALL);
     public static final DeferredItem<Item> SOLTRA_PEBBLE = registerBlockItem(
             "soltra_pebble", NoxernaBlocks.SOLTRA_PEBBLE);
     // Noxum Block set
@@ -548,19 +616,65 @@ public class NoxernaItems {
     // Aestum Block set
     public static final DeferredItem<Item> AESTUM = registerBlockItem(
             "aestum", NoxernaBlocks.AESTUM);
-    public static final DeferredItem<Item> POLISHED_AESTUM = registerBlockItem(
-            "polished_aestum", NoxernaBlocks.POLISHED_AESTUM);
-    public static final DeferredItem<Item> AESTUM_BRICKS = registerBlockItem(
-            "aestum_bricks", NoxernaBlocks.AESTUM_BRICKS);
+    public static final DeferredItem<Item> AESTUM_STAIRS = registerBlockItem(
+            "aestum_stairs", NoxernaBlocks.AESTUM_STAIRS);
+    public static final DeferredItem<Item> AESTUM_SLAB = registerBlockItem(
+            "aestum_slab", NoxernaBlocks.AESTUM_SLAB);
+    public static final DeferredItem<Item> AESTUM_WALL = registerBlockItem(
+            "aestum_wall", NoxernaBlocks.AESTUM_WALL);
+    public static final DeferredItem<Item> AESTUM_PRESSURE_PLATE = registerBlockItem(
+            "aestum_pressure_plate", NoxernaBlocks.AESTUM_PRESSURE_PLATE);
+    public static final DeferredItem<Item> AESTUM_BUTTON = registerBlockItem(
+            "aestum_button", NoxernaBlocks.AESTUM_BUTTON);
     public static final DeferredItem<Item> AESTUM_PEBBLE = registerBlockItem(
             "aestum_pebble", NoxernaBlocks.AESTUM_PEBBLE);
+    // Polished
+    public static final DeferredItem<Item> POLISHED_AESTUM = registerBlockItem(
+            "polished_aestum", NoxernaBlocks.POLISHED_AESTUM);
+    public static final DeferredItem<Item> POLISHED_AESTUM_STAIRS = registerBlockItem(
+            "polished_aestum_stairs", NoxernaBlocks.POLISHED_AESTUM_STAIRS);
+    public static final DeferredItem<Item> POLISHED_AESTUM_SLAB = registerBlockItem(
+            "polished_aestum_slab", NoxernaBlocks.POLISHED_AESTUM_SLAB);
+    public static final DeferredItem<Item> POLISHED_AESTUM_WALL = registerBlockItem(
+            "polished_aestum_wall", NoxernaBlocks.POLISHED_AESTUM_WALL);
+    // Bricks
+    public static final DeferredItem<Item> AESTUM_BRICKS = registerBlockItem(
+            "aestum_bricks", NoxernaBlocks.AESTUM_BRICKS);
+    public static final DeferredItem<Item> AESTUM_BRICK_STAIRS = registerBlockItem(
+            "aestum_brick_stairs", NoxernaBlocks.AESTUM_BRICK_STAIRS);
+    public static final DeferredItem<Item> AESTUM_BRICK_SLAB = registerBlockItem(
+            "aestum_brick_slab", NoxernaBlocks.AESTUM_BRICK_SLAB);
+    public static final DeferredItem<Item> AESTUM_BRICK_WALL = registerBlockItem(
+            "aestum_brick_wall", NoxernaBlocks.AESTUM_BRICK_WALL);
     // Inetra Block set
     public static final DeferredItem<Item> INETRA = registerBlockItem(
             "inetra", NoxernaBlocks.INETRA);
+    public static final DeferredItem<Item> INETRA_STAIRS = registerBlockItem(
+            "inetra_stairs", NoxernaBlocks.INETRA_STAIRS);
+    public static final DeferredItem<Item> INETRA_SLAB = registerBlockItem(
+            "inetra_slab", NoxernaBlocks.INETRA_SLAB);
+    public static final DeferredItem<Item> INETRA_WALL = registerBlockItem(
+            "inetra_wall", NoxernaBlocks.INETRA_WALL);
+    public static final DeferredItem<Item> INETRA_PRESSURE_PLATE = registerBlockItem(
+            "inetra_pressure_plate", NoxernaBlocks.INETRA_PRESSURE_PLATE);
+    public static final DeferredItem<Item> INETRA_BUTTON = registerBlockItem(
+            "inetra_button", NoxernaBlocks.INETRA_BUTTON);
     public static final DeferredItem<Item> POLISHED_INETRA = registerBlockItem(
             "polished_inetra", NoxernaBlocks.POLISHED_INETRA);
+    public static final DeferredItem<Item> POLISHED_INETRA_STAIRS = registerBlockItem(
+            "polished_inetra_stairs", NoxernaBlocks.POLISHED_INETRA_STAIRS);
+    public static final DeferredItem<Item> POLISHED_INETRA_SLAB = registerBlockItem(
+            "polished_inetra_slab", NoxernaBlocks.POLISHED_INETRA_SLAB);
+    public static final DeferredItem<Item> POLISHED_INETRA_WALL = registerBlockItem(
+            "polished_inetra_wall", NoxernaBlocks.POLISHED_INETRA_WALL);
     public static final DeferredItem<Item> INETRA_BRICKS = registerBlockItem(
             "inetra_bricks", NoxernaBlocks.INETRA_BRICKS);
+    public static final DeferredItem<Item> INETRA_BRICK_STAIRS = registerBlockItem(
+            "inetra_brick_stairs", NoxernaBlocks.INETRA_BRICK_STAIRS);
+    public static final DeferredItem<Item> INETRA_BRICK_SLAB = registerBlockItem(
+            "inetra_brick_slab", NoxernaBlocks.INETRA_BRICK_SLAB);
+    public static final DeferredItem<Item> INETRA_BRICK_WALL = registerBlockItem(
+            "inetra_brick_wall", NoxernaBlocks.INETRA_BRICK_WALL);
     public static final DeferredItem<Item> INETRA_PEBBLE = registerBlockItem(
             "inetra_pebble", NoxernaBlocks.INETRA_PEBBLE);
     // Material Storage Blocks
@@ -645,6 +759,9 @@ public class NoxernaItems {
             "argon_concrete_powder", NoxernaBlocks.ARGON_CONCRETE_POWDER);
     public static final DeferredItem<Item> NEON_CONCRETE_POWDER = registerBlockItem(
             "neon_concrete_powder", NoxernaBlocks.NEON_CONCRETE_POWDER);
+    // Functional Blocks
+    public static final DeferredItem<Item> NOBLEWOOD_CRAFTING_TABLE = registerBlockItem(
+            "noblewood_crafting_table", NoxernaBlocks.NOBLEWOOD_CRAFTING_TABLE);
     // Special Dimension Block Items
     public static final DeferredItem<Item> VOIDROCK = registerBlockItem(
             "voidrock", NoxernaBlocks.VOIDROCK);

@@ -24,7 +24,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
     protected void buildRecipes (RecipeOutput output) {
         // Building Block Recipes
         // Xenon
-        makePlanks(NoxernaTags.ItemTags.XENON_LOGS, NoxernaBlocks.XENON_PLANKS.get().asItem())
+        makePlanks(NoxernaTags.ItemTags.XENON_LOGS, NoxernaItems.XENON_PLANKS.get())
                 .group("planks")
                 .save(output, name("crafting/xenon_planks"));
         makeStairs(NoxernaItems.XENON_PLANKS.get(), NoxernaItems.XENON_STAIRS.get())
@@ -58,61 +58,316 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makePlanks(NoxernaTags.ItemTags.KRYPTON_LOGS, NoxernaItems.KRYPTON_PLANKS.get())
                 .group("planks")
                 .save(output, name("crafting/krypton_planks"));
+        makeStairs(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_STAIRS.get())
+                .group("wooden_stairs")
+                .save(output, name("crafting/krypton_stairs"));
+        makeSlab(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_SLAB.get())
+                .group("wooden_slab")
+                .save(output, name("crafting/krypton_slab"));
+        makeSlabIntoBlock(NoxernaItems.KRYPTON_SLAB.get(), NoxernaItems.KRYPTON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/krypton_planks_from_slab"));
+        makeWoodenFence(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_FENCE.get())
+                .group("wooden_fence")
+                .save(output, name("crafting/krypton_fence"));
+        makeWoodenFenceGate(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_FENCE_GATE.get())
+                .group("wooden_fence_gate")
+                .save(output, name("crafting/krypton_fence_gate"));
+        makeDoor(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_DOOR.get())
+                .group("wooden_door")
+                .save(output, name("crafting/krypton_door"));
+        makeTrapdoor(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_TRAPDOOR.get())
+                .group("wooden_trapdoor")
+                .save(output, name("crafting/krypton_trapdoor"));
+        makePressurePlate(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_PRESSURE_PLATE.get())
+                .group("wooden_pressure_plate")
+                .save(output, name("crafting/krypton_pressure_plate"));
+        makeButton(NoxernaItems.KRYPTON_PLANKS.get(), NoxernaItems.KRYPTON_BUTTON.get())
+                .group("wooden_button")
+                .save(output, name("crafting/krypton_button"));
+        // Argon
+        makePlanks(NoxernaTags.ItemTags.ARGON_LOGS, NoxernaItems.ARGON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/argon_planks"));
+        makeStairs(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_STAIRS.get())
+                .group("wooden_stairs")
+                .save(output, name("crafting/argon_stairs"));
+        makeSlab(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_SLAB.get())
+                .group("wooden_slab")
+                .save(output, name("crafting/argon_slab"));
+        makeSlabIntoBlock(NoxernaItems.ARGON_SLAB.get(), NoxernaItems.ARGON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/argon_planks_from_slab"));
+        makeWoodenFence(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_FENCE.get())
+                .group("wooden_fence")
+                .save(output, name("crafting/argon_fence"));
+        makeWoodenFenceGate(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_FENCE_GATE.get())
+                .group("wooden_fence_gate")
+                .save(output, name("crafting/argon_fence_gate"));
+        makeDoor(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_DOOR.get())
+                .group("wooden_door")
+                .save(output, name("crafting/argon_door"));
+        makeTrapdoor(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_TRAPDOOR.get())
+                .group("wooden_trapdoor")
+                .save(output, name("crafting/argon_trapdoor"));
+        makePressurePlate(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_PRESSURE_PLATE.get())
+                .group("wooden_pressure_plate")
+                .save(output, name("crafting/argon_pressure_plate"));
+        makeButton(NoxernaItems.ARGON_PLANKS.get(), NoxernaItems.ARGON_BUTTON.get())
+                .group("wooden_button")
+                .save(output, name("crafting/argon_button"));
+        // Neon
+        makePlanks(NoxernaTags.ItemTags.NEON_LOGS, NoxernaItems.NEON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/neon_planks"));
+        makeStairs(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_STAIRS.get())
+                .group("wooden_stairs")
+                .save(output, name("crafting/neon_stairs"));
+        makeSlab(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_SLAB.get())
+                .group("wooden_slab")
+                .save(output, name("crafting/neon_slab"));
+        makeSlabIntoBlock(NoxernaItems.NEON_SLAB.get(), NoxernaItems.NEON_PLANKS.get())
+                .group("planks")
+                .save(output, name("crafting/neon_planks_from_slab"));
+        makeWoodenFence(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_FENCE.get())
+                .group("wooden_fence")
+                .save(output, name("crafting/neon_fence"));
+        makeWoodenFenceGate(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_FENCE_GATE.get())
+                .group("wooden_fence_gate")
+                .save(output, name("crafting/neon_fence_gate"));
+        makeDoor(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_DOOR.get())
+                .group("wooden_door")
+                .save(output, name("crafting/neon_door"));
+        makeTrapdoor(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_TRAPDOOR.get())
+                .group("wooden_trapdoor")
+                .save(output, name("crafting/neon_trapdoor"));
+        makePressurePlate(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_PRESSURE_PLATE.get())
+                .group("wooden_pressure_plate")
+                .save(output, name("crafting/neon_pressure_plate"));
+        makeButton(NoxernaItems.NEON_PLANKS.get(), NoxernaItems.NEON_BUTTON.get())
+                .group("wooden_button")
+                .save(output, name("crafting/neon_button"));
+        // Soltra
+        makeStairs(NoxernaItems.SOLTRA.get(), NoxernaItems.SOLTRA_STAIRS.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_stairs"));
+        makeSlab(NoxernaItems.SOLTRA.get(), NoxernaItems.SOLTRA_SLAB.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_slab"));
+        makeSlabIntoBlock(NoxernaItems.SOLTRA_SLAB.get(), NoxernaItems.SOLTRA.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_from_slab"));
+        makeWall(NoxernaItems.SOLTRA.get(), NoxernaItems.SOLTRA_WALL.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_wall"));
+        makePressurePlate(NoxernaItems.SOLTRA.get(), NoxernaItems.SOLTRA_PRESSURE_PLATE)
+                .group("stone_pressure_plate")
+                .save(output, name("crafting/soltra_pressure_plate"));
+        makeButton(NoxernaItems.SOLTRA_PEBBLE.get(), NoxernaItems.SOLTRA_BUTTON.get())
+                .group("stone_button")
+                .save(output, name("crafting/soltra_button"));
+        unpacking3x3(NoxernaItems.SOLTRA.get(), NoxernaItems.SOLTRA_PEBBLE.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_pebble"));
+        packing3x3(NoxernaItems.SOLTRA_PEBBLE.get(), NoxernaItems.SOLTRA.get())
+                .group("soltra")
+                .save(output, name("crafting/soltra_from_pebble"));
+        makeBricks(NoxernaItems.SOLTRA.get(), NoxernaItems.POLISHED_SOLTRA.get())
+                .group("polished_soltra")
+                .save(output, name("crafting/polished_soltra"));
+        makeStairs(NoxernaItems.POLISHED_SOLTRA.get(), NoxernaItems.POLISHED_SOLTRA_STAIRS.get())
+                .group("polished_soltra")
+                .save(output, name("crafting/polished_soltra_stairs"));
+        makeSlab(NoxernaItems.POLISHED_SOLTRA.get(), NoxernaItems.POLISHED_SOLTRA_SLAB.get())
+                .group("polished_soltra")
+                .save(output, name("crafting/polished_soltra_slab"));
+        makeSlabIntoBlock(NoxernaItems.POLISHED_SOLTRA_SLAB.get(), NoxernaItems.POLISHED_SOLTRA.get())
+                .group("polished_soltra")
+                .save(output, name("crafting/polished_soltra_from_slab"));
+        makeWall(NoxernaItems.POLISHED_SOLTRA.get(), NoxernaItems.POLISHED_SOLTRA_WALL.get())
+                .group("polished_soltra")
+                .save(output, name("crafting/polished_soltra_wall"));
+        makeBricks(NoxernaItems.POLISHED_SOLTRA.get(), NoxernaItems.SOLTRA_BRICKS.get())
+                .group("soltra_bricks")
+                .save(output, name("crafting/soltra_bricks"));
+        makeStairs(NoxernaItems.SOLTRA_BRICKS.get(), NoxernaItems.SOLTRA_BRICK_STAIRS.get())
+                .group("soltra_bricks")
+                .save(output, name("crafting/soltra_brick_stairs"));
+        makeSlab(NoxernaItems.SOLTRA_BRICKS.get(), NoxernaItems.SOLTRA_BRICK_SLAB.get())
+                .group("soltra_bricks")
+                .save(output, name("crafting/soltra_brick_slab"));
+        makeSlabIntoBlock(NoxernaItems.SOLTRA_BRICK_SLAB.get(), NoxernaItems.SOLTRA_BRICKS.get())
+                .group("soltra_bricks")
+                .save(output, name("crafting/soltra_bricks_from_slab"));
+        makeWall(NoxernaItems.SOLTRA_BRICKS.get(), NoxernaItems.SOLTRA_BRICK_WALL.get())
+                .group("soltra_bricks")
+                .save(output, name("crafting/soltra_brick_wall"));
         // Noxum
-        makeStairs(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_STAIRS.get().asItem())
+        makeStairs(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_STAIRS.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_stairs"));
-        makeSlab(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_SLAB.get().asItem())
+        makeSlab(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_SLAB.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_slab"));
-        makeSlabIntoBlock(NoxernaBlocks.NOXUM_SLAB.get().asItem(), NoxernaBlocks.NOXUM.get().asItem())
+        makeSlabIntoBlock(NoxernaItems.NOXUM_SLAB.get(), NoxernaItems.NOXUM.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_from_slab"));
-        makeWall(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_WALL.get().asItem())
+        makeWall(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_WALL.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_wall"));
-        makePressurePlate(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_PRESSURE_PLATE.get())
+        makePressurePlate(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_PRESSURE_PLATE)
                 .group("stone_pressure_plate")
                 .save(output, name("crafting/noxum_pressure_plate"));
-        makeButton(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_BUTTON.get())
+        makeButton(NoxernaItems.NOXUM_PEBBLE.get(), NoxernaItems.NOXUM_BUTTON.get())
                 .group("stone_button")
                 .save(output, name("crafting/noxum_button"));
-        unpacking3x3(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.NOXUM_PEBBLE.get().asItem())
+        unpacking3x3(NoxernaItems.NOXUM.get(), NoxernaItems.NOXUM_PEBBLE.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_pebble"));
-        packing3x3(NoxernaBlocks.NOXUM_PEBBLE.get().asItem(), NoxernaBlocks.NOXUM.get().asItem())
+        packing3x3(NoxernaItems.NOXUM_PEBBLE.get(), NoxernaItems.NOXUM.get())
                 .group("noxum")
                 .save(output, name("crafting/noxum_from_pebble"));
-        makeBricks(NoxernaBlocks.NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM.get().asItem())
+        makeBricks(NoxernaItems.NOXUM.get(), NoxernaItems.POLISHED_NOXUM.get())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum"));
-        makeStairs(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
+        makeStairs(NoxernaItems.POLISHED_NOXUM.get(), NoxernaItems.POLISHED_NOXUM_STAIRS.get())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum_stairs"));
-        makeSlab(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem())
+        makeSlab(NoxernaItems.POLISHED_NOXUM.get(), NoxernaItems.POLISHED_NOXUM_SLAB.get())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum_slab"));
-        makeSlabIntoBlock(NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem(), NoxernaBlocks.POLISHED_NOXUM.get().asItem())
+        makeSlabIntoBlock(NoxernaItems.POLISHED_NOXUM_SLAB.get(), NoxernaItems.POLISHED_NOXUM.get())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum_from_slab"));
-        makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem())
+        makeWall(NoxernaItems.POLISHED_NOXUM.get(), NoxernaItems.POLISHED_NOXUM_WALL.get())
                 .group("polished_noxum")
                 .save(output, name("crafting/polished_noxum_wall"));
-        makeBricks(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICKS.get().asItem())
+        makeBricks(NoxernaItems.POLISHED_NOXUM.get(), NoxernaItems.NOXUM_BRICKS.get())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_bricks"));
-        makeStairs(NoxernaBlocks.NOXUM_BRICKS.get().asItem(), NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem())
+        makeStairs(NoxernaItems.NOXUM_BRICKS.get(), NoxernaItems.NOXUM_BRICK_STAIRS.get())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_brick_stairs"));
-        makeSlab(NoxernaBlocks.NOXUM_BRICKS.get().asItem(), NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem())
+        makeSlab(NoxernaItems.NOXUM_BRICKS.get(), NoxernaItems.NOXUM_BRICK_SLAB.get())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_brick_slab"));
-        makeSlabIntoBlock(NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem(), NoxernaBlocks.NOXUM_BRICKS.get().asItem())
-                .group("noxum_brick")
+        makeSlabIntoBlock(NoxernaItems.NOXUM_BRICK_SLAB.get(), NoxernaItems.NOXUM_BRICKS.get())
+                .group("noxum_bricks")
                 .save(output, name("crafting/noxum_bricks_from_slab"));
-        makeWall(NoxernaBlocks.POLISHED_NOXUM.get().asItem(), NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
+        makeWall(NoxernaItems.NOXUM_BRICKS.get(), NoxernaItems.NOXUM_BRICK_WALL.get())
                 .group("noxum_bricks")
                 .save(output, name("crafting/noxum_brick_wall"));
+        // Aestum
+        makeStairs(NoxernaItems.AESTUM.get(), NoxernaItems.AESTUM_STAIRS.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_stairs"));
+        makeSlab(NoxernaItems.AESTUM.get(), NoxernaItems.AESTUM_SLAB.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_slab"));
+        makeSlabIntoBlock(NoxernaItems.AESTUM_SLAB.get(), NoxernaItems.AESTUM.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_from_slab"));
+        makeWall(NoxernaItems.AESTUM.get(), NoxernaItems.AESTUM_WALL.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_wall"));
+        makePressurePlate(NoxernaItems.AESTUM.get(), NoxernaItems.AESTUM_PRESSURE_PLATE)
+                .group("stone_pressure_plate")
+                .save(output, name("crafting/aestum_pressure_plate"));
+        makeButton(NoxernaItems.AESTUM_PEBBLE.get(), NoxernaItems.AESTUM_BUTTON.get())
+                .group("stone_button")
+                .save(output, name("crafting/aestum_button"));
+        unpacking3x3(NoxernaItems.AESTUM.get(), NoxernaItems.AESTUM_PEBBLE.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_pebble"));
+        packing3x3(NoxernaItems.AESTUM_PEBBLE.get(), NoxernaItems.AESTUM.get())
+                .group("aestum")
+                .save(output, name("crafting/aestum_from_pebble"));
+        makeBricks(NoxernaItems.AESTUM.get(), NoxernaItems.POLISHED_AESTUM.get())
+                .group("polished_aestum")
+                .save(output, name("crafting/polished_aestum"));
+        makeStairs(NoxernaItems.POLISHED_AESTUM.get(), NoxernaItems.POLISHED_AESTUM_STAIRS.get())
+                .group("polished_aestum")
+                .save(output, name("crafting/polished_aestum_stairs"));
+        makeSlab(NoxernaItems.POLISHED_AESTUM.get(), NoxernaItems.POLISHED_AESTUM_SLAB.get())
+                .group("polished_aestum")
+                .save(output, name("crafting/polished_aestum_slab"));
+        makeSlabIntoBlock(NoxernaItems.POLISHED_AESTUM_SLAB.get(), NoxernaItems.POLISHED_AESTUM.get())
+                .group("polished_aestum")
+                .save(output, name("crafting/polished_aestum_from_slab"));
+        makeWall(NoxernaItems.POLISHED_AESTUM.get(), NoxernaItems.POLISHED_AESTUM_WALL.get())
+                .group("polished_aestum")
+                .save(output, name("crafting/polished_aestum_wall"));
+        makeBricks(NoxernaItems.POLISHED_AESTUM.get(), NoxernaItems.AESTUM_BRICKS.get())
+                .group("aestum_bricks")
+                .save(output, name("crafting/aestum_bricks"));
+        makeStairs(NoxernaItems.AESTUM_BRICKS.get(), NoxernaItems.AESTUM_BRICK_STAIRS.get())
+                .group("aestum_bricks")
+                .save(output, name("crafting/aestum_brick_stairs"));
+        makeSlab(NoxernaItems.AESTUM_BRICKS.get(), NoxernaItems.AESTUM_BRICK_SLAB.get())
+                .group("aestum_bricks")
+                .save(output, name("crafting/aestum_brick_slab"));
+        makeSlabIntoBlock(NoxernaItems.AESTUM_BRICK_SLAB.get(), NoxernaItems.AESTUM_BRICKS.get())
+                .group("aestum_bricks")
+                .save(output, name("crafting/aestum_bricks_from_slab"));
+        makeWall(NoxernaItems.AESTUM_BRICKS.get(), NoxernaItems.AESTUM_BRICK_WALL.get())
+                .group("aestum_bricks")
+                .save(output, name("crafting/aestum_brick_wall"));
+        // Inetra
+        makeStairs(NoxernaItems.INETRA.get(), NoxernaItems.INETRA_STAIRS.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_stairs"));
+        makeSlab(NoxernaItems.INETRA.get(), NoxernaItems.INETRA_SLAB.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_slab"));
+        makeSlabIntoBlock(NoxernaItems.INETRA_SLAB.get(), NoxernaItems.INETRA.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_from_slab"));
+        makeWall(NoxernaItems.INETRA.get(), NoxernaItems.INETRA_WALL.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_wall"));
+        makePressurePlate(NoxernaItems.INETRA.get(), NoxernaItems.INETRA_PRESSURE_PLATE)
+                .group("stone_pressure_plate")
+                .save(output, name("crafting/inetra_pressure_plate"));
+        makeButton(NoxernaItems.INETRA_PEBBLE.get(), NoxernaItems.INETRA_BUTTON.get())
+                .group("stone_button")
+                .save(output, name("crafting/inetra_button"));
+        unpacking3x3(NoxernaItems.INETRA.get(), NoxernaItems.INETRA_PEBBLE.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_pebble"));
+        packing3x3(NoxernaItems.INETRA_PEBBLE.get(), NoxernaItems.INETRA.get())
+                .group("inetra")
+                .save(output, name("crafting/inetra_from_pebble"));
+        makeBricks(NoxernaItems.INETRA.get(), NoxernaItems.POLISHED_INETRA.get())
+                .group("polished_inetra")
+                .save(output, name("crafting/polished_inetra"));
+        makeStairs(NoxernaItems.POLISHED_INETRA.get(), NoxernaItems.POLISHED_INETRA_STAIRS.get())
+                .group("polished_inetra")
+                .save(output, name("crafting/polished_inetra_stairs"));
+        makeSlab(NoxernaItems.POLISHED_INETRA.get(), NoxernaItems.POLISHED_INETRA_SLAB.get())
+                .group("polished_inetra")
+                .save(output, name("crafting/polished_inetra_slab"));
+        makeSlabIntoBlock(NoxernaItems.POLISHED_INETRA_SLAB.get(), NoxernaItems.POLISHED_INETRA.get())
+                .group("polished_inetra")
+                .save(output, name("crafting/polished_inetra_from_slab"));
+        makeWall(NoxernaItems.POLISHED_INETRA.get(), NoxernaItems.POLISHED_INETRA_WALL.get())
+                .group("polished_inetra")
+                .save(output, name("crafting/polished_inetra_wall"));
+        makeBricks(NoxernaItems.POLISHED_INETRA.get(), NoxernaItems.INETRA_BRICKS.get())
+                .group("inetra_bricks")
+                .save(output, name("crafting/inetra_bricks"));
+        makeStairs(NoxernaItems.INETRA_BRICKS.get(), NoxernaItems.INETRA_BRICK_STAIRS.get())
+                .group("inetra_bricks")
+                .save(output, name("crafting/inetra_brick_stairs"));
+        makeSlab(NoxernaItems.INETRA_BRICKS.get(), NoxernaItems.INETRA_BRICK_SLAB.get())
+                .group("inetra_bricks")
+                .save(output, name("crafting/inetra_brick_slab"));
+        makeSlabIntoBlock(NoxernaItems.INETRA_BRICK_SLAB.get(), NoxernaItems.INETRA_BRICKS.get())
+                .group("inetra_bricks")
+                .save(output, name("crafting/inetra_bricks_from_slab"));
+        makeWall(NoxernaItems.INETRA_BRICKS.get(), NoxernaItems.INETRA_BRICK_WALL.get())
+                .group("inetra_bricks")
+                .save(output, name("crafting/inetra_brick_wall"));
+        // Storage Blocks
         packing3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_BLOCK.get(),
                 NoxernaTags.ItemTags.FERREBRIS_INGOTS)
                 .group("ferrebris")
@@ -358,43 +613,124 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("smithing/adamuna_netherite_sword"));
 
         // Stonecutting Recipes
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA.get())
+                .save(output, name("stonecutting/soltra_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_STAIRS.get())
+                .save(output, name("stonecutting/soltra_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_SLAB.get(), 2)
+                .save(output, name("stonecutting/soltra_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_WALL.get())
+                .save(output, name("stonecutting/soltra_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_PEBBLE.get(), 9)
+                .save(output, name("stonecutting/soltra_pebble_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.POLISHED_SOLTRA.get())
+                .save(output, name("stonecutting/polished_soltra_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.POLISHED_SOLTRA_STAIRS.get())
+                .save(output, name("stonecutting/polished_soltra_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.POLISHED_SOLTRA_SLAB.get(), 2)
+                .save(output, name("stonecutting/polished_soltra_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.POLISHED_SOLTRA_WALL.get())
+                .save(output, name("stonecutting/polished_soltra_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_BRICKS.get())
+                .save(output, name("stonecutting/soltra_bricks_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_BRICK_STAIRS.get())
+                .save(output, name("stonecutting/soltra_brick_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_BRICK_SLAB.get(), 2)
+                .save(output, name("stonecutting/soltra_brick_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_BRICK_WALL.get())
+                .save(output, name("stonecutting/soltra_brick_wall_from_stonecutting"));
+
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM.get())
                 .save(output, name("stonecutting/noxum_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_STAIRS.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_STAIRS.get())
                 .save(output, name("stonecutting/noxum_stairs_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_SLAB.get().asItem(), 2)
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_SLAB.get(), 2)
                 .save(output, name("stonecutting/noxum_slab_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_WALL.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_WALL.get())
                 .save(output, name("stonecutting/noxum_wall_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_PEBBLE.get().asItem(), 9)
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_PEBBLE.get(), 9)
                 .save(output, name("stonecutting/noxum_pebble_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.POLISHED_NOXUM.get())
                 .save(output, name("stonecutting/polished_noxum_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM_STAIRS.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.POLISHED_NOXUM_STAIRS.get())
                 .save(output, name("stonecutting/polished_noxum_stairs_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM_SLAB.get().asItem(), 2)
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.POLISHED_NOXUM_SLAB.get(), 2)
                 .save(output, name("stonecutting/polished_noxum_slab_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.POLISHED_NOXUM_WALL.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.POLISHED_NOXUM_WALL.get())
                 .save(output, name("stonecutting/polished_noxum_wall_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICKS.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_BRICKS.get())
                 .save(output, name("stonecutting/noxum_bricks_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_STAIRS.get().asItem())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_BRICK_STAIRS.get())
                 .save(output, name("stonecutting/noxum_brick_stairs_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_SLAB.get().asItem(), 2)
-                .save(output, name("stonecutting/noxum_bricks_slab_from_stonecutting"));
-        stonecutting(NoxernaTags.ItemTags.NOXUM_STONE_TYPE, NoxernaBlocks.NOXUM_BRICK_WALL.get().asItem())
-                .save(output, name("stonecutting/noxum_bricks_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_BRICK_SLAB.get(), 2)
+                .save(output, name("stonecutting/noxum_brick_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_BRICK_WALL.get())
+                .save(output, name("stonecutting/noxum_brick_wall_from_stonecutting"));
+
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM.get())
+                .save(output, name("stonecutting/aestum_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_STAIRS.get())
+                .save(output, name("stonecutting/aestum_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_SLAB.get(), 2)
+                .save(output, name("stonecutting/aestum_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_WALL.get())
+                .save(output, name("stonecutting/aestum_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_PEBBLE.get(), 9)
+                .save(output, name("stonecutting/aestum_pebble_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.POLISHED_AESTUM.get())
+                .save(output, name("stonecutting/polished_aestum_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.POLISHED_AESTUM_STAIRS.get())
+                .save(output, name("stonecutting/polished_aestum_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.POLISHED_AESTUM_SLAB.get(), 2)
+                .save(output, name("stonecutting/polished_aestum_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.POLISHED_AESTUM_WALL.get())
+                .save(output, name("stonecutting/polished_aestum_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_BRICKS.get())
+                .save(output, name("stonecutting/aestum_bricks_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_BRICK_STAIRS.get())
+                .save(output, name("stonecutting/aestum_brick_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_BRICK_SLAB.get(), 2)
+                .save(output, name("stonecutting/aestum_brick_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_BRICK_WALL.get())
+                .save(output, name("stonecutting/aestum_brick_wall_from_stonecutting"));
+
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA.get())
+                .save(output, name("stonecutting/inetra_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_STAIRS.get())
+                .save(output, name("stonecutting/inetra_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_SLAB.get(), 2)
+                .save(output, name("stonecutting/inetra_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_WALL.get())
+                .save(output, name("stonecutting/inetra_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_PEBBLE.get(), 9)
+                .save(output, name("stonecutting/inetra_pebble_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.POLISHED_INETRA.get())
+                .save(output, name("stonecutting/polished_inetra_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.POLISHED_INETRA_STAIRS.get())
+                .save(output, name("stonecutting/polished_inetra_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.POLISHED_INETRA_SLAB.get(), 2)
+                .save(output, name("stonecutting/polished_inetra_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.POLISHED_INETRA_WALL.get())
+                .save(output, name("stonecutting/polished_inetra_wall_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_BRICKS.get())
+                .save(output, name("stonecutting/inetra_bricks_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_BRICK_STAIRS.get())
+                .save(output, name("stonecutting/inetra_brick_stairs_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_BRICK_SLAB.get(), 2)
+                .save(output, name("stonecutting/inetra_brick_slab_from_stonecutting"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_BRICK_WALL.get())
+                .save(output, name("stonecutting/inetra_brick_wall_from_stonecutting"));
 
         stonecutting(NoxernaTags.ItemTags.FERREBRIS_STORAGE_BLOCKS, NoxernaItems.FERREBRIS_PLATING.get(), 4)
                 .save(output, name("stonecutting/ferrebris_plating_from_block"));
-        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING.get())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, NoxernaItems.FERREBRIS_PLATING.get())
                 .save(output, name("stonecutting/ferrebris_plating"));
-        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING_STAIRS.get())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, NoxernaItems.FERREBRIS_PLATING_STAIRS.get())
                 .save(output, name("stonecutting/ferrebris_plating_stairs"));
-        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING,
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING,
                 NoxernaItems.FERREBRIS_PLATING_SLAB.get(), 2)
                 .save(output, name("stonecutting/ferrebris_plating_slab"));
-        stonecutting(NoxernaTags.ItemTags.FERREBRIS_METAL_PLATING, NoxernaItems.FERREBRIS_PLATING_WALL.get())
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, NoxernaItems.FERREBRIS_PLATING_WALL.get())
                 .save(output, name("stonecutting/ferrebris_plating_wall"));
     }
 }

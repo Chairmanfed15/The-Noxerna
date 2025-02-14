@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "noxerna:block/aestum",
+    "side": "noxerna:block/aestum",
+    "top": "noxerna:block/aestum"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "stone_pressure_plate",
+  "key": {
+    "#": {
+      "item": "noxerna:aestum"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:aestum_pressure_plate"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "noxerna:block/polished_soltra",
+    "side": "noxerna:block/polished_soltra",
+    "top": "noxerna:block/polished_soltra"
+  }
+}

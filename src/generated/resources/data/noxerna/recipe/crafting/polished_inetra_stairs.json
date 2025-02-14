@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_inetra",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_inetra"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "noxerna:polished_inetra_stairs"
+  }
+}

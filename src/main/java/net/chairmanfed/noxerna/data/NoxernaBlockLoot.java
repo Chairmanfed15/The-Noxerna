@@ -87,14 +87,48 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_PRESSURE_PLATE.get());
         dropSelf(NoxernaBlocks.KRYPTON_BUTTON.get());
 
+        dropSelf(NoxernaBlocks.ARGON_LOG.get());
+        dropSelf(NoxernaBlocks.ARGON_WOOD.get());
+        dropSelf(NoxernaBlocks.STRIPPED_ARGON_LOG.get());
+        dropSelf(NoxernaBlocks.STRIPPED_ARGON_WOOD.get());
         dropSelf(NoxernaBlocks.ARGON_PLANKS.get());
         dropSelf(NoxernaBlocks.ARGON_STAIRS.get());
+        dropSlab(NoxernaBlocks.ARGON_SLAB.get());
+        dropSelf(NoxernaBlocks.ARGON_FENCE.get());
+        dropSelf(NoxernaBlocks.ARGON_FENCE_GATE.get());
+        dropDoor(NoxernaBlocks.ARGON_DOOR.get());
+        dropSelf(NoxernaBlocks.ARGON_TRAPDOOR.get());
+        dropSelf(NoxernaBlocks.ARGON_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.ARGON_BUTTON.get());
 
+        dropSelf(NoxernaBlocks.NEON_LOG.get());
+        dropSelf(NoxernaBlocks.NEON_WOOD.get());
+        dropSelf(NoxernaBlocks.STRIPPED_NEON_LOG.get());
+        dropSelf(NoxernaBlocks.STRIPPED_NEON_WOOD.get());
         dropSelf(NoxernaBlocks.NEON_PLANKS.get());
+        dropSelf(NoxernaBlocks.NEON_STAIRS.get());
+        dropSlab(NoxernaBlocks.NEON_SLAB.get());
+        dropSelf(NoxernaBlocks.NEON_FENCE.get());
+        dropSelf(NoxernaBlocks.NEON_FENCE_GATE.get());
+        dropDoor(NoxernaBlocks.NEON_DOOR.get());
+        dropSelf(NoxernaBlocks.NEON_TRAPDOOR.get());
+        dropSelf(NoxernaBlocks.NEON_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.NEON_BUTTON.get());
 
         dropSelf(NoxernaBlocks.SOLTRA.get());
+        dropSelf(NoxernaBlocks.SOLTRA_STAIRS.get());
+        dropSlab(NoxernaBlocks.SOLTRA_SLAB.get());
+        dropSelf(NoxernaBlocks.SOLTRA_WALL.get());
+        dropSelf(NoxernaBlocks.SOLTRA_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.SOLTRA_BUTTON.get());
         dropSelf(NoxernaBlocks.POLISHED_SOLTRA.get());
+        dropSelf(NoxernaBlocks.POLISHED_SOLTRA_STAIRS.get());
+        dropSlab(NoxernaBlocks.POLISHED_SOLTRA_SLAB.get());
+        dropSelf(NoxernaBlocks.POLISHED_SOLTRA_WALL.get());
         dropSelf(NoxernaBlocks.SOLTRA_BRICKS.get());
+        dropSelf(NoxernaBlocks.SOLTRA_BRICK_STAIRS.get());
+        dropSlab(NoxernaBlocks.SOLTRA_BRICK_SLAB.get());
+        dropSelf(NoxernaBlocks.SOLTRA_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.SOLTRA_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.NOXUM.get());
@@ -114,13 +148,35 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropPebbles(NoxernaBlocks.NOXUM_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.AESTUM.get());
+        dropSelf(NoxernaBlocks.AESTUM_STAIRS.get());
+        dropSlab(NoxernaBlocks.AESTUM_SLAB.get());
+        dropSelf(NoxernaBlocks.AESTUM_WALL.get());
+        dropSelf(NoxernaBlocks.AESTUM_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.AESTUM_BUTTON.get());
         dropSelf(NoxernaBlocks.POLISHED_AESTUM.get());
+        dropSelf(NoxernaBlocks.POLISHED_AESTUM_STAIRS.get());
+        dropSlab(NoxernaBlocks.POLISHED_AESTUM_SLAB.get());
+        dropSelf(NoxernaBlocks.POLISHED_AESTUM_WALL.get());
         dropSelf(NoxernaBlocks.AESTUM_BRICKS.get());
+        dropSelf(NoxernaBlocks.AESTUM_BRICK_STAIRS.get());
+        dropSlab(NoxernaBlocks.AESTUM_BRICK_SLAB.get());
+        dropSelf(NoxernaBlocks.AESTUM_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.AESTUM_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.INETRA.get());
+        dropSelf(NoxernaBlocks.INETRA_STAIRS.get());
+        dropSlab(NoxernaBlocks.INETRA_SLAB.get());
+        dropSelf(NoxernaBlocks.INETRA_WALL.get());
+        dropSelf(NoxernaBlocks.INETRA_PRESSURE_PLATE.get());
+        dropSelf(NoxernaBlocks.INETRA_BUTTON.get());
         dropSelf(NoxernaBlocks.POLISHED_INETRA.get());
+        dropSelf(NoxernaBlocks.POLISHED_INETRA_STAIRS.get());
+        dropSlab(NoxernaBlocks.POLISHED_INETRA_SLAB.get());
+        dropSelf(NoxernaBlocks.POLISHED_INETRA_WALL.get());
         dropSelf(NoxernaBlocks.INETRA_BRICKS.get());
+        dropSelf(NoxernaBlocks.INETRA_BRICK_STAIRS.get());
+        dropSlab(NoxernaBlocks.INETRA_BRICK_SLAB.get());
+        dropSelf(NoxernaBlocks.INETRA_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
@@ -163,5 +219,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
+
+        dropSelf(NoxernaBlocks.NOBLEWOOD_CRAFTING_TABLE.get());
     }
 }

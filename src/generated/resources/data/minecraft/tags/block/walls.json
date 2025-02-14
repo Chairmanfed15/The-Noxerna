@@ -1,8 +1,17 @@
 {
   "values": [
+    "noxerna:soltra_wall",
+    "noxerna:polished_soltra_wall",
+    "noxerna:soltra_brick_wall",
     "noxerna:noxum_wall",
     "noxerna:polished_noxum_wall",
     "noxerna:noxum_brick_wall",
+    "noxerna:aestum_wall",
+    "noxerna:polished_aestum_wall",
+    "noxerna:aestum_brick_wall",
+    "noxerna:inetra_wall",
+    "noxerna:polished_inetra_wall",
+    "noxerna:inetra_brick_wall",
     "noxerna:ferrebris_plating_wall"
   ]
 }

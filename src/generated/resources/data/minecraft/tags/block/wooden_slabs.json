@@ -1,6 +1,8 @@
 {
   "values": [
     "noxerna:xenon_slab",
-    "noxerna:krypton_slab"
+    "noxerna:krypton_slab",
+    "noxerna:argon_slab",
+    "noxerna:neon_slab"
   ]
 }

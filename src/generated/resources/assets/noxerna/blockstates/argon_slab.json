@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/argon_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/argon_planks"
+    },
+    "type=top": {
+      "model": "noxerna:block/argon_slab_top"
+    }
+  }
+}

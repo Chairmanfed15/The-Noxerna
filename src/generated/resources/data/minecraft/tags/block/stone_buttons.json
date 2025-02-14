@@ -1,5 +1,8 @@
 {
   "values": [
-    "noxerna:noxum_button"
+    "noxerna:soltra_button",
+    "noxerna:noxum_button",
+    "noxerna:aestum_button",
+    "noxerna:inetra_button"
   ]
 }

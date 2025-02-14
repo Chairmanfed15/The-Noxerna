@@ -1,8 +1,17 @@
 {
   "values": [
+    "noxerna:soltra_slab",
+    "noxerna:polished_soltra_slab",
+    "noxerna:soltra_brick_slab",
     "noxerna:noxum_slab",
     "noxerna:polished_noxum_slab",
     "noxerna:noxum_brick_slab",
+    "noxerna:aestum_slab",
+    "noxerna:polished_aestum_slab",
+    "noxerna:aestum_brick_slab",
+    "noxerna:inetra_slab",
+    "noxerna:polished_inetra_slab",
+    "noxerna:inetra_brick_slab",
     "noxerna:ferrebris_plating_slab"
   ]
 }

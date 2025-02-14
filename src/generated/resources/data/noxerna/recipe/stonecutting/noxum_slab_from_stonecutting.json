@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "tag": "noxerna:stone_types/noxum"
+    "tag": "noxerna:blockset/noxum"
   },
   "result": {
     "count": 2,

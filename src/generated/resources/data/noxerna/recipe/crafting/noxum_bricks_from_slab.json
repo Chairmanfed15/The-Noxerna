@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "noxum_brick",
+  "group": "noxum_bricks",
   "key": {
     "#": {
       "item": "noxerna:noxum_brick_slab"

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_aestum",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_aestum"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "noxerna:polished_aestum_stairs"
+  }
+}

@@ -19,6 +19,8 @@ public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
     public void registerSounds() {
         this.generateSound(NoxernaSoundEvents.HEAVY_METAL_BREAK, 4);
         this.generateSound(NoxernaSoundEvents.HEAVY_METAL_PLACE, 4);
+        this.generateSound(NoxernaSoundEvents.LIGHT_METAL_BREAK, 2);
+        this.generateSound(NoxernaSoundEvents.LIGHT_METAL_PLACE, 2);
         this.generateSound(NoxernaSoundEvents.NOBLEWOOD_BREAK, 1);
         this.generateSound(NoxernaSoundEvents.NOBLEWOOD_STEP, 1);
         this.generateSound(NoxernaSoundEvents.NOBLEWOOD_PLACE, 1);

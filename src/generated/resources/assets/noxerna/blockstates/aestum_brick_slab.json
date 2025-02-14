@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/aestum_brick_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/aestum_bricks"
+    },
+    "type=top": {
+      "model": "noxerna:block/aestum_brick_slab_top"
+    }
+  }
+}

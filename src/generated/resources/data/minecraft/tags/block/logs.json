@@ -1,6 +1,8 @@
 {
   "values": [
     "#noxerna:xenon_logs",
-    "#noxerna:krypton_logs"
+    "#noxerna:krypton_logs",
+    "#noxerna:argon_logs",
+    "#noxerna:neon_logs"
   ]
 }

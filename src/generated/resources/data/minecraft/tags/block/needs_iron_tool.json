@@ -1,0 +1,19 @@
+{
+  "values": [
+    "noxerna:inetra",
+    "noxerna:inetra_stairs",
+    "noxerna:inetra_slab",
+    "noxerna:inetra_wall",
+    "noxerna:polished_inetra",
+    "noxerna:polished_inetra_stairs",
+    "noxerna:polished_inetra_slab",
+    "noxerna:polished_inetra_wall",
+    "noxerna:inetra_bricks",
+    "noxerna:inetra_brick_stairs",
+    "noxerna:inetra_brick_slab",
+    "noxerna:inetra_brick_wall",
+    "#c:storage_blocks/umburam",
+    "#c:storage_blocks/teneryl",
+    "#c:storage_blocks/adamuna"
+  ]
+}

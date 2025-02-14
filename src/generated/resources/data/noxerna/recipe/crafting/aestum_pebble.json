@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "aestum",
+  "ingredients": [
+    {
+      "item": "noxerna:aestum"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:aestum_pebble"
+  }
+}

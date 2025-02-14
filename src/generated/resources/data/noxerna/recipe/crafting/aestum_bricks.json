@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "aestum_bricks",
+  "key": {
+    "#": {
+      "item": "noxerna:polished_aestum"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "noxerna:aestum_bricks"
+  }
+}

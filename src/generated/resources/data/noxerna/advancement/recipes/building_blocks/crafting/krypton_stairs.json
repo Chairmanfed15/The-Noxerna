@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:krypton_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:krypton_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/krypton_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:krypton_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/krypton_stairs"
+    ]
+  }
+}
