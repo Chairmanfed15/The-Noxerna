@@ -12,6 +12,12 @@
     "noxerna:inetra_stairs",
     "noxerna:polished_inetra_stairs",
     "noxerna:inetra_brick_stairs",
-    "noxerna:ferrebris_plating_stairs"
+    "noxerna:iron_plating_stairs",
+    "noxerna:gold_plating_stairs",
+    "noxerna:netherite_plating_stairs",
+    "noxerna:ferrebris_plating_stairs",
+    "noxerna:umburam_plating_stairs",
+    "noxerna:inperlum_plating_stairs",
+    "noxerna:nihoxite_plating_stairs"
   ]
 }

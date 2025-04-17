@@ -13,8 +13,8 @@
 		}
 	},
 	"textures": {
-		"texture": "lumai_fuel_cell",
-		"particle": "lumai_fuel_cell"
+		"texture": "noxerna:block/lumai_fuel_cell",
+		"particle": "noxerna:block/lumai_fuel_cell"
 	},
 	"elements": [
 		{

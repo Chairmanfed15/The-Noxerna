@@ -1,14 +1,20 @@
 package net.chairmanfed.noxerna.item;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.item.equipment.armour.NoxernaArmourMaterials;
+import net.chairmanfed.noxerna.item.equipment.armor.NoxernaArmorMaterials;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimPatterns;
 import net.chairmanfed.noxerna.item.equipment.tools.TieredShieldItem;
 import net.chairmanfed.noxerna.item.miscellaneous.NoxernaSmithingTemplateItem;
 import net.chairmanfed.noxerna.item.equipment.tools.NoxernaToolMaterials;
 import net.chairmanfed.noxerna.item.equipment.tools.PickadzeItem;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -35,8 +41,8 @@ public class NoxernaItems {
     // Intermediates
     public static final DeferredItem<Item> LUMAI_CRYSTAL = registerSimpleItem(
             "lumai_crystal", new Item.Properties());
-    public static final DeferredItem<Item> LUMAI_FUEL_CELL = registerSimpleItem(
-            "lumai_fuel_cell", new Item.Properties());
+    public static final DeferredItem<Item> LUMAI_FUEL_CELL = registerBlockItem(
+            "lumai_fuel_cell", NoxernaBlocks.LUMAI_FUEL_CELL);
     public static final DeferredItem<Item> RAW_FERREBRIS = registerSimpleItem(
             "raw_ferrebris", new Item.Properties());
     public static final DeferredItem<Item> RAW_OBSCUPRUM = registerSimpleItem(
@@ -93,13 +99,15 @@ public class NoxernaItems {
             "neon_dye", new Item.Properties());
     public static final DeferredItem<Item> NOBLEWOOD_BOWL = registerSimpleItem(
             "noblewood_bowl", new Item.Properties());
+    public static final DeferredItem<Item> CUT_TENERYL = registerSimpleItem(
+            "cut_teneryl", new Item.Properties());
     public static final DeferredItem<Item> VITRAGOR_DUST = registerSimpleItem(
             "vitragor_dust", new Item.Properties());
     public static final DeferredItem<Item> SULAZE_POWDER = registerSimpleItem(
             "sulaze_powder", new Item.Properties());
     public static final DeferredItem<Item> NIHOXITE_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
-            "nihoxite_upgrade_smithing_template", () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate()
-    );
+            "nihoxite_upgrade_smithing_template",
+            () -> NoxernaSmithingTemplateItem.createNihoxiteUpgradeTemplate());
     public static final DeferredItem<Item> EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register(
             "exotic_armor_trim_smithing_template",
             ()-> NoxernaSmithingTemplateItem.createArmorTrimTemplate(NoxernaTrimPatterns.EXOTIC));
@@ -248,82 +256,93 @@ public class NoxernaItems {
     // Rockhide
     public static final DeferredItem<Item> ROCKHIDE_HELMET = ITEMS.register(
             "rockhide_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ROCKHIDE,
+                    NoxernaArmorMaterials.ROCKHIDE,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(8))
             ));
     public static final DeferredItem<Item> ROCKHIDE_CHESTPLATE = ITEMS.register(
             "rockhide_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ROCKHIDE,
+                    NoxernaArmorMaterials.ROCKHIDE,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(8))
             ));
     public static final DeferredItem<Item> ROCKHIDE_LEGGINGS = ITEMS.register(
             "rockhide_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ROCKHIDE,
+                    NoxernaArmorMaterials.ROCKHIDE,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(8))
             ));
     public static final DeferredItem<Item> ROCKHIDE_BOOTS = ITEMS.register(
             "rockhide_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ROCKHIDE,
+                    NoxernaArmorMaterials.ROCKHIDE,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(8))
             ));
     // Heart
     public static final DeferredItem<Item> HEART_HELMET = ITEMS.register(
             "heart_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.HEART,
+                    NoxernaArmorMaterials.HEART,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(26))
                             .rarity(Rarity.UNCOMMON)
             ));
     public static final DeferredItem<Item> HEART_CHESTPLATE = ITEMS.register(
             "heart_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.HEART,
+                    NoxernaArmorMaterials.HEART,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(26))
                             .rarity(Rarity.UNCOMMON)
             ));
     public static final DeferredItem<Item> HEART_LEGGINGS = ITEMS.register(
             "heart_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.HEART,
+                    NoxernaArmorMaterials.HEART,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(26))
                             .rarity(Rarity.UNCOMMON)
             ));
     public static final DeferredItem<Item> HEART_BOOTS = ITEMS.register(
             "heart_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.HEART,
+                    NoxernaArmorMaterials.HEART,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(26))
                             .rarity(Rarity.UNCOMMON)
             ));
     // Exoskeleton
+    private static final ResourceLocation EXOSKELETON_KNOCKBACK =
+            ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, "exoskeleton.attack_knockback");
+    private static final ResourceLocation EXOSKELETON_MINING_EFFICIENCY =
+            ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, "exoskeleton.mining_efficiency");
     public static final DeferredItem<Item> EXOSKELETON_HELMET = ITEMS.register(
             "exoskeleton_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.EXOSKELETON,
+                    NoxernaArmorMaterials.EXOSKELETON,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(23))
                             .rarity(Rarity.UNCOMMON)
-            ));
+                            .attributes(ItemAttributeModifiers.builder()
+                                    .add(Attributes.ATTACK_KNOCKBACK,
+                                            new AttributeModifier(EXOSKELETON_KNOCKBACK, 1.0f,
+                                                    AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                                    .add(Attributes.BLOCK_BREAK_SPEED,
+                                            new AttributeModifier(EXOSKELETON_MINING_EFFICIENCY, 1.0,
+                                                    AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                                    .build())));
     public static final DeferredItem<Item> EXOSKELETON_CHESTPLATE = ITEMS.register(
             "exoskeleton_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.EXOSKELETON,
+                    NoxernaArmorMaterials.EXOSKELETON,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(23))
                             .rarity(Rarity.UNCOMMON)
             ));
     public static final DeferredItem<Item> EXOSKELETON_LEGGINGS = ITEMS.register(
             "exoskeleton_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.EXOSKELETON,
+                    NoxernaArmorMaterials.EXOSKELETON,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(23))
                             .rarity(Rarity.UNCOMMON)
             ));
     public static final DeferredItem<Item> EXOSKELETON_BOOTS = ITEMS.register(
             "exoskeleton_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.EXOSKELETON,
+                    NoxernaArmorMaterials.EXOSKELETON,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(23))
                             .rarity(Rarity.UNCOMMON)
@@ -331,100 +350,100 @@ public class NoxernaItems {
     // Ferrebris
     public static final DeferredItem<Item> FERREBRIS_HELMET = ITEMS.register(
             "ferrebris_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.FERREBRIS,
+                    NoxernaArmorMaterials.FERREBRIS,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(23))
             ));
     public static final DeferredItem<Item> FERREBRIS_CHESTPLATE = ITEMS.register(
             "ferrebris_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.FERREBRIS,
+                    NoxernaArmorMaterials.FERREBRIS,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(23))
             ));
     public static final DeferredItem<Item> FERREBRIS_LEGGINGS = ITEMS.register(
             "ferrebris_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.FERREBRIS,
+                    NoxernaArmorMaterials.FERREBRIS,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(23))
             ));
     public static final DeferredItem<Item> FERREBRIS_BOOTS = ITEMS.register(
             "ferrebris_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.FERREBRIS,
+                    NoxernaArmorMaterials.FERREBRIS,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(23))
             ));
     // Umburam
     public static final DeferredItem<Item> UMBURAM_HELMET = ITEMS.register(
             "umburam_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.UMBURAM,
+                    NoxernaArmorMaterials.UMBURAM,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(11))
             ));
     public static final DeferredItem<Item> UMBURAM_CHESTPLATE = ITEMS.register(
             "umburam_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.UMBURAM,
+                    NoxernaArmorMaterials.UMBURAM,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(11))
             ));
     public static final DeferredItem<Item> UMBURAM_LEGGINGS = ITEMS.register(
             "umburam_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.UMBURAM,
+                    NoxernaArmorMaterials.UMBURAM,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(11))
             ));
     public static final DeferredItem<Item> UMBURAM_BOOTS = ITEMS.register(
             "umburam_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.UMBURAM,
+                    NoxernaArmorMaterials.UMBURAM,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(11))
             ));
     // Adamuna
     public static final DeferredItem<Item> ADAMUNA_HELMET = ITEMS.register(
             "adamuna_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ADAMUNA,
+                    NoxernaArmorMaterials.ADAMUNA,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))
             ));
     public static final DeferredItem<Item> ADAMUNA_CHESTPLATE = ITEMS.register(
             "adamuna_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ADAMUNA,
+                    NoxernaArmorMaterials.ADAMUNA,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))
             ));
     public static final DeferredItem<Item> ADAMUNA_LEGGINGS = ITEMS.register(
             "adamuna_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ADAMUNA,
+                    NoxernaArmorMaterials.ADAMUNA,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))
             ));
     public static final DeferredItem<Item> ADAMUNA_BOOTS = ITEMS.register(
             "adamuna_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.ADAMUNA,
+                    NoxernaArmorMaterials.ADAMUNA,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))
             ));
     // Nihoxite
     public static final DeferredItem<Item> NIHOXITE_HELMET = ITEMS.register(
             "nihoxite_helmet", () -> new ArmorItem(
-                    NoxernaArmourMaterials.NIHOXITE,
+                    NoxernaArmorMaterials.NIHOXITE,
                     ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(56))
             ));
     public static final DeferredItem<Item> NIHOXITE_CHESTPLATE = ITEMS.register(
             "nihoxite_chestplate", () -> new ArmorItem(
-                    NoxernaArmourMaterials.NIHOXITE,
+                    NoxernaArmorMaterials.NIHOXITE,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(56))
             ));
     public static final DeferredItem<Item> NIHOXITE_LEGGINGS = ITEMS.register(
             "nihoxite_leggings", () -> new ArmorItem(
-                    NoxernaArmourMaterials.NIHOXITE,
+                    NoxernaArmorMaterials.NIHOXITE,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(56))
             ));
     public static final DeferredItem<Item> NIHOXITE_BOOTS = ITEMS.register(
             "nihoxite_boots", () -> new ArmorItem(
-                    NoxernaArmourMaterials.NIHOXITE,
+                    NoxernaArmorMaterials.NIHOXITE,
                     ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(56))
             ));
@@ -677,7 +696,34 @@ public class NoxernaItems {
             "inetra_brick_wall", NoxernaBlocks.INETRA_BRICK_WALL);
     public static final DeferredItem<Item> INETRA_PEBBLE = registerBlockItem(
             "inetra_pebble", NoxernaBlocks.INETRA_PEBBLE);
-    // Material Storage Blocks
+    // Material Storage & Decorative Blocks
+    // Iron
+    public static final DeferredItem<Item> IRON_PLATING = registerBlockItem(
+            "iron_plating", NoxernaBlocks.IRON_PLATING);
+    public static final DeferredItem<Item> IRON_PLATING_STAIRS = registerBlockItem(
+            "iron_plating_stairs", NoxernaBlocks.IRON_PLATING_STAIRS);
+    public static final DeferredItem<Item> IRON_PLATING_SLAB = registerBlockItem(
+            "iron_plating_slab", NoxernaBlocks.IRON_PLATING_SLAB);
+    public static final DeferredItem<Item> IRON_PLATING_WALL = registerBlockItem(
+            "iron_plating_wall", NoxernaBlocks.IRON_PLATING_WALL);
+    // Gold
+    public static final DeferredItem<Item> GOLD_PLATING = registerBlockItem(
+            "gold_plating", NoxernaBlocks.GOLD_PLATING);
+    public static final DeferredItem<Item> GOLD_PLATING_STAIRS = registerBlockItem(
+            "gold_plating_stairs", NoxernaBlocks.GOLD_PLATING_STAIRS);
+    public static final DeferredItem<Item> GOLD_PLATING_SLAB = registerBlockItem(
+            "gold_plating_slab", NoxernaBlocks.GOLD_PLATING_SLAB);
+    public static final DeferredItem<Item> GOLD_PLATING_WALL = registerBlockItem(
+            "gold_plating_wall", NoxernaBlocks.GOLD_PLATING_WALL);
+    // Netherite
+    public static final DeferredItem<Item> NETHERITE_PLATING = registerBlockItem(
+            "netherite_plating", NoxernaBlocks.NETHERITE_PLATING);
+    public static final DeferredItem<Item> NETHERITE_PLATING_STAIRS = registerBlockItem(
+            "netherite_plating_stairs", NoxernaBlocks.NETHERITE_PLATING_STAIRS);
+    public static final DeferredItem<Item> NETHERITE_PLATING_SLAB = registerBlockItem(
+            "netherite_plating_slab", NoxernaBlocks.NETHERITE_PLATING_SLAB);
+    public static final DeferredItem<Item> NETHERITE_PLATING_WALL = registerBlockItem(
+            "netherite_plating_wall", NoxernaBlocks.NETHERITE_PLATING_WALL);
     // Ferrebris
     public static final DeferredItem<Item> FERREBRIS_BLOCK = registerBlockItem(
             "ferrebris_block", NoxernaBlocks.FERREBRIS_BLOCK);
@@ -691,24 +737,58 @@ public class NoxernaItems {
             "ferrebris_plating_slab", NoxernaBlocks.FERREBRIS_PLATING_SLAB);
     public static final DeferredItem<Item> FERREBRIS_PLATING_WALL = registerBlockItem(
             "ferrebris_plating_wall", NoxernaBlocks.FERREBRIS_PLATING_WALL);
+    // Umburam
     public static final DeferredItem<Item> UMBURAM_BLOCK = registerBlockItem(
             "umburam_block", NoxernaBlocks.UMBURAM_BLOCK);
     public static final DeferredItem<Item> UMBURAM_PLATING = registerBlockItem(
             "umburam_plating", NoxernaBlocks.UMBURAM_PLATING);
+    public static final DeferredItem<Item> UMBURAM_PLATING_STAIRS = registerBlockItem(
+            "umburam_plating_stairs", NoxernaBlocks.UMBURAM_PLATING_STAIRS);
+    public static final DeferredItem<Item> UMBURAM_PLATING_SLAB = registerBlockItem(
+            "umburam_plating_slab", NoxernaBlocks.UMBURAM_PLATING_SLAB);
+    public static final DeferredItem<Item> UMBURAM_PLATING_WALL = registerBlockItem(
+            "umburam_plating_wall", NoxernaBlocks.UMBURAM_PLATING_WALL);
+    // Teneryl
     public static final DeferredItem<Item> TENERYL_BLOCK = registerBlockItem(
             "teneryl_block", NoxernaBlocks.TENERYL_BLOCK);
+    // Adamuna
     public static final DeferredItem<Item> ADAMUNA_BLOCK = registerBlockItem(
             "adamuna_block", NoxernaBlocks.ADAMUNA_BLOCK);
+    // Inperlum
     public static final DeferredItem<Item> INPERLUM_BLOCK = registerBlockItem(
             "inperlum_block", NoxernaBlocks.INPERLUM_BLOCK);
     public static final DeferredItem<Item> INPERLUM_PLATING = registerBlockItem(
             "inperlum_plating", NoxernaBlocks.INPERLUM_PLATING);
+    public static final DeferredItem<Item> INPERLUM_PLATING_STAIRS = registerBlockItem(
+            "inperlum_plating_stairs", NoxernaBlocks.INPERLUM_PLATING_STAIRS);
+    public static final DeferredItem<Item> INPERLUM_PLATING_SLAB = registerBlockItem(
+            "inperlum_plating_slab", NoxernaBlocks.INPERLUM_PLATING_SLAB);
+    public static final DeferredItem<Item> INPERLUM_PLATING_WALL = registerBlockItem(
+            "inperlum_plating_wall", NoxernaBlocks.INPERLUM_PLATING_WALL);
+    // Nihoxite
     public static final DeferredItem<Item> NIHOXITE_BLOCK = registerBlockItem(
             "nihoxite_block", NoxernaBlocks.NIHOXITE_BLOCK);
     public static final DeferredItem<Item> NIHOXITE_PLATING = registerBlockItem(
             "nihoxite_plating", NoxernaBlocks.NIHOXITE_PLATING);
+    public static final DeferredItem<Item> NIHOXITE_PLATING_STAIRS = registerBlockItem(
+            "nihoxite_plating_stairs", NoxernaBlocks.NIHOXITE_PLATING_STAIRS);
+    public static final DeferredItem<Item> NIHOXITE_PLATING_SLAB = registerBlockItem(
+            "nihoxite_plating_slab", NoxernaBlocks.NIHOXITE_PLATING_SLAB);
+    public static final DeferredItem<Item> NIHOXITE_PLATING_WALL = registerBlockItem(
+            "nihoxite_plating_wall", NoxernaBlocks.NIHOXITE_PLATING_WALL);
+    // Mysterious Alloy
+    public static final DeferredItem<Item> MYSTERIOUS_ALLOY_PLATING = registerBlockItem(
+            "mysterious_alloy_plating", NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+    public static final DeferredItem<Item> MYSTERIOUS_ALLOY_PLATING_STAIRS = registerBlockItem(
+            "mysterious_alloy_plating_stairs", NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS);
+    public static final DeferredItem<Item> MYSTERIOUS_ALLOY_PLATING_SLAB = registerBlockItem(
+            "mysterious_alloy_plating_slab", NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB);
+    public static final DeferredItem<Item> MYSTERIOUS_ALLOY_PLATING_WALL = registerBlockItem(
+            "mysterious_alloy_plating_wall", NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL);
+    // Vitragor
     public static final DeferredItem<Item> VITRAGOR_BLOCK = registerBlockItem(
             "vitragor_block", NoxernaBlocks.VITRAGOR_BLOCK);
+    // Obscuprum
     public static final DeferredItem<Item> OBSCUPRUM_BLOCK = registerBlockItem(
             "obscuprum_block", NoxernaBlocks.OBSCUPRUM_BLOCK);
     public static final DeferredItem<Item> EXPOSED_OBSCUPRUM_BLOCK = registerBlockItem(

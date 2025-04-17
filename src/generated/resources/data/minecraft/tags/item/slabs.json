@@ -12,6 +12,13 @@
     "noxerna:inetra_slab",
     "noxerna:polished_inetra_slab",
     "noxerna:inetra_brick_slab",
-    "noxerna:ferrebris_plating_slab"
+    "noxerna:iron_plating_slab",
+    "noxerna:gold_plating_slab",
+    "noxerna:netherite_plating_slab",
+    "noxerna:ferrebris_plating_slab",
+    "noxerna:umburam_plating_slab",
+    "noxerna:inperlum_plating_slab",
+    "noxerna:nihoxite_plating_slab",
+    "noxerna:mysterious_alloy_plating_slab"
   ]
 }

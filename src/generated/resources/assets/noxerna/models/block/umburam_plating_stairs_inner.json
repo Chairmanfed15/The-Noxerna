@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "noxerna:block/umburam_plating",
+    "side": "noxerna:block/umburam_plating",
+    "top": "noxerna:block/umburam_plating"
+  }
+}

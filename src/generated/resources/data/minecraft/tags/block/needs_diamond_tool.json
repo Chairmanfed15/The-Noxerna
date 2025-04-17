@@ -1,6 +1,25 @@
 {
   "values": [
-    "#c:storage_blocks/inperlum",
-    "#c:storage_blocks/nihoxite"
+    "noxerna:soltra",
+    "noxerna:soltra_stairs",
+    "noxerna:soltra_slab",
+    "noxerna:polished_soltra",
+    "noxerna:polished_soltra_stairs",
+    "noxerna:polished_soltra_slab",
+    "noxerna:polished_soltra_wall",
+    "noxerna:soltra_bricks",
+    "noxerna:soltra_brick_stairs",
+    "noxerna:soltra_brick_slab",
+    "noxerna:soltra_brick_wall",
+    "noxerna:inperlum_block",
+    "noxerna:inperlum_plating",
+    "noxerna:inperlum_plating_stairs",
+    "noxerna:inperlum_plating_slab",
+    "noxerna:inperlum_plating_wall",
+    "noxerna:nihoxite_block",
+    "noxerna:nihoxite_plating",
+    "noxerna:nihoxite_plating_stairs",
+    "noxerna:nihoxite_plating_slab",
+    "noxerna:nihoxite_plating_wall"
   ]
 }

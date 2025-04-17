@@ -1,7 +1,7 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.data.PackOutput;
@@ -182,6 +182,17 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.INETRA_BRICK_STAIRS, "Inetra Brick Stairs");
         addBlock(NoxernaBlocks.INETRA_BRICK_SLAB, "Inetra Brick Slab");
         addBlock(NoxernaBlocks.INETRA_BRICK_WALL, "Inetra Brick Wall");
+        // Vanilla Metal Plating
+            // Iron
+        addBlock(NoxernaBlocks.IRON_PLATING, "Iron Plating");
+        addBlock(NoxernaBlocks.IRON_PLATING_STAIRS, "Iron Plating Stairs");
+        addBlock(NoxernaBlocks.IRON_PLATING_SLAB, "Iron Plating Slab");
+        addBlock(NoxernaBlocks.IRON_PLATING_WALL, "Iron Plating Wall");
+            // Gold
+        addBlock(NoxernaBlocks.GOLD_PLATING, "Gold Plating");
+        addBlock(NoxernaBlocks.GOLD_PLATING_STAIRS, "Gold Plating Stairs");
+        addBlock(NoxernaBlocks.GOLD_PLATING_SLAB, "Gold Plating Slab");
+        addBlock(NoxernaBlocks.GOLD_PLATING_WALL, "Gold Plating Wall");
         // Ferrebris Metal set
         addBlock(NoxernaBlocks.FERREBRIS_BLOCK, "Block of Ferrebris");
         addBlock(NoxernaBlocks.FERREBRIS_BARS, "Ferrebris Bars");
@@ -194,6 +205,9 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.UMBURAM_BLOCK, "Block of Umburam");
             // Plating
         addBlock(NoxernaBlocks.UMBURAM_PLATING, "Umburam Plating");
+        addBlock(NoxernaBlocks.UMBURAM_PLATING_STAIRS, "Umburam Plating Stairs");
+        addBlock(NoxernaBlocks.UMBURAM_PLATING_SLAB, "Umburam Plating Slab");
+        addBlock(NoxernaBlocks.UMBURAM_PLATING_WALL, "Umburam Plating Wall");
         // Teneryl Gem set
         addBlock(NoxernaBlocks.TENERYL_BLOCK, "Block of Teneryl");
         // Adamuna Gem set
@@ -202,10 +216,16 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.INPERLUM_BLOCK, "Block of Inperlum");
             // Plating
         addBlock(NoxernaBlocks.INPERLUM_PLATING, "Inperlum Plating");
+        addBlock(NoxernaBlocks.INPERLUM_PLATING_STAIRS, "Inperlum Plating Stairs");
+        addBlock(NoxernaBlocks.INPERLUM_PLATING_SLAB, "Inperlum Plating Slab");
+        addBlock(NoxernaBlocks.INPERLUM_PLATING_WALL, "Inperlum Plating Wall");
         // Nihoxite Metal set
         addBlock(NoxernaBlocks.NIHOXITE_BLOCK, "Block of Nihoxite");
             // Plating
         addBlock(NoxernaBlocks.NIHOXITE_PLATING, "Nihoxite Plating");
+        addBlock(NoxernaBlocks.NIHOXITE_PLATING_STAIRS, "Nihoxite Plating Stairs");
+        addBlock(NoxernaBlocks.NIHOXITE_PLATING_SLAB, "Nihoxite Plating Slab");
+        addBlock(NoxernaBlocks.NIHOXITE_PLATING_WALL, "Nihoxite Plating Wall");
         // Vitragor Gem set
         addBlock(NoxernaBlocks.VITRAGOR_BLOCK, "Block of Vitragor");
         // Obscuprum Metal set
@@ -285,6 +305,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.ARGON_DYE, "Argon Dye");
         addItem(NoxernaItems.NEON_DYE, "Neon Dye");
         addItem(NoxernaItems.NOBLEWOOD_BOWL, "Noblewood Bowl");
+        addItem(NoxernaItems.CUT_TENERYL, "Cut Teneryl");
         addItem(NoxernaItems.VITRAGOR_DUST, "Vitragor Dust");
         addItem(NoxernaItems.SULAZE_POWDER, "Sulaze Powder");
         // Banner Patterns

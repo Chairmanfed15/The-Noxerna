@@ -49,6 +49,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         wipItem(NoxernaItems.VITRAGOR_DUST);
         wipItem(NoxernaItems.SULAZE_POWDER);
         flatItem(NoxernaItems.NOBLEWOOD_BOWL);
+        flatItem(NoxernaItems.CUT_TENERYL);
         flatItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
         flatItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
         // Food

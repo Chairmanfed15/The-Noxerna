@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.world.inventory;
 /*
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;

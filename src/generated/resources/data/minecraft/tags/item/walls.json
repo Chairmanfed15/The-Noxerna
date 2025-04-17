@@ -12,6 +12,13 @@
     "noxerna:inetra_wall",
     "noxerna:polished_inetra_wall",
     "noxerna:inetra_brick_wall",
-    "noxerna:ferrebris_plating_wall"
+    "noxerna:iron_plating_wall",
+    "noxerna:gold_plating_wall",
+    "noxerna:netherite_plating_wall",
+    "noxerna:ferrebris_plating_wall",
+    "noxerna:umburam_plating_wall",
+    "noxerna:inperlum_plating_wall",
+    "noxerna:nihoxite_plating_wall",
+    "noxerna:mysterious_alloy_plating_wall"
   ]
 }

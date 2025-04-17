@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna.registry;
 
 import com.google.common.collect.ImmutableList;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.minecraft.data.worldgen.SurfaceRuleData;
 import net.minecraft.world.level.block.Block;

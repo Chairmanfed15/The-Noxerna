@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "noxerna:block/netherite_plating",
+    "side": "noxerna:block/netherite_plating",
+    "top": "noxerna:block/netherite_plating"
+  }
+}

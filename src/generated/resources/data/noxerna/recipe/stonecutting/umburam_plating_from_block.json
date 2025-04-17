@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:storage_blocks/umburam"
+  },
+  "result": {
+    "count": 9,
+    "id": "noxerna:umburam_plating"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "noxerna:block/mysterious_alloy_plating",
+    "side": "noxerna:block/mysterious_alloy_plating",
+    "top": "noxerna:block/mysterious_alloy_plating"
+  }
+}

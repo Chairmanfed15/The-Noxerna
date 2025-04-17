@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:iron_plating_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:iron_plating_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/iron_plating_from_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:iron_plating_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/iron_plating_from_slab"
+    ]
+  }
+}

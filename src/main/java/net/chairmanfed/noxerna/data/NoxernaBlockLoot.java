@@ -1,7 +1,7 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.block.PebbleBlock;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.natural.PebbleBlock;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -146,6 +146,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSlab(NoxernaBlocks.NOXUM_BRICK_SLAB.get());
         dropSelf(NoxernaBlocks.NOXUM_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.NOXUM_PEBBLE.get());
+        dropSelf(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
 
         dropSelf(NoxernaBlocks.AESTUM.get());
         dropSelf(NoxernaBlocks.AESTUM_STAIRS.get());
@@ -179,20 +180,54 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.INETRA_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
+        dropSelf(NoxernaBlocks.IRON_PLATING.get());
+        dropSelf(NoxernaBlocks.IRON_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.IRON_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.IRON_PLATING_WALL.get());
+
+        dropSelf(NoxernaBlocks.GOLD_PLATING.get());
+        dropSelf(NoxernaBlocks.GOLD_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.GOLD_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.GOLD_PLATING_WALL.get());
+
+        dropSelf(NoxernaBlocks.NETHERITE_PLATING.get());
+        dropSelf(NoxernaBlocks.NETHERITE_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.NETHERITE_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.NETHERITE_PLATING_WALL.get());
+
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
         dropSelf(NoxernaBlocks.FERREBRIS_BARS.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
+
         dropSelf(NoxernaBlocks.UMBURAM_BLOCK.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING.get());
+        dropSelf(NoxernaBlocks.UMBURAM_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.UMBURAM_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.UMBURAM_PLATING_WALL.get());
+
         dropSelf(NoxernaBlocks.TENERYL_BLOCK.get());
         dropSelf(NoxernaBlocks.ADAMUNA_BLOCK.get());
+
         dropSelf(NoxernaBlocks.INPERLUM_BLOCK.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING.get());
+        dropSelf(NoxernaBlocks.INPERLUM_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.INPERLUM_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.INPERLUM_PLATING_WALL.get());
+
         dropSelf(NoxernaBlocks.NIHOXITE_BLOCK.get());
         dropSelf(NoxernaBlocks.NIHOXITE_PLATING.get());
+        dropSelf(NoxernaBlocks.NIHOXITE_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.NIHOXITE_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.NIHOXITE_PLATING_WALL.get());
+
+        dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING.get());
+        dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS.get());
+        dropSlab(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB.get());
+        dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL.get());
+
         dropSelf(NoxernaBlocks.VITRAGOR_BLOCK.get());
         dropSelf(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK.get());
@@ -220,6 +255,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
 
+        dropSelf(NoxernaBlocks.LUMAI_FUEL_CELL.get());
         dropSelf(NoxernaBlocks.NOBLEWOOD_CRAFTING_TABLE.get());
     }
 }

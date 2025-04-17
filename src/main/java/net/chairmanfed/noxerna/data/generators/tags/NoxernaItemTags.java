@@ -237,8 +237,23 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.POLISHED_INETRA_STAIRS.get()).add(NoxernaItems.POLISHED_INETRA_WALL.get())
                 .add(NoxernaItems.INETRA_BRICKS.get()).add(NoxernaItems.INETRA_BRICK_STAIRS.get())
                 .add(NoxernaItems.INETRA_BRICK_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING)
+                .add(NoxernaItems.IRON_PLATING.get()).add(NoxernaItems.IRON_PLATING_STAIRS.get())
+                .add(NoxernaItems.IRON_PLATING_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_GOLD_PLATING)
+                .add(NoxernaItems.GOLD_PLATING.get()).add(NoxernaItems.GOLD_PLATING_STAIRS.get())
+                .add(NoxernaItems.GOLD_PLATING_WALL.get());
         tag(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING)
                 .add(NoxernaItems.FERREBRIS_PLATING.get()).add(NoxernaItems.FERREBRIS_PLATING_STAIRS.get())
                 .add(NoxernaItems.FERREBRIS_PLATING_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING)
+                .add(NoxernaItems.UMBURAM_PLATING.get()).add(NoxernaItems.UMBURAM_PLATING_STAIRS.get())
+                .add(NoxernaItems.UMBURAM_PLATING_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING)
+                .add(NoxernaItems.INPERLUM_PLATING.get()).add(NoxernaItems.INPERLUM_PLATING_STAIRS.get())
+                .add(NoxernaItems.INPERLUM_PLATING_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING)
+                .add(NoxernaItems.NIHOXITE_PLATING.get()).add(NoxernaItems.NIHOXITE_PLATING_STAIRS.get())
+                .add(NoxernaItems.NIHOXITE_PLATING_WALL.get());
     }
 }

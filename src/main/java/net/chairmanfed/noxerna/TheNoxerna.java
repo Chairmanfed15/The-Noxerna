@@ -1,8 +1,8 @@
 package net.chairmanfed.noxerna;
 
 import com.mojang.logging.LogUtils;
-import net.chairmanfed.noxerna.item.equipment.armour.NoxernaArmourMaterials;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.item.equipment.armor.NoxernaArmorMaterials;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.item.NoxernaCreativeModeTabs;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.client.Minecraft;
@@ -43,7 +43,7 @@ public class TheNoxerna
         modEventBus.addListener(this::commonSetup);
         NoxernaBlocks.BLOCKS.register(modEventBus);
         NoxernaItems.ITEMS.register(modEventBus);
-        NoxernaArmourMaterials.ARMOUR_MATERIAL.register(modEventBus);
+        NoxernaArmorMaterials.ARMOR_MATERIAL.register(modEventBus);
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         // modEventBus.addListener(DataGenerators::gatherData);
         NeoForge.EVENT_BUS.register(this);

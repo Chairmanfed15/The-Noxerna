@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "noxerna:block/lumai_fuel_cell",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "noxerna:block/lumai_fuel_cell",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "noxerna:block/lumai_fuel_cell",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "noxerna:block/lumai_fuel_cell",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "noxerna:block/lumai_fuel_cell"
+    },
+    "facing=west": {
+      "model": "noxerna:block/lumai_fuel_cell",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

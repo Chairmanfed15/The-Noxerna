@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna.registry;
 
 import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;

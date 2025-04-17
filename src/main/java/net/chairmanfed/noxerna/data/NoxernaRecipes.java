@@ -2,14 +2,15 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.providers.NoxernaRecipeProvider;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.common.Tags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -367,11 +368,31 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeWall(NoxernaItems.INETRA_BRICKS.get(), NoxernaItems.INETRA_BRICK_WALL.get())
                 .group("inetra_bricks")
                 .save(output, name("crafting/inetra_brick_wall"));
+        // Plating
+        makeSlabIntoBlock(NoxernaItems.IRON_PLATING_SLAB.get(), NoxernaItems.IRON_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/iron_plating_from_slab"));
+        makeSlabIntoBlock(NoxernaItems.FERREBRIS_PLATING_SLAB.get(), NoxernaItems.FERREBRIS_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/ferrebris_plating_from_slab"));
+        makeSlabIntoBlock(NoxernaItems.UMBURAM_PLATING_SLAB.get(), NoxernaItems.UMBURAM_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/umburam_plating_from_slab"));
+        makeSlabIntoBlock(NoxernaItems.INPERLUM_PLATING_SLAB.get(), NoxernaItems.INPERLUM_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/inperlum_plating_from_slab"));
+        makeSlabIntoBlock(NoxernaItems.NIHOXITE_PLATING_SLAB.get(), NoxernaItems.NIHOXITE_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/nihoxite_plating_from_slab"));
         // Storage Blocks
         packing3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_BLOCK.get(),
                 NoxernaTags.ItemTags.FERREBRIS_INGOTS)
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_block"));
+        packing3x3(NoxernaItems.UMBURAM_INGOT.get(), NoxernaItems.UMBURAM_BLOCK.get(),
+                NoxernaTags.ItemTags.UMBURAM_INGOTS)
+                .group("umburam")
+                .save(output, name("crafting/umburam_block"));
 
         // Noblewood Alt Recipes
         villagerWorkStation(NoxernaTags.ItemTags.ANY_IRON_INGOT, Items.SMITHING_TABLE)
@@ -395,6 +416,10 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_ingot_from_nugget"));
+        packing3x3(NoxernaItems.UMBURAM_NUGGET.get(), NoxernaItems.UMBURAM_INGOT.get(),
+                NoxernaTags.ItemTags.UMBURAM_NUGGETS)
+                .group("umburam")
+                .save(output, name("crafting/umburam_ingot_from_nugget"));
         // Unpacking 3x3
         unpacking3x3(NoxernaItems.FERREBRIS_BLOCK.get(), NoxernaItems.FERREBRIS_INGOT.get())
                 .group("ferrebris")
@@ -402,6 +427,12 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         unpacking3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_NUGGET.get())
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_nugget"));
+        unpacking3x3(NoxernaItems.UMBURAM_BLOCK.get(), NoxernaItems.UMBURAM_INGOT.get())
+                .group("umburam")
+                .save(output, name("crafting/umburam_ingot_from_block"));
+        unpacking3x3(NoxernaItems.UMBURAM_INGOT.get(), NoxernaItems.UMBURAM_NUGGET.get())
+                .group("umburam")
+                .save(output, name("crafting/umburam_nugget"));
         // Smelting
         smelting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 200)
@@ -428,6 +459,9 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 0.7f, 100)
                 .group("umburam_ingot")
                 .save(output, name("blasting/umburam_ingot"));
+        // Cutting
+        stonecutting(NoxernaTags.ItemTags.TENERYL_GEMS, NoxernaItems.CUT_TENERYL)
+                .save(output, name("stonecutting/cut_teneryl"));
 
         // Smithing Templates
         cloneSmithingTemplate(NoxernaItems.INETRA.get(), NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get())
@@ -613,6 +647,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("smithing/adamuna_netherite_sword"));
 
         // Stonecutting Recipes
+        // Soltra
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA.get())
                 .save(output, name("stonecutting/soltra_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_STAIRS.get())
@@ -639,7 +674,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/soltra_brick_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, NoxernaItems.SOLTRA_BRICK_WALL.get())
                 .save(output, name("stonecutting/soltra_brick_wall_from_stonecutting"));
-
+        // Noxum
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM.get())
                 .save(output, name("stonecutting/noxum_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_STAIRS.get())
@@ -666,7 +701,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/noxum_brick_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_NOXUM, NoxernaItems.NOXUM_BRICK_WALL.get())
                 .save(output, name("stonecutting/noxum_brick_wall_from_stonecutting"));
-
+        // Aestum
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM.get())
                 .save(output, name("stonecutting/aestum_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_STAIRS.get())
@@ -693,7 +728,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/aestum_brick_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_AESTUM, NoxernaItems.AESTUM_BRICK_WALL.get())
                 .save(output, name("stonecutting/aestum_brick_wall_from_stonecutting"));
-
+        // Inetra
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA.get())
                 .save(output, name("stonecutting/inetra_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_STAIRS.get())
@@ -720,8 +755,21 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/inetra_brick_slab_from_stonecutting"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_INETRA, NoxernaItems.INETRA_BRICK_WALL.get())
                 .save(output, name("stonecutting/inetra_brick_wall_from_stonecutting"));
-
-        stonecutting(NoxernaTags.ItemTags.FERREBRIS_STORAGE_BLOCKS, NoxernaItems.FERREBRIS_PLATING.get(), 4)
+        // Plating
+        // Iron
+        stonecutting(Tags.Items.STORAGE_BLOCKS_IRON, NoxernaItems.IRON_PLATING.get(), 9)
+                .save(output, name("stonecutting/iron_plating_from_block"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING, NoxernaItems.IRON_PLATING.get())
+                .save(output, name("stonecutting/iron_plating"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING, NoxernaItems.IRON_PLATING_STAIRS.get())
+                .save(output, name("stonecutting/iron_plating_stairs"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING,
+                NoxernaItems.IRON_PLATING_SLAB.get(), 2)
+                .save(output, name("stonecutting/iron_plating_slab"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING, NoxernaItems.IRON_PLATING_WALL.get())
+                .save(output, name("stonecutting/iron_plating_wall"));
+        // Ferrebris
+        stonecutting(NoxernaTags.ItemTags.FERREBRIS_STORAGE_BLOCKS, NoxernaItems.FERREBRIS_PLATING.get(), 9)
                 .save(output, name("stonecutting/ferrebris_plating_from_block"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, NoxernaItems.FERREBRIS_PLATING.get())
                 .save(output, name("stonecutting/ferrebris_plating"));
@@ -732,5 +780,41 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .save(output, name("stonecutting/ferrebris_plating_slab"));
         stonecutting(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, NoxernaItems.FERREBRIS_PLATING_WALL.get())
                 .save(output, name("stonecutting/ferrebris_plating_wall"));
+        // Umburam
+        stonecutting(NoxernaTags.ItemTags.UMBURAM_STORAGE_BLOCKS, NoxernaItems.UMBURAM_PLATING.get(), 9)
+                .save(output, name("stonecutting/umburam_plating_from_block"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING, NoxernaItems.UMBURAM_PLATING.get())
+                .save(output, name("stonecutting/umburam_plating"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING, NoxernaItems.UMBURAM_PLATING_STAIRS.get())
+                .save(output, name("stonecutting/umburam_plating_stairs"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING,
+                NoxernaItems.UMBURAM_PLATING_SLAB.get(), 2)
+                .save(output, name("stonecutting/umburam_plating_slab"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING, NoxernaItems.UMBURAM_PLATING_WALL.get())
+                .save(output, name("stonecutting/umburam_plating_wall"));
+        // Inperlum
+        stonecutting(NoxernaTags.ItemTags.INPERLUM_STORAGE_BLOCKS, NoxernaItems.INPERLUM_PLATING.get(), 9)
+                .save(output, name("stonecutting/inperlum_plating_from_block"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING, NoxernaItems.INPERLUM_PLATING.get())
+                .save(output, name("stonecutting/inperlum_plating"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING, NoxernaItems.INPERLUM_PLATING_STAIRS.get())
+                .save(output, name("stonecutting/inperlum_plating_stairs"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING,
+                NoxernaItems.INPERLUM_PLATING_SLAB.get(), 2)
+                .save(output, name("stonecutting/inperlum_plating_slab"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING, NoxernaItems.INPERLUM_PLATING_WALL.get())
+                .save(output, name("stonecutting/inperlum_plating_wall"));
+        // Nihoxite
+        stonecutting(NoxernaTags.ItemTags.NIHOXITE_STORAGE_BLOCKS, NoxernaItems.NIHOXITE_PLATING.get(), 9)
+                .save(output, name("stonecutting/nihoxite_plating_from_block"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING, NoxernaItems.NIHOXITE_PLATING.get())
+                .save(output, name("stonecutting/nihoxite_plating"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING, NoxernaItems.NIHOXITE_PLATING_STAIRS.get())
+                .save(output, name("stonecutting/nihoxite_plating_stairs"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING,
+                NoxernaItems.NIHOXITE_PLATING_SLAB.get(), 2)
+                .save(output, name("stonecutting/nihoxite_plating_slab"));
+        stonecutting(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING, NoxernaItems.NIHOXITE_PLATING_WALL.get())
+                .save(output, name("stonecutting/nihoxite_plating_wall"));
     }
 }

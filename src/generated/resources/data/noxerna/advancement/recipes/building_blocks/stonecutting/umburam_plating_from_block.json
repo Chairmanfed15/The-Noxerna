@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:storage_blocks/umburam]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:storage_blocks/umburam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:stonecutting/umburam_plating_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:storage_blocks/umburam]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:stonecutting/umburam_plating_from_block"
+    ]
+  }
+}

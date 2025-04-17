@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/netherite_plating_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/netherite_plating"
+    },
+    "type=top": {
+      "model": "noxerna:block/netherite_plating_slab_top"
+    }
+  }
+}

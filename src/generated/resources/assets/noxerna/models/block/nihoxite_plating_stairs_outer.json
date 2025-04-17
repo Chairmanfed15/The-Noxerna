@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "noxerna:block/nihoxite_plating",
+    "side": "noxerna:block/nihoxite_plating",
+    "top": "noxerna:block/nihoxite_plating"
+  }
+}

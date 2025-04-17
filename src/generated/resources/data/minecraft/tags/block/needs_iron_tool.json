@@ -12,8 +12,12 @@
     "noxerna:inetra_brick_stairs",
     "noxerna:inetra_brick_slab",
     "noxerna:inetra_brick_wall",
-    "#c:storage_blocks/umburam",
-    "#c:storage_blocks/teneryl",
-    "#c:storage_blocks/adamuna"
+    "noxerna:umburam_block",
+    "noxerna:umburam_plating",
+    "noxerna:umburam_plating_stairs",
+    "noxerna:umburam_plating_slab",
+    "noxerna:umburam_plating_wall",
+    "noxerna:teneryl_block",
+    "noxerna:adamuna_block"
   ]
 }

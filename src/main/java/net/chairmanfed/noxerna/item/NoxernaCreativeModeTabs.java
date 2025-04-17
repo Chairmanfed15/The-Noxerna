@@ -85,6 +85,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.SOLTRA_WALL);
                         output.accept(NoxernaItems.SOLTRA_PRESSURE_PLATE);
                         output.accept(NoxernaItems.SOLTRA_BUTTON);
+                        output.accept(NoxernaItems.SOLTRA_PEBBLE);
 
                         output.accept(NoxernaItems.POLISHED_SOLTRA);
                         output.accept(NoxernaItems.POLISHED_SOLTRA_STAIRS);
@@ -102,6 +103,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.NOXUM_WALL);
                         output.accept(NoxernaItems.NOXUM_PRESSURE_PLATE);
                         output.accept(NoxernaItems.NOXUM_BUTTON);
+                        output.accept(NoxernaItems.NOXUM_PEBBLE);
 
                         output.accept(NoxernaItems.POLISHED_NOXUM);
                         output.accept(NoxernaItems.POLISHED_NOXUM_STAIRS);
@@ -121,6 +123,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.AESTUM_WALL);
                         output.accept(NoxernaItems.AESTUM_PRESSURE_PLATE);
                         output.accept(NoxernaItems.AESTUM_BUTTON);
+                        output.accept(NoxernaItems.AESTUM_PEBBLE);
 
                         output.accept(NoxernaItems.POLISHED_AESTUM);
                         output.accept(NoxernaItems.POLISHED_AESTUM_STAIRS);
@@ -138,6 +141,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.INETRA_WALL);
                         output.accept(NoxernaItems.INETRA_PRESSURE_PLATE);
                         output.accept(NoxernaItems.INETRA_BUTTON);
+                        output.accept(NoxernaItems.INETRA_PEBBLE);
 
                         output.accept(NoxernaItems.POLISHED_INETRA);
                         output.accept(NoxernaItems.POLISHED_INETRA_STAIRS);
@@ -150,7 +154,12 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.INETRA_BRICK_WALL);
                         // Special Blocks
 
-                        // Material Storage & Decoration Blocks
+                        // Material Storage & Decorative Blocks
+                        // Iron
+                        output.accept(NoxernaItems.IRON_PLATING);
+                        output.accept(NoxernaItems.IRON_PLATING_STAIRS);
+                        output.accept(NoxernaItems.IRON_PLATING_SLAB);
+                        output.accept(NoxernaItems.IRON_PLATING_WALL);
                         // Ferrebris
                         output.accept(NoxernaItems.FERREBRIS_BLOCK);
                         output.accept(NoxernaItems.FERREBRIS_BARS);
@@ -158,9 +167,17 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.FERREBRIS_PLATING_STAIRS);
                         output.accept(NoxernaItems.FERREBRIS_PLATING_SLAB);
                         output.accept(NoxernaItems.FERREBRIS_PLATING_WALL);
+                        // Gold
+                        output.accept(NoxernaItems.GOLD_PLATING);
+                        output.accept(NoxernaItems.GOLD_PLATING_STAIRS);
+                        output.accept(NoxernaItems.GOLD_PLATING_SLAB);
+                        output.accept(NoxernaItems.GOLD_PLATING_WALL);
                         // Umburam
                         output.accept(NoxernaItems.UMBURAM_BLOCK);
                         output.accept(NoxernaItems.UMBURAM_PLATING);
+                        output.accept(NoxernaItems.UMBURAM_PLATING_STAIRS);
+                        output.accept(NoxernaItems.UMBURAM_PLATING_SLAB);
+                        output.accept(NoxernaItems.UMBURAM_PLATING_WALL);
                         // Teneryl
                         output.accept(NoxernaItems.TENERYL_BLOCK);
                         // Adamuna
@@ -168,9 +185,25 @@ public class NoxernaCreativeModeTabs {
                         // Inperlum
                         output.accept(NoxernaItems.INPERLUM_BLOCK);
                         output.accept(NoxernaItems.INPERLUM_PLATING);
+                        output.accept(NoxernaItems.INPERLUM_PLATING_STAIRS);
+                        output.accept(NoxernaItems.INPERLUM_PLATING_SLAB);
+                        output.accept(NoxernaItems.INPERLUM_PLATING_WALL);
+                        // Netherite
+                        output.accept(NoxernaItems.NETHERITE_PLATING);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_STAIRS);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_SLAB);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_WALL);
                         // Nihoxite
                         output.accept(NoxernaItems.NIHOXITE_BLOCK);
                         output.accept(NoxernaItems.NIHOXITE_PLATING);
+                        output.accept(NoxernaItems.NIHOXITE_PLATING_STAIRS);
+                        output.accept(NoxernaItems.NIHOXITE_PLATING_SLAB);
+                        output.accept(NoxernaItems.NIHOXITE_PLATING_WALL);
+                        // Mysterious Alloy
+                        output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING);
+                        output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_STAIRS);
+                        output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_SLAB);
+                        output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_WALL);
                         // Vitragor
                         output.accept(NoxernaItems.VITRAGOR_BLOCK);
                         // Obscuprum
@@ -376,6 +409,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.ARGON_DYE);
                         output.accept(NoxernaItems.NEON_DYE);
                         output.accept(NoxernaItems.NOBLEWOOD_BOWL);
+                        output.accept(NoxernaItems.CUT_TENERYL);
                         output.accept(NoxernaItems.VITRAGOR_DUST);
                         output.accept(NoxernaItems.SULAZE_POWDER);
                         output.accept(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);

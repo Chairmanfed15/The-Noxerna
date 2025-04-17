@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "noxerna:blockset/iron_plating"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:iron_plating"
+  }
+}

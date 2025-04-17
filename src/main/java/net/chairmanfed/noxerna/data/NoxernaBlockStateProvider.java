@@ -1,11 +1,15 @@
 package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
-import net.chairmanfed.noxerna.block.PebbleBlock;
-import net.chairmanfed.noxerna.registry.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.NoxernaBlocks;
+import net.chairmanfed.noxerna.block.natural.PebbleBlock;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Direction.Axis;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -146,6 +150,19 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         slabBlockWithItem(NoxernaBlocks.INETRA_BRICK_SLAB, NoxernaBlocks.INETRA_BRICKS);
         wallBlockWithItem(NoxernaBlocks.INETRA_BRICK_WALL, NoxernaBlocks.INETRA_BRICKS);
 
+        // Vanilla Metal Plating
+        blockWithItem(NoxernaBlocks.IRON_PLATING);
+        stairBlockWithItem(NoxernaBlocks.IRON_PLATING_STAIRS, NoxernaBlocks.IRON_PLATING);
+        slabBlockWithItem(NoxernaBlocks.IRON_PLATING_SLAB, NoxernaBlocks.IRON_PLATING);
+        wallBlockWithItem(NoxernaBlocks.IRON_PLATING_WALL, NoxernaBlocks.IRON_PLATING);
+        blockWithItem(NoxernaBlocks.GOLD_PLATING);
+        stairBlockWithItem(NoxernaBlocks.GOLD_PLATING_STAIRS, NoxernaBlocks.GOLD_PLATING);
+        slabBlockWithItem(NoxernaBlocks.GOLD_PLATING_SLAB, NoxernaBlocks.GOLD_PLATING);
+        wallBlockWithItem(NoxernaBlocks.GOLD_PLATING_WALL, NoxernaBlocks.GOLD_PLATING);
+        blockWithItem(NoxernaBlocks.NETHERITE_PLATING);
+        stairBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_STAIRS, NoxernaBlocks.NETHERITE_PLATING);
+        slabBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_SLAB, NoxernaBlocks.NETHERITE_PLATING);
+        wallBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_WALL, NoxernaBlocks.NETHERITE_PLATING);
         // Ferrebris Metal set
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
         paneBlockWithItem(NoxernaBlocks.FERREBRIS_BARS, "cutout");
@@ -157,6 +174,9 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         // Umburam Metal set
         blockWithItem(NoxernaBlocks.UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_PLATING);
+        stairBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_STAIRS, NoxernaBlocks.UMBURAM_PLATING);
+        slabBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_SLAB, NoxernaBlocks.UMBURAM_PLATING);
+        wallBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_WALL, NoxernaBlocks.UMBURAM_PLATING);
 
         // Teneryl Gem set
         blockWithItem(NoxernaBlocks.TENERYL_BLOCK);
@@ -167,11 +187,21 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         // Inperlum Metal set
         blockWithItem(NoxernaBlocks.INPERLUM_BLOCK);
         blockWithItem(NoxernaBlocks.INPERLUM_PLATING);
+        stairBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_STAIRS, NoxernaBlocks.INPERLUM_PLATING);
+        slabBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_SLAB, NoxernaBlocks.INPERLUM_PLATING);
+        wallBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_WALL, NoxernaBlocks.INPERLUM_PLATING);
 
         // Nihoxite Metal set
         blockWithItem(NoxernaBlocks.NIHOXITE_BLOCK);
         blockWithItem(NoxernaBlocks.NIHOXITE_PLATING);
-
+        stairBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_STAIRS, NoxernaBlocks.NIHOXITE_PLATING);
+        slabBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_SLAB, NoxernaBlocks.NIHOXITE_PLATING);
+        wallBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_WALL, NoxernaBlocks.NIHOXITE_PLATING);
+        // Mysterious Alloy Metal set
+        blockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+        stairBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+        slabBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+        wallBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
         // Vitragor Gem set
         blockWithItem(NoxernaBlocks.VITRAGOR_BLOCK);
 
@@ -197,10 +227,12 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
 
         // Coloured Blocks
+            // Concrete
         blockWithItem(NoxernaBlocks.XENON_CONCRETE);
         blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE);
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE);
         blockWithItem(NoxernaBlocks.NEON_CONCRETE);
+            // Concrete Powder
         blockWithItem(NoxernaBlocks.XENON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);

@@ -33,7 +33,33 @@ public class NoxernaTags {
         public static final TagKey<Item> BLOCKSET_NOXUM = localTag("blockset/noxum");
         public static final TagKey<Item> BLOCKSET_AESTUM = localTag("blockset/aestum");
         public static final TagKey<Item> BLOCKSET_INETRA = localTag("blockset/inetra");
+        public static final TagKey<Item> BLOCKSET_IRON_PLATING = localTag("blockset/iron_plating");
+        public static final TagKey<Item> BLOCKSET_GOLD_PLATING = localTag("blockset/gold_plating");
+        public static final TagKey<Item> BLOCKSET_NETHERITE_PLATING = localTag("blockset/netherite_plating");
+        public static final TagKey<Item> BLOCKSET_UNAFFECTED_COPPER_PLATING =
+                localTag("blockset/copper_plating/unaffected");
+        public static final TagKey<Item> BLOCKSET_UNAFFECTED_WAXED_COPPER_PLATING =
+                localTag("blockset/waxed_copper_plating/unaffected");
+        public static final TagKey<Item> BLOCKSET_EXPOSED_COPPER_PLATING =
+                localTag("blockset/copper_plating/exposed");
+        public static final TagKey<Item> BLOCKSET_EXPOSED_WAXED_COPPER_PLATING =
+                localTag("blockset/waxed_copper_plating/exposed");
+        public static final TagKey<Item> BLOCKSET_WEATHERED_COPPER_PLATING =
+                localTag("blockset/copper_plating/weathered");
+        public static final TagKey<Item> BLOCKSET_WEATHERED_WAXED_COPPER_PLATING =
+                localTag("blockset/waxed_copper_plating/weathered");
+        public static final TagKey<Item> BLOCKSET_OXIDISED_COPPER_PLATING =
+                localTag("blockset/copper_plating/oxidised");
+        public static final TagKey<Item> BLOCKSET_OXIDISED_WAXED_COPPER_PLATING =
+                localTag("blockset/waxed_copper_plating/oxidised");
         public static final TagKey<Item> BLOCKSET_FERREBRIS_PLATING = localTag("blockset/ferrebris_plating");
+        public static final TagKey<Item> BLOCKSET_UMBURAM_PLATING = localTag("blockset/umburam_plating");
+        public static final TagKey<Item> BLOCKSET_INPERLUM_PLATING = localTag("blockset/inperlum_plating");
+        public static final TagKey<Item> BLOCKSET_NIHOXITE_PLATING = localTag("blockset/nihoxite_plating");
+        public static final TagKey<Item> BLOCKSET_UNAFFECTED_CUT_OBSCUPRUM =
+                localTag("blockset/cut_obscuprum/unaffected");
+        public static final TagKey<Item> BLOCKSET_EXPOSED_CUT_OBSCUPRUM =
+                localTag("blockset/cut_obscuprum/exposed");
         public static final TagKey<Item> PEBBLES = localTag("pebbles");
         public static final TagKey<Item> XENON_LOGS = localTag("xenon_logs");
         public static final TagKey<Item> KRYPTON_LOGS = localTag("krypton_logs");
@@ -99,6 +125,7 @@ public class NoxernaTags {
         public static final TagKey<Block> BASE_STONE_NOXERNA = localTag("base_stone_noxerna");
 
         public static final TagKey<Block> MINEABLE_WITH_PICKADZE = localTag("mineable/pickadze");
+        public static final TagKey<Block> NEEDS_ADAMUNA_TOOL = localTag("needs_adamuna_tool");
         public static final TagKey<Block> INCORRECT_FOR_NOBLEWOOD_TOOL = localTag(
                 "incorrect_for_noblewood_tool");
         public static final TagKey<Block> INCORRECT_FOR_NOXSTONE_TOOL = localTag(

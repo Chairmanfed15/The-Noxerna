@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "noxerna:blockset/inperlum_plating"
+  },
+  "result": {
+    "count": 2,
+    "id": "noxerna:inperlum_plating_slab"
+  }
+}

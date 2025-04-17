@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "umburam",
+  "key": {
+    "#": {
+      "item": "noxerna:umburam_nugget"
+    },
+    "$": {
+      "tag": "c:nuggets/umburam"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:umburam_ingot"
+  }
+}
