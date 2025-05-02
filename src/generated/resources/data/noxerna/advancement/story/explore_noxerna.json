@@ -1,8 +1,133 @@
 {
   "parent": "noxerna:story/breach_surface",
   "criteria": {
-    "explore_noxerna": {
-      "trigger": "minecraft:impossible"
+    "noxerna:aestum_wastes": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:aestum_wastes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:argon_grove": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:argon_grove"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:inetra_crags": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:inetra_crags"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:krypton_grotto": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:krypton_grotto"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:neon_grove": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:neon_grove"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:noxum_depths": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:noxum_depths"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:surface": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:surface"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "noxerna:xenon_grotto": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:xenon_grotto"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     }
   },
   "display": {
@@ -20,7 +145,28 @@
   },
   "requirements": [
     [
-      "explore_noxerna"
+      "noxerna:surface"
+    ],
+    [
+      "noxerna:noxum_depths"
+    ],
+    [
+      "noxerna:xenon_grotto"
+    ],
+    [
+      "noxerna:krypton_grotto"
+    ],
+    [
+      "noxerna:aestum_wastes"
+    ],
+    [
+      "noxerna:argon_grove"
+    ],
+    [
+      "noxerna:neon_grove"
+    ],
+    [
+      "noxerna:inetra_crags"
     ]
   ],
   "sends_telemetry_event": true

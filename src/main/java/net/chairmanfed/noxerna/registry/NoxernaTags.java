@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
@@ -197,6 +198,36 @@ public class NoxernaTags {
         }
         public static TagKey<EntityType<?>> commonTag(String tagName) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("c", tagName));
+        }
+    }
+
+    public static class BiomeTags {
+        public static final TagKey<Biome> IS_NOXERNA = localTag("is_noxerna");
+        public static final TagKey<Biome> IS_UNDERGROUND_NOXERNA = localTag("is_underground_noxerna");
+        public static final TagKey<Biome> SURFACE_LAYER_BIOMES = localTag("surface_layer_biomes");
+        public static final TagKey<Biome> NOXUM_LAYER_BIOMES = localTag("noxum_layer_biomes");
+        public static final TagKey<Biome> AESTUM_LAYER_BIOMES = localTag("aestum_layer_biomes");
+        public static final TagKey<Biome> INETRA_LAYER_BIOMES = localTag("inetra_layer_biomes");
+        public static final TagKey<Biome> IS_NOBLEPHYTE_BIOME = localTag("is_noblephyte_biome");
+        /**
+         * This tag will be used for a fog density handler in the future
+         */
+        public static final TagKey<Biome> HAS_DENSE_FOG = localTag("has_dense_fog");
+
+        /**
+         * These tags are just to match with NeoForge's biome tags
+         */
+        public static final TagKey<Biome> IS_HOT_NOXERNA = commonTag("is_hot/noxerna");
+        public static final TagKey<Biome> IS_COLD_NOXERNA = commonTag("is_cold/noxerna");
+        public static final TagKey<Biome> IS_SPARSE_VEGETATION_NOXERNA = commonTag("is_sparse_vegetation/noxerna");
+        public static final TagKey<Biome> IS_DENSE_VEGETATION_NOXERNA = commonTag("is_dense_vegetation/noxerna");
+        public static final TagKey<Biome> IS_WET_NOXERNA = commonTag("is_wet/noxerna");
+        public static final TagKey<Biome> IS_DRY_NOXERNA = commonTag("is_dry/noxerna");
+        private static TagKey<Biome> localTag(String tagName) {
+            return TagKey.create(Registries.BIOME, TheNoxerna.prefix(tagName));
+        }
+        private static TagKey<Biome> commonTag(String tagName) {
+            return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", tagName));
         }
     }
 }

@@ -414,6 +414,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.SULAZE_POWDER);
                         output.accept(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        output.accept(NoxernaItems.ENERGIZED_TENERYL_DRIVE);
                     })
                     .withTabsBefore(NOXERNA_FOOD_AND_DRINK.getKey()).build());
 }

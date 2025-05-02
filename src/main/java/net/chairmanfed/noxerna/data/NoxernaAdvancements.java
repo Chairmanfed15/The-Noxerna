@@ -32,17 +32,22 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
             NoxernaBiomes.SURFACE, NoxernaBiomes.NOXUM_DEPTHS, NoxernaBiomes.XENON_GROTTO,
             NoxernaBiomes.KRYPTON_GROTTO, NoxernaBiomes.AESTUM_WASTES, NoxernaBiomes.ARGON_GROVE,
             NoxernaBiomes.NEON_GROVE, NoxernaBiomes.INETRA_CRAGS);
-    private static final List<ResourceKey<Biome>> NOBLEPHYTE_BIOMES = ImmutableList.of(
-            NoxernaBiomes.XENON_GROTTO, NoxernaBiomes.KRYPTON_GROTTO,
-            NoxernaBiomes.ARGON_GROVE, NoxernaBiomes.NEON_GROVE);
 
+    /**
+     * Yoinked this biome advancement builder from {@link net.minecraft.data.advancements.packs.VanillaAdventureAdvancements}.
+     * Entirely because it was protected access and I needed it for Cavernous Grand Tour
+     */
     protected static Advancement.Builder addBiomes(
-            Advancement.Builder builder, HolderLookup.Provider levelRegistry, ResourceKey<Biome> biome) {
-        HolderGetter<Biome> holderGetter = levelRegistry.lookupOrThrow(Registries.BIOME);
-        builder.addCriterion(biome.toString(),
-                PlayerTrigger.TriggerInstance.located(
-                        LocationPredicate.Builder.inBiome(holderGetter.getOrThrow(biome))));
-        return builder;
+            Advancement.Builder pBuilder, HolderLookup.Provider pLevelRegistry, List<ResourceKey<Biome>> pBiomes) {
+        HolderGetter<Biome> holdergetter = pLevelRegistry.lookupOrThrow(Registries.BIOME);
+        for (ResourceKey<Biome> resourcekey : pBiomes) {
+            pBuilder.addCriterion(
+                    resourcekey.location().toString(),
+                    PlayerTrigger.TriggerInstance.located(
+                            LocationPredicate.Builder.inBiome(holdergetter.getOrThrow(resourcekey)))
+            );
+        }
+        return pBuilder;
     }
 
     @SuppressWarnings("unused")
@@ -64,7 +69,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                 .addCriterion("tick", PlayerTrigger.TriggerInstance.tick())
                 .save(saver, TheNoxerna.MODID + ":story/root");
 
-        // Entering the Noxerna storyline
+        // Entering Noxerna storyline
         // Find Abandoned Portal
         AdvancementHolder FIND_ABANDONED_PORTAL = Advancement.Builder.advancement()
                 .parent(ROOT)
@@ -115,8 +120,23 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
-                .addCriterion("noblephyte_biomes",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .requirements(AdvancementRequirements.Strategy.OR)
+                .addCriterion("xenon_grotto",
+                        PlayerTrigger.TriggerInstance.located(
+                                LocationPredicate.Builder.inBiome(registries.lookupOrThrow(Registries.BIOME)
+                                        .getOrThrow(NoxernaBiomes.XENON_GROTTO))))
+                .addCriterion("krypton_grotto",
+                        PlayerTrigger.TriggerInstance.located(
+                                LocationPredicate.Builder.inBiome(registries.lookupOrThrow(Registries.BIOME)
+                                        .getOrThrow(NoxernaBiomes.KRYPTON_GROTTO))))
+                .addCriterion("argon_grove",
+                        PlayerTrigger.TriggerInstance.located(
+                                LocationPredicate.Builder.inBiome(registries.lookupOrThrow(Registries.BIOME)
+                                        .getOrThrow(NoxernaBiomes.ARGON_GROVE))))
+                .addCriterion("neon_grove",
+                        PlayerTrigger.TriggerInstance.located(
+                                LocationPredicate.Builder.inBiome(registries.lookupOrThrow(Registries.BIOME)
+                                        .getOrThrow(NoxernaBiomes.NEON_GROVE))))
                 .save(saver, TheNoxerna.MODID + ":story/explore_noblephyte_biomes");
         // Reach the Surface
         AdvancementHolder BREACH_SURFACE = Advancement.Builder.advancement()
@@ -134,10 +154,12 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true
                 )
                 .addCriterion("breach_surface",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                        PlayerTrigger.TriggerInstance.located(
+                                LocationPredicate.Builder.inBiome(registries.lookupOrThrow(Registries.BIOME)
+                                        .getOrThrow(NoxernaBiomes.SURFACE))))
                 .save(saver, TheNoxerna.MODID + ":story/breach_surface");
         // Find all Noxerna Biomes
-        AdvancementHolder EXPLORE_NOXERNA = Advancement.Builder.advancement()
+        NoxernaAdvancements.addBiomes(Advancement.Builder.advancement(), registries, NOXERNA_BIOMES)
                 .parent(BREACH_SURFACE)
                 .display(
                         new ItemStack(NoxernaItems.NIHOXITE_BOOTS.get()),
@@ -151,8 +173,6 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
-                .addCriterion("explore_noxerna",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
                 .save(saver, TheNoxerna.MODID + ":story/explore_noxerna");
         // Automaton storyline
         // Mine Ores while un-registered

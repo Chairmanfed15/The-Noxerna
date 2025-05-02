@@ -193,6 +193,11 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.GOLD_PLATING_STAIRS, "Gold Plating Stairs");
         addBlock(NoxernaBlocks.GOLD_PLATING_SLAB, "Gold Plating Slab");
         addBlock(NoxernaBlocks.GOLD_PLATING_WALL, "Gold Plating Wall");
+        // Gold
+        addBlock(NoxernaBlocks.NETHERITE_PLATING, "Netherite Plating");
+        addBlock(NoxernaBlocks.NETHERITE_PLATING_STAIRS, "Netherite Plating Stairs");
+        addBlock(NoxernaBlocks.NETHERITE_PLATING_SLAB, "Netherite Plating Slab");
+        addBlock(NoxernaBlocks.NETHERITE_PLATING_WALL, "Netherite Plating Wall");
         // Ferrebris Metal set
         addBlock(NoxernaBlocks.FERREBRIS_BLOCK, "Block of Ferrebris");
         addBlock(NoxernaBlocks.FERREBRIS_BARS, "Ferrebris Bars");
@@ -226,6 +231,12 @@ public class NoxernaLanguageData extends LanguageProvider {
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_STAIRS, "Nihoxite Plating Stairs");
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_SLAB, "Nihoxite Plating Slab");
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_WALL, "Nihoxite Plating Wall");
+        // Mysterious Alloy
+            // Plating
+        addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING, "Mysterious Alloy Plating");
+        addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, "Mysterious Alloy Plating Stairs");
+        addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, "Mysterious Alloy Plating Slab");
+        addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL, "Mysterious Alloy Plating Wall");
         // Vitragor Gem set
         addBlock(NoxernaBlocks.VITRAGOR_BLOCK, "Block of Vitragor");
         // Obscuprum Metal set
@@ -308,6 +319,7 @@ public class NoxernaLanguageData extends LanguageProvider {
         addItem(NoxernaItems.CUT_TENERYL, "Cut Teneryl");
         addItem(NoxernaItems.VITRAGOR_DUST, "Vitragor Dust");
         addItem(NoxernaItems.SULAZE_POWDER, "Sulaze Powder");
+        addItem(NoxernaItems.ENERGIZED_TENERYL_DRIVE, "Energized Teneryl Drive");
         // Banner Patterns
         // Pottery Sherds
         // Smithing Templates

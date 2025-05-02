@@ -34,9 +34,8 @@ public class TheNoxerna
     }
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final GameRules.Key<GameRules.IntegerValue> RULE_MAX_QUAKE_MAGNITUDE =
-            GameRules.register(
-                    "maxQuakeMagnitude", GameRules.Category.UPDATES, GameRules.IntegerValue.create(10));
+    public static final GameRules.Key<GameRules.IntegerValue> RULE_MAX_QUAKE_MAGNITUDE = GameRules.register(
+            "maxQuakeMagnitude", GameRules.Category.UPDATES, GameRules.IntegerValue.create(10));
 
     public TheNoxerna(IEventBus modEventBus, ModContainer modContainer)
     {
@@ -47,7 +46,7 @@ public class TheNoxerna
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         // modEventBus.addListener(DataGenerators::gatherData);
         NeoForge.EVENT_BUS.register(this);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -55,12 +54,13 @@ public class TheNoxerna
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.logDirtBlock)
+        /* if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+         */
     }
 
     @SubscribeEvent

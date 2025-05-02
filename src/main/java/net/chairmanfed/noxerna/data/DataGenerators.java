@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.data;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.data.generators.NoxernaRegistrySets;
+import net.chairmanfed.noxerna.data.generators.tags.NoxernaBiomeTags;
 import net.chairmanfed.noxerna.data.generators.tags.NoxernaBlockTags;
 import net.chairmanfed.noxerna.data.generators.tags.NoxernaEntityTags;
 import net.chairmanfed.noxerna.data.generators.tags.NoxernaItemTags;
@@ -10,6 +11,7 @@ import net.chairmanfed.noxerna.data.providers.NoxernaLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -42,13 +44,15 @@ public class DataGenerators {
 
         // Data
         NoxernaRegistrySets datapack = new NoxernaRegistrySets(output, lookupProvider);
-        generator.addProvider(server, datapack);
+        lookupProvider = generator.addProvider(server, datapack).getRegistryProvider();
         BlockTagsProvider blockTags = new NoxernaBlockTags(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, blockTags);
         ItemTagsProvider itemTags = new NoxernaItemTags(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper);
         generator.addProvider(server, itemTags);
         EntityTypeTagsProvider entityTags = new NoxernaEntityTags(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, entityTags);
+        BiomeTagsProvider biomeTags = new NoxernaBiomeTags(output, lookupProvider, existingFileHelper);
+        generator.addProvider(server, biomeTags);
         generator.addProvider(server, new NoxernaDataMaps(output, lookupProvider));
         generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
         generator.addProvider(server, new NoxernaLootTableProvider(output, lookupProvider));

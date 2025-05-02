@@ -2,7 +2,20 @@
   "parent": "noxerna:story/explore_noblephyte_biomes",
   "criteria": {
     "breach_surface": {
-      "trigger": "minecraft:impossible"
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "noxerna:surface"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
     }
   },
   "display": {

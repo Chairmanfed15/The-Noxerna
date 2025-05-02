@@ -2,6 +2,7 @@ package net.chairmanfed.noxerna.block;
 
 import net.chairmanfed.noxerna.TheNoxerna;
 import net.chairmanfed.noxerna.block.natural.PebbleBlock;
+import net.chairmanfed.noxerna.block.portal.NoxernaPortalBlock;
 import net.chairmanfed.noxerna.block.utility.FuelCellBlock;
 import net.chairmanfed.noxerna.registry.NoxernaSoundTypes;
 import net.minecraft.world.level.block.*;
@@ -632,5 +633,5 @@ public class NoxernaBlocks {
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> NOXERNA_PORTAL = BLOCKS.register(
             "noxerna_portal",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable()));
+            () -> new NoxernaPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable()));
 }

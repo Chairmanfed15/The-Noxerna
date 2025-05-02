@@ -52,6 +52,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.CUT_TENERYL);
         flatItem(NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE);
         flatItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
+        flatItem(NoxernaItems.ENERGIZED_TENERYL_DRIVE);
         // Food
 
         // Tiered Tools

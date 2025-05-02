@@ -389,10 +389,22 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 NoxernaTags.ItemTags.FERREBRIS_INGOTS)
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_block"));
+        packing3x3(NoxernaItems.OBSCUPRUM_INGOT.get(), NoxernaItems.OBSCUPRUM_BLOCK.get(),
+                NoxernaTags.ItemTags.OBSCUPRUM_INGOTS)
+                .group("obscuprum")
+                .save(output, name("crafting/obscuprum_block"));
         packing3x3(NoxernaItems.UMBURAM_INGOT.get(), NoxernaItems.UMBURAM_BLOCK.get(),
                 NoxernaTags.ItemTags.UMBURAM_INGOTS)
                 .group("umburam")
                 .save(output, name("crafting/umburam_block"));
+        packing3x3(NoxernaItems.INPERLUM_INGOT.get(), NoxernaItems.INPERLUM_BLOCK.get(),
+                NoxernaTags.ItemTags.INPERLUM_INGOTS)
+                .group("inperlum")
+                .save(output, name("crafting/inperlum_block"));
+        packing3x3(NoxernaItems.NIHOXITE_INGOT.get(), NoxernaItems.NIHOXITE_BLOCK.get(),
+                NoxernaTags.ItemTags.NIHOXITE_INGOTS)
+                .group("nihoxite")
+                .save(output, name("crafting/nihoxite_block"));
 
         // Noblewood Alt Recipes
         villagerWorkStation(NoxernaTags.ItemTags.ANY_IRON_INGOT, Items.SMITHING_TABLE)
