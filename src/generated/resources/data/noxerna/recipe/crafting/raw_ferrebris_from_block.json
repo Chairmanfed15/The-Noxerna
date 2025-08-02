@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "raw_ferrebris",
+  "ingredients": [
+    {
+      "item": "noxerna:raw_ferrebris_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:raw_ferrebris"
+  }
+}

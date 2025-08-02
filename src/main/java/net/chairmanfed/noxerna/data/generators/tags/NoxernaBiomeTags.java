@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.generators.tags;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class NoxernaBiomeTags extends BiomeTagsProvider {
     public NoxernaBiomeTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                             @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, TheNoxerna.MODID, existingFileHelper);
+        super(output, lookupProvider, Noxerna.MODID, existingFileHelper);
     }
 
     @SuppressWarnings("unchecked")

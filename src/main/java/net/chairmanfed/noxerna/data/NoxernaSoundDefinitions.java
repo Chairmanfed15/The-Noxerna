@@ -1,6 +1,7 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
+import net.chairmanfed.noxerna.data.generators.NoxernaLanguageData;
 import net.chairmanfed.noxerna.registry.NoxernaSoundEvents;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvent;
@@ -12,7 +13,7 @@ import javax.annotation.Nullable;
 
 public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
     public NoxernaSoundDefinitions(PackOutput output, ExistingFileHelper fileHelper) {
-        super(output, TheNoxerna.MODID, fileHelper);
+        super(output, Noxerna.MODID, fileHelper);
     }
 
     @Override
@@ -32,7 +33,7 @@ public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
 
     // TODO: Finish sound registration
     protected static SoundDefinition.Sound sound(final String name){
-        return sound(TheNoxerna.prefix(name));
+        return sound(Noxerna.prefix(name));
     }
     public void generateSubbedSound(
             SoundEvent event, int soundVariations, String subtitle) {
@@ -51,7 +52,7 @@ public class NoxernaSoundDefinitions extends SoundDefinitionsProvider {
         }
         for (int i = 1; i <= soundVariations; i++) {
             definition.with(SoundDefinition.Sound.sound(
-                    TheNoxerna.prefix(baseDirectory + (soundVariations > 1 ? i : "")),
+                    Noxerna.prefix(baseDirectory + (soundVariations > 1 ? i : "")),
                     SoundDefinition.SoundType.SOUND));
         }
         this.add(event, definition);

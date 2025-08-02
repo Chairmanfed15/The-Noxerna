@@ -2,6 +2,14 @@
   "parent": "noxerna:story/all_noxerna_foods",
   "criteria": {
     "all_noxerna_potions": {
+      "conditions": {
+        "effects": {
+          "noxerna:broken_armor": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    },
+    "impossible": {
       "trigger": "minecraft:impossible"
     }
   },
@@ -12,13 +20,16 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:cooked_beef"
+      "id": "minecraft:potion"
     },
     "title": {
       "translate": "advancement.noxerna.all_noxerna_potions.title"
     }
   },
   "requirements": [
+    [
+      "impossible"
+    ],
     [
       "all_noxerna_potions"
     ]

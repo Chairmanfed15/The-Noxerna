@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.resources.registries;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
@@ -32,7 +32,7 @@ public class NoxernaTrimMaterials {
     public static final ResourceKey<TrimMaterial> XENON = createKey("xenon");
     private static ResourceKey<TrimMaterial> createKey(String name) {
         return ResourceKey.create(Registries.TRIM_MATERIAL,
-                ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name));
+                ResourceLocation.fromNamespaceAndPath(Noxerna.MODID, name));
     }
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, ARGON, NoxernaItems.ARGON_DYE.get(), Style.EMPTY.withColor(11864684), 0.4f);

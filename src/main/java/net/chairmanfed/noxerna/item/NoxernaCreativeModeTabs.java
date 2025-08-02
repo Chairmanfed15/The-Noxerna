@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.item;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -10,12 +10,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class NoxernaCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(
-            BuiltInRegistries.CREATIVE_MODE_TAB, TheNoxerna.MODID);
+            BuiltInRegistries.CREATIVE_MODE_TAB, Noxerna.MODID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_BUILDING_BLOCKS = CREATIVE_TABS.register(
             "noxerna_building_blocks", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".building_blocks"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".building_blocks"))
                     .icon(()-> new ItemStack(NoxernaItems.NOXUM_BRICKS.get()))
                     .displayItems((params, output) -> {
                         // Wood Sets
@@ -237,9 +237,17 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_COLORED_BLOCKS = CREATIVE_TABS.register(
                     "noxerna_colored_blocks", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".colored_blocks"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".colored_blocks"))
                     .icon(()-> new ItemStack(NoxernaItems.XENON_CONCRETE.get()))
                     .displayItems((params, output) -> {
+                        output.accept(NoxernaItems.XENON_WOOL);
+                        output.accept(NoxernaItems.KRYPTON_WOOL);
+                        output.accept(NoxernaItems.ARGON_WOOL);
+                        output.accept(NoxernaItems.NEON_WOOL);
+                        output.accept(NoxernaItems.XENON_TERRACOTTA);
+                        output.accept(NoxernaItems.KRYPTON_TERRACOTTA);
+                        output.accept(NoxernaItems.ARGON_TERRACOTTA);
+                        output.accept(NoxernaItems.NEON_TERRACOTTA);
                         output.accept(NoxernaItems.XENON_CONCRETE);
                         output.accept(NoxernaItems.KRYPTON_CONCRETE);
                         output.accept(NoxernaItems.ARGON_CONCRETE);
@@ -253,28 +261,48 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_NATURAL_BLOCKS = CREATIVE_TABS.register(
                     "noxerna_natural_blocks", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".natural_blocks"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".natural_blocks"))
                     .icon(()-> new ItemStack(NoxernaItems.NOXUM.get()))
                     .displayItems((params, output) -> {
+                        // Stones
                         output.accept(NoxernaItems.SOLTRA);
-                        output.accept(NoxernaItems.NOXUM);
-                        output.accept(NoxernaItems.AESTUM);
-                        output.accept(NoxernaItems.INETRA);
                         output.accept(NoxernaItems.SOLTRA_PEBBLE);
+                        output.accept(NoxernaItems.NOXUM);
                         output.accept(NoxernaItems.NOXUM_PEBBLE);
+                        output.accept(NoxernaItems.AESTUM);
                         output.accept(NoxernaItems.AESTUM_PEBBLE);
+                        output.accept(NoxernaItems.INETRA);
                         output.accept(NoxernaItems.INETRA_PEBBLE);
+                        // Ores
+                        output.accept(NoxernaItems.NOXUM_BURIED_FUEL_CELL);
+                        output.accept(NoxernaItems.AESTUM_BURIED_FUEL_CELL);
+                        output.accept(NoxernaItems.INETRA_BURIED_FUEL_CELL);
+                        output.accept(NoxernaItems.NOXUM_FERREBRIS_ORE);
+                        output.accept(NoxernaItems.AESTUM_FERREBRIS_ORE);
+                        output.accept(NoxernaItems.INETRA_FERREBRIS_ORE);
+                        output.accept(NoxernaItems.NOXUM_OBSCUPRUM_ORE);
+                        output.accept(NoxernaItems.AESTUM_OBSCUPRUM_ORE);
+                        output.accept(NoxernaItems.INETRA_OBSCUPRUM_ORE);
+                        output.accept(NoxernaItems.NOXUM_UMBURAM_ORE);
+                        output.accept(NoxernaItems.AESTUM_UMBURAM_ORE);
+                        output.accept(NoxernaItems.INETRA_UMBURAM_ORE);
+                        output.accept(NoxernaItems.RAW_FERREBRIS_BLOCK);
+                        output.accept(NoxernaItems.RAW_OBSCUPRUM_BLOCK);
+                        output.accept(NoxernaItems.RAW_UMBURAM_BLOCK);
+                        output.accept(NoxernaItems.RAW_INPERLUM_BLOCK);
+                        // Wood
                         output.accept(NoxernaItems.XENON_LOG);
                         output.accept(NoxernaItems.KRYPTON_LOG);
                         output.accept(NoxernaItems.ARGON_LOG);
                         output.accept(NoxernaItems.NEON_LOG);
+                        // Other
                         output.accept(NoxernaItems.VOIDROCK);
                     })
                     .withTabsBefore(NOXERNA_COLORED_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_FUNCTIONAL_BLOCKS = CREATIVE_TABS.register(
                     "noxerna_functional_blocks", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".functional_blocks"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".functional_blocks"))
                     .icon(()-> new ItemStack(NoxernaItems.LUMAI_FUEL_CELL.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.LUMAI_FUEL_CELL);
@@ -283,7 +311,7 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_TOOLS_AND_UTILITIES = CREATIVE_TABS.register(
             "noxerna_tools_and_utilities", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".tools_and_utilities"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".tools_and_utilities"))
                     .icon(()-> new ItemStack(NoxernaItems.ADAMUNA_PICKAXE.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.NOBLEWOOD_SHOVEL.get());
@@ -318,7 +346,7 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_COMBAT = CREATIVE_TABS.register(
             "noxerna_combat", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".combat"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".combat"))
                     .icon(()-> new ItemStack(NoxernaItems.NIHOXITE_SWORD.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.NOBLEWOOD_SWORD.get());
@@ -368,7 +396,7 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_FOOD_AND_DRINK = CREATIVE_TABS.register(
             "noxerna_food_and_drink", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".food_and_drink"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".food_and_drink"))
                     .icon(()-> new ItemStack(NoxernaItems.GLOWGRAIN.get()))
                     .displayItems((params, output) -> {
                     })
@@ -376,7 +404,7 @@ public class NoxernaCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_INGREDIENTS = CREATIVE_TABS.register(
             "noxerna_ingredients", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + TheNoxerna.MODID + ".ingredients"))
+                    .title(Component.translatable("itemGroup." + Noxerna.MODID + ".ingredients"))
                     .icon(()-> new ItemStack(NoxernaItems.FERREBRIS_INGOT.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.LUMAI_CRYSTAL);

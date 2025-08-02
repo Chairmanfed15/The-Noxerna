@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "noxerna:block/aestum_buried_fuel_cell"
+  }
+}

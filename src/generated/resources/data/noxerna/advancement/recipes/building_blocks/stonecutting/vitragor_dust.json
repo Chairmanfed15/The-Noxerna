@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:gems/vitragor]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:gems/vitragor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:stonecutting/vitragor_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:gems/vitragor]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:stonecutting/vitragor_dust"
+    ]
+  }
+}

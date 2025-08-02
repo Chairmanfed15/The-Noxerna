@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "noxerna:block/raw_ferrebris_block"
+    }
+  }
+}

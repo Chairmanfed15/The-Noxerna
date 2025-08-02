@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.generators.tags;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -18,7 +18,7 @@ public class NoxernaItemTags extends ItemTagsProvider {
     public NoxernaItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                            CompletableFuture<TagLookup<Block>> blockTags,
                            ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, TheNoxerna.MODID, existingFileHelper);
+        super(output, lookupProvider, blockTags, Noxerna.MODID, existingFileHelper);
     }
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
@@ -100,10 +100,15 @@ public class NoxernaItemTags extends ItemTagsProvider {
         this.copy(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS, NoxernaTags.ItemTags.NIHOXITE_STORAGE_BLOCKS);
         this.copy(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS, NoxernaTags.ItemTags.VITRAGOR_STORAGE_BLOCKS);
         this.copy(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS, NoxernaTags.ItemTags.OBSCUPRUM_STORAGE_BLOCKS);
+        this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        this.copy(NoxernaTags.BlockTags.ORES_FERREBRIS, NoxernaTags.ItemTags.ORES_FERREBRIS);
+        this.copy(NoxernaTags.BlockTags.BURIED_FUEL_CELLS, NoxernaTags.ItemTags.BURIED_FUEL_CELLS);
         // Tools
         tag(Tags.Items.TOOLS)
                 .addTag(NoxernaTags.ItemTags.PICKADZES);
         // Ingredient Groupings
+        tag(Tags.Items.GUNPOWDERS)
+                .addTag(NoxernaTags.ItemTags.VITRAGOR_DUSTS);
             // Raw Materials
         tag(Tags.Items.RAW_MATERIALS)
                 .addTag(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS)
@@ -120,8 +125,10 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.RAW_INPERLUM.get());
             // Gems
         tag(Tags.Items.GEMS)
-                .addTag(NoxernaTags.ItemTags.TENERYL_GEMS).addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS)
-                .addTag(NoxernaTags.ItemTags.VITRAGOR_GEMS);
+                .addTag(NoxernaTags.ItemTags.LUMAI_CRYSTALS).addTag(NoxernaTags.ItemTags.TENERYL_GEMS)
+                .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS).addTag(NoxernaTags.ItemTags.VITRAGOR_GEMS);
+        tag(NoxernaTags.ItemTags.LUMAI_CRYSTALS)
+                .add(NoxernaItems.LUMAI_CRYSTAL.get());
         tag(NoxernaTags.ItemTags.TENERYL_GEMS)
                 .add(NoxernaItems.TENERYL.get());
         tag(NoxernaTags.ItemTags.ADAMUNA_GEMS)
@@ -133,11 +140,6 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.FERREBRIS_NUGGETS).addTag(NoxernaTags.ItemTags.OBSCUPRUM_NUGGETS)
                 .addTag(NoxernaTags.ItemTags.UMBURAM_NUGGETS).addTag(NoxernaTags.ItemTags.INPERLUM_NUGGETS)
                 .addTag(NoxernaTags.ItemTags.NIHOXITE_NUGGETS);
-            // Ingots
-        tag(Tags.Items.INGOTS)
-                .addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS).addTag(NoxernaTags.ItemTags.OBSCUPRUM_INGOTS)
-                .addTag(NoxernaTags.ItemTags.UMBURAM_INGOTS).addTag(NoxernaTags.ItemTags.INPERLUM_INGOTS)
-                .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
         tag(NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
                 .add(NoxernaItems.FERREBRIS_NUGGET.get());
         tag(NoxernaTags.ItemTags.OBSCUPRUM_NUGGETS)
@@ -148,6 +150,11 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.INPERLUM_NUGGET.get());
         tag(NoxernaTags.ItemTags.NIHOXITE_NUGGETS)
                 .add(NoxernaItems.NIHOXITE_NUGGET.get());
+            // Ingots
+        tag(Tags.Items.INGOTS)
+                .addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS).addTag(NoxernaTags.ItemTags.OBSCUPRUM_INGOTS)
+                .addTag(NoxernaTags.ItemTags.UMBURAM_INGOTS).addTag(NoxernaTags.ItemTags.INPERLUM_INGOTS)
+                .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
         tag(NoxernaTags.ItemTags.FERREBRIS_INGOTS)
                 .add(NoxernaItems.FERREBRIS_INGOT.get());
         tag(NoxernaTags.ItemTags.OBSCUPRUM_INGOTS)
@@ -158,8 +165,16 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.INPERLUM_INGOT.get());
         tag(NoxernaTags.ItemTags.NIHOXITE_INGOTS)
                 .add(NoxernaItems.NIHOXITE_INGOT.get());
+            // Dusts
+        tag(Tags.Items.DUSTS)
+                .addTag(NoxernaTags.ItemTags.VITRAGOR_DUSTS);
+        tag(NoxernaTags.ItemTags.VITRAGOR_DUSTS)
+                .add(NoxernaItems.VITRAGOR_DUST.get());
+            // Plates
+        tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES)
+                .add(NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get());
             // Rods
-        tag(NoxernaTags.ItemTags.WOODEN_RODS)
+        tag(Tags.Items.RODS_WOODEN)
                 .addTag(NoxernaTags.ItemTags.NOBLEWOOD_RODS);
         tag(NoxernaTags.ItemTags.NOBLEWOOD_RODS)
                 .add(NoxernaItems.NOBLEWOOD_STICK.get());
@@ -178,6 +193,7 @@ public class NoxernaItemTags extends ItemTagsProvider {
         // Noxerna Tags
         // Copy from Block Tags
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
+        this.copy(NoxernaTags.BlockTags.FERREBRIS_ORES, NoxernaTags.ItemTags.FERREBRIS_ORES);
         this.copy(NoxernaTags.BlockTags.XENON_LOGS, NoxernaTags.ItemTags.XENON_LOGS);
         this.copy(NoxernaTags.BlockTags.KRYPTON_LOGS, NoxernaTags.ItemTags.KRYPTON_LOGS);
         this.copy(NoxernaTags.BlockTags.ARGON_LOGS, NoxernaTags.ItemTags.ARGON_LOGS);
@@ -194,7 +210,7 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.PICKADZE.get());
         // Alt Material Grouping
         tag(NoxernaTags.ItemTags.ANY_IRON_INGOT)
-                .addTag(NoxernaTags.ItemTags.IRON_INGOTS).addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS);
+                .addTag(Tags.Items.INGOTS_IRON).addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS);
         tag(NoxernaTags.ItemTags.ANY_DIAMOND_GEM)
                 .addTag(NoxernaTags.ItemTags.DIAMOND_GEMS).addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         // Tool Material Grouping
@@ -212,6 +228,12 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         tag(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)
                 .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
+        tag(NoxernaTags.ItemTags.RECYCLABLE_LOOT)
+                .add(NoxernaItems.EXOSKELETON_HELMET.get()).add(NoxernaItems.EXOSKELETON_CHESTPLATE.get())
+                .add(NoxernaItems.EXOSKELETON_LEGGINGS.get()).add(NoxernaItems.EXOSKELETON_BOOTS.get())
+                .add(NoxernaItems.HEART_HELMET.get()).add(NoxernaItems.HEART_CHESTPLATE.get())
+                .add(NoxernaItems.HEART_LEGGINGS.get()).add(NoxernaItems.HEART_BOOTS.get())
+                .add(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
         // Interchangeable Blocksets
         tag(NoxernaTags.ItemTags.BLOCKSET_SOLTRA)
                 .add(NoxernaItems.SOLTRA.get()).add(NoxernaItems.SOLTRA_STAIRS.get())

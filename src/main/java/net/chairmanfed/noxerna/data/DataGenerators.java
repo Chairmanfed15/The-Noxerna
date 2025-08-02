@@ -1,6 +1,8 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
+import net.chairmanfed.noxerna.data.generators.NoxernaLanguageData;
+import net.chairmanfed.noxerna.data.generators.NoxernaRecipeData;
 import net.chairmanfed.noxerna.data.generators.NoxernaRegistrySets;
 import net.chairmanfed.noxerna.data.generators.tags.NoxernaBiomeTags;
 import net.chairmanfed.noxerna.data.generators.tags.NoxernaBlockTags;
@@ -22,7 +24,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = TheNoxerna.MODID)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = Noxerna.MODID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
@@ -39,7 +41,7 @@ public class DataGenerators {
         // Assets
         generator.addProvider(client, new NoxernaBlockStateProvider(output, existingFileHelper));
         generator.addProvider(client, new NoxernaItemModels(output, existingFileHelper));
-        generator.addProvider(client, new NoxernaLanguageData(output, existingFileHelper));
+        generator.addProvider(client, new NoxernaLanguageData(output));
         generator.addProvider(client, new NoxernaSoundDefinitions(output, existingFileHelper));
 
         // Data
@@ -54,7 +56,7 @@ public class DataGenerators {
         BiomeTagsProvider biomeTags = new NoxernaBiomeTags(output, lookupProvider, existingFileHelper);
         generator.addProvider(server, biomeTags);
         generator.addProvider(server, new NoxernaDataMaps(output, lookupProvider));
-        generator.addProvider(server, new NoxernaRecipes(output, lookupProvider));
+        generator.addProvider(server, new NoxernaRecipeData(output, lookupProvider));
         generator.addProvider(server, new NoxernaLootTableProvider(output, lookupProvider));
         generator.addProvider(server, new NoxernaAdvancementProvider(output, lookupProvider, existingFileHelper));
     }

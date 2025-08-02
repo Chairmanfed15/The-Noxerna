@@ -195,6 +195,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSlab(NoxernaBlocks.NETHERITE_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.NETHERITE_PLATING_WALL.get());
 
+        dropSelf(NoxernaBlocks.RAW_FERREBRIS_BLOCK.get());
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
         dropSelf(NoxernaBlocks.FERREBRIS_BARS.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING.get());
@@ -202,6 +203,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSlab(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
 
+        dropSelf(NoxernaBlocks.RAW_UMBURAM_BLOCK.get());
         dropSelf(NoxernaBlocks.UMBURAM_BLOCK.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING_STAIRS.get());
@@ -211,6 +213,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.TENERYL_BLOCK.get());
         dropSelf(NoxernaBlocks.ADAMUNA_BLOCK.get());
 
+        dropSelf(NoxernaBlocks.RAW_INPERLUM_BLOCK.get());
         dropSelf(NoxernaBlocks.INPERLUM_BLOCK.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING_STAIRS.get());
@@ -229,6 +232,8 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.VITRAGOR_BLOCK.get());
+
+        dropSelf(NoxernaBlocks.RAW_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK.get());
@@ -246,6 +251,14 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING.get());
 
+        dropSelf(NoxernaBlocks.XENON_WOOL.get());
+        dropSelf(NoxernaBlocks.KRYPTON_WOOL.get());
+        dropSelf(NoxernaBlocks.ARGON_WOOL.get());
+        dropSelf(NoxernaBlocks.NEON_WOOL.get());
+        dropSelf(NoxernaBlocks.XENON_TERRACOTTA.get());
+        dropSelf(NoxernaBlocks.KRYPTON_TERRACOTTA.get());
+        dropSelf(NoxernaBlocks.ARGON_TERRACOTTA.get());
+        dropSelf(NoxernaBlocks.NEON_TERRACOTTA.get());
         dropSelf(NoxernaBlocks.XENON_CONCRETE.get());
         dropSelf(NoxernaBlocks.KRYPTON_CONCRETE.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE.get());
@@ -254,6 +267,20 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
+
+        dropSelf(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL.get());
+        dropSelf(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL.get());
+        dropSelf(NoxernaBlocks.INETRA_BURIED_FUEL_CELL.get());
+        dropSelf(NoxernaBlocks.NOXUM_FERREBRIS_ORE.get());
+        dropSelf(NoxernaBlocks.AESTUM_FERREBRIS_ORE.get());
+        dropSelf(NoxernaBlocks.INETRA_FERREBRIS_ORE.get());
+        dropSelf(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE.get());
+        dropSelf(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE.get());
+        dropSelf(NoxernaBlocks.INETRA_OBSCUPRUM_ORE.get());
+        dropSelf(NoxernaBlocks.NOXUM_UMBURAM_ORE.get());
+        dropSelf(NoxernaBlocks.AESTUM_UMBURAM_ORE.get());
+        dropSelf(NoxernaBlocks.INETRA_UMBURAM_ORE.get());
+
 
         dropSelf(NoxernaBlocks.LUMAI_FUEL_CELL.get());
         dropSelf(NoxernaBlocks.NOBLEWOOD_CRAFTING_TABLE.get());

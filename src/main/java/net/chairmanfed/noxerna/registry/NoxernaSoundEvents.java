@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.registry;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -25,7 +25,7 @@ public class NoxernaSoundEvents {
                 BuiltInRegistries.SOUND_EVENT, pName, SoundEvent.createFixedRangeEvent(pLocation, pRange));
     }
     private static SoundEvent register(String name) {
-        return register(ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name));
+        return register(ResourceLocation.fromNamespaceAndPath(Noxerna.MODID, name));
     }
     private static SoundEvent register(ResourceLocation name) {
         return register(name, name);

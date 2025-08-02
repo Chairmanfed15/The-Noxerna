@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.resources.registries;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -14,7 +14,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class NoxernaBiomes {
     private static ResourceKey<Biome> makeKey(String name) {
-        return ResourceKey.create(Registries.BIOME, TheNoxerna.prefix(name));
+        return ResourceKey.create(Registries.BIOME, Noxerna.prefix(name));
     }
 
     // Surface Layer Biomes

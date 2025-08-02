@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 
 public class NoxernaItemModels extends ItemModelProvider {
     public NoxernaItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, TheNoxerna.MODID, existingFileHelper);
+        super(output, Noxerna.MODID, existingFileHelper);
     }
     @Override
     protected void registerModels() {

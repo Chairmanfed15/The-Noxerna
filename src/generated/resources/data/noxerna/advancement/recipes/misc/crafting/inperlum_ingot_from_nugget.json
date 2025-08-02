@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:inperlum_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:inperlum_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/inperlum_ingot_from_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:inperlum_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/inperlum_ingot_from_nugget"
+    ]
+  }
+}

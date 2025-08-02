@@ -1,6 +1,6 @@
-package net.chairmanfed.noxerna.data;
+package net.chairmanfed.noxerna.data.generators;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.data.providers.NoxernaRecipeProvider;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
@@ -8,18 +8,17 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class NoxernaRecipes extends NoxernaRecipeProvider {
-    public NoxernaRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class NoxernaRecipeData extends NoxernaRecipeProvider {
+    public NoxernaRecipeData(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
     }
     private ResourceLocation name(String name) {
-        return ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(Noxerna.MODID, name);
     }
     @Override
     protected void buildRecipes (RecipeOutput output) {
@@ -384,7 +383,29 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
         makeSlabIntoBlock(NoxernaItems.NIHOXITE_PLATING_SLAB.get(), NoxernaItems.NIHOXITE_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/nihoxite_plating_from_slab"));
+        packing2x2(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES, NoxernaItems.MYSTERIOUS_ALLOY_PLATING.get(), 4)
+                .group("plating")
+                .save(output, name("crafting/mysterious_alloy_plating"));
+        makeSlabIntoBlock(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_SLAB.get(), NoxernaItems.MYSTERIOUS_ALLOY_PLATING.get())
+                .group("plating")
+                .save(output, name("crafting/mysterious_alloy_plating_from_slab"));
         // Storage Blocks
+        packing3x3(NoxernaItems.RAW_FERREBRIS.get(), NoxernaItems.RAW_FERREBRIS_BLOCK.get(),
+                NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS)
+                .group("raw_ferrebris")
+                .save(output, name("crafting/raw_ferrebris_block"));
+        packing3x3(NoxernaItems.RAW_OBSCUPRUM.get(), NoxernaItems.RAW_OBSCUPRUM_BLOCK.get(),
+                NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS)
+                .group("raw_obscuprum")
+                .save(output, name("crafting/raw_obscuprum_block"));
+        packing3x3(NoxernaItems.RAW_UMBURAM.get(), NoxernaItems.RAW_UMBURAM_BLOCK.get(),
+                NoxernaTags.ItemTags.RAW_UMBURAM_MATERIALS)
+                .group("raw_umburam")
+                .save(output, name("crafting/raw_umburam_block"));
+        packing3x3(NoxernaItems.RAW_INPERLUM.get(), NoxernaItems.RAW_INPERLUM_BLOCK.get(),
+                NoxernaTags.ItemTags.RAW_INPERLUM_MATERIALS)
+                .group("raw_inperlum")
+                .save(output, name("crafting/raw_inperlum_block"));
         packing3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_BLOCK.get(),
                 NoxernaTags.ItemTags.FERREBRIS_INGOTS)
                 .group("ferrebris")
@@ -420,7 +441,7 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .group("sticks")
                 .save(output, name("crafting/noblewood_stick"));
         // Packing 2x2
-        packing2x2(NoxernaItems.MYSTERIOUS_SCRAP.get(), NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get())
+        packing2x2(NoxernaItems.MYSTERIOUS_SCRAP.get(), NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get(), 2)
                 .group("mysterious_alloy_plate")
                 .save(output, name("crafting/mysterious_alloy_plate"));
         // Packing 3x3
@@ -428,17 +449,47 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_ingot_from_nugget"));
+        packing3x3(NoxernaItems.OBSCUPRUM_NUGGET.get(), NoxernaItems.OBSCUPRUM_INGOT.get(),
+                NoxernaTags.ItemTags.OBSCUPRUM_NUGGETS)
+                .group("obscuprum")
+                .save(output, name("crafting/obscuprum_ingot_from_nugget"));
         packing3x3(NoxernaItems.UMBURAM_NUGGET.get(), NoxernaItems.UMBURAM_INGOT.get(),
                 NoxernaTags.ItemTags.UMBURAM_NUGGETS)
                 .group("umburam")
                 .save(output, name("crafting/umburam_ingot_from_nugget"));
+        packing3x3(NoxernaItems.INPERLUM_NUGGET.get(), NoxernaItems.INPERLUM_INGOT.get(),
+                NoxernaTags.ItemTags.INPERLUM_NUGGETS)
+                .group("inperlum")
+                .save(output, name("crafting/inperlum_ingot_from_nugget"));
+        packing3x3(NoxernaItems.NIHOXITE_NUGGET.get(), NoxernaItems.NIHOXITE_INGOT.get(),
+                NoxernaTags.ItemTags.NIHOXITE_NUGGETS)
+                .group("nihoxite")
+                .save(output, name("crafting/nihoxite_ingot_from_nugget"));
         // Unpacking 3x3
+        unpacking3x3(NoxernaItems.RAW_FERREBRIS_BLOCK.get(), NoxernaItems.RAW_FERREBRIS)
+                .group("raw_ferrebris")
+                .save(output, name("crafting/raw_ferrebris_from_block"));
+        unpacking3x3(NoxernaItems.RAW_OBSCUPRUM_BLOCK.get(), NoxernaItems.RAW_OBSCUPRUM)
+                .group("raw_obscuprum")
+                .save(output, name("crafting/raw_obscuprum_from_block"));
+        unpacking3x3(NoxernaItems.RAW_UMBURAM_BLOCK.get(), NoxernaItems.RAW_UMBURAM)
+                .group("raw_umburam")
+                .save(output, name("crafting/raw_umburam_from_block"));
+        unpacking3x3(NoxernaItems.RAW_INPERLUM_BLOCK.get(), NoxernaItems.RAW_INPERLUM)
+                .group("raw_inperlum")
+                .save(output, name("crafting/raw_inperlum_from_block"));
         unpacking3x3(NoxernaItems.FERREBRIS_BLOCK.get(), NoxernaItems.FERREBRIS_INGOT.get())
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_ingot_from_block"));
         unpacking3x3(NoxernaItems.FERREBRIS_INGOT.get(), NoxernaItems.FERREBRIS_NUGGET.get())
                 .group("ferrebris")
                 .save(output, name("crafting/ferrebris_nugget"));
+        unpacking3x3(NoxernaItems.OBSCUPRUM_BLOCK.get(), NoxernaItems.OBSCUPRUM_INGOT.get())
+                .group("obscuprum")
+                .save(output, name("crafting/obscuprum_ingot_from_block"));
+        unpacking3x3(NoxernaItems.OBSCUPRUM_INGOT.get(), NoxernaItems.OBSCUPRUM_NUGGET.get())
+                .group("obscuprum")
+                .save(output, name("crafting/obscuprum_nugget"));
         unpacking3x3(NoxernaItems.UMBURAM_BLOCK.get(), NoxernaItems.UMBURAM_INGOT.get())
                 .group("umburam")
                 .save(output, name("crafting/umburam_ingot_from_block"));
@@ -446,10 +497,14 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .group("umburam")
                 .save(output, name("crafting/umburam_nugget"));
         // Smelting
+        smelting(NoxernaTags.ItemTags.FERREBRIS_ORES, NoxernaItems.FERREBRIS_INGOT.get(),
+                0.7f, 200)
+                .group("ferrebris_ingot")
+                .save(output, name("smelting/ferrebris_ingot_from_ore"));
         smelting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 200)
                 .group("ferrebris_ingot")
-                .save(output, name("smelting/ferrebris_ingot"));
+                .save(output, name("smelting/ferrebris_ingot_from_raw"));
         smelting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
                 0.7f, 200)
                 .group("obscuprum_ingot")
@@ -459,10 +514,14 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 .group("umburam_ingot")
                 .save(output, name("smelting/umburam_ingot"));
         // Blasting
+        blasting(NoxernaTags.ItemTags.FERREBRIS_ORES, NoxernaItems.FERREBRIS_INGOT.get(),
+                0.7f, 100)
+                .group("ferrebris_ingot")
+                .save(output, name("blasting/ferrebris_ingot_from_ore"));
         blasting(NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 100)
                 .group("ferrebris_ingot")
-                .save(output, name("blasting/ferrebris_ingot"));
+                .save(output, name("blasting/ferrebris_ingot_from_raw"));
         blasting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
                 0.7f, 100)
                 .group("obscuprum_ingot")
@@ -471,9 +530,15 @@ public class NoxernaRecipes extends NoxernaRecipeProvider {
                 0.7f, 100)
                 .group("umburam_ingot")
                 .save(output, name("blasting/umburam_ingot"));
+        blasting(NoxernaTags.ItemTags.RECYCLABLE_LOOT, NoxernaItems.MYSTERIOUS_SCRAP.get(),
+                0.0f, 200)
+                .group("mysterious_scrap")
+                .save(output, name("blasting/mysterious_scrap_from_loot"));
         // Cutting
         stonecutting(NoxernaTags.ItemTags.TENERYL_GEMS, NoxernaItems.CUT_TENERYL)
                 .save(output, name("stonecutting/cut_teneryl"));
+        stonecutting(NoxernaTags.ItemTags.VITRAGOR_GEMS, NoxernaItems.VITRAGOR_DUST)
+                .save(output, name("stonecutting/vitragor_dust"));
 
         // Smithing Templates
         cloneSmithingTemplate(NoxernaItems.INETRA.get(), NoxernaItems.NIHOXITE_UPGRADE_SMITHING_TEMPLATE.get())

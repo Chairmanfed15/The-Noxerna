@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.generators.tags;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -9,14 +9,13 @@ import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.entity.EntityType;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.internal.NeoForgeEntityTypeTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
 public class NoxernaEntityTags extends EntityTypeTagsProvider {
     public NoxernaEntityTags(PackOutput output, CompletableFuture<HolderLookup.Provider> provider,
                              ExistingFileHelper existingFileHelper) {
-        super(output, provider, TheNoxerna.MODID, existingFileHelper);
+        super(output, provider, Noxerna.MODID, existingFileHelper);
     }
 
     @Override

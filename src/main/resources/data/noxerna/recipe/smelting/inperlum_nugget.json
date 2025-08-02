@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.9,
+  "group": "inperlum_nugget",
+  "ingredient": {
+    "tag": "c:raw_materials/inperlum"
+  },
+  "result": {
+    "id": "noxerna:inperlum_nugget",
+    "count": 3
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "hasTagKey[minecraft:item / c:plates/mysterious_alloy]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:plates/mysterious_alloy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/mysterious_alloy_plating"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasTagKey[minecraft:item / c:plates/mysterious_alloy]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/mysterious_alloy_plating"
+    ]
+  }
+}

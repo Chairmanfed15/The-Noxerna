@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "obscuprum",
+  "key": {
+    "#": {
+      "item": "noxerna:obscuprum_nugget"
+    },
+    "$": {
+      "tag": "c:nuggets/obscuprum"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:obscuprum_ingot"
+  }
+}

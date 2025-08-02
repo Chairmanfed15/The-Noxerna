@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:raw_materials/ferrebris]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:raw_materials/ferrebris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:blasting/ferrebris_ingot_from_raw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:raw_materials/ferrebris]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:blasting/ferrebris_ingot_from_raw"
+    ]
+  }
+}

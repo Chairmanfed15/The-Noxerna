@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.generators;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimMaterials;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimPatterns;
@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class NoxernaRegistrySets extends DatapackBuiltinEntriesProvider {
     public NoxernaRegistrySets(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
-        super(output, provider, BUILDER, Set.of("minecraft", TheNoxerna.MODID));
+        super(output, provider, BUILDER, Set.of("minecraft", Noxerna.MODID));
     }
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.BIOME, NoxernaBiomes::bootstrap)

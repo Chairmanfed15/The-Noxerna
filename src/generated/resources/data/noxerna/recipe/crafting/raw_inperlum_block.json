@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_inperlum",
+  "key": {
+    "#": {
+      "item": "noxerna:raw_inperlum"
+    },
+    "$": {
+      "tag": "c:raw_materials/inperlum"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:raw_inperlum_block"
+  }
+}

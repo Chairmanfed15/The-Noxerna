@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:gems/adamuna"
+            "items": "noxerna:adamuna"
           }
         ]
       },
@@ -15,20 +15,97 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:ingots/ferrebris"
+            "items": "noxerna:ferrebris_ingot"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "mine_native_minerals": {
-      "trigger": "minecraft:impossible"
+    "inperlum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:inperlum_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lumai_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:lumai_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "nihoxite": {
       "conditions": {
         "items": [
           {
-            "items": "#c:ingots/nihoxite"
+            "items": "noxerna:nihoxite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "obscuprum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:obscuprum_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "raw_ferrebris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:raw_ferrebris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "raw_inperlum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:raw_inperlum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "raw_obscuprum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:raw_obscuprum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "raw_umburam": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:raw_umburam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "teneryl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:teneryl"
           }
         ]
       },
@@ -38,7 +115,17 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:ingots/umburam"
+            "items": "noxerna:umburam_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "vitragor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:vitragor"
           }
         ]
       },
@@ -60,16 +147,40 @@
   },
   "requirements": [
     [
-      "mine_native_minerals"
+      "lumai_crystal"
+    ],
+    [
+      "raw_ferrebris"
+    ],
+    [
+      "raw_obscuprum"
+    ],
+    [
+      "raw_umburam"
+    ],
+    [
+      "raw_inperlum"
+    ],
+    [
+      "teneryl"
+    ],
+    [
+      "adamuna"
+    ],
+    [
+      "vitragor"
     ],
     [
       "ferrebris"
     ],
     [
+      "obscuprum"
+    ],
+    [
       "umburam"
     ],
     [
-      "adamuna"
+      "inperlum"
     ],
     [
       "nihoxite"

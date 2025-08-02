@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_umburam",
+  "key": {
+    "#": {
+      "item": "noxerna:raw_umburam"
+    },
+    "$": {
+      "tag": "c:raw_materials/umburam"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:raw_umburam_block"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "raw_umburam",
+  "ingredients": [
+    {
+      "item": "noxerna:raw_umburam_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:raw_umburam"
+  }
+}

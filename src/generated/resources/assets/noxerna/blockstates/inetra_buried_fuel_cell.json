@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "noxerna:block/inetra_buried_fuel_cell"
+    }
+  }
+}

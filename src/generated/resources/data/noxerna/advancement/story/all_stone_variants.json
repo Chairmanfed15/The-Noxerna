@@ -1,7 +1,7 @@
 {
   "parent": "noxerna:story/mine_hard_stone",
   "criteria": {
-    "all_stone_variants": {
+    "impossible": {
       "trigger": "minecraft:impossible"
     },
     "noxum": {
@@ -170,7 +170,7 @@
   },
   "requirements": [
     [
-      "all_stone_variants"
+      "impossible"
     ],
     [
       "noxum"

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_ferrebris",
+  "key": {
+    "#": {
+      "item": "noxerna:raw_ferrebris"
+    },
+    "$": {
+      "tag": "c:raw_materials/ferrebris"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:raw_ferrebris_block"
+  }
+}

@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.providers;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -22,7 +22,7 @@ public class NoxernaRecipeProvider extends RecipeProvider {
         super(output, lookupProvider);
     }
     private ResourceLocation name(String name) {
-        return ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(Noxerna.MODID, name);
     }
     // Shaped Recipes
     public ShapedRecipeBuilder makeBricks(Item input, ItemLike result) {
@@ -122,8 +122,22 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .define('#', input)
                 .unlockedBy("has" + input, has(input));
     }
+    public ShapedRecipeBuilder packing2x2(TagKey<Item> input, ItemLike result, int amount) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, amount)
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has" + input, has(input));
+    }
     public ShapedRecipeBuilder packing2x2(Item input, ItemLike result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+                .pattern("##")
+                .pattern("##")
+                .define('#', input)
+                .unlockedBy("has" + input, has(input));
+    }
+    public ShapedRecipeBuilder packing2x2(Item input, ItemLike result, int amount) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result, amount)
                 .pattern("##")
                 .pattern("##")
                 .define('#', input)

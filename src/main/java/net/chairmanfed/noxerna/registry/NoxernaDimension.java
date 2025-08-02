@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.registry;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.minecraft.core.HolderGetter;
@@ -21,15 +21,15 @@ import java.util.List;
 import java.util.OptionalLong;
 
 public class NoxernaDimension {
-    public static final ResourceLocation DIMENSION_RENDERER = TheNoxerna.prefix("renderer");
+    public static final ResourceLocation DIMENSION_RENDERER = Noxerna.prefix("renderer");
     public static final ResourceKey<Level> DIMENSION_KEY = ResourceKey.create(
-            Registries.DIMENSION, TheNoxerna.prefix("the_noxerna"));
+            Registries.DIMENSION, Noxerna.prefix("the_noxerna"));
     public static final ResourceKey<DimensionType> DIMENSION_TYPE = ResourceKey.create(
-            Registries.DIMENSION_TYPE, TheNoxerna.prefix("the_noxerna"));
+            Registries.DIMENSION_TYPE, Noxerna.prefix("the_noxerna"));
     public static final ResourceKey<NoiseGeneratorSettings> NOISE_SETTINGS = ResourceKey.create(
-            Registries.NOISE_SETTINGS, TheNoxerna.prefix("the_noxerna"));
+            Registries.NOISE_SETTINGS, Noxerna.prefix("the_noxerna"));
     public static final ResourceKey<LevelStem> LEVEL_STEM = ResourceKey.create(
-            Registries.LEVEL_STEM, TheNoxerna.prefix("the_noxerna"));
+            Registries.LEVEL_STEM, Noxerna.prefix("the_noxerna"));
     public static void bootstrapType(BootstrapContext<DimensionType> context) {
         context.register(DIMENSION_TYPE, new DimensionType(
                 OptionalLong.empty(),

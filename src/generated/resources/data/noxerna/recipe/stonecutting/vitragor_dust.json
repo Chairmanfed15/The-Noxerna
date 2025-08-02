@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:gems/vitragor"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:vitragor_dust"
+  }
+}

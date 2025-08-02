@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.resources.registries;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -17,6 +17,6 @@ public class NoxernaTrimPatterns extends TrimPatterns {
     }
     private static ResourceKey<TrimPattern> registryKey(String name) {
         return ResourceKey.create(Registries.TRIM_PATTERN,
-                ResourceLocation.fromNamespaceAndPath(TheNoxerna.MODID, name));
+                ResourceLocation.fromNamespaceAndPath(Noxerna.MODID, name));
     }
 }

@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.block.natural.PebbleBlock;
 import net.minecraft.core.Direction;
@@ -8,8 +8,6 @@ import net.minecraft.core.Direction.Axis;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -17,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class NoxernaBlockStateProvider extends BlockStateProvider {
     public NoxernaBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, TheNoxerna.MODID, existingFileHelper);
+        super(output, Noxerna.MODID, existingFileHelper);
     }
 
     @Override
@@ -164,6 +162,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         slabBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_SLAB, NoxernaBlocks.NETHERITE_PLATING);
         wallBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_WALL, NoxernaBlocks.NETHERITE_PLATING);
         // Ferrebris Metal set
+        blockWithItem(NoxernaBlocks.RAW_FERREBRIS_BLOCK);
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
         paneBlockWithItem(NoxernaBlocks.FERREBRIS_BARS, "cutout");
         blockWithItem(NoxernaBlocks.FERREBRIS_PLATING);
@@ -172,6 +171,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         wallBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_WALL, NoxernaBlocks.FERREBRIS_PLATING);
 
         // Umburam Metal set
+        blockWithItem(NoxernaBlocks.RAW_UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_PLATING);
         stairBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_STAIRS, NoxernaBlocks.UMBURAM_PLATING);
@@ -185,6 +185,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.ADAMUNA_BLOCK);
 
         // Inperlum Metal set
+        blockWithItem(NoxernaBlocks.RAW_INPERLUM_BLOCK);
         blockWithItem(NoxernaBlocks.INPERLUM_BLOCK);
         blockWithItem(NoxernaBlocks.INPERLUM_PLATING);
         stairBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_STAIRS, NoxernaBlocks.INPERLUM_PLATING);
@@ -206,6 +207,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.VITRAGOR_BLOCK);
 
         // Obscuprum Metal set
+        blockWithItem(NoxernaBlocks.RAW_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
@@ -227,6 +229,16 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
 
         // Coloured Blocks
+            // Wool
+        blockWithItem(NoxernaBlocks.XENON_WOOL);
+        blockWithItem(NoxernaBlocks.KRYPTON_WOOL);
+        blockWithItem(NoxernaBlocks.ARGON_WOOL);
+        blockWithItem(NoxernaBlocks.NEON_WOOL);
+            // Terracotta
+        blockWithItem(NoxernaBlocks.XENON_TERRACOTTA);
+        blockWithItem(NoxernaBlocks.KRYPTON_TERRACOTTA);
+        blockWithItem(NoxernaBlocks.ARGON_TERRACOTTA);
+        blockWithItem(NoxernaBlocks.NEON_TERRACOTTA);
             // Concrete
         blockWithItem(NoxernaBlocks.XENON_CONCRETE);
         blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE);
@@ -237,6 +249,15 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.NEON_CONCRETE_POWDER);
+
+        // Natural Blocks
+            // Ores
+        blockWithItem(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL);
+        blockWithItem(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL);
+        blockWithItem(NoxernaBlocks.INETRA_BURIED_FUEL_CELL);
+        blockWithItem(NoxernaBlocks.NOXUM_FERREBRIS_ORE);
+        blockWithItem(NoxernaBlocks.AESTUM_FERREBRIS_ORE);
+        blockWithItem(NoxernaBlocks.INETRA_FERREBRIS_ORE);
 
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);

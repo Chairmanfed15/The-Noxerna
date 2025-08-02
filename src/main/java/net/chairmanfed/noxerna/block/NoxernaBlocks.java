@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.block;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.block.natural.PebbleBlock;
 import net.chairmanfed.noxerna.block.portal.NoxernaPortalBlock;
 import net.chairmanfed.noxerna.block.utility.FuelCellBlock;
@@ -12,9 +12,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class NoxernaBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TheNoxerna.MODID);
-
     // Registers Blocks and assigns properties
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Noxerna.MODID);
 
     // Xenon Noblewood Set
     public static final DeferredBlock<Block> XENON_LOG = BLOCKS.register(
@@ -417,6 +416,10 @@ public class NoxernaBlocks {
             "netherite_plating_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(NETHERITE_PLATING.get())));
     // Ferrebris
+    public static final DeferredBlock<Block> RAW_FERREBRIS_BLOCK = BLOCKS.register(
+            "raw_ferrebris_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.5f).explosionResistance(7.5f)
+                    .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> FERREBRIS_BLOCK = BLOCKS.register(
             "ferrebris_block", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.5f).explosionResistance(7.5f)
@@ -436,6 +439,10 @@ public class NoxernaBlocks {
             "ferrebris_plating_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(FERREBRIS_PLATING.get())));
     // Umburam
+    public static final DeferredBlock<Block> RAW_UMBURAM_BLOCK = BLOCKS.register(
+            "raw_umburam_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.5f).explosionResistance(7.5f)
+                    .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> UMBURAM_BLOCK = BLOCKS.register(
             "umburam_block", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.5f).explosionResistance(7.5f)
@@ -462,6 +469,10 @@ public class NoxernaBlocks {
                     .destroyTime(6.5f).explosionResistance(7.5f)
                     .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
     // Inperlum
+    public static final DeferredBlock<Block> RAW_INPERLUM_BLOCK = BLOCKS.register(
+            "raw_inperlum_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.5f).explosionResistance(7.5f)
+                    .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> INPERLUM_BLOCK = BLOCKS.register(
             "inperlum_block", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.5f).explosionResistance(7.5f)
@@ -514,6 +525,10 @@ public class NoxernaBlocks {
                     .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
 
     // Obscuprum
+    public static final DeferredBlock<Block> RAW_OBSCUPRUM_BLOCK = BLOCKS.register(
+            "raw_obscuprum_block", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.5f).explosionResistance(7.5f)
+                    .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> OBSCUPRUM_BLOCK = BLOCKS.register(
             "obscuprum_block", () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED,
                     BlockBehaviour.Properties.of()
@@ -586,6 +601,30 @@ public class NoxernaBlocks {
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
     // Coloured Blocks
+    public static final DeferredBlock<Block> XENON_WOOL = BLOCKS.register(
+            "xenon_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> KRYPTON_WOOL = BLOCKS.register(
+            "krypton_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> ARGON_WOOL = BLOCKS.register(
+            "argon_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> NEON_WOOL = BLOCKS.register(
+            "neon_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> XENON_TERRACOTTA = BLOCKS.register(
+            "xenon_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> KRYPTON_TERRACOTTA = BLOCKS.register(
+            "krypton_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> ARGON_TERRACOTTA = BLOCKS.register(
+            "argon_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> NEON_TERRACOTTA = BLOCKS.register(
+            "neon_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)
+                    .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> XENON_CONCRETE = BLOCKS.register(
             "xenon_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)
                     .lightLevel(state -> 12)));
@@ -601,7 +640,7 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> XENON_CONCRETE_POWDER = BLOCKS.register(
             "xenon_concrete_powder",
             () -> new ConcretePowderBlock(NoxernaBlocks.XENON_CONCRETE.get(),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE_POWDER)
                     .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> KRYPTON_CONCRETE_POWDER = BLOCKS.register(
             "krypton_concrete_powder",
@@ -618,6 +657,55 @@ public class NoxernaBlocks {
             () -> new ConcretePowderBlock(NoxernaBlocks.NEON_CONCRETE.get(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE_POWDER)
                             .lightLevel(state -> 12)));
+    // Ores
+    public static final DeferredBlock<Block> NOXUM_BURIED_FUEL_CELL = BLOCKS.register(
+            "noxum_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_BURIED_FUEL_CELL = BLOCKS.register(
+            "aestum_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_BURIED_FUEL_CELL = BLOCKS.register(
+            "inetra_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(9.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> NOXUM_FERREBRIS_ORE = BLOCKS.register(
+            "noxum_ferrebris_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_FERREBRIS_ORE = BLOCKS.register(
+            "aestum_ferrebris_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_FERREBRIS_ORE = BLOCKS.register(
+            "inetra_ferrebris_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(9.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> NOXUM_OBSCUPRUM_ORE = BLOCKS.register(
+            "noxum_obscuprum_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_OBSCUPRUM_ORE = BLOCKS.register(
+            "aestum_obscuprum_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_OBSCUPRUM_ORE = BLOCKS.register(
+            "inetra_obscuprum_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(9.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> NOXUM_UMBURAM_ORE = BLOCKS.register(
+            "noxum_umburam_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(6.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AESTUM_UMBURAM_ORE = BLOCKS.register(
+            "aestum_umburam_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(7.5f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> INETRA_UMBURAM_ORE = BLOCKS.register(
+            "inetra_umburam_ore", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(9.0f).explosionResistance(3.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
     // Functional Blocks
     public static final DeferredBlock<Block> LUMAI_FUEL_CELL = BLOCKS.register(
             "lumai_fuel_cell", () -> new FuelCellBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));

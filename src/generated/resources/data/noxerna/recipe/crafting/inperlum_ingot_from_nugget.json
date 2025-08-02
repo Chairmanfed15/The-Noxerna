@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "inperlum",
+  "key": {
+    "#": {
+      "item": "noxerna:inperlum_nugget"
+    },
+    "$": {
+      "tag": "c:nuggets/inperlum"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:inperlum_ingot"
+  }
+}

@@ -1,13 +1,12 @@
 package net.chairmanfed.noxerna.item.miscellaneous;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlag;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.armortrim.TrimPattern;
 
@@ -19,27 +18,27 @@ public class NoxernaSmithingTemplateItem extends SmithingTemplateItem {
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;
     private static final Component INGREDIENTS_TITLE = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID, "smithing_template.ingredients"))).withStyle(TITLE_FORMAT);
+                    Noxerna.MODID, "smithing_template.ingredients"))).withStyle(TITLE_FORMAT);
     private static final Component APPLIES_TO_TITLE = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID, "smithing_template.applies_to"))).withStyle(TITLE_FORMAT);
+                    Noxerna.MODID, "smithing_template.applies_to"))).withStyle(TITLE_FORMAT);
     private static final Component NIHOXITE_UPGRADE = Component.translatable(
             Util.makeDescriptionId("upgrade", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID, "nihoxite_upgrade"))).withStyle(TITLE_FORMAT);
+                    Noxerna.MODID, "nihoxite_upgrade"))).withStyle(TITLE_FORMAT);
     private static final Component NIHOXITE_UPGRADE_INGREDIENTS = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID,
+                    Noxerna.MODID,
                     "smithing_template.nihoxite_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMAT);
     private static final Component NIHOXITE_UPGRADE_APPLIES_TO = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID,
+                    Noxerna.MODID,
                     "smithing_template.nihoxite_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMAT);
     private static final Component NIHOXITE_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID, "smithing_template.nihoxite_upgrade.base_slot_description")));
+                    Noxerna.MODID, "smithing_template.nihoxite_upgrade.base_slot_description")));
     private static final Component NIHOXITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable(
             Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(
-                    TheNoxerna.MODID, "smithing_template.nihoxite_upgrade.additions_slot_description")));
+                    Noxerna.MODID, "smithing_template.nihoxite_upgrade.additions_slot_description")));
     private static final ResourceLocation EMPTY_SLOT_HELMET = ResourceLocation.withDefaultNamespace(
             "item/empty_armor_slot_helmet");
     private static final ResourceLocation EMPTY_SLOT_CHESTPLATE = ResourceLocation.withDefaultNamespace(

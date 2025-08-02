@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "raw_obscuprum",
+  "ingredients": [
+    {
+      "item": "noxerna:raw_obscuprum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "noxerna:raw_obscuprum"
+  }
+}

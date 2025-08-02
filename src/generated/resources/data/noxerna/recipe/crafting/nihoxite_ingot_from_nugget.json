@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "nihoxite",
+  "key": {
+    "#": {
+      "item": "noxerna:nihoxite_nugget"
+    },
+    "$": {
+      "tag": "c:nuggets/nihoxite"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:nihoxite_ingot"
+  }
+}

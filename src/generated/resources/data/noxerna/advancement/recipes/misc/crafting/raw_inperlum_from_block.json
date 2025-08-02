@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_TagKey[minecraft:item / c:raw_materials/ferrebris]": {
+    "has_noxerna:raw_inperlum_block": {
       "conditions": {
         "items": [
           {
-            "items": "#c:raw_materials/ferrebris"
+            "items": "noxerna:raw_inperlum_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "noxerna:smelting/ferrebris_ingot"
+        "recipe": "noxerna:crafting/raw_inperlum_from_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_TagKey[minecraft:item / c:raw_materials/ferrebris]"
+      "has_noxerna:raw_inperlum_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "noxerna:smelting/ferrebris_ingot"
+      "noxerna:crafting/raw_inperlum_from_block"
     ]
   }
 }

@@ -1,6 +1,6 @@
 package net.chairmanfed.noxerna.data.generators.tags;
 
-import net.chairmanfed.noxerna.TheNoxerna;
+import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class NoxernaBlockTags extends BlockTagsProvider {
     public NoxernaBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                             ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, TheNoxerna.MODID, existingFileHelper);
+        super(output, lookupProvider, Noxerna.MODID, existingFileHelper);
     }
 
     @Override
@@ -300,6 +300,16 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(BlockTags.CONCRETE_POWDER)
                 .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         // Common Tags
+        // Ores
+        tag(Tags.Blocks.ORES)
+                .addTag(NoxernaTags.BlockTags.BURIED_FUEL_CELLS)
+                .addTag(NoxernaTags.BlockTags.ORES_FERREBRIS);
+        tag(NoxernaTags.BlockTags.BURIED_FUEL_CELLS)
+                .add(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL.get())
+                .add(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL.get())
+                .add(NoxernaBlocks.INETRA_BURIED_FUEL_CELL.get());
+        tag(NoxernaTags.BlockTags.ORES_FERREBRIS)
+                .addTag(NoxernaTags.BlockTags.FERREBRIS_ORES);
         // Material Storage Blocks
         tag(Tags.Blocks.STORAGE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
@@ -326,11 +336,11 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.VITRAGOR_BLOCK.get());
         tag(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS)
                 .add(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
-        // Dye able Blocks
+        // Dyed Blocks
         tag(Tags.Blocks.CONCRETES)
                 .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE.get())
                 .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE.get());
-        // Dyed Blocks
+        // Dyed <Colour> Blocks
         tag(Tags.Blocks.DYED)
                 .addTag(NoxernaTags.BlockTags.DYED_XENON).addTag(NoxernaTags.BlockTags.DYED_KRYPTON)
                 .addTag(NoxernaTags.BlockTags.DYED_ARGON).addTag(NoxernaTags.BlockTags.DYED_NEON);
@@ -381,6 +391,11 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .remove(NoxernaTags.BlockTags.NEEDS_ADAMUNA_TOOL);
         tag(NoxernaTags.BlockTags.INCORRECT_FOR_NIHOXITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+        // Ores
+        tag(NoxernaTags.BlockTags.FERREBRIS_ORES)
+                .add(NoxernaBlocks.NOXUM_FERREBRIS_ORE.get())
+                .add(NoxernaBlocks.AESTUM_FERREBRIS_ORE.get())
+                .add(NoxernaBlocks.INETRA_FERREBRIS_ORE.get());
         // Block Variations
         tag(NoxernaTags.BlockTags.PEBBLES)
                 .add(NoxernaBlocks.SOLTRA_PEBBLE.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get())

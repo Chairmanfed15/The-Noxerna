@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_obscuprum",
+  "key": {
+    "#": {
+      "item": "noxerna:raw_obscuprum"
+    },
+    "$": {
+      "tag": "c:raw_materials/obscuprum"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$#$",
+    "$$$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:raw_obscuprum_block"
+  }
+}
