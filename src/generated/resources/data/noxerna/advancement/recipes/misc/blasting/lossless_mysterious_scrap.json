@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / noxerna:recyclable/mysterious_alloy_lossless]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#noxerna:recyclable/mysterious_alloy_lossless"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:blasting/lossless_mysterious_scrap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / noxerna:recyclable/mysterious_alloy_lossless]"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:blasting/lossless_mysterious_scrap"
+    ]
+  }
+}

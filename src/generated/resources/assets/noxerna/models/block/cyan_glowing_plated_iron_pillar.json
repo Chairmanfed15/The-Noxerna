@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "noxerna:block/cyan_glowing_plated_iron_pillar_top",
+    "side": "noxerna:block/cyan_glowing_plated_iron_pillar"
+  }
+}

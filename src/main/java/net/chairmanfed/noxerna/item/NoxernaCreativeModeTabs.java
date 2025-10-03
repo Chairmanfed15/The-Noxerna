@@ -157,24 +157,44 @@ public class NoxernaCreativeModeTabs {
                         // Material Storage & Decorative Blocks
                         // Iron
                         output.accept(NoxernaItems.IRON_PLATING);
+                        output.accept(NoxernaItems.PLATED_IRON_PILLAR);
                         output.accept(NoxernaItems.IRON_PLATING_STAIRS);
                         output.accept(NoxernaItems.IRON_PLATING_SLAB);
                         output.accept(NoxernaItems.IRON_PLATING_WALL);
+                        // Gold
+                        output.accept(NoxernaItems.GOLD_PLATING);
+                        output.accept(NoxernaItems.PLATED_GOLD_PILLAR);
+                        output.accept(NoxernaItems.GOLD_PLATING_STAIRS);
+                        output.accept(NoxernaItems.GOLD_PLATING_SLAB);
+                        output.accept(NoxernaItems.GOLD_PLATING_WALL);
+                        // Netherite
+                        output.accept(NoxernaItems.NETHERITE_PLATING);
+                        output.accept(NoxernaItems.PLATED_NETHERITE_PILLAR);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_STAIRS);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_SLAB);
+                        output.accept(NoxernaItems.NETHERITE_PLATING_WALL);
+                        // Copper
+                            // Unaffected
+                            // Exposed
+                            // Weathered
+                            // Oxidised
+                        // Waxed Copper
+                            // Unaffected
+                            // Exposed
+                            // Weathered
+                            // Oxidised
                         // Ferrebris
                         output.accept(NoxernaItems.FERREBRIS_BLOCK);
                         output.accept(NoxernaItems.FERREBRIS_BARS);
                         output.accept(NoxernaItems.FERREBRIS_PLATING);
+                        output.accept(NoxernaItems.PLATED_FERREBRIS_PILLAR);
                         output.accept(NoxernaItems.FERREBRIS_PLATING_STAIRS);
                         output.accept(NoxernaItems.FERREBRIS_PLATING_SLAB);
                         output.accept(NoxernaItems.FERREBRIS_PLATING_WALL);
-                        // Gold
-                        output.accept(NoxernaItems.GOLD_PLATING);
-                        output.accept(NoxernaItems.GOLD_PLATING_STAIRS);
-                        output.accept(NoxernaItems.GOLD_PLATING_SLAB);
-                        output.accept(NoxernaItems.GOLD_PLATING_WALL);
                         // Umburam
                         output.accept(NoxernaItems.UMBURAM_BLOCK);
                         output.accept(NoxernaItems.UMBURAM_PLATING);
+                        output.accept(NoxernaItems.PLATED_UMBURAM_PILLAR);
                         output.accept(NoxernaItems.UMBURAM_PLATING_STAIRS);
                         output.accept(NoxernaItems.UMBURAM_PLATING_SLAB);
                         output.accept(NoxernaItems.UMBURAM_PLATING_WALL);
@@ -185,22 +205,20 @@ public class NoxernaCreativeModeTabs {
                         // Inperlum
                         output.accept(NoxernaItems.INPERLUM_BLOCK);
                         output.accept(NoxernaItems.INPERLUM_PLATING);
+                        output.accept(NoxernaItems.PLATED_INPERLUM_PILLAR);
                         output.accept(NoxernaItems.INPERLUM_PLATING_STAIRS);
                         output.accept(NoxernaItems.INPERLUM_PLATING_SLAB);
                         output.accept(NoxernaItems.INPERLUM_PLATING_WALL);
-                        // Netherite
-                        output.accept(NoxernaItems.NETHERITE_PLATING);
-                        output.accept(NoxernaItems.NETHERITE_PLATING_STAIRS);
-                        output.accept(NoxernaItems.NETHERITE_PLATING_SLAB);
-                        output.accept(NoxernaItems.NETHERITE_PLATING_WALL);
                         // Nihoxite
                         output.accept(NoxernaItems.NIHOXITE_BLOCK);
                         output.accept(NoxernaItems.NIHOXITE_PLATING);
+                        output.accept(NoxernaItems.PLATED_NIHOXITE_PILLAR);
                         output.accept(NoxernaItems.NIHOXITE_PLATING_STAIRS);
                         output.accept(NoxernaItems.NIHOXITE_PLATING_SLAB);
                         output.accept(NoxernaItems.NIHOXITE_PLATING_WALL);
                         // Mysterious Alloy
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING);
+                        output.accept(NoxernaItems.PLATED_MYSTERIOUS_ALLOY_PILLAR);
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_STAIRS);
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_SLAB);
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_WALL);
@@ -226,9 +244,10 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.OXIDISED_OBSCUPRUM_BLOCK);
                         output.accept(NoxernaItems.OXIDISED_CUT_OBSCUPRUM_BLOCK);
                         output.accept(NoxernaItems.OXIDISED_OBSCUPRUM_BRICKS);
-                        output.accept(NoxernaItems.OXIDISED_OBSCUPRUM_PLATING);
+                        output.accept(NoxernaItems.OXIDIZED_OBSCUPRUM_PLATING);
                         // Waxed Obscuprum
                             // Unaffected
+                        output.accept(NoxernaItems.WAXED_OBSCUPRUM_BLOCK);
                             // Exposed
                             // Weathered
                             // Oxidised
@@ -244,10 +263,14 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.KRYPTON_WOOL);
                         output.accept(NoxernaItems.ARGON_WOOL);
                         output.accept(NoxernaItems.NEON_WOOL);
+
+                        output.accept(NoxernaItems.XENON_CARPET);
+
                         output.accept(NoxernaItems.XENON_TERRACOTTA);
                         output.accept(NoxernaItems.KRYPTON_TERRACOTTA);
                         output.accept(NoxernaItems.ARGON_TERRACOTTA);
                         output.accept(NoxernaItems.NEON_TERRACOTTA);
+
                         output.accept(NoxernaItems.XENON_CONCRETE);
                         output.accept(NoxernaItems.KRYPTON_CONCRETE);
                         output.accept(NoxernaItems.ARGON_CONCRETE);
@@ -256,6 +279,52 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.KRYPTON_CONCRETE_POWDER);
                         output.accept(NoxernaItems.ARGON_CONCRETE_POWDER);
                         output.accept(NoxernaItems.NEON_CONCRETE_POWDER);
+
+                        output.accept(NoxernaItems.RADIANT_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.LUMINOUS_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.WHITE_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.GRAY_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.BLACK_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.BROWN_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.RED_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.ORANGE_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.YELLOW_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.LIME_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.GREEN_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.CYAN_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.BLUE_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.PURPLE_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.MAGENTA_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.PINK_GLOWING_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.XENON_GLOWING_IRON_PILLAR);
+                        output.accept(NoxernaItems.KRYPTON_GLOWING_IRON_PILLAR);
+                        output.accept(NoxernaItems.ARGON_GLOWING_IRON_PILLAR);
+                        output.accept(NoxernaItems.NEON_GLOWING_IRON_PILLAR);
+
+                        output.accept(NoxernaItems.RADIANT_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.LUMINOUS_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.RED_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.LIME_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.PINK_GLOWING_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.XENON_GLOWING_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.KRYPTON_GLOWING_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.ARGON_GLOWING_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.NEON_GLOWING_FERREBRIS_PILLAR);
                     }).withTabsBefore(NOXERNA_BUILDING_BLOCKS.getKey()).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
@@ -306,6 +375,11 @@ public class NoxernaCreativeModeTabs {
                     .icon(()-> new ItemStack(NoxernaItems.LUMAI_FUEL_CELL.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.LUMAI_FUEL_CELL);
+                        output.accept(NoxernaItems.RADIANT_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.LUMINOUS_PLATED_IRON_PILLAR);
+                        output.accept(NoxernaItems.RADIANT_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.LUMINOUS_PLATED_FERREBRIS_PILLAR);
+                        output.accept(NoxernaItems.NOBLEWOOD_CRAFTING_TABLE);
                     })
                     .withTabsBefore(NOXERNA_NATURAL_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
@@ -342,7 +416,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.PICKADZE.get());
                         output.accept(NoxernaItems.VITRALISK.get());
                     })
-                    .withTabsBefore(NOXERNA_NATURAL_BLOCKS.getKey()).build());
+                    .withTabsBefore(NOXERNA_FUNCTIONAL_BLOCKS.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_COMBAT = CREATIVE_TABS.register(
             "noxerna_combat", () -> CreativeModeTab.builder()
@@ -399,8 +473,9 @@ public class NoxernaCreativeModeTabs {
                     .title(Component.translatable("itemGroup." + Noxerna.MODID + ".food_and_drink"))
                     .icon(()-> new ItemStack(NoxernaItems.GLOWGRAIN.get()))
                     .displayItems((params, output) -> {
+                        output.accept(NoxernaItems.XENON_NOBLEPHYTE);
                     })
-                    .withTabsBefore(NOXERNA_TOOLS_AND_UTILITIES.getKey()).build());
+                    .withTabsBefore(NOXERNA_COMBAT.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>
             NOXERNA_INGREDIENTS = CREATIVE_TABS.register(
             "noxerna_ingredients", () -> CreativeModeTab.builder()

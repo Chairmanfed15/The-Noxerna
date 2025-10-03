@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "obscuprum_ingot",
+  "ingredient": {
+    "tag": "noxerna:obscuprum_ores"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:obscuprum_ingot"
+  }
+}

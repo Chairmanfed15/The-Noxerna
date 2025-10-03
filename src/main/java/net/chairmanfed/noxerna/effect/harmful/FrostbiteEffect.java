@@ -14,17 +14,11 @@ public class FrostbiteEffect extends MobEffect {
     }
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-        int i = entity.getTicksFrozen();
-        if (entity.canFreeze() && entity.getTicksFrozen() <= 240) {
-            entity.setTicksFrozen(i + 64);
-        }
+        entity.setIsInPowderSnow(true);
         return true;
     }
     @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        int i = 10 >> amplifier;
-        return i > 0 ? duration % i == 0 : true;
-    }
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) { return true; }
     @Override
     public void onEffectStarted(LivingEntity entity, int pAmplifier) {
         if (entity.canFreeze()) {

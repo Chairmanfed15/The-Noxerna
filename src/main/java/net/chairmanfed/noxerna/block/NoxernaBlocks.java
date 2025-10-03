@@ -11,6 +11,8 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class NoxernaBlocks {
     // Registers Blocks and assigns properties
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Noxerna.MODID);
@@ -382,6 +384,9 @@ public class NoxernaBlocks {
     // Iron
     public static final DeferredBlock<Block> IRON_PLATING = BLOCKS.register(
             "iron_plating", ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+    public static final DeferredBlock<Block> PLATED_IRON_PILLAR = BLOCKS.register(
+            "plated_iron_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(IRON_PLATING.get())));
     public static final DeferredBlock<Block> IRON_PLATING_STAIRS = BLOCKS.register(
             "iron_plating_stairs", () -> new StairBlock(IRON_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(IRON_PLATING.get())));
@@ -394,6 +399,9 @@ public class NoxernaBlocks {
     // Gold
     public static final DeferredBlock<Block> GOLD_PLATING = BLOCKS.register(
             "gold_plating", ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK)));
+    public static final DeferredBlock<Block> PLATED_GOLD_PILLAR = BLOCKS.register(
+            "plated_gold_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(GOLD_PLATING.get())));
     public static final DeferredBlock<Block> GOLD_PLATING_STAIRS = BLOCKS.register(
             "gold_plating_stairs", () -> new StairBlock(GOLD_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(GOLD_PLATING.get())));
@@ -406,6 +414,9 @@ public class NoxernaBlocks {
     // Netherite
     public static final DeferredBlock<Block> NETHERITE_PLATING = BLOCKS.register(
             "netherite_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)));
+    public static final DeferredBlock<Block> PLATED_NETHERITE_PILLAR = BLOCKS.register(
+            "plated_netherite_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(NETHERITE_PLATING.get())));
     public static final DeferredBlock<Block> NETHERITE_PLATING_STAIRS = BLOCKS.register(
             "netherite_plating_stairs", () -> new StairBlock(NETHERITE_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(NETHERITE_PLATING.get())));
@@ -429,6 +440,9 @@ public class NoxernaBlocks {
                     BlockBehaviour.Properties.ofFullCopy(FERREBRIS_BLOCK.get()).noOcclusion()));
     public static final DeferredBlock<Block> FERREBRIS_PLATING = BLOCKS.register(
             "ferrebris_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(FERREBRIS_BLOCK.get())));
+    public static final DeferredBlock<Block> PLATED_FERREBRIS_PILLAR = BLOCKS.register(
+            "plated_ferrebris_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(FERREBRIS_PLATING.get())));
     public static final DeferredBlock<Block> FERREBRIS_PLATING_STAIRS = BLOCKS.register(
             "ferrebris_plating_stairs", () -> new StairBlock(FERREBRIS_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(FERREBRIS_PLATING.get())));
@@ -449,6 +463,9 @@ public class NoxernaBlocks {
                     .sound(NoxernaSoundTypes.LIGHT_METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> UMBURAM_PLATING = BLOCKS.register(
             "umburam_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(UMBURAM_BLOCK.get())));
+    public static final DeferredBlock<Block> PLATED_UMBURAM_PILLAR = BLOCKS.register(
+            "plated_umburam_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(UMBURAM_PLATING.get())));
     public static final DeferredBlock<Block> UMBURAM_PLATING_STAIRS = BLOCKS.register(
             "umburam_plating_stairs", () -> new StairBlock(UMBURAM_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(UMBURAM_PLATING.get())));
@@ -479,6 +496,9 @@ public class NoxernaBlocks {
                     .sound(NoxernaSoundTypes.LIGHT_METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> INPERLUM_PLATING = BLOCKS.register(
             "inperlum_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(INPERLUM_BLOCK.get())));
+    public static final DeferredBlock<Block> PLATED_INPERLUM_PILLAR = BLOCKS.register(
+            "plated_inperlum_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(INPERLUM_PLATING.get())));
     public static final DeferredBlock<Block> INPERLUM_PLATING_STAIRS = BLOCKS.register(
             "inperlum_plating_stairs", () -> new StairBlock(INPERLUM_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(INPERLUM_PLATING.get())));
@@ -495,6 +515,9 @@ public class NoxernaBlocks {
                     .sound(NoxernaSoundTypes.HEAVY_METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> NIHOXITE_PLATING = BLOCKS.register(
             "nihoxite_plating", () -> new Block(BlockBehaviour.Properties.ofFullCopy(NIHOXITE_BLOCK.get())));
+    public static final DeferredBlock<Block> PLATED_NIHOXITE_PILLAR = BLOCKS.register(
+            "plated_nihoxite_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(NIHOXITE_PLATING.get())));
     public static final DeferredBlock<Block> NIHOXITE_PLATING_STAIRS = BLOCKS.register(
             "nihoxite_plating_stairs", () -> new StairBlock(NIHOXITE_PLATING.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(NIHOXITE_PLATING.get())));
@@ -508,6 +531,9 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> MYSTERIOUS_ALLOY_PLATING = BLOCKS.register(
             "mysterious_alloy_plating",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(NIHOXITE_BLOCK.get())));
+    public static final DeferredBlock<Block> PLATED_MYSTERIOUS_ALLOY_PILLAR = BLOCKS.register(
+            "plated_mysterious_alloy_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(MYSTERIOUS_ALLOY_PLATING.get())));
     public static final DeferredBlock<Block> MYSTERIOUS_ALLOY_PLATING_STAIRS = BLOCKS.register(
             "mysterious_alloy_plating_stairs",
             () -> new StairBlock(MYSTERIOUS_ALLOY_PLATING.get().defaultBlockState(),
@@ -546,6 +572,10 @@ public class NoxernaBlocks {
             "oxidised_obscuprum_block",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BLOCK.get())));
+        // Waxed
+        public static final DeferredBlock<Block> WAXED_OBSCUPRUM_BLOCK = BLOCKS.register(
+                "waxed_obscuprum_block",
+                () -> new Block(BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_BLOCK.get())));
     // Cut
     public static final DeferredBlock<Block> CUT_OBSCUPRUM_BLOCK = BLOCKS.register(
             "cut_obscuprum_block", () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED,
@@ -596,8 +626,8 @@ public class NoxernaBlocks {
             "weathered_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
-    public static final DeferredBlock<Block> OXIDISED_OBSCUPRUM_PLATING = BLOCKS.register(
-            "oxidised_obscuprum_plating",
+    public static final DeferredBlock<Block> OXIDIZED_OBSCUPRUM_PLATING = BLOCKS.register(
+            "oxidized_obscuprum_plating",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
                     BlockBehaviour.Properties.ofFullCopy(OBSCUPRUM_PLATING.get())));
     // Coloured Blocks
@@ -612,6 +642,9 @@ public class NoxernaBlocks {
                     .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> NEON_WOOL = BLOCKS.register(
             "neon_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)
+                    .lightLevel(state -> 12)));
+    public static final DeferredBlock<Block> XENON_CARPET = BLOCKS.register(
+            "xenon_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CARPET)
                     .lightLevel(state -> 12)));
     public static final DeferredBlock<Block> XENON_TERRACOTTA = BLOCKS.register(
             "xenon_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)
@@ -657,6 +690,104 @@ public class NoxernaBlocks {
             () -> new ConcretePowderBlock(NoxernaBlocks.NEON_CONCRETE.get(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE_POWDER)
                             .lightLevel(state -> 12)));
+
+    public static final DeferredBlock<Block> RADIANT_PLATED_IRON_PILLAR = BLOCKS.register(
+            "radiant_plated_iron_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(PLATED_IRON_PILLAR.get())
+                    .lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> LUMINOUS_PLATED_IRON_PILLAR = BLOCKS.register(
+            "luminous_plated_iron_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(PLATED_IRON_PILLAR.get())
+                    .lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> WHITE_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("white", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("light_gray", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> GRAY_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("gray", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> BLACK_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("black", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> BROWN_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("brown", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> RED_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("red", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> ORANGE_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("orange", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> YELLOW_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("yellow", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> LIME_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("lime", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> GREEN_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("green", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> CYAN_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("cyan", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("light_blue", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> BLUE_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("blue", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> PURPLE_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("purple", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> MAGENTA_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("magenta", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> PINK_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("pink", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> XENON_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("xenon", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> KRYPTON_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("krypton", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> ARGON_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("argon", "iron", PLATED_IRON_PILLAR);
+    public static final DeferredBlock<Block> NEON_GLOWING_PLATED_IRON_PILLAR =
+            registerColouredGlowingMetalPillar("neon", "iron", PLATED_IRON_PILLAR);
+
+    public static final DeferredBlock<Block> RADIANT_PLATED_FERREBRIS_PILLAR = BLOCKS.register(
+            "radiant_plated_ferrebris_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(PLATED_FERREBRIS_PILLAR.get())
+                    .lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> LUMINOUS_PLATED_FERREBRIS_PILLAR = BLOCKS.register(
+            "luminous_plated_ferrebris_pillar", () -> new
+                    RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(PLATED_FERREBRIS_PILLAR.get())
+                    .lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> WHITE_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("white", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("light_gray", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> GRAY_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("gray", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> BLACK_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("black", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> BROWN_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("brown", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> RED_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("red", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("orange", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("yellow", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> LIME_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("lime", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> GREEN_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("green", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> CYAN_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("cyan", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("light_blue", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> BLUE_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("blue", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("purple", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("magenta", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> PINK_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("pink", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> XENON_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("xenon", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("krypton", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> ARGON_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("argon", "ferrebris", PLATED_FERREBRIS_PILLAR);
+    public static final DeferredBlock<Block> NEON_GLOWING_PLATED_FERREBRIS_PILLAR =
+            registerColouredGlowingMetalPillar("neon", "ferrebris", PLATED_FERREBRIS_PILLAR);
     // Ores
     public static final DeferredBlock<Block> NOXUM_BURIED_FUEL_CELL = BLOCKS.register(
             "noxum_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
@@ -722,4 +853,10 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NOXERNA_PORTAL = BLOCKS.register(
             "noxerna_portal",
             () -> new NoxernaPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable()));
+    public static DeferredBlock<Block> registerColouredGlowingMetalPillar(
+            String colour, String material, Supplier<Block> baseBlock) {
+        return BLOCKS.register(colour + "_glowing_plated_" + material + "_pillar",
+                () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(baseBlock.get())
+                        .lightLevel(state -> 15)));
+    }
 }

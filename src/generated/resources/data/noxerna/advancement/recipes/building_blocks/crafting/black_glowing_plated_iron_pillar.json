@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:dyes/black]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes/black"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_noxerna:plated_iron_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:plated_iron_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/black_glowing_plated_iron_pillar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:dyes/black]",
+      "has_noxerna:plated_iron_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/black_glowing_plated_iron_pillar"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "noxerna:block/purple_glowing_plated_iron_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "noxerna:block/purple_glowing_plated_iron_pillar"
+    },
+    "axis=z": {
+      "model": "noxerna:block/purple_glowing_plated_iron_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

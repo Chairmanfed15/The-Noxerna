@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "noxerna:block/plated_umburam_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "noxerna:block/plated_umburam_pillar"
+    },
+    "axis=z": {
+      "model": "noxerna:block/plated_umburam_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

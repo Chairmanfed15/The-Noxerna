@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.data.providers;
 import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.alchemy.Potion;
 import net.neoforged.neoforge.common.data.LanguageProvider;
@@ -14,12 +15,15 @@ public abstract class NoxernaLanguageProvider extends LanguageProvider {
         super(output, id, "en_us");
     }
 
-    public void addCreativeTab(String creativeTab, String name) {
-        this.add("itemGroup." + Noxerna.MODID + "." + creativeTab, name);
-    }
     public void addAdvancement(String id, String title, String description) {
         this.add("advancement." + Noxerna.MODID + "." + id + ".title", title);
         this.add("advancement." + Noxerna.MODID + "." + id + ".description", description);
+    }
+    public void addCreativeTab(String creativeTab, String name) {
+        this.add("itemGroup." + Noxerna.MODID + "." + creativeTab, name);
+    }
+    public void addEffectDescription(MobEffect key, String description) {
+        add(key.getDescriptionId() + ".description", description);
     }
     public void addUpgradeTemplate(String upgradeType, String name, String ingredients, String appliedTo) {
         this.add("upgrade." + Noxerna.MODID + "." + upgradeType, name);

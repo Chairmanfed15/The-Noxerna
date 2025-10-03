@@ -117,7 +117,7 @@ dependencies {
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    localRuntime "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
+    implementation "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
 
     implementation "curse.maven:jade-324717:${project.jade_version}"
     implementation "curse.maven:better-advancements-272515:${project.better_advancements_version}"

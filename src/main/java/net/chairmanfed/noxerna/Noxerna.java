@@ -8,6 +8,7 @@ import net.chairmanfed.noxerna.item.equipment.armor.NoxernaArmorMaterials;
 import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.item.NoxernaCreativeModeTabs;
 import net.chairmanfed.noxerna.item.NoxernaItems;
+import net.chairmanfed.noxerna.world.NoxernaPoiTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.GameRules;
@@ -48,6 +49,8 @@ public class Noxerna
         NoxernaCreativeModeTabs.CREATIVE_TABS.register(eventBus);
         NoxernaEffects.EFFECTS.register(eventBus);
         NoxernaPotions.POTIONS.register(eventBus);
+        NoxernaPoiTypes.POI.register(eventBus);
+        NeoForge.EVENT_BUS.addListener(NoxernaPotions::registerBrewingRecipes);
 
         // eventBus.addListener(DataGenerators::gatherData);
         eventSetup(eventBus);

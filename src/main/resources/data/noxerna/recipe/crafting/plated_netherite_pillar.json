@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:nuggets/netherite"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "plated_pillars",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/netherite"
+    },
+    "S": {
+      "item": "noxerna:netherite_plating_slab"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "SNS",
+    "SNS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:plated_netherite_pillar"
+  }
+}

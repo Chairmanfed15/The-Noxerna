@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glowing_plated_pillars",
+  "key": {
+    "#": {
+      "tag": "noxerna:plated_pillar_lights"
+    },
+    "C": {
+      "tag": "c:dyes/argon"
+    },
+    "P": {
+      "item": "noxerna:plated_ferrebris_pillar"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "P#P",
+    "PCP"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:argon_glowing_plated_ferrebris_pillar"
+  }
+}

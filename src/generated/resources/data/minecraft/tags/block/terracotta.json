@@ -1,0 +1,8 @@
+{
+  "values": [
+    "noxerna:xenon_terracotta",
+    "noxerna:krypton_terracotta",
+    "noxerna:argon_terracotta",
+    "noxerna:neon_terracotta"
+  ]
+}

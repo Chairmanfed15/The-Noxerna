@@ -38,6 +38,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
         // Enchanting
         tag(ItemTags.DURABILITY_ENCHANTABLE)
                 .addTag(NoxernaTags.ItemTags.PICKADZES);
+        tag(ItemTags.MINING_LOOT_ENCHANTABLE)
+                .addTag(NoxernaTags.ItemTags.PICKADZES);
         // Tools
         tag(ItemTags.AXES)
                 .add(NoxernaItems.NOBLEWOOD_AXE.get()).add(NoxernaItems.NOXSTONE_AXE.get())
@@ -100,8 +102,13 @@ public class NoxernaItemTags extends ItemTagsProvider {
         this.copy(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS, NoxernaTags.ItemTags.NIHOXITE_STORAGE_BLOCKS);
         this.copy(NoxernaTags.BlockTags.VITRAGOR_STORAGE_BLOCKS, NoxernaTags.ItemTags.VITRAGOR_STORAGE_BLOCKS);
         this.copy(NoxernaTags.BlockTags.OBSCUPRUM_STORAGE_BLOCKS, NoxernaTags.ItemTags.OBSCUPRUM_STORAGE_BLOCKS);
+        this.copy(NoxernaTags.BlockTags.DYED_XENON, NoxernaTags.ItemTags.DYED_XENON);
+        this.copy(NoxernaTags.BlockTags.DYED_KRYPTON, NoxernaTags.ItemTags.DYED_KRYPTON);
+        this.copy(NoxernaTags.BlockTags.DYED_ARGON, NoxernaTags.ItemTags.DYED_ARGON);
+        this.copy(NoxernaTags.BlockTags.DYED_NEON, NoxernaTags.ItemTags.DYED_NEON);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
         this.copy(NoxernaTags.BlockTags.ORES_FERREBRIS, NoxernaTags.ItemTags.ORES_FERREBRIS);
+        this.copy(NoxernaTags.BlockTags.ORES_OBSCUPRUM, NoxernaTags.ItemTags.ORES_OBSCUPRUM);
         this.copy(NoxernaTags.BlockTags.BURIED_FUEL_CELLS, NoxernaTags.ItemTags.BURIED_FUEL_CELLS);
         // Tools
         tag(Tags.Items.TOOLS)
@@ -171,6 +178,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
         tag(NoxernaTags.ItemTags.VITRAGOR_DUSTS)
                 .add(NoxernaItems.VITRAGOR_DUST.get());
             // Plates
+        tag(NoxernaTags.ItemTags.PLATES)
+                .addTag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES);
         tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES)
                 .add(NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get());
             // Rods
@@ -194,6 +203,7 @@ public class NoxernaItemTags extends ItemTagsProvider {
         // Copy from Block Tags
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
         this.copy(NoxernaTags.BlockTags.FERREBRIS_ORES, NoxernaTags.ItemTags.FERREBRIS_ORES);
+        this.copy(NoxernaTags.BlockTags.OBSCUPRUM_ORES, NoxernaTags.ItemTags.OBSCUPRUM_ORES);
         this.copy(NoxernaTags.BlockTags.XENON_LOGS, NoxernaTags.ItemTags.XENON_LOGS);
         this.copy(NoxernaTags.BlockTags.KRYPTON_LOGS, NoxernaTags.ItemTags.KRYPTON_LOGS);
         this.copy(NoxernaTags.BlockTags.ARGON_LOGS, NoxernaTags.ItemTags.ARGON_LOGS);
@@ -213,6 +223,8 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(Tags.Items.INGOTS_IRON).addTag(NoxernaTags.ItemTags.FERREBRIS_INGOTS);
         tag(NoxernaTags.ItemTags.ANY_DIAMOND_GEM)
                 .addTag(NoxernaTags.ItemTags.DIAMOND_GEMS).addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
+        tag(NoxernaTags.ItemTags.PLATED_PILLAR_LIGHTS)
+                .addTag(Tags.Items.DUSTS_GLOWSTONE).add(NoxernaItems.LUMAI_FUEL_CELL.get());
         // Tool Material Grouping
         tag(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
                 .add(NoxernaItems.XENON_PLANKS.get()).add(NoxernaItems.KRYPTON_PLANKS.get())
@@ -228,12 +240,14 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         tag(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)
                 .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
-        tag(NoxernaTags.ItemTags.RECYCLABLE_LOOT)
+        tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY)
                 .add(NoxernaItems.EXOSKELETON_HELMET.get()).add(NoxernaItems.EXOSKELETON_CHESTPLATE.get())
                 .add(NoxernaItems.EXOSKELETON_LEGGINGS.get()).add(NoxernaItems.EXOSKELETON_BOOTS.get())
                 .add(NoxernaItems.HEART_HELMET.get()).add(NoxernaItems.HEART_CHESTPLATE.get())
-                .add(NoxernaItems.HEART_LEGGINGS.get()).add(NoxernaItems.HEART_BOOTS.get())
-                .add(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get());
+                .add(NoxernaItems.HEART_LEGGINGS.get()).add(NoxernaItems.HEART_BOOTS.get());
+        tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS)
+                .add(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE.get())
+                .addTag(NoxernaTags.ItemTags.BLOCKSET_MYSTERIOUS_ALLOY_PLATING);
         // Interchangeable Blocksets
         tag(NoxernaTags.ItemTags.BLOCKSET_SOLTRA)
                 .add(NoxernaItems.SOLTRA.get()).add(NoxernaItems.SOLTRA_STAIRS.get())
@@ -277,5 +291,9 @@ public class NoxernaItemTags extends ItemTagsProvider {
         tag(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING)
                 .add(NoxernaItems.NIHOXITE_PLATING.get()).add(NoxernaItems.NIHOXITE_PLATING_STAIRS.get())
                 .add(NoxernaItems.NIHOXITE_PLATING_WALL.get());
+        tag(NoxernaTags.ItemTags.BLOCKSET_MYSTERIOUS_ALLOY_PLATING)
+                .add(NoxernaItems.MYSTERIOUS_ALLOY_PLATING.get())
+                .add(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_STAIRS.get())
+                .add(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_WALL.get());
     }
 }

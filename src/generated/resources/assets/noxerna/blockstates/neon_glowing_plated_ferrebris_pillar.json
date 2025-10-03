@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "noxerna:block/neon_glowing_plated_ferrebris_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "noxerna:block/neon_glowing_plated_ferrebris_pillar"
+    },
+    "axis=z": {
+      "model": "noxerna:block/neon_glowing_plated_ferrebris_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

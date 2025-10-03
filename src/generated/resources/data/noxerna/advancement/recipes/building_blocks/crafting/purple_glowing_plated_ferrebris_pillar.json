@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:dyes/purple]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes/purple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_noxerna:plated_ferrebris_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:plated_ferrebris_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/purple_glowing_plated_ferrebris_pillar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:dyes/purple]",
+      "has_noxerna:plated_ferrebris_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/purple_glowing_plated_ferrebris_pillar"
+    ]
+  }
+}

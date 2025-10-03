@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "plated_pillars",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/iron"
+    },
+    "S": {
+      "item": "noxerna:iron_plating_slab"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "SNS",
+    "SNS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:plated_iron_pillar"
+  }
+}

@@ -1,5 +1,8 @@
 {
   "values": [
-    "noxerna:argon_concrete_powder"
+    "noxerna:xenon_concrete_powder",
+    "noxerna:krypton_concrete_powder",
+    "noxerna:argon_concrete_powder",
+    "noxerna:neon_concrete_powder"
   ]
 }

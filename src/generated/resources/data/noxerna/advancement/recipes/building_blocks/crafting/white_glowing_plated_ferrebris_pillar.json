@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_TagKey[minecraft:item / c:dyes/white]": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dyes/white"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_noxerna:plated_ferrebris_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:plated_ferrebris_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/white_glowing_plated_ferrebris_pillar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_TagKey[minecraft:item / c:dyes/white]",
+      "has_noxerna:plated_ferrebris_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/white_glowing_plated_ferrebris_pillar"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "plated_pillars",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/gold"
+    },
+    "S": {
+      "item": "noxerna:gold_plating_slab"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "SNS",
+    "SNS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:plated_gold_pillar"
+  }
+}

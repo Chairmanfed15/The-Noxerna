@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -150,14 +151,17 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
 
         // Vanilla Metal Plating
         blockWithItem(NoxernaBlocks.IRON_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_IRON_PILLAR);
         stairBlockWithItem(NoxernaBlocks.IRON_PLATING_STAIRS, NoxernaBlocks.IRON_PLATING);
         slabBlockWithItem(NoxernaBlocks.IRON_PLATING_SLAB, NoxernaBlocks.IRON_PLATING);
         wallBlockWithItem(NoxernaBlocks.IRON_PLATING_WALL, NoxernaBlocks.IRON_PLATING);
         blockWithItem(NoxernaBlocks.GOLD_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_GOLD_PILLAR);
         stairBlockWithItem(NoxernaBlocks.GOLD_PLATING_STAIRS, NoxernaBlocks.GOLD_PLATING);
         slabBlockWithItem(NoxernaBlocks.GOLD_PLATING_SLAB, NoxernaBlocks.GOLD_PLATING);
         wallBlockWithItem(NoxernaBlocks.GOLD_PLATING_WALL, NoxernaBlocks.GOLD_PLATING);
         blockWithItem(NoxernaBlocks.NETHERITE_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_NETHERITE_PILLAR);
         stairBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_STAIRS, NoxernaBlocks.NETHERITE_PLATING);
         slabBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_SLAB, NoxernaBlocks.NETHERITE_PLATING);
         wallBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_WALL, NoxernaBlocks.NETHERITE_PLATING);
@@ -166,6 +170,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
         paneBlockWithItem(NoxernaBlocks.FERREBRIS_BARS, "cutout");
         blockWithItem(NoxernaBlocks.FERREBRIS_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_FERREBRIS_PILLAR);
         stairBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_STAIRS, NoxernaBlocks.FERREBRIS_PLATING);
         slabBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_SLAB, NoxernaBlocks.FERREBRIS_PLATING);
         wallBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_WALL, NoxernaBlocks.FERREBRIS_PLATING);
@@ -174,6 +179,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.RAW_UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_UMBURAM_PILLAR);
         stairBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_STAIRS, NoxernaBlocks.UMBURAM_PLATING);
         slabBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_SLAB, NoxernaBlocks.UMBURAM_PLATING);
         wallBlockWithItem(NoxernaBlocks.UMBURAM_PLATING_WALL, NoxernaBlocks.UMBURAM_PLATING);
@@ -188,6 +194,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.RAW_INPERLUM_BLOCK);
         blockWithItem(NoxernaBlocks.INPERLUM_BLOCK);
         blockWithItem(NoxernaBlocks.INPERLUM_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_INPERLUM_PILLAR);
         stairBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_STAIRS, NoxernaBlocks.INPERLUM_PLATING);
         slabBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_SLAB, NoxernaBlocks.INPERLUM_PLATING);
         wallBlockWithItem(NoxernaBlocks.INPERLUM_PLATING_WALL, NoxernaBlocks.INPERLUM_PLATING);
@@ -195,11 +202,13 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         // Nihoxite Metal set
         blockWithItem(NoxernaBlocks.NIHOXITE_BLOCK);
         blockWithItem(NoxernaBlocks.NIHOXITE_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_NIHOXITE_PILLAR);
         stairBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_STAIRS, NoxernaBlocks.NIHOXITE_PLATING);
         slabBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_SLAB, NoxernaBlocks.NIHOXITE_PLATING);
         wallBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_WALL, NoxernaBlocks.NIHOXITE_PLATING);
         // Mysterious Alloy Metal set
         blockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+        logBlockWithItem(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR);
         stairBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
         slabBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
         wallBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
@@ -226,7 +235,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.OBSCUPRUM_PLATING);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING);
-        blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING);
+        blockWithItem(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING);
 
         // Coloured Blocks
             // Wool
@@ -249,6 +258,52 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.KRYPTON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.ARGON_CONCRETE_POWDER);
         blockWithItem(NoxernaBlocks.NEON_CONCRETE_POWDER);
+            // Glowing Pillar
+        logBlockWithItem(NoxernaBlocks.RADIANT_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LUMINOUS_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.WHITE_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.GRAY_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BLACK_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BROWN_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.RED_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.ORANGE_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.YELLOW_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIME_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.GREEN_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.CYAN_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BLUE_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.PURPLE_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.MAGENTA_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.PINK_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.XENON_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.KRYPTON_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.ARGON_GLOWING_PLATED_IRON_PILLAR);
+        logBlockWithItem(NoxernaBlocks.NEON_GLOWING_PLATED_IRON_PILLAR);
+
+        logBlockWithItem(NoxernaBlocks.RADIANT_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LUMINOUS_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.RED_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIME_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.PINK_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.XENON_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.ARGON_GLOWING_PLATED_FERREBRIS_PILLAR);
+        logBlockWithItem(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR);
 
         // Natural Blocks
             // Ores
@@ -258,14 +313,17 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.NOXUM_FERREBRIS_ORE);
         blockWithItem(NoxernaBlocks.AESTUM_FERREBRIS_ORE);
         blockWithItem(NoxernaBlocks.INETRA_FERREBRIS_ORE);
+        blockWithItem(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE);
+        blockWithItem(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE);
+        blockWithItem(NoxernaBlocks.INETRA_OBSCUPRUM_ORE);
 
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);
         blockWithItem(NoxernaBlocks.NOXERNA_PORTAL_FRAME);
         basicBlock(NoxernaBlocks.NOXERNA_PORTAL);
     }
-    private void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    private void blockWithItem(DeferredBlock<Block> block) {
+        simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
     public void basicBlock(DeferredBlock<Block> block) {
         this.simpleBlock(block.get(), cubeAll(block.get()));
@@ -274,6 +332,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         this.itemModels().withExistingParent(block.getId().toString(),
                 this.modLoc("block/" + block.getId().getPath()));
     }
+
     public void logBlockWithItem(DeferredBlock<Block> block) {
         this.logBlock((RotatedPillarBlock) block.get());
         this.simpleBlockItem(block);
@@ -303,6 +362,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         this.wallBlock((WallBlock) block.get(), this.blockTexture(baseBlock.get()));
         this.itemModels().wallInventory(block.getId().toString(), this.blockTexture(baseBlock.get()));
     }
+    public void carpetBlockWithItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {}
     public void paneBlockWithItem(DeferredBlock<Block> block, String renderType) {
         this.paneBlockWithRenderType((IronBarsBlock) block.get(),
                 this.blockTexture(block.get()),

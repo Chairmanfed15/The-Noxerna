@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "noxerna:block/inetra_obscuprum_ore"
+  }
+}

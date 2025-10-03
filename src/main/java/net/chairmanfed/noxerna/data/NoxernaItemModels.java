@@ -16,6 +16,13 @@ public class NoxernaItemModels extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
+        // WIP Blocks
+        wipItem(NoxernaItems.WAXED_OBSCUPRUM_BLOCK);
+        wipItem(NoxernaItems.XENON_CARPET);
+        wipItem(NoxernaItems.NOXUM_UMBURAM_ORE);
+        wipItem(NoxernaItems.AESTUM_UMBURAM_ORE);
+        wipItem(NoxernaItems.INETRA_UMBURAM_ORE);
+        wipItem(NoxernaItems.NOBLEWOOD_CRAFTING_TABLE);
         // Intermediates
         flatItem(NoxernaItems.LUMAI_CRYSTAL);
         flatItem(NoxernaItems.LUMAI_FUEL_CELL);
@@ -54,7 +61,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
         flatItem(NoxernaItems.ENERGIZED_TENERYL_DRIVE);
         // Food
-
+        wipItem(NoxernaItems.XENON_NOBLEPHYTE);
         // Tiered Tools
         handheldFlatItem(NoxernaItems.NOBLEWOOD_AXE);
         handheldFlatItem(NoxernaItems.NOBLEWOOD_HOE);

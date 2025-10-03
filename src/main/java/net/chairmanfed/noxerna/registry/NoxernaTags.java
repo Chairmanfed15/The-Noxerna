@@ -24,12 +24,14 @@ public class NoxernaTags {
         public static final TagKey<Item> NOBLEWOOD_PLANKS = localTag("noblewood_planks");
         public static final TagKey<Item> ANY_IRON_INGOT = localTag("any_iron_ingot");
         public static final TagKey<Item> ANY_DIAMOND_GEM = localTag("any_diamond_gem");
+        public static final TagKey<Item> PLATED_PILLAR_LIGHTS = localTag("plated_pillar_lights");
         public static final TagKey<Item> NOXSTONE_TOOL_MATERIALS = localTag("noxstone_tool_materials");
         public static final TagKey<Item> FERREBRIS_TOOL_MATERIALS = localTag("ferrebris_tool_materials");
         public static final TagKey<Item> UMBURAM_TOOL_MATERIALS = localTag("umburam_tool_materials");
         public static final TagKey<Item> ADAMUNA_TOOL_MATERIALS = localTag("adamuna_tool_materials");
         public static final TagKey<Item> NIHOXITE_TOOL_MATERIALS = localTag("nihoxite_tool_materials");
-        public static final TagKey<Item> RECYCLABLE_LOOT = localTag("loot/recyclable");
+        public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY = localTag("recyclable/mysterious_alloy_lossy");
+        public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS = localTag("recyclable/mysterious_alloy_lossless");
         // Block Groups
         public static final TagKey<Item> BLOCKSET_SOLTRA = localTag("blockset/soltra");
         public static final TagKey<Item> BLOCKSET_NOXUM = localTag("blockset/noxum");
@@ -50,19 +52,24 @@ public class NoxernaTags {
                 localTag("blockset/copper_plating/weathered");
         public static final TagKey<Item> BLOCKSET_WEATHERED_WAXED_COPPER_PLATING =
                 localTag("blockset/waxed_copper_plating/weathered");
-        public static final TagKey<Item> BLOCKSET_OXIDISED_COPPER_PLATING =
-                localTag("blockset/copper_plating/oxidised");
-        public static final TagKey<Item> BLOCKSET_OXIDISED_WAXED_COPPER_PLATING =
-                localTag("blockset/waxed_copper_plating/oxidised");
+        public static final TagKey<Item> BLOCKSET_OXIDIZED_COPPER_PLATING =
+                localTag("blockset/copper_plating/oxidized");
+        public static final TagKey<Item> BLOCKSET_OXIDIZED_WAXED_COPPER_PLATING =
+                localTag("blockset/waxed_copper_plating/oxidized");
         public static final TagKey<Item> BLOCKSET_FERREBRIS_PLATING = localTag("blockset/ferrebris_plating");
         public static final TagKey<Item> BLOCKSET_UMBURAM_PLATING = localTag("blockset/umburam_plating");
         public static final TagKey<Item> BLOCKSET_INPERLUM_PLATING = localTag("blockset/inperlum_plating");
         public static final TagKey<Item> BLOCKSET_NIHOXITE_PLATING = localTag("blockset/nihoxite_plating");
+        public static final TagKey<Item> BLOCKSET_MYSTERIOUS_ALLOY_PLATING = localTag(
+                "blockset/mysterious_alloy_plating");
         public static final TagKey<Item> BLOCKSET_UNAFFECTED_CUT_OBSCUPRUM =
                 localTag("blockset/cut_obscuprum/unaffected");
         public static final TagKey<Item> BLOCKSET_EXPOSED_CUT_OBSCUPRUM =
                 localTag("blockset/cut_obscuprum/exposed");
         public static final TagKey<Item> PEBBLES = localTag("pebbles");
+        public static final TagKey<Item> FERREBRIS_ORES = localTag("ferrebris_ores");
+        public static final TagKey<Item> OBSCUPRUM_ORES = localTag("obscuprum_ores");
+        public static final TagKey<Item> UMBURAM_ORES = localTag("umburam_ores");
         public static final TagKey<Item> XENON_LOGS = localTag("xenon_logs");
         public static final TagKey<Item> KRYPTON_LOGS = localTag("krypton_logs");
         public static final TagKey<Item> ARGON_LOGS = localTag("argon_logs");
@@ -70,8 +77,6 @@ public class NoxernaTags {
 
         // Common Tags
         // Material Groupings
-            // Ores
-        public static final TagKey<Item> FERREBRIS_ORES = localTag("ferrebris_ores");
             // Storage Blocks
         public static final TagKey<Item> FERREBRIS_STORAGE_BLOCKS = commonTag("storage_blocks/ferrebris");
         public static final TagKey<Item> UMBURAM_STORAGE_BLOCKS = commonTag("storage_blocks/umburam");
@@ -84,8 +89,8 @@ public class NoxernaTags {
             // Ores
         public static final TagKey<Item> BURIED_FUEL_CELLS = commonTag("ores/buried_fuel_cells");
         public static final TagKey<Item> ORES_FERREBRIS = commonTag("ores/ferrebris");
-        public static final TagKey<Item> OBSCUPRUM_ORES = commonTag("ores/obscuprum");
-        public static final TagKey<Item> UMBURAM_ORES = commonTag("ores/umburam");
+        public static final TagKey<Item> ORES_OBSCUPRUM = commonTag("ores/obscuprum");
+        public static final TagKey<Item> ORES_UMBURAM = commonTag("ores/umburam");
             // Raw Materials
         public static final TagKey<Item> RAW_FERREBRIS_MATERIALS = commonTag("raw_materials/ferrebris");
         public static final TagKey<Item> RAW_OBSCUPRUM_MATERIALS = commonTag("raw_materials/obscuprum");
@@ -112,9 +117,21 @@ public class NoxernaTags {
             //
         public static final TagKey<Item> VITRAGOR_DUSTS = commonTag("dusts/vitragor");
             // Plates
+        public static final TagKey<Item> PLATES = commonTag("plates");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_PLATES = commonTag("plates/mysterious_alloy");
             // Rods
         public static final TagKey<Item> NOBLEWOOD_RODS = commonTag("rods/noblewood");
+            // Dyable Blocks
+        public static final TagKey<Item> PLATED_METAL_PILLARS = commonTag(
+                "plated_metal_pillars");
+        public static final TagKey<Item> PLATED_METAL_PILLARS_NO_GLOWING = commonTag(
+                "plated_pillars/no_glowing");
+        public static final TagKey<Item> PLATED_METAL_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing");
+        public static final TagKey<Item> PLATED_FERREBRIS_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing_ferrebris");
+        public static final TagKey<Item> PLATED_IRON_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing_iron");
             // Dyes
         public static final TagKey<Item> XENON_DYES = commonTag("dyes/xenon");
         public static final TagKey<Item> KRYPTON_DYES = commonTag("dyes/krypton");
@@ -159,6 +176,8 @@ public class NoxernaTags {
         public static final TagKey<Block> BOSS_IMMUNE = localTag("boss_immune");
 
         public static final TagKey<Block> FERREBRIS_ORES = localTag("ferrebris_ores");
+        public static final TagKey<Block> OBSCUPRUM_ORES = localTag("obscuprum_ores");
+        public static final TagKey<Block> UMBURAM_ORES = localTag("umburam_ores");
 
         public static final TagKey<Block> XENON_LOGS = localTag("xenon_logs");
         public static final TagKey<Block> KRYPTON_LOGS = localTag("krypton_logs");
@@ -173,14 +192,26 @@ public class NoxernaTags {
         public static final TagKey<Block> NIHOXITE_STORAGE_BLOCKS = commonTag("storage_blocks/nihoxite");
         public static final TagKey<Block> VITRAGOR_STORAGE_BLOCKS = commonTag("storage_blocks/vitragor");
         public static final TagKey<Block> OBSCUPRUM_STORAGE_BLOCKS = commonTag("storage_blocks/obscuprum");
+
+        public static final TagKey<Block> PLATED_METAL_PILLARS = commonTag(
+                "plated_metal_pillars");
+        public static final TagKey<Block> PLATED_METAL_PILLARS_NO_GLOWING = commonTag(
+                "plated_pillars/no_glowing");
+        public static final TagKey<Block> PLATED_METAL_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing");
+        public static final TagKey<Block> PLATED_FERREBRIS_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing_ferrebris");
+        public static final TagKey<Block> PLATED_IRON_PILLARS_GLOWING = commonTag(
+                "plated_pillars/glowing_iron");
+
         public static final TagKey<Block> DYED_XENON = commonTag("dyed/xenon");
         public static final TagKey<Block> DYED_KRYPTON = commonTag("dyed/krypton");
         public static final TagKey<Block> DYED_ARGON = commonTag("dyed/argon");
         public static final TagKey<Block> DYED_NEON = commonTag("dyed/neon");
         public static final TagKey<Block> BURIED_FUEL_CELLS = commonTag("ores/buried_fuel_cells");
         public static final TagKey<Block> ORES_FERREBRIS = commonTag("ores/ferrebris");
-        public static final TagKey<Block> OBSCUPRUM_ORES = commonTag("ores/obscuprum");
-        public static final TagKey<Block> UMBURAM_ORES = commonTag("ores/umburam");
+        public static final TagKey<Block> ORES_OBSCUPRUM = commonTag("ores/obscuprum");
+        public static final TagKey<Block> ORES_UMBURAM = commonTag("ores/umburam");
         public static final TagKey<Block> NOXUM_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/noxum");
         public static final TagKey<Block> AESTUM_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/aestum");
         public static final TagKey<Block> INETRA_ORE_BEARING_GROUND = commonTag("ore_bearing_ground/inetra");

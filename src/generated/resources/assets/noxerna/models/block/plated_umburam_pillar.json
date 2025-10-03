@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "noxerna:block/plated_umburam_pillar_top",
+    "side": "noxerna:block/plated_umburam_pillar"
+  }
+}

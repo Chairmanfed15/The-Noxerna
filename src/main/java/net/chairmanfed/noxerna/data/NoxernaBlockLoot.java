@@ -181,16 +181,19 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
         dropSelf(NoxernaBlocks.IRON_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_IRON_PILLAR.get());
         dropSelf(NoxernaBlocks.IRON_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.IRON_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.IRON_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.GOLD_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_GOLD_PILLAR.get());
         dropSelf(NoxernaBlocks.GOLD_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.GOLD_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.GOLD_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.NETHERITE_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_NETHERITE_PILLAR.get());
         dropSelf(NoxernaBlocks.NETHERITE_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.NETHERITE_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.NETHERITE_PLATING_WALL.get());
@@ -199,6 +202,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.FERREBRIS_BLOCK.get());
         dropSelf(NoxernaBlocks.FERREBRIS_BARS.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_FERREBRIS_PILLAR.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.FERREBRIS_PLATING_WALL.get());
@@ -206,6 +210,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.RAW_UMBURAM_BLOCK.get());
         dropSelf(NoxernaBlocks.UMBURAM_BLOCK.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_UMBURAM_PILLAR.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.UMBURAM_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.UMBURAM_PLATING_WALL.get());
@@ -216,17 +221,20 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.RAW_INPERLUM_BLOCK.get());
         dropSelf(NoxernaBlocks.INPERLUM_BLOCK.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_INPERLUM_PILLAR.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.INPERLUM_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.INPERLUM_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.NIHOXITE_BLOCK.get());
         dropSelf(NoxernaBlocks.NIHOXITE_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_NIHOXITE_PILLAR.get());
         dropSelf(NoxernaBlocks.NIHOXITE_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.NIHOXITE_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.NIHOXITE_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING.get());
+        dropSelf(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR.get());
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB.get());
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL.get());
@@ -238,6 +246,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK.get());
+        dropSelf(NoxernaBlocks.WAXED_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK.get());
         dropSelf(NoxernaBlocks.WEATHERED_CUT_OBSCUPRUM_BLOCK.get());
@@ -249,12 +258,13 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING.get());
         dropSelf(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING.get());
-        dropSelf(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING.get());
+        dropSelf(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING.get());
 
         dropSelf(NoxernaBlocks.XENON_WOOL.get());
         dropSelf(NoxernaBlocks.KRYPTON_WOOL.get());
         dropSelf(NoxernaBlocks.ARGON_WOOL.get());
         dropSelf(NoxernaBlocks.NEON_WOOL.get());
+        dropSelf(NoxernaBlocks.XENON_CARPET.get());
         dropSelf(NoxernaBlocks.XENON_TERRACOTTA.get());
         dropSelf(NoxernaBlocks.KRYPTON_TERRACOTTA.get());
         dropSelf(NoxernaBlocks.ARGON_TERRACOTTA.get());
@@ -267,6 +277,52 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
         dropSelf(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
+
+        dropSelf(NoxernaBlocks.RADIANT_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.LUMINOUS_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.WHITE_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.GRAY_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.BLACK_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.BROWN_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.RED_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.ORANGE_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.YELLOW_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIME_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.GREEN_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.CYAN_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.BLUE_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.PURPLE_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.MAGENTA_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.PINK_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.XENON_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.KRYPTON_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.ARGON_GLOWING_PLATED_IRON_PILLAR.get());
+        dropSelf(NoxernaBlocks.NEON_GLOWING_PLATED_IRON_PILLAR.get());
+
+        dropSelf(NoxernaBlocks.RADIANT_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.LUMINOUS_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.RED_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIME_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.PINK_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.XENON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.ARGON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
+        dropSelf(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
 
         dropSelf(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL.get());
         dropSelf(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL.get());

@@ -4,13 +4,10 @@ import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.data.providers.NoxernaLanguageProvider;
 import net.chairmanfed.noxerna.effect.NoxernaEffects;
-import net.chairmanfed.noxerna.item.NoxernaCreativeModeTabs;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.item.consumable.NoxernaPotions;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -43,11 +40,35 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addTrimMaterial("oxidised_obscuprum", "Obscuprum (Oxidized)");
         addTrimMaterial("xenon", "Xenon");
         // Mob Effects
+            // Beneficial
+        addEffect(NoxernaEffects.ARMOR_BOOST, "Bolstered Armor");
+        addEffect(NoxernaEffects.FOOD_REGENERATION, "Subsistence");
+            // Negative
         addEffect(NoxernaEffects.ARMOR_REDUCTION, "Broken Armor");
+        addEffect(NoxernaEffects.LEADWEIGHT, "Leadweight");
         addEffect(NoxernaEffects.FROSTBITE, "Frostbite");
         addEffect(NoxernaEffects.FLIGHT_CANCEL, "Grounded");
+        addEffect(NoxernaEffects.STUNNED, "Stunned");
+            // Descriptions
+        addEffectDescription(NoxernaEffects.ARMOR_BOOST.get(),
+                "Increases armor by 20% and armor toughness by 5% per level.");
+        addEffectDescription(NoxernaEffects.FOOD_REGENERATION.get(),
+                "Restores food and saturation over time; higher levels restore food & saturation faster.");
+        addEffectDescription(NoxernaEffects.ARMOR_REDUCTION.get(),
+                "Reduces armor by 20% and armor toughness by 5% per level.");
+        addEffectDescription(NoxernaEffects.LEADWEIGHT.get(),
+                "Causes the affected entity to be more vulnerable to fall damage, and decreases the strength of jumping.");
+        addEffectDescription(NoxernaEffects.FROSTBITE.get(),
+                "Freezes affected entities as if they were in powder snow.");
+        addEffectDescription(NoxernaEffects.FLIGHT_CANCEL.get(),
+                "Prevents Creative-like flight and Elytra gliding.");
+        addEffectDescription(NoxernaEffects.STUNNED.get(),
+                "Prevents most actions for affected entities.");
         // Potions
+        addPotion(NoxernaPotions.BOLSTERED_ARMOR.get(), "Bulking");
         addPotion(NoxernaPotions.BROKEN_ARMOR.get(), "Shattering");
+        addPotion(NoxernaPotions.FROSTBITE.get(), "Frostbite");
+        addPotion(NoxernaPotions.LEADWEIGHT.get(), "Anchoring");
         // Building Blocks
         // Xenon Wood set
         addBlock(NoxernaBlocks.XENON_LOG, "Xenon Log");
@@ -176,16 +197,19 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         // Vanilla Metal Plating
             // Iron
         addBlock(NoxernaBlocks.IRON_PLATING, "Iron Plating");
+        addBlock(NoxernaBlocks.PLATED_IRON_PILLAR, "Plated Iron Pillar");
         addBlock(NoxernaBlocks.IRON_PLATING_STAIRS, "Iron Plating Stairs");
         addBlock(NoxernaBlocks.IRON_PLATING_SLAB, "Iron Plating Slab");
         addBlock(NoxernaBlocks.IRON_PLATING_WALL, "Iron Plating Wall");
             // Gold
         addBlock(NoxernaBlocks.GOLD_PLATING, "Gold Plating");
+        addBlock(NoxernaBlocks.PLATED_GOLD_PILLAR, "Plated Gold Pillar");
         addBlock(NoxernaBlocks.GOLD_PLATING_STAIRS, "Gold Plating Stairs");
         addBlock(NoxernaBlocks.GOLD_PLATING_SLAB, "Gold Plating Slab");
         addBlock(NoxernaBlocks.GOLD_PLATING_WALL, "Gold Plating Wall");
         // Gold
         addBlock(NoxernaBlocks.NETHERITE_PLATING, "Netherite Plating");
+        addBlock(NoxernaBlocks.PLATED_NETHERITE_PILLAR, "Plated Netherite Pillar");
         addBlock(NoxernaBlocks.NETHERITE_PLATING_STAIRS, "Netherite Plating Stairs");
         addBlock(NoxernaBlocks.NETHERITE_PLATING_SLAB, "Netherite Plating Slab");
         addBlock(NoxernaBlocks.NETHERITE_PLATING_WALL, "Netherite Plating Wall");
@@ -195,6 +219,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.FERREBRIS_BARS, "Ferrebris Bars");
             // Plating
         addBlock(NoxernaBlocks.FERREBRIS_PLATING, "Ferrebris Plating");
+        addBlock(NoxernaBlocks.PLATED_FERREBRIS_PILLAR, "Plated Ferrebris Pillar");
         addBlock(NoxernaBlocks.FERREBRIS_PLATING_STAIRS, "Ferrebris Plating Stairs");
         addBlock(NoxernaBlocks.FERREBRIS_PLATING_SLAB, "Ferrebris Plating Slab");
         addBlock(NoxernaBlocks.FERREBRIS_PLATING_WALL, "Ferrebris Plating Wall");
@@ -203,6 +228,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.UMBURAM_BLOCK, "Block of Umburam");
             // Plating
         addBlock(NoxernaBlocks.UMBURAM_PLATING, "Umburam Plating");
+        addBlock(NoxernaBlocks.PLATED_UMBURAM_PILLAR, "Plated Umburam Pillar");
         addBlock(NoxernaBlocks.UMBURAM_PLATING_STAIRS, "Umburam Plating Stairs");
         addBlock(NoxernaBlocks.UMBURAM_PLATING_SLAB, "Umburam Plating Slab");
         addBlock(NoxernaBlocks.UMBURAM_PLATING_WALL, "Umburam Plating Wall");
@@ -215,6 +241,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.INPERLUM_BLOCK, "Block of Inperlum");
             // Plating
         addBlock(NoxernaBlocks.INPERLUM_PLATING, "Inperlum Plating");
+        addBlock(NoxernaBlocks.PLATED_INPERLUM_PILLAR, "Plated Inperlum Pillar");
         addBlock(NoxernaBlocks.INPERLUM_PLATING_STAIRS, "Inperlum Plating Stairs");
         addBlock(NoxernaBlocks.INPERLUM_PLATING_SLAB, "Inperlum Plating Slab");
         addBlock(NoxernaBlocks.INPERLUM_PLATING_WALL, "Inperlum Plating Wall");
@@ -222,12 +249,14 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.NIHOXITE_BLOCK, "Block of Nihoxite");
             // Plating
         addBlock(NoxernaBlocks.NIHOXITE_PLATING, "Nihoxite Plating");
+        addBlock(NoxernaBlocks.PLATED_NIHOXITE_PILLAR, "Plated Nihoxite Pillar");
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_STAIRS, "Nihoxite Plating Stairs");
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_SLAB, "Nihoxite Plating Slab");
         addBlock(NoxernaBlocks.NIHOXITE_PLATING_WALL, "Nihoxite Plating Wall");
         // Mysterious Alloy
             // Plating
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING, "Mysterious Alloy Plating");
+        addBlock(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR, "Plated Mysterious Alloy Pillar");
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, "Mysterious Alloy Plating Stairs");
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, "Mysterious Alloy Plating Slab");
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL, "Mysterious Alloy Plating Wall");
@@ -236,6 +265,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         // Obscuprum Metal set
         addBlock(NoxernaBlocks.RAW_OBSCUPRUM_BLOCK, "Block of Raw Obscuprum");
         addBlock(NoxernaBlocks.OBSCUPRUM_BLOCK, "Block of Obscuprum");
+        addBlock(NoxernaBlocks.WAXED_OBSCUPRUM_BLOCK, "Waxed Block of Obscuprum");
         addBlock(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK, "Exposed Obscuprum");
         addBlock(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK, "Weathered Obscuprum");
         addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK, "Oxidized Obscuprum");
@@ -253,13 +283,15 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.OBSCUPRUM_PLATING, "Obscuprum Plating");
         addBlock(NoxernaBlocks.EXPOSED_OBSCUPRUM_PLATING, "Exposed Obscuprum Plating");
         addBlock(NoxernaBlocks.WEATHERED_OBSCUPRUM_PLATING, "Weathered Obscuprum Plating");
-        addBlock(NoxernaBlocks.OXIDISED_OBSCUPRUM_PLATING, "Oxidized Obscuprum Plating");
+        addBlock(NoxernaBlocks.OXIDIZED_OBSCUPRUM_PLATING, "Oxidized Obscuprum Plating");
         // Colored Blocks
             // Wool
         addBlock(NoxernaBlocks.XENON_WOOL, "Xenon Wool");
         addBlock(NoxernaBlocks.KRYPTON_WOOL, "Krypton Wool");
         addBlock(NoxernaBlocks.ARGON_WOOL, "Argon Wool");
         addBlock(NoxernaBlocks.NEON_WOOL, "Neon Wool");
+            // Carpet
+        addBlock(NoxernaBlocks.XENON_CARPET, "Xenon Carpet");
             // Terracotta
         addBlock(NoxernaBlocks.XENON_TERRACOTTA, "Xenon Terracotta");
         addBlock(NoxernaBlocks.KRYPTON_TERRACOTTA, "Krypton Terracotta");
@@ -275,6 +307,53 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.KRYPTON_CONCRETE_POWDER, "Krypton Concrete Powder");
         addBlock(NoxernaBlocks.ARGON_CONCRETE_POWDER, "Argon Concrete Powder");
         addBlock(NoxernaBlocks.NEON_CONCRETE_POWDER, "Neon Concrete Powder");
+            // Glowing Plated Pillar
+            //Iron
+        addBlock(NoxernaBlocks.RADIANT_PLATED_IRON_PILLAR, "Radiant Plated Iron Pillar");
+        addBlock(NoxernaBlocks.LUMINOUS_PLATED_IRON_PILLAR, "Luminous Plated Iron Pillar");
+        addBlock(NoxernaBlocks.WHITE_GLOWING_PLATED_IRON_PILLAR, "White Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR, "Light Gray Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.GRAY_GLOWING_PLATED_IRON_PILLAR, "Gray Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.BLACK_GLOWING_PLATED_IRON_PILLAR, "Black Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.BROWN_GLOWING_PLATED_IRON_PILLAR, "Brown Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.RED_GLOWING_PLATED_IRON_PILLAR, "Red Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.ORANGE_GLOWING_PLATED_IRON_PILLAR, "Orange Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.YELLOW_GLOWING_PLATED_IRON_PILLAR, "Yellow Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.LIME_GLOWING_PLATED_IRON_PILLAR, "Lime Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.GREEN_GLOWING_PLATED_IRON_PILLAR, "Green Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.CYAN_GLOWING_PLATED_IRON_PILLAR, "Cyan Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR, "Light Blue Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.BLUE_GLOWING_PLATED_IRON_PILLAR, "Blue Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.PURPLE_GLOWING_PLATED_IRON_PILLAR, "Purple Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.MAGENTA_GLOWING_PLATED_IRON_PILLAR, "Magenta Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.PINK_GLOWING_PLATED_IRON_PILLAR, "Pink Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.XENON_GLOWING_PLATED_IRON_PILLAR, "Xenon Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.KRYPTON_GLOWING_PLATED_IRON_PILLAR, "Krypton Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.ARGON_GLOWING_PLATED_IRON_PILLAR, "Argon Glowing Plated Iron Pillar");
+        addBlock(NoxernaBlocks.NEON_GLOWING_PLATED_IRON_PILLAR, "Neon Glowing Plated Iron Pillar");
+            // Ferrebris
+        addBlock(NoxernaBlocks.RADIANT_PLATED_FERREBRIS_PILLAR, "Radiant Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.LUMINOUS_PLATED_FERREBRIS_PILLAR, "Luminous Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR, "White Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR, "Light Gray Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR, "Gray Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR, "Black Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR, "Brown Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.RED_GLOWING_PLATED_FERREBRIS_PILLAR, "Red Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR, "Orange Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR, "Yellow Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.LIME_GLOWING_PLATED_FERREBRIS_PILLAR, "Lime Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR, "Green Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR, "Cyan Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR, "Light Blue Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR, "Blue Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR, "Purple Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR, "Magenta Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.PINK_GLOWING_PLATED_FERREBRIS_PILLAR, "Pink Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.XENON_GLOWING_PLATED_FERREBRIS_PILLAR, "Xenon Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR, "Krypton Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.ARGON_GLOWING_PLATED_FERREBRIS_PILLAR, "Argon Glowing Plated Ferrebris Pillar");
+        addBlock(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR, "Neon Glowing Plated Ferrebris Pillar");
         // Natural Blocks
             // Stones
         addBlock(NoxernaBlocks.SOLTRA_PEBBLE, "Soltra Pebble");
@@ -289,6 +368,12 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.NOXUM_FERREBRIS_ORE, "Noxum Ferrebris Ore");
         addBlock(NoxernaBlocks.AESTUM_FERREBRIS_ORE, "Aestum Ferrebris Ore");
         addBlock(NoxernaBlocks.INETRA_FERREBRIS_ORE, "Inetra Ferrebris Ore");
+        addBlock(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE, "Noxum Obscuprum Ore");
+        addBlock(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE, "Aestum Obscuprum Ore");
+        addBlock(NoxernaBlocks.INETRA_OBSCUPRUM_ORE, "Inetra Obscuprum Ore");
+        addBlock(NoxernaBlocks.NOXUM_UMBURAM_ORE, "Noxum Umburam Ore");
+        addBlock(NoxernaBlocks.AESTUM_UMBURAM_ORE, "Aestum Umburam Ore");
+        addBlock(NoxernaBlocks.INETRA_UMBURAM_ORE, "Inetra Umburam Ore");
         // Mystery Blocks
         addBlock(NoxernaBlocks.NOXERNA_PORTAL, "Noxerna Portal");
         addBlock(NoxernaBlocks.NOXERNA_PORTAL_FRAME, "Mysterious Framework");
@@ -340,6 +425,11 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
                 "Nihoxite Ingot", "Adamuna Equipment");
         addItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE, "Smithing Template");
         add("trim_pattern.noxerna.exotic", "Exotic Armor Trim");
+        // Food
+        // Raw
+        addItem(NoxernaItems.XENON_NOBLEPHYTE, "Xenon Noblephyte");
+        // Cooked
+        // Meals
         // Tools
         // Tiered
         addItem(NoxernaItems.NOBLEWOOD_AXE, "Noblewood Axe");
@@ -420,8 +510,30 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
             // Material Storage Blocks
         add(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS, "Ferrebris Storage Blocks");
             // Dyed Blocks
+        add(NoxernaTags.BlockTags.DYED_XENON, "Xenon Dyed Blocks");
+        add(NoxernaTags.BlockTags.DYED_KRYPTON, "Krypton Dyed Blocks");
         add(NoxernaTags.BlockTags.DYED_ARGON, "Argon Dyed Blocks");
+        add(NoxernaTags.BlockTags.DYED_NEON, "Neon Dyed Blocks");
+            // Dyeable BLocks
+        add(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_GLOWING, "Glowing Plated Metal Pillars");
+        add(NoxernaTags.BlockTags.PLATED_IRON_PILLARS_GLOWING, "Glowing Plated Iron Pillars");
+        add(NoxernaTags.BlockTags.PLATED_FERREBRIS_PILLARS_GLOWING, "Glowing Plated Ferrebris Pillars");
+            // Building Blocks
+        add(NoxernaTags.BlockTags.PLATED_METAL_PILLARS, "Plated Metal Pillars");
+        add(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_NO_GLOWING, "Non-Glowing Plated Metal Pillars");
         // Noxerna Tags
+            // Tool Logic
+        add(NoxernaTags.BlockTags.MINEABLE_WITH_PICKADZE, "Mineable With Pickadze");
+            // Incorrect Tiers
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_NOBLEWOOD_TOOL, "Noblewood Tools Cannot Mine");
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_NOXSTONE_TOOL, "Noxstone Tools Cannot Mine");
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_UMBURAM_TOOL, "Umburam Tools Cannot Mine");
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_FERREBRIS_TOOL, "Ferrebris Tools Cannot Mine");
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_ADAMUNA_TOOL, "Adamuna Tools Cannot Mine");
+        add(NoxernaTags.BlockTags.INCORRECT_FOR_NIHOXITE_TOOL, "Nihoxite Tools Cannot Mine");
+            // Correct Tiers
+        add(NoxernaTags.BlockTags.NEEDS_ADAMUNA_TOOL, "Mined With Adamuna Tool");
+            // Groupings
         add(NoxernaTags.BlockTags.BOSS_IMMUNE, "Bosses Cannot Destroy");
         add(NoxernaTags.BlockTags.INFINIBURN_NOXERNA, "Burns Forever in Noxerna");
         add(NoxernaTags.BlockTags.PEBBLES, "Pebbles");
@@ -460,8 +572,26 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         // Noxerna Tags
             // Block set groups
         add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, "Noblewood Planks");
-        add(NoxernaTags.ItemTags.BLOCKSET_NOXUM, "Any Noxum Stone");
-        add(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, "Any Ferrebris Plating");
+        add(NoxernaTags.ItemTags.BLOCKSET_SOLTRA, "Soltra Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_NOXUM, "Noxum Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_AESTUM, "Aestum Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_INETRA, "Inetra Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_IRON_PLATING, "Iron Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_GOLD_PLATING, "Gold Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_NETHERITE_PLATING, "Netherite Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_UNAFFECTED_COPPER_PLATING, "Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_EXPOSED_COPPER_PLATING, "Exposed Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_WEATHERED_COPPER_PLATING, "Weathered Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_OXIDIZED_COPPER_PLATING, "Oxidized Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_UNAFFECTED_WAXED_COPPER_PLATING, "Waxed Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_EXPOSED_WAXED_COPPER_PLATING, "Waxed Exposed Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_WEATHERED_WAXED_COPPER_PLATING, "Waxed Weathered Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_OXIDIZED_WAXED_COPPER_PLATING, "Waxed Oxidized Copper Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_FERREBRIS_PLATING, "Ferrebris Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_UMBURAM_PLATING, "Umburam Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_INPERLUM_PLATING, "Inperlum Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_NIHOXITE_PLATING, "Nihoxite Plating Blockset");
+        add(NoxernaTags.ItemTags.BLOCKSET_MYSTERIOUS_ALLOY_PLATING, "Mysterious Alloy Plating Blockset");
         add(NoxernaTags.ItemTags.PEBBLES, "Pebbles");
         add(NoxernaTags.ItemTags.XENON_LOGS, "Xenon Logs");
         add(NoxernaTags.ItemTags.KRYPTON_LOGS, "Krypton Logs");
@@ -478,7 +608,8 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         add(NoxernaTags.ItemTags.UMBURAM_TOOL_MATERIALS, "Umburam Tool Materials");
         add(NoxernaTags.ItemTags.ADAMUNA_TOOL_MATERIALS, "Adamuna Tool Materials");
         add(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS, "Nihoxite Tool Materials");
-        add(NoxernaTags.ItemTags.RECYCLABLE_LOOT, "Recyclable Loot Items");
+        add(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY, "Recycles into Mysterious Alloy With Loss");
+        add(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS, "Recycles into Mysterious Alloy Without Loss");
             // Material Groups
         add(NoxernaTags.ItemTags.ANY_IRON_INGOT, "Any Iron-like Ingot");
         add(NoxernaTags.ItemTags.ANY_DIAMOND_GEM, "Any Diamond-like Gem");

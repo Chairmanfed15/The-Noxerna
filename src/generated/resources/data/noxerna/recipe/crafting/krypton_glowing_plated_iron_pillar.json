@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glowing_plated_pillars",
+  "key": {
+    "#": {
+      "tag": "noxerna:plated_pillar_lights"
+    },
+    "C": {
+      "tag": "c:dyes/krypton"
+    },
+    "P": {
+      "item": "noxerna:plated_iron_pillar"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "P#P",
+    "PCP"
+  ],
+  "result": {
+    "count": 6,
+    "id": "noxerna:krypton_glowing_plated_iron_pillar"
+  }
+}

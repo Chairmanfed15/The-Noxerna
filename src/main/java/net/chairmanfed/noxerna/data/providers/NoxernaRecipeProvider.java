@@ -1,8 +1,11 @@
 package net.chairmanfed.noxerna.data.providers;
 
+import com.google.common.collect.ImmutableList;
+import com.mojang.serialization.Codec;
 import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -13,7 +16,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.Tags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 
@@ -96,6 +101,37 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .pattern("##")
                 .define('#', input)
                 .unlockedBy("has_" + input, has(input));
+    }
+    public ShapedRecipeBuilder makePlatedMetalPillar(ItemLike platingSlab, TagKey<Item> nugget, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
+                .pattern("SNS")
+                .pattern("SNS")
+                .pattern("SNS")
+                .define('S', platingSlab)
+                .define('N', nugget)
+                .unlockedBy("has_" + platingSlab.asItem(), has(platingSlab));
+    }
+    public ShapedRecipeBuilder makeGlowingPlatedPillar(ItemLike pillar, TagKey<Item> colour, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
+                .pattern("PCP")
+                .pattern("P#P")
+                .pattern("PCP")
+                .define('#', NoxernaTags.ItemTags.PLATED_PILLAR_LIGHTS)
+                .define('P', pillar)
+                .define('C', colour)
+                .unlockedBy("has_" + colour, has(colour))
+                .unlockedBy("has_" + pillar.asItem(), has(pillar));
+    }
+    public ShapedRecipeBuilder makeGlowingPlatedPillar(ItemLike pillar, ItemLike colour, ItemLike result) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result, 6)
+                .pattern("PCP")
+                .pattern("P#P")
+                .pattern("PCP")
+                .define('#', NoxernaTags.ItemTags.PLATED_PILLAR_LIGHTS)
+                .define('P', pillar)
+                .define('C', colour)
+                .unlockedBy("has_" + colour.asItem(), has(colour))
+                .unlockedBy("has_" + pillar.asItem(), has(pillar));
     }
     public ShapedRecipeBuilder villagerWorkStation(Item input, Item result) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)

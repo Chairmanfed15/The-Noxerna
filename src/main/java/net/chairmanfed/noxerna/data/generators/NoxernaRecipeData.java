@@ -371,18 +371,48 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
         makeSlabIntoBlock(NoxernaItems.IRON_PLATING_SLAB.get(), NoxernaItems.IRON_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/iron_plating_from_slab"));
+        makePlatedMetalPillar(
+                NoxernaItems.IRON_PLATING_SLAB,
+                Tags.Items.NUGGETS_IRON,
+                NoxernaItems.PLATED_IRON_PILLAR)
+                .group("plated_pillars")
+                .save(output, name("crafting/plated_iron_pillar"));
+        makePlatedMetalPillar(
+                NoxernaItems.GOLD_PLATING_SLAB,
+                Tags.Items.NUGGETS_GOLD,
+                NoxernaItems.PLATED_GOLD_PILLAR)
+                .group("plated_pillars")
+                .save(output, name("crafting/plated_gold_pillar"));
         makeSlabIntoBlock(NoxernaItems.FERREBRIS_PLATING_SLAB.get(), NoxernaItems.FERREBRIS_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/ferrebris_plating_from_slab"));
+        makePlatedMetalPillar(
+                NoxernaItems.FERREBRIS_PLATING_SLAB,
+                NoxernaTags.ItemTags.FERREBRIS_NUGGETS,
+                NoxernaItems.PLATED_FERREBRIS_PILLAR)
+                .group("plated_pillars")
+                .save(output, name("crafting/plated_ferrebris_pillar"));
         makeSlabIntoBlock(NoxernaItems.UMBURAM_PLATING_SLAB.get(), NoxernaItems.UMBURAM_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/umburam_plating_from_slab"));
+        makePlatedMetalPillar(
+                NoxernaItems.UMBURAM_PLATING_SLAB,
+                NoxernaTags.ItemTags.UMBURAM_NUGGETS,
+                NoxernaItems.PLATED_UMBURAM_PILLAR)
+                .group("plated_pillars")
+                .save(output, name("crafting/plated_umburam_pillar"));
         makeSlabIntoBlock(NoxernaItems.INPERLUM_PLATING_SLAB.get(), NoxernaItems.INPERLUM_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/inperlum_plating_from_slab"));
         makeSlabIntoBlock(NoxernaItems.NIHOXITE_PLATING_SLAB.get(), NoxernaItems.NIHOXITE_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/nihoxite_plating_from_slab"));
+        makePlatedMetalPillar(
+                NoxernaItems.NIHOXITE_PLATING_SLAB,
+                NoxernaTags.ItemTags.NIHOXITE_NUGGETS,
+                NoxernaItems.PLATED_NIHOXITE_PILLAR)
+                .group("plated_pillars")
+                .save(output, name("crafting/plated_nihoxite_pillar"));
         packing2x2(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES, NoxernaItems.MYSTERIOUS_ALLOY_PLATING.get(), 4)
                 .group("plating")
                 .save(output, name("crafting/mysterious_alloy_plating"));
@@ -434,6 +464,274 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
         packing2x2(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, Items.CRAFTING_TABLE)
                 .group("crafting_tables")
                 .save(output, name("crafting/noblewood_crafting_table"));
+
+        // Coloured Blocks
+            // Glowing Plated Iron Pillars
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DUSTS_GLOWSTONE,
+                NoxernaItems.RADIANT_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/radiant_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                NoxernaItems.LUMAI_FUEL_CELL,
+                NoxernaItems.LUMINOUS_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/luminous_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_WHITE,
+                NoxernaItems.WHITE_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/white_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_LIGHT_GRAY,
+                NoxernaItems.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/light_gray_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_GRAY,
+                NoxernaItems.GRAY_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/gray_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_BLACK,
+                NoxernaItems.BLACK_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/black_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_BROWN,
+                NoxernaItems.BROWN_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/brown_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_RED,
+                NoxernaItems.RED_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/red_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_ORANGE,
+                NoxernaItems.ORANGE_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/orange_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_YELLOW,
+                NoxernaItems.YELLOW_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/yellow_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_LIME,
+                NoxernaItems.LIME_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/lime_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_GREEN,
+                NoxernaItems.GREEN_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/green_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_CYAN,
+                NoxernaItems.CYAN_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/cyan_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_LIGHT_BLUE,
+                NoxernaItems.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/light_blue_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_BLUE,
+                NoxernaItems.BLUE_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/blue_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_PURPLE,
+                NoxernaItems.PURPLE_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/purple_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_MAGENTA,
+                NoxernaItems.MAGENTA_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/magenta_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                Tags.Items.DYES_PINK,
+                NoxernaItems.PINK_GLOWING_PLATED_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/pink_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                NoxernaTags.ItemTags.XENON_DYES,
+                NoxernaItems.XENON_GLOWING_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/xenon_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                NoxernaTags.ItemTags.KRYPTON_DYES,
+                NoxernaItems.KRYPTON_GLOWING_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/krypton_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                NoxernaTags.ItemTags.ARGON_DYES,
+                NoxernaItems.ARGON_GLOWING_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/argon_glowing_plated_iron_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_IRON_PILLAR,
+                NoxernaTags.ItemTags.NEON_DYES,
+                NoxernaItems.NEON_GLOWING_IRON_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/neon_glowing_plated_iron_pillar"));
+            // Glowing Plated Ferrebris Pillars
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DUSTS_GLOWSTONE,
+                NoxernaItems.RADIANT_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/radiant_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                NoxernaItems.LUMAI_FUEL_CELL,
+                NoxernaItems.LUMINOUS_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/luminous_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_WHITE,
+                NoxernaItems.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/white_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_LIGHT_GRAY,
+                NoxernaItems.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/light_gray_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_GRAY,
+                NoxernaItems.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/gray_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_BLACK,
+                NoxernaItems.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/black_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_BROWN,
+                NoxernaItems.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/brown_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_RED,
+                NoxernaItems.RED_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/red_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_ORANGE,
+                NoxernaItems.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/orange_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_YELLOW,
+                NoxernaItems.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/yellow_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_LIME,
+                NoxernaItems.LIME_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/lime_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_GREEN,
+                NoxernaItems.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/green_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_CYAN,
+                NoxernaItems.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/cyan_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_LIGHT_BLUE,
+                NoxernaItems.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/light_blue_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_BLUE,
+                NoxernaItems.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/blue_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_PURPLE,
+                NoxernaItems.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/purple_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_MAGENTA,
+                NoxernaItems.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/magenta_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                Tags.Items.DYES_PINK,
+                NoxernaItems.PINK_GLOWING_PLATED_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/pink_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                NoxernaTags.ItemTags.XENON_DYES,
+                NoxernaItems.XENON_GLOWING_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/xenon_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                NoxernaTags.ItemTags.KRYPTON_DYES,
+                NoxernaItems.KRYPTON_GLOWING_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/krypton_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                NoxernaTags.ItemTags.ARGON_DYES,
+                NoxernaItems.ARGON_GLOWING_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/argon_glowing_plated_ferrebris_pillar"));
+        makeGlowingPlatedPillar(
+                NoxernaItems.PLATED_FERREBRIS_PILLAR,
+                NoxernaTags.ItemTags.NEON_DYES,
+                NoxernaItems.NEON_GLOWING_FERREBRIS_PILLAR)
+                .group("glowing_plated_pillars")
+                .save(output, name("crafting/neon_glowing_plated_ferrebris_pillar"));
 
         // Ingredient Recipes
         // Crafting
@@ -505,14 +803,18 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
                 0.7f, 200)
                 .group("ferrebris_ingot")
                 .save(output, name("smelting/ferrebris_ingot_from_raw"));
+        smelting(NoxernaTags.ItemTags.OBSCUPRUM_ORES, NoxernaItems.OBSCUPRUM_INGOT.get(),
+                0.7f, 200)
+                .group("obscuprum_ingot")
+                .save(output, name("smelting/obscuprum_ingot_from_ore"));
         smelting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
                 0.7f, 200)
                 .group("obscuprum_ingot")
-                .save(output, name("smelting/obscuprum_ingot"));
+                .save(output, name("smelting/obscuprum_ingot_from_raw"));
         smelting(NoxernaTags.ItemTags.RAW_UMBURAM_MATERIALS, NoxernaItems.UMBURAM_INGOT.get(),
                 0.7f, 200)
                 .group("umburam_ingot")
-                .save(output, name("smelting/umburam_ingot"));
+                .save(output, name("smelting/umburam_ingot_from_raw"));
         // Blasting
         blasting(NoxernaTags.ItemTags.FERREBRIS_ORES, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 100)
@@ -525,15 +827,19 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
         blasting(NoxernaTags.ItemTags.RAW_OBSCUPRUM_MATERIALS, NoxernaItems.OBSCUPRUM_INGOT.get(),
                 0.7f, 100)
                 .group("obscuprum_ingot")
-                .save(output, name("blasting/obscuprum_ingot"));
+                .save(output, name("blasting/obscuprum_ingot_from_raw"));
         blasting(NoxernaTags.ItemTags.RAW_UMBURAM_MATERIALS, NoxernaItems.UMBURAM_INGOT.get(),
                 0.7f, 100)
                 .group("umburam_ingot")
-                .save(output, name("blasting/umburam_ingot"));
-        blasting(NoxernaTags.ItemTags.RECYCLABLE_LOOT, NoxernaItems.MYSTERIOUS_SCRAP.get(),
+                .save(output, name("blasting/umburam_ingot_from_raw"));
+        blasting(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY, NoxernaItems.MYSTERIOUS_SCRAP.get(),
                 0.0f, 200)
                 .group("mysterious_scrap")
-                .save(output, name("blasting/mysterious_scrap_from_loot"));
+                .save(output, name("blasting/lossy_mysterious_scrap"));
+        blasting(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS, NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get(),
+                0.0f, 200)
+                .group("mysterious_scrap")
+                .save(output, name("blasting/lossless_mysterious_scrap"));
         // Cutting
         stonecutting(NoxernaTags.ItemTags.TENERYL_GEMS, NoxernaItems.CUT_TENERYL)
                 .save(output, name("stonecutting/cut_teneryl"));

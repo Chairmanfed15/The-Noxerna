@@ -98,16 +98,19 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 // Vanilla
                     // Iron
                 .add(NoxernaBlocks.IRON_PLATING.get())
+                .add(NoxernaBlocks.PLATED_IRON_PILLAR.get())
                 .add(NoxernaBlocks.IRON_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.IRON_PLATING_SLAB.get())
                 .add(NoxernaBlocks.IRON_PLATING_WALL.get())
                     // Gold
                 .add(NoxernaBlocks.GOLD_PLATING.get())
+                .add(NoxernaBlocks.PLATED_GOLD_PILLAR.get())
                 .add(NoxernaBlocks.GOLD_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.GOLD_PLATING_SLAB.get())
                 .add(NoxernaBlocks.GOLD_PLATING_WALL.get())
                     // Netherite
                 .add(NoxernaBlocks.NETHERITE_PLATING.get())
+                .add(NoxernaBlocks.PLATED_NETHERITE_PILLAR.get())
                 .add(NoxernaBlocks.NETHERITE_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.NETHERITE_PLATING_SLAB.get())
                 .add(NoxernaBlocks.NETHERITE_PLATING_WALL.get())
@@ -116,32 +119,48 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get())
                 .add(NoxernaBlocks.FERREBRIS_BARS.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING.get())
+                .add(NoxernaBlocks.PLATED_FERREBRIS_PILLAR.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_SLAB.get())
                 .add(NoxernaBlocks.FERREBRIS_PLATING_WALL.get())
+                    // Umburam
                 .add(NoxernaBlocks.UMBURAM_BLOCK.get())
                 .add(NoxernaBlocks.UMBURAM_PLATING.get())
+                .add(NoxernaBlocks.PLATED_UMBURAM_PILLAR.get())
                 .add(NoxernaBlocks.UMBURAM_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.UMBURAM_PLATING_SLAB.get())
                 .add(NoxernaBlocks.UMBURAM_PLATING_WALL.get())
+                    // Inperlum
                 .add(NoxernaBlocks.INPERLUM_BLOCK.get())
                 .add(NoxernaBlocks.INPERLUM_PLATING.get())
+                .add(NoxernaBlocks.PLATED_INPERLUM_PILLAR.get())
                 .add(NoxernaBlocks.INPERLUM_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.INPERLUM_PLATING_SLAB.get())
                 .add(NoxernaBlocks.INPERLUM_PLATING_WALL.get())
+                    // Nihoxite
                 .add(NoxernaBlocks.NIHOXITE_BLOCK.get())
                 .add(NoxernaBlocks.NIHOXITE_PLATING.get())
+                .add(NoxernaBlocks.PLATED_NIHOXITE_PILLAR.get())
                 .add(NoxernaBlocks.NIHOXITE_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.NIHOXITE_PLATING_SLAB.get())
                 .add(NoxernaBlocks.NIHOXITE_PLATING_WALL.get())
+                    // Mysterious Alloy
                 .add(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING.get())
+                .add(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR.get())
                 .add(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS.get())
                 .add(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB.get())
                 .add(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_WALL.get())
+                    // Obscuprum
+                .add(NoxernaBlocks.OBSCUPRUM_BLOCK.get())
+                .add(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK.get())
+                .add(NoxernaBlocks.OBSCUPRUM_BRICKS.get())
+                .add(NoxernaBlocks.OBSCUPRUM_PLATING.get())
+                // Coloured Blocks
                 .add(NoxernaBlocks.XENON_CONCRETE.get())
                 .add(NoxernaBlocks.KRYPTON_CONCRETE.get())
                 .add(NoxernaBlocks.ARGON_CONCRETE.get())
-                .add(NoxernaBlocks.NEON_CONCRETE.get());
+                .add(NoxernaBlocks.NEON_CONCRETE.get())
+                .addTag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_GLOWING);
             // Required Tool Tier
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(NoxernaBlocks.FERREBRIS_BLOCK.get())
@@ -178,16 +197,23 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         // Logic
             // Entity Interaction
         tag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS)
-                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
+                .add(NoxernaBlocks.VOIDROCK.get())
+                .add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.DRAGON_IMMUNE)
-                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
+                .add(NoxernaBlocks.VOIDROCK.get())
+                .add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.WITHER_IMMUNE)
-                .add(NoxernaBlocks.VOIDROCK.get()).add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
+                .add(NoxernaBlocks.VOIDROCK.get())
+                .add(NoxernaBlocks.NOXERNA_PORTAL_FRAME.get());
         tag(BlockTags.PORTALS)
                 .add(NoxernaBlocks.NOXERNA_PORTAL.get());
             // MultiBlock Formation
         tag(BlockTags.BEACON_BASE_BLOCKS)
-                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS).addTag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS);
+                .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.UMBURAM_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.ADAMUNA_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.INPERLUM_STORAGE_BLOCKS)
+                .addTag(NoxernaTags.BlockTags.NIHOXITE_STORAGE_BLOCKS);
             // Block Replacement
         tag(BlockTags.SCULK_REPLACEABLE)
                 .addTag(NoxernaTags.BlockTags.BASE_STONE_NOXERNA);
@@ -296,20 +322,36 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(BlockTags.WOODEN_BUTTONS)
                 .add(NoxernaBlocks.XENON_BUTTON.get()).add(NoxernaBlocks.KRYPTON_BUTTON.get())
                 .add(NoxernaBlocks.ARGON_BUTTON.get()).add(NoxernaBlocks.NEON_BUTTON.get());
-        // Dye able Blocks
+        // Coloured Blocks
+        tag(BlockTags.WOOL)
+                .add(NoxernaBlocks.XENON_WOOL.get())
+                .add(NoxernaBlocks.KRYPTON_WOOL.get())
+                .add(NoxernaBlocks.ARGON_WOOL.get())
+                .add(NoxernaBlocks.NEON_WOOL.get());
+        tag(BlockTags.TERRACOTTA)
+                .add(NoxernaBlocks.XENON_TERRACOTTA.get())
+                .add(NoxernaBlocks.KRYPTON_TERRACOTTA.get())
+                .add(NoxernaBlocks.ARGON_TERRACOTTA.get())
+                .add(NoxernaBlocks.NEON_TERRACOTTA.get());
         tag(BlockTags.CONCRETE_POWDER)
-                .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+                .add(NoxernaBlocks.XENON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
         // Common Tags
         // Ores
         tag(Tags.Blocks.ORES)
                 .addTag(NoxernaTags.BlockTags.BURIED_FUEL_CELLS)
-                .addTag(NoxernaTags.BlockTags.ORES_FERREBRIS);
+                .addTag(NoxernaTags.BlockTags.ORES_FERREBRIS)
+                .addTag(NoxernaTags.BlockTags.ORES_OBSCUPRUM);
         tag(NoxernaTags.BlockTags.BURIED_FUEL_CELLS)
                 .add(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL.get())
                 .add(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL.get())
                 .add(NoxernaBlocks.INETRA_BURIED_FUEL_CELL.get());
         tag(NoxernaTags.BlockTags.ORES_FERREBRIS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_ORES);
+        tag(NoxernaTags.BlockTags.ORES_OBSCUPRUM)
+                .addTag(NoxernaTags.BlockTags.OBSCUPRUM_ORES);
         // Material Storage Blocks
         tag(Tags.Blocks.STORAGE_BLOCKS)
                 .addTag(NoxernaTags.BlockTags.FERREBRIS_STORAGE_BLOCKS)
@@ -338,20 +380,106 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.OBSCUPRUM_BLOCK.get());
         // Dyed Blocks
         tag(Tags.Blocks.CONCRETES)
-                .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE.get())
-                .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE.get());
+                .add(NoxernaBlocks.XENON_CONCRETE.get())
+                .add(NoxernaBlocks.KRYPTON_CONCRETE.get())
+                .add(NoxernaBlocks.ARGON_CONCRETE.get())
+                .add(NoxernaBlocks.NEON_CONCRETE.get());
+        tag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS)
+                .addTag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_NO_GLOWING)
+                .addTag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_GLOWING);
+        tag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_NO_GLOWING)
+                .add(NoxernaBlocks.PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_GOLD_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_NETHERITE_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_UMBURAM_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_INPERLUM_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_NIHOXITE_PILLAR.get())
+                .add(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR.get());
+        tag(NoxernaTags.BlockTags.PLATED_METAL_PILLARS_GLOWING)
+                .addTag(NoxernaTags.BlockTags.PLATED_IRON_PILLARS_GLOWING)
+                .addTag(NoxernaTags.BlockTags.PLATED_FERREBRIS_PILLARS_GLOWING);
+        tag(NoxernaTags.BlockTags.PLATED_IRON_PILLARS_GLOWING)
+                .add(NoxernaBlocks.RADIANT_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.LUMINOUS_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.WHITE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.GRAY_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.BLACK_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.BROWN_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.RED_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.ORANGE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.YELLOW_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.LIME_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.GREEN_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.CYAN_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.BLUE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.PURPLE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.MAGENTA_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.PINK_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.XENON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.KRYPTON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.ARGON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.NEON_GLOWING_PLATED_IRON_PILLAR.get());
+        tag(NoxernaTags.BlockTags.PLATED_FERREBRIS_PILLARS_GLOWING)
+                .add(NoxernaBlocks.RADIANT_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.LUMINOUS_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.LIGHT_GRAY_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.GRAY_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.BLACK_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.BROWN_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.RED_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.ORANGE_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.YELLOW_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.LIME_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.GREEN_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.CYAN_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.LIGHT_BLUE_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.BLUE_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.PURPLE_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.MAGENTA_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.PINK_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.XENON_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.ARGON_GLOWING_PLATED_FERREBRIS_PILLAR.get())
+                .add(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         // Dyed <Colour> Blocks
         tag(Tags.Blocks.DYED)
                 .addTag(NoxernaTags.BlockTags.DYED_XENON).addTag(NoxernaTags.BlockTags.DYED_KRYPTON)
                 .addTag(NoxernaTags.BlockTags.DYED_ARGON).addTag(NoxernaTags.BlockTags.DYED_NEON);
+        tag(Tags.Blocks.DYED_WHITE)
+                .add(NoxernaBlocks.WHITE_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.WHITE_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         tag(NoxernaTags.BlockTags.DYED_XENON)
-                .add(NoxernaBlocks.XENON_CONCRETE.get()).add(NoxernaBlocks.XENON_CONCRETE_POWDER.get());
+                .add(NoxernaBlocks.XENON_CONCRETE.get())
+                .add(NoxernaBlocks.XENON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.XENON_TERRACOTTA.get())
+                .add(NoxernaBlocks.XENON_WOOL.get())
+                .add(NoxernaBlocks.XENON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.XENON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         tag(NoxernaTags.BlockTags.DYED_KRYPTON)
-                .add(NoxernaBlocks.KRYPTON_CONCRETE.get()).add(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get());
+                .add(NoxernaBlocks.KRYPTON_CONCRETE.get())
+                .add(NoxernaBlocks.KRYPTON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.KRYPTON_TERRACOTTA.get())
+                .add(NoxernaBlocks.KRYPTON_WOOL.get())
+                .add(NoxernaBlocks.KRYPTON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.KRYPTON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         tag(NoxernaTags.BlockTags.DYED_ARGON)
-                .add(NoxernaBlocks.ARGON_CONCRETE.get()).add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get());
+                .add(NoxernaBlocks.ARGON_CONCRETE.get())
+                .add(NoxernaBlocks.ARGON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.ARGON_TERRACOTTA.get())
+                .add(NoxernaBlocks.ARGON_WOOL.get())
+                .add(NoxernaBlocks.ARGON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.ARGON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         tag(NoxernaTags.BlockTags.DYED_NEON)
-                .add(NoxernaBlocks.NEON_CONCRETE.get()).add(NoxernaBlocks.NEON_CONCRETE_POWDER.get());
+                .add(NoxernaBlocks.NEON_CONCRETE.get())
+                .add(NoxernaBlocks.NEON_CONCRETE_POWDER.get())
+                .add(NoxernaBlocks.NEON_TERRACOTTA.get())
+                .add(NoxernaBlocks.NEON_WOOL.get())
+                .add(NoxernaBlocks.NEON_GLOWING_PLATED_IRON_PILLAR.get())
+                .add(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR.get());
         // Noxerna Tags
         // Logic
             // Entity Interaction
@@ -396,6 +524,10 @@ public class NoxernaBlockTags extends BlockTagsProvider {
                 .add(NoxernaBlocks.NOXUM_FERREBRIS_ORE.get())
                 .add(NoxernaBlocks.AESTUM_FERREBRIS_ORE.get())
                 .add(NoxernaBlocks.INETRA_FERREBRIS_ORE.get());
+        tag(NoxernaTags.BlockTags.OBSCUPRUM_ORES)
+                .add(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE.get())
+                .add(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE.get())
+                .add(NoxernaBlocks.INETRA_OBSCUPRUM_ORE.get());
         // Block Variations
         tag(NoxernaTags.BlockTags.PEBBLES)
                 .add(NoxernaBlocks.SOLTRA_PEBBLE.get()).add(NoxernaBlocks.NOXUM_PEBBLE.get())

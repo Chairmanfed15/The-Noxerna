@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "noxerna:block/plated_mysterious_alloy_pillar_top",
+    "side": "noxerna:block/plated_mysterious_alloy_pillar"
+  }
+}
