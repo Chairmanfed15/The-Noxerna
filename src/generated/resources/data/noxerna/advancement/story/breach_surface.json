@@ -26,7 +26,7 @@
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "minecraft:campfire"
+      "id": "noxerna:soltra"
     },
     "title": {
       "translate": "advancement.noxerna.breach_surface.title"

@@ -54,10 +54,10 @@ public class NoxernaBlocks {
                     BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> XENON_PRESSURE_PLATE = BLOCKS.register(
             "xenon_pressure_plate", () -> new PressurePlateBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET,
-                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get()).noCollission()));
     public static final DeferredBlock<Block> XENON_BUTTON = BLOCKS.register(
             "xenon_button", () -> new ButtonBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET, 30,
-                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get()).noCollission()));
 
     // Krypton Wood set
     public static final DeferredBlock<Block> KRYPTON_LOG = BLOCKS.register(
@@ -96,10 +96,10 @@ public class NoxernaBlocks {
                     BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> KRYPTON_PRESSURE_PLATE = BLOCKS.register(
             "krypton_pressure_plate", () -> new PressurePlateBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET,
-                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(XENON_PLANKS.get()).noCollission()));
     public static final DeferredBlock<Block> KRYPTON_BUTTON = BLOCKS.register(
             "krypton_button", () -> new ButtonBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET, 30,
-                    BlockBehaviour.Properties.ofFullCopy(KRYPTON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(KRYPTON_PLANKS.get()).noCollission()));
 
     // Argon Wood set
     public static final DeferredBlock<Block> ARGON_LOG = BLOCKS.register(
@@ -138,10 +138,10 @@ public class NoxernaBlocks {
                     BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> ARGON_PRESSURE_PLATE = BLOCKS.register(
             "argon_pressure_plate", () -> new PressurePlateBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET,
-                    BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get()).noCollission()));
     public static final DeferredBlock<Block> ARGON_BUTTON = BLOCKS.register(
             "argon_button", () -> new ButtonBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET, 30,
-                    BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(ARGON_PLANKS.get()).noCollission()));
 
     // Neon Wood set
     public static final DeferredBlock<Block> NEON_LOG = BLOCKS.register(
@@ -180,10 +180,10 @@ public class NoxernaBlocks {
                     BlockBehaviour.Properties.ofFullCopy(NEON_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> NEON_PRESSURE_PLATE = BLOCKS.register(
             "neon_pressure_plate", () -> new PressurePlateBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET,
-                    BlockBehaviour.Properties.ofFullCopy(NEON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(NEON_PLANKS.get()).noCollission()));
     public static final DeferredBlock<Block> NEON_BUTTON = BLOCKS.register(
             "neon_button", () -> new ButtonBlock(NoxernaBlockSetTypes.NOBLEWOOD_SET, 30,
-                    BlockBehaviour.Properties.ofFullCopy(NEON_PLANKS.get())));
+                    BlockBehaviour.Properties.ofFullCopy(NEON_PLANKS.get()).noCollission()));
 
     // Soltra Stone set
     public static final DeferredBlock<Block> SOLTRA = BLOCKS.register(
@@ -200,11 +200,11 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> SOLTRA_PRESSURE_PLATE = BLOCKS.register(
             "soltra_pressure_plate", () ->
                     new PressurePlateBlock(NoxernaBlockSetTypes.NOXUM_SET,
-                            BlockBehaviour.Properties.ofFullCopy(SOLTRA.get())));
+                            BlockBehaviour.Properties.ofFullCopy(SOLTRA.get()).noCollission()));
     public static final DeferredBlock<Block> SOLTRA_BUTTON = BLOCKS.register(
             "soltra_button", () ->
                     new ButtonBlock(NoxernaBlockSetTypes.NOXUM_SET, 20,
-                            BlockBehaviour.Properties.ofFullCopy(SOLTRA.get())));
+                            BlockBehaviour.Properties.ofFullCopy(SOLTRA.get()).noCollission()));
     public static final DeferredBlock<Block> POLISHED_SOLTRA = BLOCKS.register(
             "polished_soltra", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(7.5f).explosionResistance(9.0f)
@@ -248,11 +248,11 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NOXUM_PRESSURE_PLATE = BLOCKS.register(
             "noxum_pressure_plate", () ->
                     new PressurePlateBlock(NoxernaBlockSetTypes.NOXUM_SET,
-                            BlockBehaviour.Properties.ofFullCopy(NOXUM.get())));
+                            BlockBehaviour.Properties.ofFullCopy(NOXUM.get()).noCollission()));
     public static final DeferredBlock<Block> NOXUM_BUTTON = BLOCKS.register(
             "noxum_button", () ->
                     new ButtonBlock(NoxernaBlockSetTypes.NOXUM_SET, 20,
-                            BlockBehaviour.Properties.ofFullCopy(NOXUM.get())));
+                            BlockBehaviour.Properties.ofFullCopy(NOXUM.get()).noCollission()));
     public static final DeferredBlock<Block> POLISHED_NOXUM = BLOCKS.register(
             "polished_noxum", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(4.5f).explosionResistance(6.0f)
@@ -279,8 +279,9 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NOXUM_BRICK_WALL = BLOCKS.register(
             "noxum_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM_BRICKS.get())));
     public static final DeferredBlock<Block> NOXUM_PEBBLE = BLOCKS.register("noxum_pebble", () ->
-            new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(NOXUM.get())
-                    .noOcclusion().pushReaction(PushReaction.DESTROY)));
+            new PebbleBlock(BlockBehaviour.Properties.of()
+                    .destroyTime(4.5f).explosionResistance(6.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     // Aestum Stone set
     public static final DeferredBlock<Block> AESTUM = BLOCKS.register(
@@ -297,11 +298,11 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> AESTUM_PRESSURE_PLATE = BLOCKS.register(
             "aestum_pressure_plate", () ->
                     new PressurePlateBlock(NoxernaBlockSetTypes.NOXUM_SET,
-                            BlockBehaviour.Properties.ofFullCopy(AESTUM.get())));
+                            BlockBehaviour.Properties.ofFullCopy(AESTUM.get()).noCollission()));
     public static final DeferredBlock<Block> AESTUM_BUTTON = BLOCKS.register(
             "aestum_button", () ->
                     new ButtonBlock(NoxernaBlockSetTypes.NOXUM_SET, 20,
-                            BlockBehaviour.Properties.ofFullCopy(AESTUM.get())));
+                            BlockBehaviour.Properties.ofFullCopy(AESTUM.get()).noCollission()));
     public static final DeferredBlock<Block> POLISHED_AESTUM = BLOCKS.register(
             "polished_aestum", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.0f).explosionResistance(7.5f)
@@ -346,11 +347,11 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> INETRA_PRESSURE_PLATE = BLOCKS.register(
             "inetra_pressure_plate", () ->
                     new PressurePlateBlock(NoxernaBlockSetTypes.NOXUM_SET,
-                            BlockBehaviour.Properties.ofFullCopy(INETRA.get())));
+                            BlockBehaviour.Properties.ofFullCopy(INETRA.get()).noCollission()));
     public static final DeferredBlock<Block> INETRA_BUTTON = BLOCKS.register(
             "inetra_button", () ->
                     new ButtonBlock(NoxernaBlockSetTypes.NOXUM_SET, 20,
-                            BlockBehaviour.Properties.ofFullCopy(INETRA.get())));
+                            BlockBehaviour.Properties.ofFullCopy(INETRA.get()).noCollission()));
     public static final DeferredBlock<Block> POLISHED_INETRA = BLOCKS.register(
             "polished_inetra", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(7.5f).explosionResistance(9.0f)
@@ -379,6 +380,31 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> INETRA_PEBBLE = BLOCKS.register("inetra_pebble", () ->
             new PebbleBlock(BlockBehaviour.Properties.ofFullCopy(INETRA.get())
                     .noOcclusion().pushReaction(PushReaction.DESTROY)));
+    // Acceleslate
+    public static final DeferredBlock<Block> ACCELESLATE = BLOCKS.register(
+            "acceleslate", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(4.5f).explosionResistance(6.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).speedFactor(1.4F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ACCELESLATE_STAIRS = BLOCKS.register(
+            "acceleslate_stairs", () -> new StairBlock(ACCELESLATE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(ACCELESLATE.get())));
+    public static final DeferredBlock<Block> ACCELESLATE_SLAB = BLOCKS.register(
+            "acceleslate_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(ACCELESLATE.get())));
+    public static final DeferredBlock<Block> ACCELESLATE_WALL = BLOCKS.register(
+            "acceleslate_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(ACCELESLATE.get())));
+    public static final DeferredBlock<Block> POLISHED_ACCELESLATE = BLOCKS.register(
+            "polished_acceleslate", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(4.5f).explosionResistance(6.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).speedFactor(1.4F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ACCELESLATE_BRICKS = BLOCKS.register(
+            "acceleslate_bricks", () -> new Block(BlockBehaviour.Properties.of()
+                    .destroyTime(4.5f).explosionResistance(6.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).speedFactor(1.4F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ACCELESLATE_PEBBLE = BLOCKS.register("acceleslate_pebble", () ->
+            new PebbleBlock(BlockBehaviour.Properties.of()
+                    .destroyTime(4.5f).explosionResistance(6.0f)
+                    .sound(NoxernaSoundTypes.NOXUM).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     // Resource Storage & Decorative Blocks
     // Iron
@@ -531,6 +557,9 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> MYSTERIOUS_ALLOY_PLATING = BLOCKS.register(
             "mysterious_alloy_plating",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(NIHOXITE_BLOCK.get())));
+    public static final DeferredBlock<Block> METAL_FRAMED_HAZARD_BLOCK = BLOCKS.register(
+            "metal_framed_hazard_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(FERREBRIS_PLATING.get())));
     public static final DeferredBlock<Block> PLATED_MYSTERIOUS_ALLOY_PILLAR = BLOCKS.register(
             "plated_mysterious_alloy_pillar", () -> new
                     RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(MYSTERIOUS_ALLOY_PLATING.get())));
@@ -792,15 +821,15 @@ public class NoxernaBlocks {
     public static final DeferredBlock<Block> NOXUM_BURIED_FUEL_CELL = BLOCKS.register(
             "noxum_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.0f).explosionResistance(3.0f)
-                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops().lightLevel(state ->15)));
     public static final DeferredBlock<Block> AESTUM_BURIED_FUEL_CELL = BLOCKS.register(
             "aestum_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(7.5f).explosionResistance(3.0f)
-                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops().lightLevel(state ->15)));
     public static final DeferredBlock<Block> INETRA_BURIED_FUEL_CELL = BLOCKS.register(
             "inetra_buried_fuel_cell", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(9.0f).explosionResistance(3.0f)
-                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops()));
+                    .sound(NoxernaSoundTypes.NOXUM).requiresCorrectToolForDrops().lightLevel(state ->15)));
     public static final DeferredBlock<Block> NOXUM_FERREBRIS_ORE = BLOCKS.register(
             "noxum_ferrebris_ore", () -> new Block(BlockBehaviour.Properties.of()
                     .destroyTime(6.0f).explosionResistance(3.0f)

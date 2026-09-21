@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "noxerna:nihoxite_tool_materials"
+  },
+  "base": {
+    "item": "noxerna:adamuna_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "noxerna:nihoxite_chestplate"
+  },
+  "template": {
+    "item": "noxerna:nihoxite_upgrade_smithing_template"
+  }
+}

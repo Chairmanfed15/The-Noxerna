@@ -43,21 +43,30 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
             // Beneficial
         addEffect(NoxernaEffects.ARMOR_BOOST, "Bolstered Armor");
         addEffect(NoxernaEffects.FOOD_REGENERATION, "Subsistence");
+        addEffect(NoxernaEffects.INSULATED, "Insulated");
+        addEffect(NoxernaEffects.MOVEMENT_EFFICIENCY, "Unimpeded");
             // Negative
         addEffect(NoxernaEffects.ARMOR_REDUCTION, "Broken Armor");
-        addEffect(NoxernaEffects.LEADWEIGHT, "Leadweight");
+        addEffect(NoxernaEffects.FLAMMABLE, "Flammable");
         addEffect(NoxernaEffects.FROSTBITE, "Frostbite");
         addEffect(NoxernaEffects.FLIGHT_CANCEL, "Grounded");
+        addEffect(NoxernaEffects.LEADWEIGHT, "Leadweight");
         addEffect(NoxernaEffects.STUNNED, "Stunned");
             // Descriptions
         addEffectDescription(NoxernaEffects.ARMOR_BOOST.get(),
                 "Increases armor by 20% and armor toughness by 5% per level.");
         addEffectDescription(NoxernaEffects.FOOD_REGENERATION.get(),
                 "Restores food and saturation over time; higher levels restore food & saturation faster.");
+        addEffectDescription(NoxernaEffects.INSULATED.get(),
+                "Provides immunity to Burning and Freezing, and prevents related status effects from being inflicted.");
+        addEffectDescription(NoxernaEffects.MOVEMENT_EFFICIENCY.get(),
+                "Grants immunity to the movement effects of certain blocks.");
         addEffectDescription(NoxernaEffects.ARMOR_REDUCTION.get(),
                 "Reduces armor by 20% and armor toughness by 5% per level.");
         addEffectDescription(NoxernaEffects.LEADWEIGHT.get(),
                 "Causes the affected entity to be more vulnerable to fall damage, and decreases the strength of jumping.");
+        addEffectDescription(NoxernaEffects.FLAMMABLE.get(),
+                "Increases burn time from all sources.");
         addEffectDescription(NoxernaEffects.FROSTBITE.get(),
                 "Freezes affected entities as if they were in powder snow.");
         addEffectDescription(NoxernaEffects.FLIGHT_CANCEL.get(),
@@ -194,6 +203,15 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.INETRA_BRICK_STAIRS, "Inetra Brick Stairs");
         addBlock(NoxernaBlocks.INETRA_BRICK_SLAB, "Inetra Brick Slab");
         addBlock(NoxernaBlocks.INETRA_BRICK_WALL, "Inetra Brick Wall");
+        // Acceleslate Stone set
+        addBlock(NoxernaBlocks.ACCELESLATE, "Acceleslate");
+        addBlock(NoxernaBlocks.ACCELESLATE_STAIRS, "Acceleslate Stairs");
+        addBlock(NoxernaBlocks.ACCELESLATE_SLAB, "Acceleslate Slab");
+        addBlock(NoxernaBlocks.ACCELESLATE_WALL, "Acceleslate Wall");
+            // Polished
+        addBlock(NoxernaBlocks.POLISHED_ACCELESLATE, "Polished Acceleslate");
+            // Bricks
+        addBlock(NoxernaBlocks.ACCELESLATE_BRICKS, "Acceleslate Bricks");
         // Vanilla Metal Plating
             // Iron
         addBlock(NoxernaBlocks.IRON_PLATING, "Iron Plating");
@@ -256,6 +274,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         // Mysterious Alloy
             // Plating
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING, "Mysterious Alloy Plating");
+        addBlock(NoxernaBlocks.METAL_FRAMED_HAZARD_BLOCK, "Metal-Framed Hazard Block");
         addBlock(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR, "Plated Mysterious Alloy Pillar");
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, "Mysterious Alloy Plating Stairs");
         addBlock(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, "Mysterious Alloy Plating Slab");
@@ -360,6 +379,7 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addBlock(NoxernaBlocks.NOXUM_PEBBLE, "Noxum Pebble");
         addBlock(NoxernaBlocks.AESTUM_PEBBLE, "Aestum Pebble");
         addBlock(NoxernaBlocks.INETRA_PEBBLE, "Inetra Pebble");
+        addBlock(NoxernaBlocks.ACCELESLATE_PEBBLE, "Acceleslate Pebble");
         addBlock(NoxernaBlocks.VOIDROCK, "Voidrock");
             // Ores
         addBlock(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL, "Noxum Buried Fuel Cell");
@@ -429,7 +449,12 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         // Raw
         addItem(NoxernaItems.XENON_NOBLEPHYTE, "Xenon Noblephyte");
         // Cooked
+        addItem(NoxernaItems.COOKED_XENON_NOBLEPHYTE, "Cooked Xenon Noblephyte");
+        // "Snacks"
+        addItem(NoxernaItems.GLOWBREAD, "Glowbread");
         // Meals
+        addItem(NoxernaItems.NOBLEPHYTE_STEW, "Noblephyte Stew");
+        addItem(NoxernaItems.GLOWING_PORRIDGE, "Glowing Porridge");
         // Tools
         // Tiered
         addItem(NoxernaItems.NOBLEWOOD_AXE, "Noblewood Axe");
@@ -569,6 +594,11 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         add(NoxernaTags.ItemTags.NIHOXITE_INGOTS, "Nihoxite Ingots");
             // Plates
         add(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_PLATES, "Mysterious Alloy Plates");
+            // Rods
+        add(NoxernaTags.ItemTags.NOBLEWOOD_RODS, "Noblewood Rods");
+            // Food Groups
+        add(NoxernaTags.ItemTags.FOODS_FRESH_NOBLEPHYTES, "Fresh Noblephytes");
+        add(NoxernaTags.ItemTags.FOODS_COOKED_NOBLEPHYTES, "Cooked Noblephytes");
         // Noxerna Tags
             // Block set groups
         add(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, "Noblewood Planks");

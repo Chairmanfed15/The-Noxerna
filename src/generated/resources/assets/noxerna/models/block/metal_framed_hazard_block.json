@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "noxerna:block/metal_framed_hazard_block"
+  }
+}

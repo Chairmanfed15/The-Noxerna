@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "ferrebris_tool_recycling",
+  "ingredient": {
+    "tag": "noxerna:recyclable/ferrebris/tools_costing_3"
+  },
+  "result": {
+    "id": "noxerna:ferrebris_nugget",
+    "count": 9
+  }
+}

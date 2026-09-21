@@ -5,6 +5,7 @@ import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.block.natural.PebbleBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -149,6 +150,15 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         slabBlockWithItem(NoxernaBlocks.INETRA_BRICK_SLAB, NoxernaBlocks.INETRA_BRICKS);
         wallBlockWithItem(NoxernaBlocks.INETRA_BRICK_WALL, NoxernaBlocks.INETRA_BRICKS);
 
+        // Acceleslate Stone Set
+        blockWithItem(NoxernaBlocks.ACCELESLATE);
+        stairBlockWithItem(NoxernaBlocks.ACCELESLATE_STAIRS, NoxernaBlocks.ACCELESLATE);
+        slabBlockWithItem(NoxernaBlocks.ACCELESLATE_SLAB, NoxernaBlocks.ACCELESLATE);
+        wallBlockWithItem(NoxernaBlocks.ACCELESLATE_WALL, NoxernaBlocks.ACCELESLATE);
+        pebbleBlock(NoxernaBlocks.ACCELESLATE_PEBBLE, NoxernaBlocks.ACCELESLATE);
+        blockWithItem(NoxernaBlocks.POLISHED_ACCELESLATE);
+        blockWithItem(NoxernaBlocks.ACCELESLATE_BRICKS);
+
         // Vanilla Metal Plating
         blockWithItem(NoxernaBlocks.IRON_PLATING);
         logBlockWithItem(NoxernaBlocks.PLATED_IRON_PILLAR);
@@ -208,6 +218,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         wallBlockWithItem(NoxernaBlocks.NIHOXITE_PLATING_WALL, NoxernaBlocks.NIHOXITE_PLATING);
         // Mysterious Alloy Metal set
         blockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
+        blockWithItem(NoxernaBlocks.METAL_FRAMED_HAZARD_BLOCK);
         logBlockWithItem(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR);
         stairBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
         slabBlockWithItem(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB, NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING);
@@ -221,6 +232,7 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.OXIDISED_OBSCUPRUM_BLOCK);
+        blockUsingOtherTexture(NoxernaBlocks.WAXED_OBSCUPRUM_BLOCK, NoxernaBlocks.OBSCUPRUM_BLOCK);
             // Cut
         blockWithItem(NoxernaBlocks.CUT_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.EXPOSED_CUT_OBSCUPRUM_BLOCK);
@@ -333,6 +345,14 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
                 this.modLoc("block/" + block.getId().getPath()));
     }
 
+    public ModelFile cubeAllUsingOtherTexture(Block block, Block baseBlock) {
+        return models().cubeAll(name(block), blockTexture(baseBlock));
+    }
+    public void blockUsingOtherTexture(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.simpleBlock(block.get(), cubeAllUsingOtherTexture(block.get(), baseBlock.get()));
+        this.simpleBlockItem(block);
+    }
+
     public void logBlockWithItem(DeferredBlock<Block> block) {
         this.logBlock((RotatedPillarBlock) block.get());
         this.simpleBlockItem(block);
@@ -438,5 +458,11 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
     private ResourceLocation extend(ResourceLocation resourceLocation, String suffix) {
         return ResourceLocation.fromNamespaceAndPath(resourceLocation.getNamespace(),
                 resourceLocation.getPath() + suffix);
+    }
+    private ResourceLocation key(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block);
+    }
+    private String name(Block block) {
+        return key(block).getPath();
     }
 }

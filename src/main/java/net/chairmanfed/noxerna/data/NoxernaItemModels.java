@@ -17,7 +17,6 @@ public class NoxernaItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // WIP Blocks
-        wipItem(NoxernaItems.WAXED_OBSCUPRUM_BLOCK);
         wipItem(NoxernaItems.XENON_CARPET);
         wipItem(NoxernaItems.NOXUM_UMBURAM_ORE);
         wipItem(NoxernaItems.AESTUM_UMBURAM_ORE);
@@ -46,7 +45,7 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.MYSTERIOUS_SCRAP);
         flatItem(NoxernaItems.MYSTERIOUS_ALLOY_PLATE);
         handheldFlatItem(NoxernaItems.NOBLEWOOD_STICK);
-        wipItem(NoxernaItems.GLOWGRAIN);
+        flatItem(NoxernaItems.GLOWGRAIN);
         wipItem(NoxernaItems.ROCKHIDE);
         flatItem(NoxernaItems.SULAZE_CORE);
         flatItem(NoxernaItems.XENON_DYE);
@@ -61,7 +60,14 @@ public class NoxernaItemModels extends ItemModelProvider {
         flatItem(NoxernaItems.EXOTIC_ARMOR_TRIM_SMITHING_TEMPLATE);
         flatItem(NoxernaItems.ENERGIZED_TENERYL_DRIVE);
         // Food
-        wipItem(NoxernaItems.XENON_NOBLEPHYTE);
+        flatItem(NoxernaItems.XENON_NOBLEPHYTE);
+        flatItem(NoxernaItems.COOKED_XENON_NOBLEPHYTE);
+        wipItem(NoxernaItems.KRYPTON_NOBLEPHYTE);
+        wipItem(NoxernaItems.ARGON_NOBLEPHYTE);
+        wipItem(NoxernaItems.NEON_NOBLEPHYTE);
+        flatItem(NoxernaItems.GLOWBREAD);
+        flatItem(NoxernaItems.GLOWING_PORRIDGE);
+        flatItem(NoxernaItems.NOBLEPHYTE_STEW);
         // Tiered Tools
         handheldFlatItem(NoxernaItems.NOBLEWOOD_AXE);
         handheldFlatItem(NoxernaItems.NOBLEWOOD_HOE);

@@ -6,9 +6,10 @@ import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 
 import java.util.concurrent.CompletableFuture;
@@ -419,6 +420,15 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
         makeSlabIntoBlock(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_SLAB.get(), NoxernaItems.MYSTERIOUS_ALLOY_PLATING.get())
                 .group("plating")
                 .save(output, name("crafting/mysterious_alloy_plating_from_slab"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, NoxernaItems.METAL_FRAMED_HAZARD_BLOCK, 16)
+                .pattern("YNB").pattern("NNN").pattern("BNY")
+                .define('Y', Items.YELLOW_CONCRETE)
+                .define('B', Items.BLACK_CONCRETE)
+                .define('N', NoxernaTags.ItemTags.STRUCTURAL_METAL_NUGGETS)
+                .group("plating")
+                .unlockedBy("has_" + Items.YELLOW_CONCRETE, has(Items.YELLOW_CONCRETE))
+                .unlockedBy("has_" + Items.BLACK_CONCRETE, has(Items.BLACK_CONCRETE))
+                .save(output, name("crafting/metal_framed_hazard_block"));
         // Storage Blocks
         packing3x3(NoxernaItems.RAW_FERREBRIS.get(), NoxernaItems.RAW_FERREBRIS_BLOCK.get(),
                 NoxernaTags.ItemTags.RAW_FERREBRIS_MATERIALS)
@@ -732,7 +742,17 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
                 NoxernaItems.NEON_GLOWING_FERREBRIS_PILLAR)
                 .group("glowing_plated_pillars")
                 .save(output, name("crafting/neon_glowing_plated_ferrebris_pillar"));
-
+        // Food Recipes
+        // Crafting
+        packing2x2(NoxernaItems.GLOWGRAIN.get(), NoxernaItems.GLOWBREAD)
+                .group("glowbread")
+                .save(output, name("crafting/glowbread"));
+        makeCheapSingleIngredientMeal(NoxernaTags.ItemTags.FOODS_COOKED_NOBLEPHYTES, NoxernaItems.NOBLEPHYTE_STEW)
+                .group("cheap_meals")
+                .save(output, name("crafting/noblephyte_stew"));
+        makeCheapSingleIngredientMeal(NoxernaItems.GLOWGRAIN.get(), NoxernaItems.GLOWING_PORRIDGE)
+                .group("cheap_meals")
+                .save(output, name("crafting/glowing_porridge"));
         // Ingredient Recipes
         // Crafting
         makeSticks(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS, NoxernaItems.NOBLEWOOD_STICK.get())
@@ -795,6 +815,10 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
                 .group("umburam")
                 .save(output, name("crafting/umburam_nugget"));
         // Smelting
+        smelting(NoxernaItems.XENON_NOBLEPHYTE.get(), NoxernaItems.COOKED_XENON_NOBLEPHYTE.get(),
+                0.1f, 200)
+                .group("cooked_noblephytes")
+                .save(output, name("smelting/cooked_xenon_noblephyte"));
         smelting(NoxernaTags.ItemTags.FERREBRIS_ORES, NoxernaItems.FERREBRIS_INGOT.get(),
                 0.7f, 200)
                 .group("ferrebris_ingot")
@@ -1006,6 +1030,14 @@ public class NoxernaRecipeData extends NoxernaRecipeProvider {
                 .save(output, name("smithing/nihoxite_shovel"));
         nihoxiteUpgrade(NoxernaItems.ADAMUNA_SWORD.get(), NoxernaItems.NIHOXITE_SWORD.get())
                 .save(output, name("smithing/nihoxite_sword"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_HELMET.get(), NoxernaItems.NIHOXITE_HELMET.get())
+                .save(output, name("smithing/nihoxite_helmet"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_CHESTPLATE.get(), NoxernaItems.NIHOXITE_CHESTPLATE.get())
+                .save(output, name("smithing/nihoxite_chestplate"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_LEGGINGS.get(), NoxernaItems.NIHOXITE_LEGGINGS.get())
+                .save(output, name("smithing/nihoxite_leggings"));
+        nihoxiteUpgrade(NoxernaItems.ADAMUNA_BOOTS.get(), NoxernaItems.NIHOXITE_BOOTS.get())
+                .save(output, name("smithing/nihoxite_boots"));
         // Nihoxite Alt recipes
         nihoxiteUpgrade(Items.DIAMOND_AXE, NoxernaItems.NIHOXITE_AXE.get())
                 .save(output, name("smithing/diamond_nihoxite_axe"));

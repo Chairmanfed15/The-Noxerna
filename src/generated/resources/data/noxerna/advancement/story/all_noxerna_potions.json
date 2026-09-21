@@ -4,13 +4,14 @@
     "all_noxerna_potions": {
       "conditions": {
         "effects": {
-          "noxerna:broken_armor": {}
+          "noxerna:bolstered_armor": {},
+          "noxerna:broken_armor": {},
+          "noxerna:frostbite": {},
+          "noxerna:grounded": {},
+          "noxerna:leadweight": {}
         }
       },
       "trigger": "minecraft:effects_changed"
-    },
-    "impossible": {
-      "trigger": "minecraft:impossible"
     }
   },
   "display": {
@@ -27,9 +28,6 @@
     }
   },
   "requirements": [
-    [
-      "impossible"
-    ],
     [
       "all_noxerna_potions"
     ]

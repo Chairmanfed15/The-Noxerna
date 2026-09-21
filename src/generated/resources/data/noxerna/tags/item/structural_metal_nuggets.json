@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#c:nuggets/iron",
+    "#c:nuggets/gold",
+    {
+      "id": "#c:nuggets/copper",
+      "required": false
+    },
+    "#c:nuggets/ferrebris",
+    "#c:nuggets/obscuprum",
+    "#c:nuggets/umburam"
+  ]
+}

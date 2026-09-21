@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "plating",
+  "key": {
+    "B": {
+      "item": "minecraft:black_concrete"
+    },
+    "N": {
+      "tag": "noxerna:structural_metal_nuggets"
+    },
+    "Y": {
+      "item": "minecraft:yellow_concrete"
+    }
+  },
+  "pattern": [
+    "YNB",
+    "NNN",
+    "BNY"
+  ],
+  "result": {
+    "count": 16,
+    "id": "noxerna:metal_framed_hazard_block"
+  }
+}

@@ -3,6 +3,7 @@
     "noxerna:soltra_pebble",
     "noxerna:noxum_pebble",
     "noxerna:aestum_pebble",
-    "noxerna:inetra_pebble"
+    "noxerna:inetra_pebble",
+    "noxerna:acceleslate_pebble"
   ]
 }

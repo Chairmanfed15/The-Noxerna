@@ -6,6 +6,7 @@ import net.chairmanfed.noxerna.block.NoxernaBlocks;
 import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
 import net.chairmanfed.noxerna.effect.NoxernaEffects;
 import net.chairmanfed.noxerna.item.NoxernaItems;
+import net.chairmanfed.noxerna.item.consumable.NoxernaPotions;
 import net.chairmanfed.noxerna.registry.*;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
@@ -15,6 +16,7 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -22,6 +24,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.level.biome.Biome;
 import net.neoforged.neoforge.common.data.AdvancementProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -111,7 +114,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder EXPLORE_NOBLEPHYTE_BIOMES = Advancement.Builder.advancement()
                 .parent(ENTER_NOXERNA)
                 .display(
-                        new ItemStack(Items.RED_MUSHROOM),
+                        new ItemStack(NoxernaItems.XENON_NOBLEPHYTE.get()),
                         Component.translatable(
                                 "advancement." + Noxerna.MODID + ".explore_noblephyte_biomes.title"),
                         Component.translatable(
@@ -144,7 +147,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder BREACH_SURFACE = Advancement.Builder.advancement()
                 .parent(EXPLORE_NOBLEPHYTE_BIOMES)
                 .display(
-                        new ItemStack(Items.CAMPFIRE),
+                        new ItemStack(NoxernaItems.SOLTRA.get()),
                         Component.translatable(
                                 "advancement." + Noxerna.MODID + ".breach_surface.title"),
                         Component.translatable(
@@ -254,7 +257,7 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
         AdvancementHolder ALL_NOXERNA_FOODS = Advancement.Builder.advancement()
                 .parent(ENTER_NOXERNA)
                 .display(
-                        new ItemStack(Items.COOKED_BEEF),
+                        new ItemStack(NoxernaItems.NOBLEPHYTE_STEW.get()),
                         Component.translatable(
                                 "advancement." + Noxerna.MODID + ".all_noxerna_foods.title"),
                         Component.translatable(
@@ -265,8 +268,26 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
-                .addCriterion("all_noxerna_foods",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "xenon_noblephyte", "cooked_xenon_noblephyte", "krypton_noblephyte", "argon_noblephyte",
+                        "neon_noblephyte", "glowbread", "noblephyte_stew", "glowing_porridge"
+                )))
+                .addCriterion("xenon_noblephyte", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.XENON_NOBLEPHYTE).triggerInstance()))
+                .addCriterion("cooked_xenon_noblephyte", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.COOKED_XENON_NOBLEPHYTE).triggerInstance()))
+                .addCriterion("krypton_noblephyte", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.KRYPTON_NOBLEPHYTE).triggerInstance()))
+                .addCriterion("argon_noblephyte", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.ARGON_NOBLEPHYTE).triggerInstance()))
+                .addCriterion("neon_noblephyte", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.NEON_NOBLEPHYTE).triggerInstance()))
+                .addCriterion("glowbread", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.GLOWBREAD).triggerInstance()))
+                .addCriterion("noblephyte_stew", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.NOBLEPHYTE_STEW).triggerInstance()))
+                .addCriterion("glowing_porridge", CriteriaTriggers.CONSUME_ITEM.createCriterion(
+                        ConsumeItemTrigger.TriggerInstance.usedItem(NoxernaItems.GLOWING_PORRIDGE).triggerInstance()))
                 .save(saver, Noxerna.MODID + ":story/all_noxerna_foods");
         // Be affected by all Noxerna potion effects
         AdvancementHolder ALL_NOXERNA_POTIONS = Advancement.Builder.advancement()
@@ -283,12 +304,13 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         false
                 )
-                .requirements(AdvancementRequirements.allOf(List.of("impossible", "all_noxerna_potions")))
-                .addCriterion("impossible",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
                 .addCriterion("all_noxerna_potions", EffectsChangedTrigger.TriggerInstance.hasEffects(
                         MobEffectsPredicate.Builder.effects()
+                                .and(NoxernaEffects.ARMOR_BOOST)
                                 .and(NoxernaEffects.ARMOR_REDUCTION)
+                                .and(NoxernaEffects.FLIGHT_CANCEL)
+                                .and(NoxernaEffects.FROSTBITE)
+                                .and(NoxernaEffects.LEADWEIGHT)
                         )
                 )
                 .save(saver, Noxerna.MODID + ":story/all_noxerna_potions");
@@ -307,13 +329,18 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                         true,
                         true
                 )
-                .requirements(AdvancementRequirements.allOf(List.of("impossible", "all_noxerna_effects")))
-                .addCriterion("impossible",
-                        CriteriaTriggers.IMPOSSIBLE.createCriterion(new ImpossibleTrigger.TriggerInstance()))
                 .addCriterion("all_noxerna_effects", EffectsChangedTrigger.TriggerInstance.hasEffects(
                                 MobEffectsPredicate.Builder.effects()
+                                        .and(NoxernaEffects.ARMOR_BOOST)
                                         .and(NoxernaEffects.ARMOR_REDUCTION)
+                                        .and(NoxernaEffects.FLAMMABLE)
                                         .and(NoxernaEffects.FLIGHT_CANCEL)
+                                        .and(NoxernaEffects.FOOD_REGENERATION)
+                                        .and(NoxernaEffects.FROSTBITE)
+                                        .and(NoxernaEffects.INSULATED)
+                                        .and(NoxernaEffects.LEADWEIGHT)
+                                        .and(NoxernaEffects.MOVEMENT_EFFICIENCY)
+                                        .and(NoxernaEffects.STUNNED)
                         )
                 )
                 .save(saver, Noxerna.MODID + ":story/all_noxerna_effects");
@@ -606,65 +633,6 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                                 ItemPredicate.Builder.item().of(
                                         NoxernaTags.ItemTags.FERREBRIS_INGOTS)))
                 .save(saver, Noxerna.MODID + ":story/smelt_ferrebris");
-        // Obtain every mineral from the Noxerna
-        AdvancementHolder MINE_NATIVE_MINERALS = Advancement.Builder.advancement()
-                .parent(SMELT_FERREBRIS)
-                .display(
-                        new ItemStack(NoxernaItems.MINE_NATIVE_MINERALS.get()),
-                        Component.translatable(
-                                "advancement." + Noxerna.MODID + ".mine_native_minerals.title"),
-                        Component.translatable(
-                                "advancement." + Noxerna.MODID + ".mine_native_minerals.description"),
-                        null,
-                        AdvancementType.CHALLENGE,
-                        true,
-                        true,
-                        false
-                )
-                .requirements(AdvancementRequirements.allOf(List.of(
-                        "lumai_crystal", "raw_ferrebris", "raw_obscuprum", "raw_umburam", "raw_inperlum",
-                        "teneryl", "adamuna", "vitragor", "ferrebris", "obscuprum", "umburam",
-                        "inperlum", "nihoxite")))
-                .addCriterion("lumai_crystal",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.LUMAI_CRYSTAL)))
-                .addCriterion("raw_ferrebris",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_FERREBRIS)))
-                .addCriterion("raw_obscuprum",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_OBSCUPRUM)))
-                .addCriterion("raw_umburam",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_UMBURAM)))
-                .addCriterion("raw_inperlum",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_INPERLUM)))
-                .addCriterion("teneryl",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.TENERYL)))
-                .addCriterion("adamuna",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.ADAMUNA)))
-                .addCriterion("vitragor",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.VITRAGOR)))
-                .addCriterion("ferrebris",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.FERREBRIS_INGOT)))
-                .addCriterion("obscuprum",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.OBSCUPRUM_INGOT)))
-                .addCriterion("umburam",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.UMBURAM_INGOT)))
-                .addCriterion("inperlum",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.INPERLUM_INGOT)))
-                .addCriterion("nihoxite",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(
-                                ItemPredicate.Builder.item().of(NoxernaItems.NIHOXITE_INGOT)))
-                .save(saver, Noxerna.MODID + ":story/mine_native_minerals");
         // Switch a Noxerna material to its equivalent vanilla material or vice versa.
         AdvancementHolder ATTUNEMENT_ALCHEMY = Advancement.Builder.advancement()
                 .parent(SMELT_FERREBRIS)
@@ -983,6 +951,65 @@ public class NoxernaAdvancements implements AdvancementProvider.AdvancementGener
                                 ItemPredicate.Builder.item().of(
                                         NoxernaTags.ItemTags.NIHOXITE_INGOTS)))
                 .save(saver, Noxerna.MODID + ":story/refine_nihoxite");
+        // Obtain every mineral from the Noxerna
+        AdvancementHolder MINE_NATIVE_MINERALS = Advancement.Builder.advancement()
+                .parent(REFINE_NIHOXITE)
+                .display(
+                        new ItemStack(NoxernaItems.MINE_NATIVE_MINERALS.get()),
+                        Component.translatable(
+                                "advancement." + Noxerna.MODID + ".mine_native_minerals.title"),
+                        Component.translatable(
+                                "advancement." + Noxerna.MODID + ".mine_native_minerals.description"),
+                        null,
+                        AdvancementType.CHALLENGE,
+                        true,
+                        true,
+                        false
+                )
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "lumai_crystal", "raw_ferrebris", "raw_obscuprum", "raw_umburam", "raw_inperlum",
+                        "teneryl", "adamuna", "vitragor", "ferrebris", "obscuprum", "umburam",
+                        "inperlum", "nihoxite")))
+                .addCriterion("lumai_crystal",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.LUMAI_CRYSTAL)))
+                .addCriterion("raw_ferrebris",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_FERREBRIS)))
+                .addCriterion("raw_obscuprum",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_OBSCUPRUM)))
+                .addCriterion("raw_umburam",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_UMBURAM)))
+                .addCriterion("raw_inperlum",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.RAW_INPERLUM)))
+                .addCriterion("teneryl",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.TENERYL)))
+                .addCriterion("adamuna",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.ADAMUNA)))
+                .addCriterion("vitragor",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.VITRAGOR)))
+                .addCriterion("ferrebris",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.FERREBRIS_INGOT)))
+                .addCriterion("obscuprum",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.OBSCUPRUM_INGOT)))
+                .addCriterion("umburam",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.UMBURAM_INGOT)))
+                .addCriterion("inperlum",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.INPERLUM_INGOT)))
+                .addCriterion("nihoxite",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(NoxernaItems.NIHOXITE_INGOT)))
+                .save(saver, Noxerna.MODID + ":story/mine_native_minerals");
         // Make a Nihoxite Hoe, like an idiot...
         AdvancementHolder NIHOXITE_HOE = Advancement.Builder.advancement()
                 .parent(REFINE_NIHOXITE)

@@ -59,6 +59,7 @@ public class NoxernaPotions {
 
     // We need to be able to brew these potions
     public static void registerBrewingRecipes(RegisterBrewingRecipesEvent event) {
+        event.getBuilder().addMix(Potions.WATER, NoxernaItems.GLOWGRAIN.get(), Potions.THICK);
         event.getBuilder().addMix(Potions.THICK, NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get(), NoxernaPotions.BOLSTERED_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BOLSTERED_ARMOR, Items.REDSTONE, NoxernaPotions.LONG_BOLSTERED_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BOLSTERED_ARMOR, Items.GLOWSTONE_DUST, NoxernaPotions.STRONG_BOLSTERED_ARMOR);

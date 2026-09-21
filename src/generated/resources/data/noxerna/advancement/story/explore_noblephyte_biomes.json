@@ -73,7 +73,7 @@
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "minecraft:red_mushroom"
+      "id": "noxerna:xenon_noblephyte"
     },
     "title": {
       "translate": "advancement.noxerna.explore_noblephyte_biomes.title"

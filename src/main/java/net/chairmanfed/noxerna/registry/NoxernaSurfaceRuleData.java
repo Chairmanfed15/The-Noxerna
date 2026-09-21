@@ -21,7 +21,9 @@ public class NoxernaSurfaceRuleData extends SurfaceRuleData {
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
         // Bedrock
         builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient(
-                "bedrock_floor", VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(5)), VOIDROCK));
+                "noxerna:voidrock_floor", VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(5)), VOIDROCK));
+        builder.add(SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.verticalGradient(
+                "noxerna:voidrock_ceiling", VerticalAnchor.belowTop(5), VerticalAnchor.TOP)), VOIDROCK));
         // Noxum Depths
         builder.add(SurfaceRules.ifTrue(SurfaceRules.isBiome(NoxernaBiomes.NOXUM_DEPTHS), SurfaceRules.sequence(
                 // Top Layer

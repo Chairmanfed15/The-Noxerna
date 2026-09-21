@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.*;
+import net.minecraft.world.level.levelgen.synth.BlendedNoise;
 
 import java.util.List;
 import java.util.OptionalLong;
@@ -41,11 +42,11 @@ public class NoxernaDimension {
                 false,
                 true,
                 0,
-                192,
+                256,
                 192,
                 NoxernaTags.BlockTags.INFINIBURN_NOXERNA,
                 DIMENSION_RENDERER,
-                0.0f,
+                0.01f,
                 new DimensionType.MonsterSettings(false, false, UniformInt.of(0, 7), 0)
         ));
     }
@@ -55,21 +56,47 @@ public class NoxernaDimension {
                 NoxernaBlocks.NOXUM.get().defaultBlockState(),
                 Blocks.WATER.defaultBlockState(),
                 new NoiseRouter(
-                        DensityFunctions.zero(), // TODO Add density functions
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero(),
-                        DensityFunctions.zero()
+                        // TODO Add density functions
+                        DensityFunctions.zero(), // barrier
+                        DensityFunctions.zero(), // fluid level floodedness
+                        DensityFunctions.zero(), // fluid level spread
+                        DensityFunctions.zero(), // lava
+                        DensityFunctions.zero(), // temperature
+                        DensityFunctions.zero(), // vegetation
+                        DensityFunctions.zero(), // continents
+                        DensityFunctions.zero(), // erosion
+                        DensityFunctions.zero(), // depth
+                        DensityFunctions.zero(), // ridges
+                        DensityFunctions.zero(), // initial density
+                        DensityFunctions.mul(
+                                DensityFunctions.constant(0.64),
+                                DensityFunctions.interpolated(
+                                        DensityFunctions.blendDensity(
+                                                DensityFunctions.add(
+                                                        DensityFunctions.constant(2.5),
+                                                        DensityFunctions.mul(
+                                                                DensityFunctions.yClampedGradient(16, 48, 0.0D, 1.0D),
+                                                                DensityFunctions.add(
+                                                                        DensityFunctions.constant(-2.5),
+                                                                        DensityFunctions.add(
+                                                                                DensityFunctions.constant(0.9375),
+                                                                                DensityFunctions.mul(
+                                                                                        DensityFunctions.yClampedGradient(160, 192, 1.0D, 0.0D),
+                                                                                        DensityFunctions.add(
+                                                                                                DensityFunctions.constant(-0.9375),
+                                                                                                BlendedNoise.createUnseeded(0.25, 0.375, 80.0, 60.0, 8.0)
+                                                                                        )
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        ).squeeze(), // final density
+                        DensityFunctions.zero(), // vein toggle
+                        DensityFunctions.zero(), // vein ridged
+                        DensityFunctions.zero()  // vein gap
                 ),
                 NoxernaSurfaceRuleData.noxerna(),
                 List.of(),

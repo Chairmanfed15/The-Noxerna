@@ -1,11 +1,8 @@
 package net.chairmanfed.noxerna.data.providers;
 
-import com.google.common.collect.ImmutableList;
-import com.mojang.serialization.Codec;
 import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.item.NoxernaItems;
 import net.chairmanfed.noxerna.registry.NoxernaTags;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -16,9 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.neoforge.common.Tags;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 
@@ -277,6 +272,18 @@ public class NoxernaRecipeProvider extends RecipeProvider {
                 .requires(input)
                 .unlockedBy("has_" + input, has(input));
     }
+    public ShapelessRecipeBuilder makeCheapSingleIngredientMeal(Item ingredient, ItemLike result) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, result)
+                .requires(Ingredient.of(ingredient), 2)
+                .requires(NoxernaItems.NOBLEWOOD_BOWL)
+                .unlockedBy("has_" + ingredient, has(ingredient));
+    }
+    public ShapelessRecipeBuilder makeCheapSingleIngredientMeal(TagKey<Item> ingredient, ItemLike result) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, result)
+                .requires(Ingredient.of(ingredient), 2)
+                .requires(NoxernaItems.NOBLEWOOD_BOWL)
+                .unlockedBy("has_" + ingredient, has(ingredient));
+    }
 
     // Smithing Recipes
     public SmithingTransformRecipeBuilder nihoxiteUpgrade(Item base, Item result) {
@@ -306,19 +313,19 @@ public class NoxernaRecipeProvider extends RecipeProvider {
     public SimpleCookingRecipeBuilder smelting(
             Item input, Item result, Float experience, Integer time) {
         return SimpleCookingRecipeBuilder.smelting(
-                        Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                        Ingredient.of(input), RecipeCategory.MISC, result, experience, time)
                 .unlockedBy("has_" + input, has(input));
     }
     public SimpleCookingRecipeBuilder smelting(
             TagKey<Item> input, Item result, Float experience, Integer time) {
         return SimpleCookingRecipeBuilder.smelting(
-                Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                Ingredient.of(input), RecipeCategory.MISC, result, experience, time)
                 .unlockedBy("has_" + input, has(input));
     }
     public SimpleCookingRecipeBuilder blasting(
             TagKey<Item> input, Item result, Float experience, Integer time) {
         return SimpleCookingRecipeBuilder.blasting(
-                        Ingredient.of(input), RecipeCategory.MISC, result, experience.floatValue(), time)
+                        Ingredient.of(input), RecipeCategory.MISC, result, experience, time)
                 .unlockedBy("has_" + input, has(input));
     }
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:glowgrain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:glowgrain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/glowing_porridge"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:glowgrain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/glowing_porridge"
+    ]
+  }
+}

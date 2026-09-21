@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "noxerna:block/acceleslate_slab"
+    },
+    "type=double": {
+      "model": "noxerna:block/acceleslate"
+    },
+    "type=top": {
+      "model": "noxerna:block/acceleslate_slab_top"
+    }
+  }
+}

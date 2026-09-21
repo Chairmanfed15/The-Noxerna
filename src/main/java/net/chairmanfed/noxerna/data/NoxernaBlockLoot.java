@@ -180,6 +180,14 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.INETRA_BRICK_WALL.get());
         dropPebbles(NoxernaBlocks.INETRA_PEBBLE.get());
 
+        dropSelf(NoxernaBlocks.ACCELESLATE.get());
+        dropSelf(NoxernaBlocks.ACCELESLATE_STAIRS.get());
+        dropSlab(NoxernaBlocks.ACCELESLATE_SLAB.get());
+        dropSelf(NoxernaBlocks.ACCELESLATE_WALL.get());
+        dropSelf(NoxernaBlocks.POLISHED_ACCELESLATE.get());
+        dropSelf(NoxernaBlocks.ACCELESLATE_BRICKS.get());
+        dropPebbles(NoxernaBlocks.ACCELESLATE_PEBBLE.get());
+
         dropSelf(NoxernaBlocks.IRON_PLATING.get());
         dropSelf(NoxernaBlocks.PLATED_IRON_PILLAR.get());
         dropSelf(NoxernaBlocks.IRON_PLATING_STAIRS.get());
@@ -234,6 +242,7 @@ public class NoxernaBlockLoot extends BlockLootSubProvider {
         dropSelf(NoxernaBlocks.NIHOXITE_PLATING_WALL.get());
 
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING.get());
+        dropSelf(NoxernaBlocks.METAL_FRAMED_HAZARD_BLOCK.get());
         dropSelf(NoxernaBlocks.PLATED_MYSTERIOUS_ALLOY_PILLAR.get());
         dropSelf(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_STAIRS.get());
         dropSlab(NoxernaBlocks.MYSTERIOUS_ALLOY_PLATING_SLAB.get());

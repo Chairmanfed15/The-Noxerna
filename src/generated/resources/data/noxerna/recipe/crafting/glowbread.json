@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "glowbread",
+  "key": {
+    "#": {
+      "item": "noxerna:glowgrain"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:glowbread"
+  }
+}

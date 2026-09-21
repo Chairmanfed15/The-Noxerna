@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "noxerna:block/metal_framed_hazard_block"
+    }
+  }
+}

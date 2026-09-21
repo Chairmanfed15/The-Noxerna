@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:crafting/glowbread"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "hasnoxerna:glowgrain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:glowgrain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "hasnoxerna:glowgrain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:crafting/glowbread"
+    ]
+  }
+}

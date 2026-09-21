@@ -4,14 +4,19 @@
     "all_noxerna_effects": {
       "conditions": {
         "effects": {
+          "noxerna:bolstered_armor": {},
           "noxerna:broken_armor": {},
-          "noxerna:grounded": {}
+          "noxerna:flammable": {},
+          "noxerna:frostbite": {},
+          "noxerna:grounded": {},
+          "noxerna:insulated": {},
+          "noxerna:leadweight": {},
+          "noxerna:stunned": {},
+          "noxerna:subsistence": {},
+          "noxerna:unimpeded": {}
         }
       },
       "trigger": "minecraft:effects_changed"
-    },
-    "impossible": {
-      "trigger": "minecraft:impossible"
     }
   },
   "display": {
@@ -29,9 +34,6 @@
     }
   },
   "requirements": [
-    [
-      "impossible"
-    ],
     [
       "all_noxerna_effects"
     ]

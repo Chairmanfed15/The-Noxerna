@@ -1,8 +1,69 @@
 {
   "parent": "noxerna:story/enter_noxerna",
   "criteria": {
-    "all_noxerna_foods": {
-      "trigger": "minecraft:impossible"
+    "argon_noblephyte": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:argon_noblephyte"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cooked_xenon_noblephyte": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:cooked_xenon_noblephyte"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "glowbread": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:glowbread"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "glowing_porridge": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:glowing_porridge"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "krypton_noblephyte": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:krypton_noblephyte"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "neon_noblephyte": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:neon_noblephyte"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "noblephyte_stew": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:noblephyte_stew"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "xenon_noblephyte": {
+      "conditions": {
+        "item": {
+          "items": "noxerna:xenon_noblephyte"
+        }
+      },
+      "trigger": "minecraft:consume_item"
     }
   },
   "display": {
@@ -12,7 +73,7 @@
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:cooked_beef"
+      "id": "noxerna:noblephyte_stew"
     },
     "title": {
       "translate": "advancement.noxerna.all_noxerna_foods.title"
@@ -20,7 +81,28 @@
   },
   "requirements": [
     [
-      "all_noxerna_foods"
+      "xenon_noblephyte"
+    ],
+    [
+      "cooked_xenon_noblephyte"
+    ],
+    [
+      "krypton_noblephyte"
+    ],
+    [
+      "argon_noblephyte"
+    ],
+    [
+      "neon_noblephyte"
+    ],
+    [
+      "glowbread"
+    ],
+    [
+      "noblephyte_stew"
+    ],
+    [
+      "glowing_porridge"
     ]
   ],
   "sends_telemetry_event": true

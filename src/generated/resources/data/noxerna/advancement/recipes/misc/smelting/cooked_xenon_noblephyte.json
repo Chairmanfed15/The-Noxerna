@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_noxerna:xenon_noblephyte": {
+      "conditions": {
+        "items": [
+          {
+            "items": "noxerna:xenon_noblephyte"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "noxerna:smelting/cooked_xenon_noblephyte"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_noxerna:xenon_noblephyte"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "noxerna:smelting/cooked_xenon_noblephyte"
+    ]
+  }
+}

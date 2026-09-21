@@ -85,13 +85,10 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.SOLTRA_WALL);
                         output.accept(NoxernaItems.SOLTRA_PRESSURE_PLATE);
                         output.accept(NoxernaItems.SOLTRA_BUTTON);
-                        output.accept(NoxernaItems.SOLTRA_PEBBLE);
-
                         output.accept(NoxernaItems.POLISHED_SOLTRA);
                         output.accept(NoxernaItems.POLISHED_SOLTRA_STAIRS);
                         output.accept(NoxernaItems.POLISHED_SOLTRA_SLAB);
                         output.accept(NoxernaItems.POLISHED_SOLTRA_WALL);
-
                         output.accept(NoxernaItems.SOLTRA_BRICKS);
                         output.accept(NoxernaItems.SOLTRA_BRICK_STAIRS);
                         output.accept(NoxernaItems.SOLTRA_BRICK_SLAB);
@@ -103,18 +100,14 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.NOXUM_WALL);
                         output.accept(NoxernaItems.NOXUM_PRESSURE_PLATE);
                         output.accept(NoxernaItems.NOXUM_BUTTON);
-                        output.accept(NoxernaItems.NOXUM_PEBBLE);
-
                         output.accept(NoxernaItems.POLISHED_NOXUM);
                         output.accept(NoxernaItems.POLISHED_NOXUM_STAIRS);
                         output.accept(NoxernaItems.POLISHED_NOXUM_SLAB);
                         output.accept(NoxernaItems.POLISHED_NOXUM_WALL);
-
                         output.accept(NoxernaItems.NOXUM_BRICKS);
                         output.accept(NoxernaItems.NOXUM_BRICK_STAIRS);
                         output.accept(NoxernaItems.NOXUM_BRICK_SLAB);
                         output.accept(NoxernaItems.NOXUM_BRICK_WALL);
-
                         output.accept(NoxernaItems.NOXERNA_PORTAL_FRAME);
                         // Aestum
                         output.accept(NoxernaItems.AESTUM);
@@ -123,13 +116,10 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.AESTUM_WALL);
                         output.accept(NoxernaItems.AESTUM_PRESSURE_PLATE);
                         output.accept(NoxernaItems.AESTUM_BUTTON);
-                        output.accept(NoxernaItems.AESTUM_PEBBLE);
-
                         output.accept(NoxernaItems.POLISHED_AESTUM);
                         output.accept(NoxernaItems.POLISHED_AESTUM_STAIRS);
                         output.accept(NoxernaItems.POLISHED_AESTUM_SLAB);
                         output.accept(NoxernaItems.POLISHED_AESTUM_WALL);
-
                         output.accept(NoxernaItems.AESTUM_BRICKS);
                         output.accept(NoxernaItems.AESTUM_BRICK_STAIRS);
                         output.accept(NoxernaItems.AESTUM_BRICK_SLAB);
@@ -152,6 +142,14 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.INETRA_BRICK_STAIRS);
                         output.accept(NoxernaItems.INETRA_BRICK_SLAB);
                         output.accept(NoxernaItems.INETRA_BRICK_WALL);
+                        // Acceleslate
+                        output.accept(NoxernaItems.ACCELESLATE);
+                        output.accept(NoxernaItems.ACCELESLATE_STAIRS);
+                        output.accept(NoxernaItems.ACCELESLATE_SLAB);
+                        output.accept(NoxernaItems.ACCELESLATE_WALL);
+                        output.accept(NoxernaItems.ACCELESLATE_PEBBLE);
+                        output.accept(NoxernaItems.POLISHED_ACCELESLATE);
+                        output.accept(NoxernaItems.ACCELESLATE_BRICKS);
                         // Special Blocks
 
                         // Material Storage & Decorative Blocks
@@ -218,6 +216,7 @@ public class NoxernaCreativeModeTabs {
                         output.accept(NoxernaItems.NIHOXITE_PLATING_WALL);
                         // Mysterious Alloy
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING);
+                        output.accept(NoxernaItems.METAL_FRAMED_HAZARD_BLOCK);
                         output.accept(NoxernaItems.PLATED_MYSTERIOUS_ALLOY_PILLAR);
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_STAIRS);
                         output.accept(NoxernaItems.MYSTERIOUS_ALLOY_PLATING_SLAB);
@@ -335,13 +334,15 @@ public class NoxernaCreativeModeTabs {
                     .displayItems((params, output) -> {
                         // Stones
                         output.accept(NoxernaItems.SOLTRA);
-                        output.accept(NoxernaItems.SOLTRA_PEBBLE);
                         output.accept(NoxernaItems.NOXUM);
-                        output.accept(NoxernaItems.NOXUM_PEBBLE);
                         output.accept(NoxernaItems.AESTUM);
-                        output.accept(NoxernaItems.AESTUM_PEBBLE);
                         output.accept(NoxernaItems.INETRA);
+                        output.accept(NoxernaItems.ACCELESLATE);
+                        output.accept(NoxernaItems.SOLTRA_PEBBLE);
+                        output.accept(NoxernaItems.NOXUM_PEBBLE);
+                        output.accept(NoxernaItems.AESTUM_PEBBLE);
                         output.accept(NoxernaItems.INETRA_PEBBLE);
+                        output.accept(NoxernaItems.ACCELESLATE_PEBBLE);
                         // Ores
                         output.accept(NoxernaItems.NOXUM_BURIED_FUEL_CELL);
                         output.accept(NoxernaItems.AESTUM_BURIED_FUEL_CELL);
@@ -471,9 +472,16 @@ public class NoxernaCreativeModeTabs {
             NOXERNA_FOOD_AND_DRINK = CREATIVE_TABS.register(
             "noxerna_food_and_drink", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + Noxerna.MODID + ".food_and_drink"))
-                    .icon(()-> new ItemStack(NoxernaItems.GLOWGRAIN.get()))
+                    .icon(()-> new ItemStack(NoxernaItems.GLOWING_PORRIDGE.get()))
                     .displayItems((params, output) -> {
                         output.accept(NoxernaItems.XENON_NOBLEPHYTE);
+                        output.accept(NoxernaItems.COOKED_XENON_NOBLEPHYTE);
+                        output.accept(NoxernaItems.KRYPTON_NOBLEPHYTE);
+                        output.accept(NoxernaItems.ARGON_NOBLEPHYTE);
+                        output.accept(NoxernaItems.NEON_NOBLEPHYTE);
+                        output.accept(NoxernaItems.GLOWBREAD);
+                        output.accept(NoxernaItems.NOBLEPHYTE_STEW);
+                        output.accept(NoxernaItems.GLOWING_PORRIDGE);
                     })
                     .withTabsBefore(NOXERNA_COMBAT.getKey()).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab>

@@ -1,5 +1,5 @@
 {
-  "parent": "noxerna:story/smelt_ferrebris",
+  "parent": "noxerna:story/refine_nihoxite",
   "criteria": {
     "adamuna": {
       "conditions": {

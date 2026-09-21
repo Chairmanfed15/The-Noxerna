@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cheap_meals",
+  "ingredients": [
+    {
+      "item": "noxerna:glowgrain"
+    },
+    {
+      "item": "noxerna:glowgrain"
+    },
+    {
+      "item": "noxerna:noblewood_bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "noxerna:glowing_porridge"
+  }
+}

@@ -4,6 +4,7 @@ import net.chairmanfed.noxerna.Noxerna;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
@@ -30,8 +31,15 @@ public class NoxernaTags {
         public static final TagKey<Item> UMBURAM_TOOL_MATERIALS = localTag("umburam_tool_materials");
         public static final TagKey<Item> ADAMUNA_TOOL_MATERIALS = localTag("adamuna_tool_materials");
         public static final TagKey<Item> NIHOXITE_TOOL_MATERIALS = localTag("nihoxite_tool_materials");
+        // Recycling
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_1 = localTag("recyclable/ferrebris/tools_costing_1");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_2 = localTag("recyclable/ferrebris/tools_costing_2");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_3 = localTag("recyclable/ferrebris/tools_costing_3");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_4 = localTag("recyclable/ferrebris/tools_costing_4");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY = localTag("recyclable/mysterious_alloy_lossy");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS = localTag("recyclable/mysterious_alloy_lossless");
+        // Food Groupings
+        public static final TagKey<Item> NOBLEPHYTES = localTag("noblephytes");
         // Block Groups
         public static final TagKey<Item> BLOCKSET_SOLTRA = localTag("blockset/soltra");
         public static final TagKey<Item> BLOCKSET_NOXUM = localTag("blockset/noxum");
@@ -74,6 +82,7 @@ public class NoxernaTags {
         public static final TagKey<Item> KRYPTON_LOGS = localTag("krypton_logs");
         public static final TagKey<Item> ARGON_LOGS = localTag("argon_logs");
         public static final TagKey<Item> NEON_LOGS = localTag("neon_logs");
+        public static final TagKey<Item> STRUCTURAL_METAL_NUGGETS = localTag("structural_metal_nuggets");
 
         // Common Tags
         // Material Groupings
@@ -114,14 +123,17 @@ public class NoxernaTags {
         public static final TagKey<Item> UMBURAM_INGOTS = commonTag("ingots/umburam");
         public static final TagKey<Item> INPERLUM_INGOTS = commonTag("ingots/inperlum");
         public static final TagKey<Item> NIHOXITE_INGOTS = commonTag("ingots/nihoxite");
-            //
+            // Dusts
         public static final TagKey<Item> VITRAGOR_DUSTS = commonTag("dusts/vitragor");
             // Plates
         public static final TagKey<Item> PLATES = commonTag("plates");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_PLATES = commonTag("plates/mysterious_alloy");
             // Rods
         public static final TagKey<Item> NOBLEWOOD_RODS = commonTag("rods/noblewood");
-            // Dyable Blocks
+            // Food Groups
+        public static final TagKey<Item> FOODS_FRESH_NOBLEPHYTES = commonTag("foods/fresh_noblephytes");
+        public static final TagKey<Item> FOODS_COOKED_NOBLEPHYTES = commonTag("foods/cooked_noblephytes");
+            // Dyeable Blocks
         public static final TagKey<Item> PLATED_METAL_PILLARS = commonTag(
                 "plated_metal_pillars");
         public static final TagKey<Item> PLATED_METAL_PILLARS_NO_GLOWING = commonTag(
@@ -249,7 +261,13 @@ public class NoxernaTags {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("c", tagName));
         }
     }
+    public static class MobEffectTags {
+        public static final TagKey<MobEffect> CLEARED_BY_INSULATED = localTag("cleared_by_insulated");
 
+        private static TagKey<MobEffect> localTag(String tagName) {
+            return TagKey.create(Registries.MOB_EFFECT, Noxerna.prefix(tagName));
+        }
+    }
     public static class BiomeTags {
         public static final TagKey<Biome> IS_NOXERNA = localTag("is_noxerna");
         public static final TagKey<Biome> IS_UNDERGROUND_NOXERNA = localTag("is_underground_noxerna");

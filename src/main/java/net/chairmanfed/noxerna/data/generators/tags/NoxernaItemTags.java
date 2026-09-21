@@ -6,6 +6,7 @@ import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
@@ -199,6 +200,21 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.ARGON_DYE.get());
         tag(NoxernaTags.ItemTags.NEON_DYES)
                 .add(NoxernaItems.NEON_DYE.get());
+            // Foods
+        tag(NoxernaTags.ItemTags.FOODS_FRESH_NOBLEPHYTES)
+                .add(NoxernaItems.XENON_NOBLEPHYTE.get())
+                .add(NoxernaItems.KRYPTON_NOBLEPHYTE.get())
+                .add(NoxernaItems.ARGON_NOBLEPHYTE.get())
+                .add(NoxernaItems.NEON_NOBLEPHYTE.get());
+        tag(NoxernaTags.ItemTags.FOODS_COOKED_NOBLEPHYTES)
+                .add(NoxernaItems.COOKED_XENON_NOBLEPHYTE.get());
+        tag(Tags.Items.FOODS_SOUP)
+                .add(NoxernaItems.NOBLEPHYTE_STEW.get());
+        tag(Tags.Items.FOODS_FOOD_POISONING)
+                .add(NoxernaItems.XENON_NOBLEPHYTE.get())
+                .add(NoxernaItems.KRYPTON_NOBLEPHYTE.get())
+                .add(NoxernaItems.ARGON_NOBLEPHYTE.get())
+                .add(NoxernaItems.NEON_NOBLEPHYTE.get());
         // Noxerna Tags
         // Copy from Block Tags
         this.copy(NoxernaTags.BlockTags.PEBBLES, NoxernaTags.ItemTags.PEBBLES);
@@ -225,6 +241,13 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.DIAMOND_GEMS).addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         tag(NoxernaTags.ItemTags.PLATED_PILLAR_LIGHTS)
                 .addTag(Tags.Items.DUSTS_GLOWSTONE).add(NoxernaItems.LUMAI_FUEL_CELL.get());
+        tag(NoxernaTags.ItemTags.STRUCTURAL_METAL_NUGGETS)
+                .addTag(Tags.Items.NUGGETS_IRON)
+                .addTag(Tags.Items.NUGGETS_GOLD)
+                .addOptionalTag(ResourceLocation.fromNamespaceAndPath("c", "nuggets/copper"))
+                .addTag(NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
+                .addTag(NoxernaTags.ItemTags.OBSCUPRUM_NUGGETS)
+                .addTag(NoxernaTags.ItemTags.UMBURAM_NUGGETS);
         // Tool Material Grouping
         tag(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
                 .add(NoxernaItems.XENON_PLANKS.get()).add(NoxernaItems.KRYPTON_PLANKS.get())
@@ -240,6 +263,15 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.ADAMUNA_GEMS);
         tag(NoxernaTags.ItemTags.NIHOXITE_TOOL_MATERIALS)
                 .addTag(NoxernaTags.ItemTags.NIHOXITE_INGOTS);
+        // Material Recycling
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_1)
+                .add(NoxernaItems.FERREBRIS_SHOVEL.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_2)
+                .add(NoxernaItems.FERREBRIS_HOE.get()).add(NoxernaItems.FERREBRIS_SWORD.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_3)
+                .add(NoxernaItems.FERREBRIS_AXE.get()).add(NoxernaItems.FERREBRIS_PICKAXE.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_4)
+                .add(NoxernaItems.FERREBRIS_BOOTS.get());
         tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY)
                 .add(NoxernaItems.EXOSKELETON_HELMET.get()).add(NoxernaItems.EXOSKELETON_CHESTPLATE.get())
                 .add(NoxernaItems.EXOSKELETON_LEGGINGS.get()).add(NoxernaItems.EXOSKELETON_BOOTS.get())
