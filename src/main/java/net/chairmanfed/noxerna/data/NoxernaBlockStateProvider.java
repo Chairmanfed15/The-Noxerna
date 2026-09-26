@@ -175,8 +175,18 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         stairBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_STAIRS, NoxernaBlocks.NETHERITE_PLATING);
         slabBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_SLAB, NoxernaBlocks.NETHERITE_PLATING);
         wallBlockWithItem(NoxernaBlocks.NETHERITE_PLATING_WALL, NoxernaBlocks.NETHERITE_PLATING);
+
+        // Lumai set
+        blockWithItem(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL);
+        blockWithItem(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL);
+        blockWithItem(NoxernaBlocks.INETRA_BURIED_FUEL_CELL);
+
         // Ferrebris Metal set
+        blockWithItem(NoxernaBlocks.NOXUM_FERREBRIS_ORE);
+        blockWithItem(NoxernaBlocks.AESTUM_FERREBRIS_ORE);
+        blockWithItem(NoxernaBlocks.INETRA_FERREBRIS_ORE);
         blockWithItem(NoxernaBlocks.RAW_FERREBRIS_BLOCK);
+
         blockWithItem(NoxernaBlocks.FERREBRIS_BLOCK);
         paneBlockWithItem(NoxernaBlocks.FERREBRIS_BARS, "cutout");
         blockWithItem(NoxernaBlocks.FERREBRIS_PLATING);
@@ -186,7 +196,11 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         wallBlockWithItem(NoxernaBlocks.FERREBRIS_PLATING_WALL, NoxernaBlocks.FERREBRIS_PLATING);
 
         // Umburam Metal set
+        blockWithItem(NoxernaBlocks.NOXUM_UMBURAM_ORE);
+        blockWithItem(NoxernaBlocks.AESTUM_UMBURAM_ORE);
+        blockWithItem(NoxernaBlocks.INETRA_UMBURAM_ORE);
         blockWithItem(NoxernaBlocks.RAW_UMBURAM_BLOCK);
+
         blockWithItem(NoxernaBlocks.UMBURAM_BLOCK);
         blockWithItem(NoxernaBlocks.UMBURAM_PLATING);
         logBlockWithItem(NoxernaBlocks.PLATED_UMBURAM_PILLAR);
@@ -227,7 +241,11 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         blockWithItem(NoxernaBlocks.VITRAGOR_BLOCK);
 
         // Obscuprum Metal set
+        blockWithItem(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE);
+        blockWithItem(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE);
+        blockWithItem(NoxernaBlocks.INETRA_OBSCUPRUM_ORE);
         blockWithItem(NoxernaBlocks.RAW_OBSCUPRUM_BLOCK);
+
         blockWithItem(NoxernaBlocks.OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.EXPOSED_OBSCUPRUM_BLOCK);
         blockWithItem(NoxernaBlocks.WEATHERED_OBSCUPRUM_BLOCK);
@@ -318,16 +336,6 @@ public class NoxernaBlockStateProvider extends BlockStateProvider {
         logBlockWithItem(NoxernaBlocks.NEON_GLOWING_PLATED_FERREBRIS_PILLAR);
 
         // Natural Blocks
-            // Ores
-        blockWithItem(NoxernaBlocks.NOXUM_BURIED_FUEL_CELL);
-        blockWithItem(NoxernaBlocks.AESTUM_BURIED_FUEL_CELL);
-        blockWithItem(NoxernaBlocks.INETRA_BURIED_FUEL_CELL);
-        blockWithItem(NoxernaBlocks.NOXUM_FERREBRIS_ORE);
-        blockWithItem(NoxernaBlocks.AESTUM_FERREBRIS_ORE);
-        blockWithItem(NoxernaBlocks.INETRA_FERREBRIS_ORE);
-        blockWithItem(NoxernaBlocks.NOXUM_OBSCUPRUM_ORE);
-        blockWithItem(NoxernaBlocks.AESTUM_OBSCUPRUM_ORE);
-        blockWithItem(NoxernaBlocks.INETRA_OBSCUPRUM_ORE);
 
         // Set-less Blocks
         blockWithItem(NoxernaBlocks.VOIDROCK);

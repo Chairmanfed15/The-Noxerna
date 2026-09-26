@@ -9,6 +9,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
 import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -64,6 +65,7 @@ public class NoxernaBiomes {
                 .mobSpawnSettings(MobSpawnSettings.EMPTY) // TODO Populate with entries
                 .generationSettings(BiomeGenerationSettings.EMPTY) // TODO Populate with entries
                 .build());
+        HolderGetter<ConfiguredWorldCarver<?>> worldCarver = null;
         context.register(NOXUM_DEPTHS, new Biome.BiomeBuilder()
                 .temperature(0.8f)
                 .downfall(0.0f)
@@ -76,7 +78,8 @@ public class NoxernaBiomes {
                         .skyColor(2631723)
                         .build())
                 .mobSpawnSettings(MobSpawnSettings.EMPTY) // TODO Populate with entries
-                .generationSettings(BiomeGenerationSettings.EMPTY) // TODO Populate with entries
+                .generationSettings(new BiomeGenerationSettings.Builder(placedFeature, worldCarver)
+                        .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, NoxernaPlacedFeatures.ORE_ACCELESLATE_PLACEMENT).build()) // TODO Populate with entries
                 .build());
         context.register(XENON_GROTTO, new Biome.BiomeBuilder()
                 .temperature(0.8f)

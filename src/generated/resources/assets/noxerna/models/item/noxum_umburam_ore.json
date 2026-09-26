@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "noxerna:item/wip_placeholder"
-  }
+  "parent": "noxerna:block/noxum_umburam_ore"
 }

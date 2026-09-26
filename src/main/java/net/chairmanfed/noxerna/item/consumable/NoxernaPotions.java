@@ -3,6 +3,7 @@ package net.chairmanfed.noxerna.item.consumable;
 import net.chairmanfed.noxerna.Noxerna;
 import net.chairmanfed.noxerna.effect.NoxernaEffects;
 import net.chairmanfed.noxerna.item.NoxernaItems;
+import net.chairmanfed.noxerna.registry.NoxernaTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.Items;
@@ -62,14 +63,20 @@ public class NoxernaPotions {
         event.getBuilder().addMix(Potions.WATER, NoxernaItems.GLOWGRAIN.get(), Potions.THICK);
         event.getBuilder().addMix(Potions.THICK, NoxernaItems.MYSTERIOUS_ALLOY_PLATE.get(), NoxernaPotions.BOLSTERED_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BOLSTERED_ARMOR, Items.REDSTONE, NoxernaPotions.LONG_BOLSTERED_ARMOR);
+        // Despite making thick potions like glowstone dust,
+        // the effect glowgrain has on subsistence means it should extend the duration of potions
+        event.getBuilder().addMix(NoxernaPotions.BOLSTERED_ARMOR, NoxernaItems.GLOWGRAIN.get(), NoxernaPotions.LONG_BOLSTERED_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BOLSTERED_ARMOR, Items.GLOWSTONE_DUST, NoxernaPotions.STRONG_BOLSTERED_ARMOR);
         event.getBuilder().addMix(Potions.THICK, NoxernaItems.VITRALISK.get(), NoxernaPotions.BROKEN_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BROKEN_ARMOR, Items.REDSTONE, NoxernaPotions.LONG_BROKEN_ARMOR);
+        event.getBuilder().addMix(NoxernaPotions.BROKEN_ARMOR, NoxernaItems.GLOWGRAIN.get(), NoxernaPotions.LONG_BROKEN_ARMOR);
         event.getBuilder().addMix(NoxernaPotions.BROKEN_ARMOR, Items.GLOWSTONE_DUST, NoxernaPotions.STRONG_BROKEN_ARMOR);
         event.getBuilder().addMix(Potions.THICK, Items.SNOW_BLOCK, NoxernaPotions.FROSTBITE);
         event.getBuilder().addMix(NoxernaPotions.FROSTBITE, Items.REDSTONE, NoxernaPotions.LONG_FROSTBITE);
+        event.getBuilder().addMix(NoxernaPotions.FROSTBITE, NoxernaItems.GLOWGRAIN.get(), NoxernaPotions.LONG_FROSTBITE);
         event.getBuilder().addMix(Potions.THICK, NoxernaItems.FERREBRIS_BLOCK.get(), NoxernaPotions.LEADWEIGHT);
         event.getBuilder().addMix(NoxernaPotions.LEADWEIGHT, Items.REDSTONE, NoxernaPotions.LONG_LEADWEIGHT);
+        event.getBuilder().addMix(NoxernaPotions.LEADWEIGHT, NoxernaItems.GLOWGRAIN.get(), NoxernaPotions.LONG_LEADWEIGHT);
         event.getBuilder().addMix(NoxernaPotions.LEADWEIGHT, Items.GLOWSTONE_DUST, NoxernaPotions.STRONG_LEADWEIGHT);
     }
 }

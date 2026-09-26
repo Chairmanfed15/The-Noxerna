@@ -36,8 +36,17 @@ public class NoxernaTags {
         public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_2 = localTag("recyclable/ferrebris/tools_costing_2");
         public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_3 = localTag("recyclable/ferrebris/tools_costing_3");
         public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_4 = localTag("recyclable/ferrebris/tools_costing_4");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_5 = localTag("recyclable/ferrebris/tools_costing_5");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_6 = localTag("recyclable/ferrebris/tools_costing_6");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_7 = localTag("recyclable/ferrebris/tools_costing_7");
+        public static final TagKey<Item> FERREBRIS_RECYCLABLE_MATERIAL_COST_8 = localTag("recyclable/ferrebris/tools_costing_8");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY = localTag("recyclable/mysterious_alloy_lossy");
         public static final TagKey<Item> MYSTERIOUS_ALLOY_RECYCLABLE_LOSSLESS = localTag("recyclable/mysterious_alloy_lossless");
+        // Potion Making
+            // These won't really do anything until I update to Wilderness Bound and can use the .json brewing recipes,
+            // but I guess they could serve an informational purpose.
+        public static final TagKey<Item> EXTENDS_NOXERNA_POTIONS = localTag("extends_noxerna_potions");
+        public static final TagKey<Item> EMPOWERS_NOXERNA_POTIONS = localTag("empowers_noxerna_potions");
         // Food Groupings
         public static final TagKey<Item> NOBLEPHYTES = localTag("noblephytes");
         // Block Groups

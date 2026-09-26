@@ -18,9 +18,6 @@ public class NoxernaItemModels extends ItemModelProvider {
     protected void registerModels() {
         // WIP Blocks
         wipItem(NoxernaItems.XENON_CARPET);
-        wipItem(NoxernaItems.NOXUM_UMBURAM_ORE);
-        wipItem(NoxernaItems.AESTUM_UMBURAM_ORE);
-        wipItem(NoxernaItems.INETRA_UMBURAM_ORE);
         wipItem(NoxernaItems.NOBLEWOOD_CRAFTING_TABLE);
         // Intermediates
         flatItem(NoxernaItems.LUMAI_CRYSTAL);

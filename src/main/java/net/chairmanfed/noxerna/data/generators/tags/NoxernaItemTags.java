@@ -9,6 +9,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -208,8 +209,11 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.NEON_NOBLEPHYTE.get());
         tag(NoxernaTags.ItemTags.FOODS_COOKED_NOBLEPHYTES)
                 .add(NoxernaItems.COOKED_XENON_NOBLEPHYTE.get());
+        tag(Tags.Items.FOODS_BREAD)
+                .add(NoxernaItems.GLOWBREAD.get());
         tag(Tags.Items.FOODS_SOUP)
-                .add(NoxernaItems.NOBLEPHYTE_STEW.get());
+                .add(NoxernaItems.NOBLEPHYTE_STEW.get())
+                .add(NoxernaItems.GLOWING_PORRIDGE.get());
         tag(Tags.Items.FOODS_FOOD_POISONING)
                 .add(NoxernaItems.XENON_NOBLEPHYTE.get())
                 .add(NoxernaItems.KRYPTON_NOBLEPHYTE.get())
@@ -248,6 +252,9 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .addTag(NoxernaTags.ItemTags.FERREBRIS_NUGGETS)
                 .addTag(NoxernaTags.ItemTags.OBSCUPRUM_NUGGETS)
                 .addTag(NoxernaTags.ItemTags.UMBURAM_NUGGETS);
+        tag(NoxernaTags.ItemTags.EXTENDS_NOXERNA_POTIONS)
+                .add(Items.REDSTONE)
+                .add(NoxernaItems.GLOWGRAIN.get());
         // Tool Material Grouping
         tag(NoxernaTags.ItemTags.NOBLEWOOD_PLANKS)
                 .add(NoxernaItems.XENON_PLANKS.get()).add(NoxernaItems.KRYPTON_PLANKS.get())
@@ -272,6 +279,12 @@ public class NoxernaItemTags extends ItemTagsProvider {
                 .add(NoxernaItems.FERREBRIS_AXE.get()).add(NoxernaItems.FERREBRIS_PICKAXE.get());
         tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_4)
                 .add(NoxernaItems.FERREBRIS_BOOTS.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_5)
+                .add(NoxernaItems.FERREBRIS_HELMET.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_7)
+                .add(NoxernaItems.FERREBRIS_LEGGINGS.get());
+        tag(NoxernaTags.ItemTags.FERREBRIS_RECYCLABLE_MATERIAL_COST_8)
+                .add(NoxernaItems.FERREBRIS_CHESTPLATE.get());
         tag(NoxernaTags.ItemTags.MYSTERIOUS_ALLOY_RECYCLABLE_LOSSY)
                 .add(NoxernaItems.EXOSKELETON_HELMET.get()).add(NoxernaItems.EXOSKELETON_CHESTPLATE.get())
                 .add(NoxernaItems.EXOSKELETON_LEGGINGS.get()).add(NoxernaItems.EXOSKELETON_BOOTS.get())

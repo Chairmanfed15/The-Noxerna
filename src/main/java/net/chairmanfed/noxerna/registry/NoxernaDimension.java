@@ -38,7 +38,7 @@ public class NoxernaDimension {
                 true,
                 false,
                 true,
-                0.4D,
+                0.4D, // This makes Noxerna roughly 2.5x "bigger" than The Overworld
                 false,
                 true,
                 0,

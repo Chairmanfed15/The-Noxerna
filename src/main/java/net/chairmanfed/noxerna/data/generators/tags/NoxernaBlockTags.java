@@ -513,6 +513,8 @@ public class NoxernaBlockTags extends BlockTagsProvider {
         tag(NoxernaTags.BlockTags.BASE_STONE_NOXERNA)
                 .add(NoxernaBlocks.SOLTRA.get()).add(NoxernaBlocks.NOXUM.get()).add(NoxernaBlocks.AESTUM.get())
                 .add(NoxernaBlocks.INETRA.get());
+        tag(NoxernaTags.BlockTags.NOXUM_ORES_REPLACEABLE)
+                .add(NoxernaBlocks.NOXUM.get());
         tag(NoxernaTags.BlockTags.INFINIBURN_NOXERNA)
                 .addTag(BlockTags.INFINIBURN_OVERWORLD)
                 .add(NoxernaBlocks.VOIDROCK.get());

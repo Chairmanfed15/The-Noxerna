@@ -125,9 +125,9 @@ public class NoxernaPortalBlock extends Block implements Portal {
 
     @javax.annotation.Nullable
     private DimensionTransition getExitPortal(
-            ServerLevel pLevel, Entity pEntity, BlockPos pPos, BlockPos pExitPos, boolean isNoxerna, WorldBorder pWorldBorder
-    ) {
-        Optional<BlockPos> optional = pLevel.getPortalForcer().findClosestPortalPosition(pExitPos, isNoxerna, pWorldBorder);
+            ServerLevel pLevel, Entity pEntity, BlockPos pPos, BlockPos exitPos, boolean isNoxerna, WorldBorder worldBorder) {
+        NoxernaPortalForcer portalForcer = new NoxernaPortalForcer(pLevel);
+        Optional<BlockPos> optional = portalForcer.findClosestPortalPosition(exitPos, isNoxerna, worldBorder);
         BlockUtil.FoundRectangle blockutil$foundrectangle;
         DimensionTransition.PostDimensionTransition dimensiontransition$postdimensiontransition;
         if (optional.isPresent()) {
@@ -144,7 +144,7 @@ public class NoxernaPortalBlock extends Block implements Portal {
             dimensiontransition$postdimensiontransition = DimensionTransition.PLAY_PORTAL_SOUND.then(p_351967_ -> p_351967_.placePortalTicket(blockpos));
         } else {
             Direction.Axis direction$axis = pEntity.level().getBlockState(pPos).getOptionalValue(AXIS).orElse(Direction.Axis.X);
-            Optional<BlockUtil.FoundRectangle> optional1 = pLevel.getPortalForcer().createPortal(pExitPos, direction$axis);
+            Optional<BlockUtil.FoundRectangle> optional1 = portalForcer.createPortal(exitPos, direction$axis);
             if (optional1.isEmpty()) {
                 LOGGER.error("Unable to create a portal, likely target out of worldborder");
                 return null;

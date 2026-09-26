@@ -21,6 +21,10 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Dimension & Biomes
+        add("dimension.noxerna.the_noxerna", "Noxerna");
+        add("biome.noxerna.surface", "The Surface");
+        add("biome.noxerna.noxum_depths", "Noxum Depths");
         // Creative Tabs
         addCreativeTab("building_blocks", "Noxerna Building Blocks");
         addCreativeTab("colored_blocks", "Noxerna Colored Blocks");
@@ -657,13 +661,13 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addAdvancement("caught_mining", "Busted!", "Get caught mining without a license");
         addAdvancement("get_license", "License to Mine",
                 "Get a Drillaton ID Chip to safely mine in the Noxerna");
-        addAdvancement("suspicion_five", "Marked for Death",
+        addAdvancement("suspicion_five", "Noxerna's Most Wanted",
                 "Resist the automated authority and escape with your life!");
-        addAdvancement("survive_suspicion_reset", "Exception to the Rule",
+        addAdvancement("survive_suspicion_reset", "Above Consequences",
                 "Get yourself off the 'Kill on Sight' list by defying death");
         // Foods & Potions Storyline
         addAdvancement("all_noxerna_foods", "Dining in the Dark",
-                "Eat all the food the Noxerna offers, even if its unsafe for you");
+                "Eat all the food the Noxerna offers, even if it's unsafe for you");
         addAdvancement("all_noxerna_potions", "Alchemical Connoisseur",
                 "Have every potion effect sourced from the Noxerna applied all at once");
         addAdvancement("all_noxerna_effects", "Affliction of the Shadows",
@@ -687,9 +691,9 @@ public class NoxernaLanguageData extends NoxernaLanguageProvider {
         addAdvancement("ride_flatfish_in_other_dimensions", "Not the Way Home",
                 "Ride a Volcanic Flatfish a fair way in the Overworld, Nether and End");
         addAdvancement("superheated_lava_fish", "Hot Fishes on Your Line",
-                "Catch a fish... From SUPERHEATED lava???");
+                "Catch a fish... From superheated lava");
         addAdvancement("liquefied_shadow_fish", "Fishing in the Deep",
-                "There's even fish in the liquid void! It can't get any crazier, it can't right?");
+                "There's even fish in the liquid void!");
         addAdvancement("catch_all_fish", "Angler Supreme",
                 "Catch all of the fish native to the Noxerna");
         // Ferrebris Tool Storyline

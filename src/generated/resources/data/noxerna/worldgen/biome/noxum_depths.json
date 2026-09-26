@@ -9,7 +9,17 @@
     "water_color": 2304829,
     "water_fog_color": 1909551
   },
-  "features": [],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "noxerna:ore_acceleslate"
+    ]
+  ],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {

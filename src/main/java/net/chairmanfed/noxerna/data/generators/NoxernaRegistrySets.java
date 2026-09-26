@@ -1,9 +1,7 @@
 package net.chairmanfed.noxerna.data.generators;
 
 import net.chairmanfed.noxerna.Noxerna;
-import net.chairmanfed.noxerna.data.resources.registries.NoxernaBiomes;
-import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimMaterials;
-import net.chairmanfed.noxerna.data.resources.registries.NoxernaTrimPatterns;
+import net.chairmanfed.noxerna.data.resources.registries.*;
 import net.chairmanfed.noxerna.registry.NoxernaDimension;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -19,6 +17,8 @@ public class NoxernaRegistrySets extends DatapackBuiltinEntriesProvider {
         super(output, provider, BUILDER, Set.of("minecraft", Noxerna.MODID));
     }
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.CONFIGURED_FEATURE, NoxernaConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, NoxernaPlacedFeatures::bootstrap)
             .add(Registries.BIOME, NoxernaBiomes::bootstrap)
             .add(Registries.LEVEL_STEM, NoxernaDimension::bootstrapStem)
             .add(Registries.DIMENSION_TYPE, NoxernaDimension::bootstrapType)
